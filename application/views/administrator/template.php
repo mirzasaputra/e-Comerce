@@ -157,6 +157,7 @@
     $('.datepicker').datepicker();
     $('#rangepicker').daterangepicker();
     $(function() {
+      $('.jatuh-tempo').hide();
       $('.select2').select2();
       $("#example1").DataTable();
       $("#example11").DataTable();
