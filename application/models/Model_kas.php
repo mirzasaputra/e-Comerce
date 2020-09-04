@@ -42,4 +42,18 @@ class Model_kas extends CI_model
         );
         return $this->db->set($data)->where($this->primary, $id)->update($this->table);
     }
+
+    public function addKasFromPembelian($kembalian, $bayar)
+    {
+        $users = $this->Model_users->users_edit($this->session->username)->row_array();
+        $nominal = $bayar - $kembalian;
+        $data = array(
+            'id_user'        => $users['id_users'],
+            'nominal'        => $nominal,
+            'jenis'          => 'Pengeluaran',
+            'keterangan'     => 'Transaksi Pembelian',
+            'created_at'     => date('Y-m-d H:i:s')
+        );
+        return $this->db->insert($this->table, $data);
+    }
 }

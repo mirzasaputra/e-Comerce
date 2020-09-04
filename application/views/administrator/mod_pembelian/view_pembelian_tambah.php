@@ -122,7 +122,7 @@
                       <div class="form-group">
                         <label class="control-label mb-1 col-md-3 col-sm-3 col-xs-12">Grand Total</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" name="total" readonly class="form-control" value="<?php echo $total['total'] ?>">
+                          <input type="text" name="total" id="total" readonly class="form-control" value="<?php echo $total['total'] ?>">
                         </div>
                       </div>
                       <div class="form-group">
@@ -147,7 +147,7 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Bayar</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="number" class="form-control" onkeyup="totalbayar()" name="bayar" id="bayar" autocomplete="off">
+                          <input type="text" class="form-control" onkeyup="totalbayar()" name="bayar" id="bayar" autocomplete="off">
                         </div>
                       </div>
                       <div class="form-group">
@@ -180,18 +180,16 @@
               });
 
               function totalbayar() {
-                var grand = $('#total');
-                var bayar = $('#bayar');
-                bayar.keyup(function() {
-                  var byr = document.getElementById('bayar').value;
-                  if (byr == null) {
-                    var nilai = 0;
-                    byr = nilai;
-                  } else {
-                    var hasil = bayar.val() - grand.val();
-                    $('#kembali').val(hasil);
-                  }
-                })
+                const grand = $('#total');
+                const bayar = $('#bayar');
+                if (bayar.val() == null) {
+                  const nilai = 0;
+                  bayar.val(nilai);
+                } else {
+                  const hasil = bayar.val() - grand.val();
+                  $('#kembali').val(hasil);
+                }
+
               }
 
               function checkoutBeli() {

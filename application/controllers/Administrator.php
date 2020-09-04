@@ -1287,21 +1287,39 @@ class Administrator extends CI_Controller
 		cek_session_akses('pembelian', $this->session->id_session);
 		if (isset($_POST['submit1'])) {
 			if ($this->session->idp == '') {
+				$user = $this->Model_users->users_edit($this->session->username)->row_array();
 				$data = array(
 					'kode_pembelian' => $this->input->post('a'),
 					'id_supplier' => $this->input->post('b'),
-					'waktu_beli' => date('Y-m-d H:i:s')
+					'waktu_beli' => date('Y-m-d H:i:s'),
+					'id_user'	=> $user['id_user']
 				);
 				$this->Model_app->insert('rb_pembelian', $data);
 				$idp = $this->db->insert_id();
 				$this->session->set_userdata(array('idp' => $idp));
 			} else {
+				$kembalian = $this->input->post('kembali');
+				$bayar = $this->input->post('bayar');
+				$metode = $this->input->post('metode');
+
+				if ($kembalian < 0) {
+					$kembalian = 0;
+				}
+				// $data = array(
+				// 	'kode_pembelian' => $this->input->post('a'),
+				// 	'id_supplier' => $this->input->post('b')
+				// );
+				// $where = array('id_pembelian' => $this->session->idp);
+				// $this->Model_app->update('rb_pembelian', $data, $where);
 				$data = array(
-					'kode_pembelian' => $this->input->post('a'),
-					'id_supplier' => $this->input->post('b')
+					'method'	=> $metode,
+					'bayar'		=> $bayar,
+					'kembali'	=> $kembalian,
 				);
 				$where = array('id_pembelian' => $this->session->idp);
 				$this->Model_app->update('rb_pembelian', $data, $where);
+				$this->Model_kas->addKasFromPembelian($kembalian, $bayar);
+				$this->Model_hutang->addHutang($metode, $this->session->idp);
 			}
 			redirect('administrator/tambah_pembelian');
 		} elseif (isset($_POST['submit'])) {
