@@ -1330,6 +1330,7 @@ class Administrator extends CI_Controller
 				$jumlah = $this->input->post('cc') - $detailBeli['jumlah_pesan'];
 
 				if ($jumlah < 0) {
+
 					$qty = abs($jumlah);
 					$stokBrg = $produk['stok'] - $qty;
 				} else {
@@ -1394,6 +1395,7 @@ class Administrator extends CI_Controller
 			$data['barang'] = $this->Model_app->view_ordering('rb_produk', 'id_produk', 'ASC');
 			$data['supplier'] = $this->Model_app->view_ordering('rb_supplier', 'id_supplier', 'ASC');
 			if ($this->uri->segment(4) != '') {
+
 				$data['row'] = $this->Model_app->view_where('rb_pembelian_detail', array('id_pembelian_detail' => $this->uri->segment(4)))->row_array();
 			}
 			$data['title'] = "Edit Pembelian";
@@ -1423,6 +1425,10 @@ class Administrator extends CI_Controller
 	{
 		cek_session_akses('pembelian', $this->session->id_session);
 		$id = array('id_pembelian_detail' => $this->uri->segment(3));
+		$data = $this->db->get_where('rb_pembelian_detail', ['id_pembelian_detail' => $id['id_pembelian_detail']])->row_array();
+		$produk = $this->db->get_where('rb_produk', ['id_produk' => $data['id_produk']])->row_array();
+		$stok = $produk['stok'] - $data['jumlah_pesan'];
+		$this->db->set('stok', $stok)->where('id_produk', $produk['id_produk'])->update('rb_produk');
 		$this->Model_app->delete('rb_pembelian_detail', $id);
 		redirect('administrator/tambah_pembelian');
 	}
