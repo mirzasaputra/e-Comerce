@@ -1267,7 +1267,7 @@ class Administrator extends CI_Controller
 		cek_session_akses('pembelian', $this->session->id_session);
 		$this->session->unset_userdata('idp');
 		$data['record'] = $this->Model_app->view_join_one('rb_pembelian', 'rb_supplier', 'id_supplier', 'id_pembelian', 'DESC');
-		$data['title'] = "Pembelian";
+		$data['title'] = "Entry Pembelian";
 		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
 		$this->template->load('administrator/template', 'administrator/mod_pembelian/view_pembelian', $data);
 	}
@@ -1314,6 +1314,9 @@ class Administrator extends CI_Controller
 					'satuan' => $this->input->post('dd')
 				);
 				$this->Model_app->insert('rb_pembelian_detail', $data);
+				$produk = $this->db->get_where('rb_produk', ['id_produk ' => $this->input->post('aa')])->row_array();
+				$stok = $produk['stok'] + $this->input->post('cc');
+				$this->db->set('stok', $stok)->where('id_produk', $this->input->post('aa'))->update('rb_produk');
 			} else {
 				$data = array(
 					'id_produk' => $this->input->post('aa'),
@@ -1321,6 +1324,19 @@ class Administrator extends CI_Controller
 					'jumlah_pesan' => $this->input->post('cc'),
 					'satuan' => $this->input->post('dd')
 				);
+
+				$detailBeli = $this->db->get_where('rb_pembelian_detail', ['id_pembelian_detail ' => $this->input->post('idpd')])->row_array();
+				$produk = $this->db->get_where('rb_produk', ['id_produk ' => $this->input->post('aa')])->row_array();
+				$jumlah = $this->input->post('cc') - $detailBeli['jumlah_pesan'];
+
+				if ($jumlah < 0) {
+					$qty = abs($jumlah);
+					$stokBrg = $produk['stok'] - $qty;
+				} else {
+
+					$stokBrg = $produk['stok'] + $jumlah;
+				}
+				$this->db->set(array('stok' => $stokBrg))->where('id_produk', $this->input->post('aa'))->update('rb_produk');
 				$where = array('id_pembelian_detail' => $this->input->post('idpd'));
 				$this->Model_app->update('rb_pembelian_detail', $data, $where);
 			}

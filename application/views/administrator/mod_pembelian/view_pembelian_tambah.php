@@ -1,7 +1,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Tambah Transaksi Pembelian (PO)</h3>
+                  <h3 class="box-title"><?php echo $title ?></h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <?php
@@ -12,12 +12,12 @@
                     <tbody>
                       <tr>
                         <th width='140px' scope='row'>Kode Pembelian</th>
-                        <td><input type='text' class='form-control' value='<?php echo "$rows[kode_pembelian]"; ?>' name='a'></td>
+                        <td><input type='text' class='form-control' value='<?php echo "$rows[kode_pembelian]"; ?>' name='a' autocomplete="off"></td>
                       </tr>
                       <tr>
                         <th scope='row'>Nama Supplier</th>
-                        <td><select class='form-control select2' name='b'>
-                            <option value='' selected></option>
+                        <td><select class='form-control select2' name='b' data-placeholder="Pilih Supplier">
+                            <option value=""></option>
                             <?php
                             foreach ($supplier as $r) {
                               if ($r['id_supplier'] == $rows['id_supplier']) {
@@ -52,7 +52,7 @@
                                 <td></td>
                                 <input type='hidden' value='" . $this->uri->segment(3) . "' name='idpd'>
                                 <td><select name='aa' class='combobox form-control' onchange=\"changeValue(this.value)\" autofocus>
-                                                                      <option value='' selected> Cari Barang </option>";
+                                 <option value='' selected> Cari Barang </option>";
                       $jsArray = "var prdName = new Array();\n";
                       foreach ($barang as $r) {
                         if ($r['id_produk'] == $row['id_produk']) {
@@ -104,7 +104,7 @@
               </div>
             </div>
 
-            </div>
+            <!-- </div> -->
 
 
             <script type="text/javascript">
