@@ -31,9 +31,10 @@
                       </tr>
                     </tbody>
                   </table>
-                  <input class='btn btn-primary btn-sm' type="submit" name='submit1' value='Simpan Data'>
+                  <!-- <input class='btn btn-primary btn-sm' type="submit" name='submit1' value='Simpan Data'> -->
+                  <button type="button" onclick="checkoutBeli()" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Checkout</button>
                   <?php if ($this->session->idp != '') { ?>
-                    <a class='btn btn-default btn-sm' href='<?php echo base_url(); ?>administrator/pembelian'>Selesai / Kembali</a>
+
                     <hr>
                     <table id="example2" class="table table-bordered table-striped">
                       <thead>
@@ -106,8 +107,96 @@
 
             <!-- </div> -->
 
+            <!-- Modal Checkout -->
+
+            <div class="modal fade" id="checkoutModalBeli">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Checkout Pembelian</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <label class="control-label mb-1 col-md-3 col-sm-3 col-xs-12">Grand Total</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" name="total" readonly class="form-control" value="<?php echo $total['total'] ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label mb-1 col-md-3 col-sm-3 col-xs-12">Payment Method</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                              <input type="radio" name="metode" id="cash" value="Cash" checked> Cash
+                            </label>
+                            <label>
+                              <input type="radio" name="metode" id="kredit" value="Kredit"> Kredit
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group jatuh-tempo">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jatuh Tempo</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="date" class="form-control" name="tempo" id="tempo" autocomplete="off">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Bayar</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="number" class="form-control" onkeyup="totalbayar()" name="bayar" id="bayar" autocomplete="off">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Kembali</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" name="kembali" id="kembali" readonly autocomplete="off">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button type="submit" name="submit1" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+
 
             <script type="text/javascript">
+              $('input:radio[name="metode"]').on('change', function() {
+                if ($(this).is(':checked') && $(this).val() == "Cash") {
+                  $('.jatuh-tempo').hide();
+                } else if ($(this).is(':checked') && $(this).val() == "Kredit") {
+                  $('.jatuh-tempo').show();
+                }
+              });
+
+              function totalbayar() {
+                var grand = $('#total');
+                var bayar = $('#bayar');
+                bayar.keyup(function() {
+                  var byr = document.getElementById('bayar').value;
+                  if (byr == null) {
+                    var nilai = 0;
+                    byr = nilai;
+                  } else {
+                    var hasil = bayar.val() - grand.val();
+                    $('#kembali').val(hasil);
+                  }
+                })
+              }
+
+              function checkoutBeli() {
+                $('#checkoutModalBeli').modal('show');
+              }
               <?php echo $jsArray; ?>
 
               function changeValue(id) {
