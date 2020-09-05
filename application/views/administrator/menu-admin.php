@@ -103,7 +103,7 @@
                 <?php
                 $cek = $this->Model_app->umenu_akses("pembelian", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/pembelian'><i class='fa fa-circle-o'></i> Entry Pembelian </a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/pembelian'><i class='fa fa-circle-o'></i> Pembelian </a></li>";
                 }
 
                 ?>

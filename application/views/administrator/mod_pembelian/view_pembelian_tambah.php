@@ -31,9 +31,11 @@
                       </tr>
                     </tbody>
                   </table>
-                  <!-- <input class='btn btn-primary btn-sm' type="submit" name='submit1' value='Simpan Data'> -->
-                  <button type="button" onclick="checkoutBeli()" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Checkout</button>
+                  <?php if ($this->session->idp == '') { ?>
+                    <input class='btn btn-primary btn-sm' type="submit" name='submit1' value='Simpan Data'>
+                  <?php } ?>
                   <?php if ($this->session->idp != '') { ?>
+                    <button type="button" onclick="checkoutBeli()" class="btn btn-primary btn-sm"><i class="fa fa-check-square-o"></i> Checkout</button>
 
                     <hr>
                     <table id="example2" class="table table-bordered table-striped">
@@ -122,7 +124,8 @@
                       <div class="form-group">
                         <label class="control-label mb-1 col-md-3 col-sm-3 col-xs-12">Grand Total</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" name="total" id="total" readonly class="form-control" value="<?php echo $total['total'] ?>">
+                          <input type="text" readonly class="form-control" value="Rp. <?php echo rupiah($total['total']) ?>">
+                          <input type="hidden" name="total" id="total" readonly class="form-control" value="<?php echo $total['total'] ?>">
                         </div>
                       </div>
                       <div class="form-group">

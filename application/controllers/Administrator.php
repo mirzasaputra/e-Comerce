@@ -1267,7 +1267,7 @@ class Administrator extends CI_Controller
 		cek_session_akses('pembelian', $this->session->id_session);
 		$this->session->unset_userdata('idp');
 		$data['record'] = $this->Model_app->view_join_one('rb_pembelian', 'rb_supplier', 'id_supplier', 'id_pembelian', 'DESC');
-		$data['title'] = "Entry Pembelian";
+		$data['title'] = "Daftar Pembelian";
 		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
 		$this->template->load('administrator/template', 'administrator/mod_pembelian/view_pembelian', $data);
 	}
@@ -1287,12 +1287,12 @@ class Administrator extends CI_Controller
 		cek_session_akses('pembelian', $this->session->id_session);
 		if (isset($_POST['submit1'])) {
 			if ($this->session->idp == '') {
-				$user = $this->Model_users->users_edit($this->session->username)->row_array();
+				$user = $this->db->get_where('users', ['username' => $this->session->username])->row_array();
 				$data = array(
 					'kode_pembelian' => $this->input->post('a'),
 					'id_supplier' => $this->input->post('b'),
 					'waktu_beli' => date('Y-m-d H:i:s'),
-					'id_user'	=> $user['id_user']
+					'id_user'	=> $user['id_users']
 				);
 				$this->Model_app->insert('rb_pembelian', $data);
 				$idp = $this->db->insert_id();
@@ -1321,7 +1321,7 @@ class Administrator extends CI_Controller
 				$this->Model_kas->addKasFromPembelian($kembalian, $bayar);
 				$this->Model_hutang->addHutang($metode, $this->session->idp);
 			}
-			redirect('administrator/tambah_pembelian');
+			redirect('administrator/pembelian');
 		} elseif (isset($_POST['submit'])) {
 			if ($this->input->post('idpd') == '') {
 				$data = array(
@@ -1374,70 +1374,70 @@ class Administrator extends CI_Controller
 		}
 	}
 
-	function edit_pembelian()
-	{
-		cek_session_akses('pembelian', $this->session->id_session);
-		if (isset($_POST['submit1'])) {
-			$data = array(
-				'kode_pembelian' => $this->input->post('a'),
-				'id_supplier' => $this->input->post('b'),
-				'waktu_beli' => $this->input->post('c')
-			);
-			$where = array('id_pembelian' => $this->input->post('idp'));
-			$this->Model_app->update('rb_pembelian', $data, $where);
-			redirect('administrator/edit_pembelian/' . $this->input->post('idp'));
-		} elseif (isset($_POST['submit'])) {
-			if ($this->input->post('idpd') == '') {
-				$data = array(
-					'id_pembelian' => $this->input->post('idp'),
-					'id_produk' => $this->input->post('aa'),
-					'harga_pesan' => $this->input->post('bb'),
-					'jumlah_pesan' => $this->input->post('cc'),
-					'satuan' => $this->input->post('dd')
-				);
-				$this->Model_app->insert('rb_pembelian_detail', $data);
-			} else {
-				$data = array(
-					'id_produk' => $this->input->post('aa'),
-					'harga_pesan' => $this->input->post('bb'),
-					'jumlah_pesan' => $this->input->post('cc'),
-					'satuan' => $this->input->post('dd')
-				);
-				$where = array('id_pembelian_detail' => $this->input->post('idpd'));
-				$this->Model_app->update('rb_pembelian_detail', $data, $where);
-			}
-			redirect('administrator/edit_pembelian/' . $this->input->post('idp'));
-		} else {
-			$data['rows'] = $this->Model_app->view_join_rows('rb_pembelian', 'rb_supplier', 'id_supplier', array('id_pembelian' => $this->uri->segment(3)), 'id_pembelian', 'DESC')->row_array();
-			$data['record'] = $this->Model_app->view_join_where('rb_pembelian_detail', 'rb_produk', 'id_produk', array('id_pembelian' => $this->uri->segment(3)), 'id_pembelian_detail', 'DESC');
-			$data['barang'] = $this->Model_app->view_ordering('rb_produk', 'id_produk', 'ASC');
-			$data['supplier'] = $this->Model_app->view_ordering('rb_supplier', 'id_supplier', 'ASC');
-			if ($this->uri->segment(4) != '') {
+	// function edit_pembelian()
+	// {
+	// 	cek_session_akses('pembelian', $this->session->id_session);
+	// 	if (isset($_POST['submit1'])) {
+	// 		$data = array(
+	// 			'kode_pembelian' => $this->input->post('a'),
+	// 			'id_supplier' => $this->input->post('b'),
+	// 			'waktu_beli' => $this->input->post('c')
+	// 		);
+	// 		$where = array('id_pembelian' => $this->input->post('idp'));
+	// 		$this->Model_app->update('rb_pembelian', $data, $where);
+	// 		redirect('administrator/edit_pembelian/' . $this->input->post('idp'));
+	// 	} elseif (isset($_POST['submit'])) {
+	// 		if ($this->input->post('idpd') == '') {
+	// 			$data = array(
+	// 				'id_pembelian' => $this->input->post('idp'),
+	// 				'id_produk' => $this->input->post('aa'),
+	// 				'harga_pesan' => $this->input->post('bb'),
+	// 				'jumlah_pesan' => $this->input->post('cc'),
+	// 				'satuan' => $this->input->post('dd')
+	// 			);
+	// 			$this->Model_app->insert('rb_pembelian_detail', $data);
+	// 		} else {
+	// 			$data = array(
+	// 				'id_produk' => $this->input->post('aa'),
+	// 				'harga_pesan' => $this->input->post('bb'),
+	// 				'jumlah_pesan' => $this->input->post('cc'),
+	// 				'satuan' => $this->input->post('dd')
+	// 			);
+	// 			$where = array('id_pembelian_detail' => $this->input->post('idpd'));
+	// 			$this->Model_app->update('rb_pembelian_detail', $data, $where);
+	// 		}
+	// 		redirect('administrator/edit_pembelian/' . $this->input->post('idp'));
+	// 	} else {
+	// 		$data['rows'] = $this->Model_app->view_join_rows('rb_pembelian', 'rb_supplier', 'id_supplier', array('id_pembelian' => $this->uri->segment(3)), 'id_pembelian', 'DESC')->row_array();
+	// 		$data['record'] = $this->Model_app->view_join_where('rb_pembelian_detail', 'rb_produk', 'id_produk', array('id_pembelian' => $this->uri->segment(3)), 'id_pembelian_detail', 'DESC');
+	// 		$data['barang'] = $this->Model_app->view_ordering('rb_produk', 'id_produk', 'ASC');
+	// 		$data['supplier'] = $this->Model_app->view_ordering('rb_supplier', 'id_supplier', 'ASC');
+	// 		if ($this->uri->segment(4) != '') {
 
-				$data['row'] = $this->Model_app->view_where('rb_pembelian_detail', array('id_pembelian_detail' => $this->uri->segment(4)))->row_array();
-			}
-			$data['title'] = "Edit Pembelian";
-			$data['identitas_web'] = $this->Model_main->identitas()->row_array();
-			$this->template->load('administrator/template', 'administrator/mod_pembelian/view_pembelian_edit', $data);
-		}
-	}
+	// 			$data['row'] = $this->Model_app->view_where('rb_pembelian_detail', array('id_pembelian_detail' => $this->uri->segment(4)))->row_array();
+	// 		}
+	// 		$data['title'] = "Edit Pembelian";
+	// 		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+	// 		$this->template->load('administrator/template', 'administrator/mod_pembelian/view_pembelian_edit', $data);
+	// 	}
+	// }
 
-	function delete_pembelian()
-	{
-		cek_session_akses('pembelian', $this->session->id_session);
-		$id = array('id_pembelian' => $this->uri->segment(3));
-		$this->Model_app->delete('rb_pembelian', $id);
-		$this->Model_app->delete('rb_pembelian_detail', $id);
-		redirect('administrator/pembelian');
-	}
+	// function delete_pembelian()
+	// {
+	// 	cek_session_akses('pembelian', $this->session->id_session);
+	// 	$id = array('id_pembelian' => $this->uri->segment(3));
+	// 	$this->Model_app->delete('rb_pembelian', $id);
+	// 	$this->Model_app->delete('rb_pembelian_detail', $id);
+	// 	redirect('administrator/pembelian');
+	// }
 
-	function delete_pembelian_detail()
-	{
-		cek_session_akses('pembelian', $this->session->id_session);
-		$id = array('id_pembelian_detail' => $this->uri->segment(4));
-		$this->Model_app->delete('rb_pembelian_detail', $id);
-		redirect('administrator/edit_pembelian/' . $this->uri->segment(3));
-	}
+	// function delete_pembelian_detail()
+	// {
+	// 	cek_session_akses('pembelian', $this->session->id_session);
+	// 	$id = array('id_pembelian_detail' => $this->uri->segment(4));
+	// 	$this->Model_app->delete('rb_pembelian_detail', $id);
+	// 	redirect('administrator/edit_pembelian/' . $this->uri->segment(3));
+	// }
 
 	function delete_pembelian_tambah_detail()
 	{
