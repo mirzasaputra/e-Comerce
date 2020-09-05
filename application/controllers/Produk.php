@@ -104,7 +104,9 @@ class Produk extends CI_Controller
 						'harga_jual' => $harga['harga_konsumen'],
 						'satuan' => $harga['satuan'],
 						'keterangan_order' => $keterangan,
-						'waktu_order' => date('Y-m-d H:i:s')
+						'waktu_order' => date('Y-m-d H:i:s'),
+						'diskon'	=> $this->input->post('diskonnilai'),
+						'subtotal'	=> $harga['harga_konsumen'] * $jumlah - $this->input->post('diskonnilai')
 					);
 					$this->Model_app->insert('rb_penjualan_temp', $data);
 				}
@@ -162,7 +164,8 @@ class Produk extends CI_Controller
 					'service' => $this->input->post('service'),
 					'ongkir' => $this->input->post('ongkir'),
 					'waktu_transaksi' => date('Y-m-d H:i:s'),
-					'proses' => '0'
+					'proses' => '0',
+					'online_order'	=> 'Y'
 				);
 				$this->Model_app->insert('rb_penjualan', $data);
 				$idp = $this->db->insert_id();
@@ -175,7 +178,10 @@ class Produk extends CI_Controller
 						'jumlah' => $row['jumlah'],
 						'keterangan_order' => $row['keterangan_order'],
 						'harga_jual' => $row['harga_jual'],
-						'satuan' => $row['satuan']
+						'satuan' => $row['satuan'],
+						'diskon' => $row['diskon'],
+						'subtotal' => $row['subtotal'],
+
 					);
 					$this->Model_app->insert('rb_penjualan_detail', $dataa);
 				}
