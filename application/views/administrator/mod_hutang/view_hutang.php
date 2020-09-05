@@ -40,7 +40,7 @@
                                 <td>
 
                                     <?php if ($row['status'] == 'Lunas') { ?>
-                                        <a href="#" onclick="detailPay('<?php echo $row['id_hutang'] ?>')" class="btn btn-primary btn-xs"><i class="fa fa-search-plus"></i> Detail Pembayaran</a>
+                                        <a onclick="detailPay('<?php echo $row['id_hutang'] ?>')" class="btn btn-primary btn-xs"><i class="fa fa-search-plus"></i> Detail Pembayaran</a>
                                     <?php } else { ?>
                                         <a href="<?php echo base_url('administrator/pembayaran_hutang/' . $row['id_hutang']) ?>" class="btn btn-success btn-xs"><i class="fa fa-check"></i> Payment</a>
                                     <?php } ?>
