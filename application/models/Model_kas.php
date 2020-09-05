@@ -13,7 +13,7 @@ class Model_kas extends CI_model
 
     public function addKas()
     {
-        $users = $this->model_users->users_edit($this->session->username)->row_array();
+        $users = $this->db->get_where('users', ['username' => $this->session->username])->row_array();
         $data = array(
             'id_user'        => $users['id_users'],
             'nominal'        => htmlspecialchars($this->input->post('nominal'), true),
