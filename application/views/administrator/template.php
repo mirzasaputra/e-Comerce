@@ -23,6 +23,11 @@
   <link href="<?php echo base_url(); ?>asset/css/bootstrap-combobox.css" media="screen" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<?php echo base_url('asset/admin/plugins/select2/select2.css'); ?>" type="text/css" />
   <link rel="stylesheet" href="<?php echo base_url('asset/admin/plugins/icomoon/styles.css'); ?>" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/admin/plugins/'); ?>sweetalert2/dist/sweetalert2.min.css" />
+  <script src="<?php echo base_url('asset/admin/plugins/') ?>sweetalert2/dist/sweetalert2.min.js"></script>
+  <script>
+    var base_url = "<?php echo base_url(); ?>";
+  </script>
   <style type="text/css">
     .files {
       position: absolute;
