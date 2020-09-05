@@ -101,6 +101,11 @@
               <a href="#"><i class="fa fa-shopping-cart"></i> <span>Transaksi</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <?php
+                $cek = $this->Model_app->umenu_akses("penjualan", $this->session->id_session);
+                if ($cek == 1 or $this->session->level == 'admin') {
+                  echo "<li><a href='" . base_url() . "administrator/penjualan'><i class='fa fa-circle-o'></i> Penjualan </a></li>";
+                }
+
                 $cek = $this->Model_app->umenu_akses("pembelian", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
                   echo "<li><a href='" . base_url() . "administrator/pembelian'><i class='fa fa-circle-o'></i> Pembelian </a></li>";
