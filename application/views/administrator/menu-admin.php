@@ -106,6 +106,10 @@
                   echo "<li><a href='" . base_url() . "administrator/pembelian'><i class='fa fa-circle-o'></i> Pembelian </a></li>";
                 }
 
+                $cek = $this->Model_app->umenu_akses("hutang", $this->session->id_session);
+                if ($cek == 1 or $this->session->level == 'admin') {
+                  echo "<li><a href='" . base_url() . "administrator/hutang'><i class='fa fa-circle-o'></i> Hutang </a></li>";
+                }
                 ?>
               </ul>
             </li>
