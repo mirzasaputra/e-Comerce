@@ -12,7 +12,7 @@
                         <th>Kode Pembelian</th>
                         <th>Supplier</th>
                         <th>Waktu Pembelian</th>
-                        <th>Metode Pembayaran</th>
+                        <th>Pembayaran</th>
                         <th>Total</th>
                         <th>Tunai</th>
                         <th style='width:120px'>Action</th>
