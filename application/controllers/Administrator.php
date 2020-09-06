@@ -993,7 +993,7 @@ class Administrator extends CI_Controller
 	function konsumen()
 	{
 		cek_session_akses('konsumen', $this->session->id_session);
-		$data['record'] = $this->Model_app->view_ordering('rb_konsumen', 'id_konsumen', 'DESC');
+		$data['record'] = $this->db->query('SELECT * FROM rb_konsumen WHERE kota_id != "Umum"')->result_array();
 		$data['title'] = "Konsumen";
 		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
 		$this->template->load('administrator/template', 'administrator/mod_konsumen/view_konsumen', $data);
@@ -1676,6 +1676,50 @@ class Administrator extends CI_Controller
 		$data['title'] = "Data Penjualan";
 		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
 		$this->template->load('administrator/template', 'administrator/mod_penjualan/view_penjualan', $data);
+	}
+
+	public function tambah_penjualan()
+	{
+		cek_session_akses('penjualan', $this->session->id_session);
+		$data['konsumen'] = $this->db->query('SELECT * FROM rb_konsumen WHERE kota_id != "Umum"')->result_array();
+		$data['produk'] = $this->Model_app->view_ordering('rb_produk', 'id_produk', 'DESC');
+		$data['title'] = "Entry Penjualan";
+		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+		$this->template->load('administrator/template', 'administrator/mod_penjualan/view_penjualan_tambah', $data);
+	}
+
+	public function detail_produk($id = '')
+	{
+		$data = $this->db->get_where('rb_produk', ['id_produk' => $id])->row_array();
+		echo json_encode($data);
+	}
+
+	public function detail_customer($id = '')
+	{
+		$data = $this->db->get_where('rb_konsumen', ['id_konsumen' => $id])->row_array();
+		echo json_encode($data);
+	}
+
+	public function addItemJual()
+	{
+		$this->Model_penjualan->addItemJual();
+	}
+
+	public function load_item_jual()
+	{
+		$this->Model_penjualan->loadItemJual();
+	}
+	public function del_item_jual($id = '')
+	{
+		$this->Model_penjualan->deleteItemJual($id);
+	}
+	public function detail_item_jual($id = '')
+	{
+		$this->Model_penjualan->detailItemJual($id);
+	}
+	public function edit_detail_penjualan($id = '')
+	{
+		$this->Model_penjualan->editDetailPenjualan($id);
 	}
 
 

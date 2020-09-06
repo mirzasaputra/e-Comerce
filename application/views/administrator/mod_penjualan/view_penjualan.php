@@ -1,8 +1,8 @@
 <div class="col-xs-12">
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Data Transaksi Pembelian</h3>
-            <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>administrator/tambah_pembelian'><i class="fa fa-shopping-cart"></i> Tambah Pembelian</a>
+            <h3 class="box-title">Data Transaksi Penjualan</h3>
+            <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>administrator/tambah_penjualan'><i class="fa fa-shopping-cart"></i> Tambah Penjualan</a>
         </div><!-- /.box-header -->
         <div class="box-body">
             <table id="example1" class="table table-bordered table-striped">

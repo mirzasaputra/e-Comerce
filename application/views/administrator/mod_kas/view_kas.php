@@ -43,7 +43,7 @@
 
                 </tbody>
                 <tfoot>
-                    </tr>
+
                     <tr class='success'>
                         <td colspan='4'><b>Total Kas Saat Ini </b></td>
                         <td colspan="3"><b>Rp <?php echo rupiah($total_kas) ?></b></td>

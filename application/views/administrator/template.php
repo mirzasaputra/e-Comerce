@@ -164,6 +164,8 @@
     $(function() {
       $('.jatuh-tempo').hide();
       $('.select2').select2();
+      $('.customer-form').hide();
+      $('#customer-check').attr('checked', 'checked');
       $("#example1").DataTable();
       $("#example11").DataTable();
       $('#example2').DataTable({
