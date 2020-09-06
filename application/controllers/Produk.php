@@ -165,7 +165,6 @@ class Produk extends CI_Controller
 					'ongkir' => $this->input->post('ongkir'),
 					'waktu_transaksi' => date('Y-m-d H:i:s'),
 					'proses' => '0',
-					'online_order'	=> 'Y'
 				);
 				$this->Model_app->insert('rb_penjualan', $data);
 				$idp = $this->db->insert_id();
