@@ -1015,6 +1015,22 @@ class Administrator extends CI_Controller
 		}
 	}
 
+	public function add_konsumen()
+	{
+		cek_session_akses('konsumen', $this->session->id_session);
+		$id = $this->uri->segment(3);
+		if (isset($_POST['submit'])) {
+			$this->Model_members->add_konsumen();
+			redirect('administrator/konsumen');
+		} else {
+			$data['row'] = $this->Model_app->profile_konsumen($id)->row_array();
+			$data['kota'] = $this->Model_app->view('rb_kota');
+			$data['title'] = "Tambah Konsumen Baru";
+			$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+			$this->template->load('administrator/template', 'administrator/mod_konsumen/view_konsumen_tambah', $data);
+		}
+	}
+
 	function detail_konsumen()
 	{
 		cek_session_akses('konsumen', $this->session->id_session);

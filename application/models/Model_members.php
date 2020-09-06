@@ -98,4 +98,39 @@ class Model_members extends CI_model
         $this->db->where('id_konsumen', $id);
         $this->db->update('rb_konsumen', $datadbd);
     }
+
+    public function add_konsumen()
+    {
+        if (trim($this->input->post('a')) != '') {
+            $datadbd = array(
+                'username' => $this->db->escape_str(strip_tags($this->input->post('aa'))),
+                'password' => hash("sha512", md5($this->input->post('a'))),
+                'nama_lengkap' => $this->db->escape_str(strip_tags($this->input->post('b'))),
+                'email' => $this->db->escape_str(strip_tags($this->input->post('c'))),
+                'jenis_kelamin' => $this->db->escape_str($this->input->post('d')),
+                'tanggal_lahir' => $this->db->escape_str($this->input->post('e')),
+                'tempat_lahir' => $this->db->escape_str(strip_tags($this->input->post('f'))),
+                'alamat_lengkap' => $this->db->escape_str(strip_tags($this->input->post('g'))),
+                'kota_id' => $this->db->escape_str(strip_tags($this->input->post('j'))),
+                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('l'))),
+                'tanggal_daftar' => date('Y-m-d H:i:s'),
+                'tipe' => $this->db->escape_str(strip_tags($this->input->post('tipe')))
+            );
+        } else {
+            $datadbd = array(
+                'username' => $this->db->escape_str(strip_tags($this->input->post('aa'))),
+                'nama_lengkap' => $this->db->escape_str(strip_tags($this->input->post('b'))),
+                'email' => $this->db->escape_str(strip_tags($this->input->post('c'))),
+                'jenis_kelamin' => $this->db->escape_str($this->input->post('d')),
+                'tanggal_lahir' => $this->db->escape_str($this->input->post('e')),
+                'tempat_lahir' => $this->db->escape_str(strip_tags($this->input->post('f'))),
+                'alamat_lengkap' => $this->db->escape_str(strip_tags($this->input->post('g'))),
+                'kota_id' => $this->db->escape_str(strip_tags($this->input->post('j'))),
+                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('l'))),
+                'tanggal_daftar' => date('Y-m-d H:i:s'),
+                'tipe' => $this->db->escape_str(strip_tags($this->input->post('tipe')))
+            );
+        }
+        $this->db->insert('rb_konsumen', $datadbd);
+    }
 }
