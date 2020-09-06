@@ -1651,6 +1651,18 @@ class Administrator extends CI_Controller
 	}
 
 
+	// Modul Penjualan
+
+	public function penjualan()
+	{
+		cek_session_akses('hutang', $this->session->id_session);
+		$data['record'] = $this->Model_penjualan->getAllData();
+		$data['title'] = "Data Penjualan";
+		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+		$this->template->load('administrator/template', 'administrator/mod_penjualan/view_penjualan', $data);
+	}
+
+
 	function orders()
 	{
 		cek_session_akses('konsumen', $this->session->id_session);
