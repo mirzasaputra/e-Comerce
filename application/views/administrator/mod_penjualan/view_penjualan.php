@@ -8,7 +8,7 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th style='width:40px'>No</th>
+                        <th>No</th>
                         <th>Kode Transaksi</th>
                         <th>Kasir</th>
                         <th>Customer</th>
@@ -17,33 +17,67 @@
                         <th>Qty</th>
                         <th>Total</th>
                         <th>Waktu</th>
-                        <th style='width:120px'>Action</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $no = 1;
-                    foreach ($record as $row) {
+                    foreach ($record as $row) { ?>
 
-                        echo "<tr><td>$no</td>
-                              <td>$row[kode_transaksi]</td>
-                              <td>$row[nama_lengkap]</td>
-                              <td>$row[customer]</td>
-                              <td style='color:red;'>Rp " . rupiah($row['diskon']) . "</td>
-                              <td>$row[method]</td>
-                              <td>$row[qty]</td>
-                              <td style='color:green;'>Rp " . rupiah($row['total']) . "</td>
-                              <td>$row[waktu_transaksi]</td>
-                              <td><center>
-                                <a class='btn btn-success btn-xs' title='Detail Data' href='" . base_url() . "administrator/detail_penjualan/$row[id_penjualan]'><span class='glyphicon glyphicon-search'></span> Detail</a>
-                                <a class='btn btn-info btn-xs' title='Print Data' href='" . base_url() . "administrator/print_struk/$row[id_penjualan]'><span class='glyphicon glyphicon-print'></span> Print</a>
-                              </center></td>
-                          </tr>";
-                        $no++;
-                    }
-                    ?>
+                        <tr>
+                            <td><?php echo $no++ ?></td>
+                            <td><?php echo $row['kode_transaksi'] ?></td>
+                            <td><?php echo $row['nama_lengkap'] ?></td>
+                            <td><?php echo $row['customer'] ?></td>
+                            <td style='color:red;'>Rp <?php echo rupiah($row['diskon']) ?></td>
+                            <td><?php echo $row['method'] ?></td>
+                            <td><?php echo $row['qty'] ?></td>
+                            <td style='color:green;'>Rp <?php echo rupiah($row['total']) ?></td>
+                            <td><?php echo $row['waktu_transaksi'] ?></td>
+                            <td>
+                                <a class='btn btn-success btn-xs' title='Detail Data' onclick="detailPenjualan('<?php echo $row['id_penjualan'] ?>')"><span class='glyphicon glyphicon-search'></span> Detail</a>
+                                <a class='btn btn-info btn-xs' title='Print Data' href="<?php echo base_url('administrator/invoice/') . $row['id_penjualan'] ?> "><span class='glyphicon glyphicon-print'></span> Print</a>
+
+                            </td>
+                        </tr>
+
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+<!-- Modal detail Penjulan -->
+<div class="modal fade" id="detailPenjualanModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Detail Penjualan</h4>
+            </div>
+            <div class="modal-body">
+                <table width="100%" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nama Produk</th>
+                            <th>Harga</th>
+                            <th>Qty</th>
+                            <th>Diskon</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detail_penjualan">
+                    </tbody>
+                </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include 'script.php' ?>

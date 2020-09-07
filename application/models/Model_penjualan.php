@@ -5,7 +5,7 @@ class Model_penjualan extends CI_model
 
     public function getAllData()
     {
-        $query = "SELECT a.id_penjualan, a.kode_transaksi, c.nama_lengkap, d.nama_lengkap AS customer, a.diskon, a.method, SUM(b.jumlah) AS qty, SUM(b.subtotal) AS total, a.waktu_transaksi FROM rb_penjualan a, rb_penjualan_detail b, users c, rb_konsumen d WHERE a.id_pembeli = d.id_konsumen AND c.id_users = a.id_user AND a.id_penjualan = b.id_penjualan AND a.online_order = 'N' AND a.proses = 3 GROUP BY a.id_penjualan";
+        $query = "SELECT a.id_penjualan, a.kode_transaksi, a.bayar, c.nama_lengkap, d.nama_lengkap AS customer, a.diskon, a.method, SUM(b.jumlah) AS qty, SUM(b.subtotal) AS total, a.waktu_transaksi FROM rb_penjualan a, rb_penjualan_detail b, users c, rb_konsumen d WHERE a.id_pembeli = d.id_konsumen AND c.id_users = a.id_user AND a.id_penjualan = b.id_penjualan AND a.online_order = 'N' AND a.proses = 3 GROUP BY a.id_penjualan";
         return $this->db->query($query)->result_array();
     }
 
@@ -173,5 +173,13 @@ class Model_penjualan extends CI_model
             );
             $this->db->insert('piutang', $piutang);
         }
+    }
+
+    public function detailPenjualan($id)
+    {
+        $query = "SELECT c.nama_produk, a.harga_jual, a.jumlah, a.diskon, a.subtotal 
+        FROM rb_penjualan_detail a, rb_penjualan b, rb_produk c WHERE b.id_penjualan = a.id_penjualan AND c.id_produk = a.id_produk AND  a.id_penjualan = '$id'";
+        $data = $this->db->query($query)->result_array();
+        echo json_encode($data);
     }
 }

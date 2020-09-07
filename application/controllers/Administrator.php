@@ -1688,6 +1688,11 @@ class Administrator extends CI_Controller
 		$this->template->load('administrator/template', 'administrator/mod_penjualan/view_penjualan_tambah', $data);
 	}
 
+	public function detail_penjualan($id = '')
+	{
+		$this->Model_penjualan->detailPenjualan($id);
+	}
+
 	public function detail_produk($id = '')
 	{
 		$data = $this->db->get_where('rb_produk', ['id_produk' => $id])->row_array();
@@ -1729,7 +1734,7 @@ class Administrator extends CI_Controller
 	public function simpan_penjualan()
 	{
 		$this->Model_penjualan->simpanPenjualan();
-		redirect('administrator/invoice');
+		redirect('administrator/penjualan');
 	}
 	public function invoice()
 	{
