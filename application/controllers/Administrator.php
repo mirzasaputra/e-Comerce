@@ -1721,6 +1721,20 @@ class Administrator extends CI_Controller
 	{
 		$this->Model_penjualan->editDetailPenjualan($id);
 	}
+	public function data_checkout()
+	{
+		$this->Model_penjualan->dataCheckout();
+	}
+
+	public function simpan_penjualan()
+	{
+		$this->Model_penjualan->simpanPenjualan();
+		redirect('administrator/invoice');
+	}
+	public function invoice()
+	{
+		$this->load->view('administrator/mod_penjualan/view_Struk');
+	}
 
 
 	function orders()

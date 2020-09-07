@@ -15,7 +15,7 @@
                     </div>
                     <div class="form-group customer-form">
                         <label>Customer</label>
-                        <select name="customer" id="customer" class="form-control select2" data-placeholder="Pilih Customer" id="">
+                        <select name="customer" id="customer" onchange="selectPembeli()" class="form-control select2" data-placeholder="Pilih Customer" id="">
                             <?php foreach ($konsumen as $customer) { ?>
                                 <option value="<?php echo $customer['id_konsumen'] ?>"><?php echo $customer['nama_lengkap'] ?></option>
                             <?php } ?>
@@ -31,6 +31,7 @@
                         </select>
                         <input type="hidden" name="satuan" id="satuan" class="form-control">
                         <input type="hidden" name="stok" id="stok" class="form-control">
+                        <input type="hidden" name="id_pembeli" id="id_pembeli" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Harga</label>

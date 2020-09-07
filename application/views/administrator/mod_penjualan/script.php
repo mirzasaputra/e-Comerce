@@ -7,10 +7,17 @@
         }
     });
 
+    function selectPembeli() {
+
+        const pembeli = $('#customer').val();
+        $('#id_pembeli').val(pembeli);
+    }
+
     function customerCheck() {
         var check = document.getElementById('customer-check');
         if (check.checked == true) {
             $('.customer-form').hide();
+            $('#id_pembeli').val('');
         } else if (check.checked == false) {
             $('.customer-form').show();
         }
@@ -216,29 +223,52 @@
                 subtotal.val(total);
             }
         })
+
+        var grand = $('#grandtotal');
+        var bayar = $('#bayar');
+        bayar.keyup(function() {
+            var byr = document.getElementById('bayar').value;
+            if (byr == null) {
+                var nilai = 0;
+                byr = nilai;
+            } else {
+                var hasil = bayar.val() - grand.val();
+                $('#kembali').val(hasil);
+            }
+        })
     })
 
     function checkoutPenjualan() {
-        // var cs = $('#customer').val();
-        // var user = $('#idoperator').val();
-        // $('#cus').val(cs);
-        // $('#kasir').val(user);
-        // $.ajax({
-        //     url: base_url + "penjualan/hargatotal",
-        //     type: "post",
-        //     success: function(data) {
-        //         var obj = JSON.parse(data);
-        //         var ppn = obj.subtotal * 10 / 100;
-        //         var hargaAkhir = ppn + Number(obj.subtotal);
-        //         $('#diskon1').val(obj.diskon);
-        //         $('#subtot').html(obj.subtotal);
-        //         $('#subtotal').val(obj.subtotal);
-        //         $('#grandtotal').val(obj.subtotal);
-        //         // $('#nominal_ppn').val(ppn);
-        //         $('#nominal').val(obj.subtotal);
+        const table = document.getElementById('data-item-jual').rows.length;
+        if (table == 0) {
+            Swal.fire({
+                title: "Oops!",
+                text: "Silakan Pilih Produk Terlebih Dahulu!",
+                icon: "error",
+            });
+        } else {
+            const pembeli = $('#id_pembeli').val();
+            if (pembeli == '') {
+                $('#kredit').attr('disabled', 'disabled');
+            } else {
+                $('#kredit').removeAttr('disabled');
 
-        //     }
-        // });
-        $('#pembayaranModal').modal('show');
+            }
+            $.ajax({
+                url: base_url + "administrator/data_checkout",
+                type: "post",
+                dataType: "json",
+                success: function(data) {
+                    $('#diskon1').val(data.diskon);
+                    $('#subtot').html(data.subtotal);
+                    $('#subtotal').val(data.subtotal);
+                    $('#grandtotal').val(data.total);
+                    $('#nominal').val(data.total);
+                    $('#idpembeli').val(pembeli);
+
+                }
+            });
+            $('#pembayaranModal').modal('show');
+        }
     }
 </script>

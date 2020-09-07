@@ -104,4 +104,74 @@ class Model_penjualan extends CI_model
         $data = $this->db->query($subtotal)->row_array();
         echo json_encode($data);
     }
+
+    public function dataCheckout()
+    {
+        $query = "SELECT (SUM(subtotal) + SUM(diskon)) AS subtotal, SUM(diskon) AS diskon, SUM(subtotal) AS  total FROM rb_penjualan_detail  WHERE id_penjualan IS NULL";
+        $data = $this->db->query($query)->row_array();
+        echo json_encode($data);
+    }
+
+    public function simpanPenjualan()
+    {
+        $user = $this->db->get_where('users', ['username' => $this->session->username])->row_array();
+        $invoice = 'TRX-' . date('YmdHis');
+        $kembalian = $this->input->post('kembali');
+        $bayar = $this->input->post('bayar');
+        $metode = $this->input->post('metode');
+        $customer = $this->input->post('idpembeli');
+        $umum = $this->db->get_where('rb_konsumen', ['kota_id' => 'Umum'])->row_array();
+        if ($customer == '') {
+            $id_pembeli = $umum['id_konsumen'];
+        } else {
+            $id_pembeli = $customer;
+        }
+
+        if ($kembalian < 0) {
+            $kembalian = 0;
+        }
+
+        $data = array(
+            'kode_transaksi'      => $invoice,
+            'id_pembeli'          => $id_pembeli,
+            'diskon'              => $this->input->post('diskon1'),
+            'waktu_transaksi'     => date('Y-m-d H:i:s'),
+            'proses'              => 3,
+            'method'              => $metode,
+            'bayar'               => $bayar,
+            'kembali'             => $kembalian,
+            'id_user'             => $user['id_users'],
+            'online_order'        => 'N',
+
+        );
+        $this->db->insert('rb_penjualan', $data);
+        $nominal = $bayar - $kembalian;
+        $kas = array(
+            'id_user'        => $user['id_users'],
+            'nominal'        => $nominal,
+            'jenis'          => 'Pemasukan',
+            'keterangan'     => 'Penjualan Point Of Sales (Offline)',
+            'created_at'     => date('Y-m-d H:i:s')
+        );
+
+        $this->db->insert('kas', $kas);
+
+        $id = implode($this->db->query('select max(id_penjualan) as id_jual from rb_penjualan')->row_array());
+        $this->db->query("update rb_penjualan_detail set id_penjualan = '$id' where id_penjualan is null");
+        $kembali = $this->input->post('kembali');
+
+        if ($kembali < 0 || $metode == "Kredit") {
+            $jml_piutang = abs($kembali);
+            $piutang = array(
+                'id_jual'        => $id,
+                'tgl_piutang'    => date('Y-m-d H:i:s'),
+                'jml_piutang'    => $jml_piutang,
+                'bayar'          => 0,
+                'sisa'           => $jml_piutang,
+                'status'         => 'Belum Lunas',
+                'jatuh_tempo'    => $this->input->post('tempo')
+            );
+            $this->db->insert('piutang', $piutang);
+        }
+    }
 }
