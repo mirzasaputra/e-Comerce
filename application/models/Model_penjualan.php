@@ -32,7 +32,7 @@ class Model_penjualan extends CI_model
         $update = "update rb_produk set stok = '$hasil' where id_produk = '$id_produk'";
         $this->db->query($update);
 
-        $sql = "SELECT sum(subtotal) as subtotal FROM rb_penjualan_detail WHERE id_penjualan IS NULL";
+        $sql = "SELECT (SUM(subtotal) + SUM(diskon)) AS subtotal, SUM(diskon) AS diskon, SUM(subtotal) AS  total FROM rb_penjualan_detail  WHERE id_penjualan IS NULL";
         $data = $this->db->query($sql)->row_array();
         echo json_encode($data);
     }
@@ -61,7 +61,7 @@ class Model_penjualan extends CI_model
         $sql = "delete from rb_penjualan_detail where id_penjualan_detail = '$id'";
         $this->db->query($sql);
 
-        $subtotal = "SELECT sum(subtotal) as subtotal FROM rb_penjualan_detail WHERE id_penjualan IS NULL";
+        $subtotal = "SELECT (SUM(subtotal) + SUM(diskon)) AS subtotal, SUM(diskon) AS diskon, SUM(subtotal) AS  total FROM rb_penjualan_detail  WHERE id_penjualan IS NULL";
         $data = $this->db->query($subtotal)->row_array();
         echo json_encode($data);
     }
@@ -100,7 +100,7 @@ class Model_penjualan extends CI_model
         );
         $this->db->set($data)->where('id_penjualan_detail', $id)->update('rb_penjualan_detail');
 
-        $subtotal = "SELECT sum(subtotal) as subtotal FROM rb_penjualan_detail WHERE id_penjualan IS NULL";
+        $subtotal = "SELECT (SUM(subtotal) + SUM(diskon)) AS subtotal, SUM(diskon) AS diskon, SUM(subtotal) AS  total FROM rb_penjualan_detail  WHERE id_penjualan IS NULL";
         $data = $this->db->query($subtotal)->row_array();
         echo json_encode($data);
     }

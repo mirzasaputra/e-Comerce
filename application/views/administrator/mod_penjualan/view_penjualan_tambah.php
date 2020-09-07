@@ -71,6 +71,14 @@
                     <tfoot>
 
                         <tr class='success'>
+                            <td colspan='4'><b>Subtotal </b></td>
+                            <td colspan="2"><b>Rp <b id="sub-total">0</b></b></td>
+                        </tr>
+                        <tr class='success'>
+                            <td colspan='4'><b>Diskon Total</b></td>
+                            <td colspan="2"><b>Rp <b id="diskon-total">0</b></b></td>
+                        </tr>
+                        <tr class='success'>
                             <td colspan='4'><b>Grand Total </b></td>
                             <td colspan="2"><b>Rp <b id="grand-total">0</b></b></td>
                         </tr>

@@ -102,7 +102,8 @@
                         data: data,
                         success: function(data) {
                             var obj = JSON.parse(data);
-                            $('#grand-total').html(obj.subtotal);
+                            $('#grand-total').html(obj.total);
+                            $('#sub-total').html(obj.subtotal);
                             loadItemBeli();
                         }
                     });
@@ -149,10 +150,14 @@
                     success: function(data) {
                         loadItemBeli();
                         var obj = JSON.parse(data);
-                        if (obj.subtotal != null) {
-                            $('#grand-total').text(obj.subtotal);
+                        if (obj.subtotal != null || obj.total != 0 || obj.diskon != 0) {
+                            $('#grand-total').text(obj.total);
+                            $('#sub-total').text(obj.subtotal);
+                            $('#diskon-total').text(obj.diskon);
                         } else {
                             $('#grand-total').text(0);
+                            $('#sub-total').text(0);
+                            $('#diskon-total').text(0);
                         }
                     }
                 })
@@ -189,10 +194,14 @@
             dataType: "json",
             success: function(data) {
                 loadItemBeli();
-                if (data.subtotal != null) {
-                    $('#grand-total').text(data.subtotal);
+                if (data.subtotal != null || data.total != 0 || data.diskon != 0) {
+                    $('#grand-total').text(data.total);
+                    $('#sub-total').text(data.subtotal);
+                    $('#diskon-total').text(data.diskon);
                 } else {
                     $('#grand-total').text(0);
+                    $('#sub-total').text(0);
+                    $('#diskon-total').text(0);
                 }
 
             }
