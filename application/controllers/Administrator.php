@@ -1671,7 +1671,7 @@ class Administrator extends CI_Controller
 
 	public function penjualan()
 	{
-		cek_session_akses('hutang', $this->session->id_session);
+		cek_session_akses('penjualan', $this->session->id_session);
 		$data['record'] = $this->Model_penjualan->getAllData();
 		$data['title'] = "Data Penjualan";
 		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
@@ -1734,6 +1734,47 @@ class Administrator extends CI_Controller
 	public function invoice()
 	{
 		$this->load->view('administrator/mod_penjualan/view_Struk');
+	}
+
+
+	// Modul Piutang
+
+	public function piutang()
+	{
+		cek_session_akses('piutang', $this->session->id_session);
+		$data['record'] = $this->Model_piutang->getAllData();
+		$data['title'] = "Data Piutang";
+		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+		$this->template->load('administrator/template', 'administrator/mod_piutang/view_piutang', $data);
+	}
+
+
+
+	public function pembayaran_piutang()
+	{
+		cek_session_akses('hutang', $this->session->id_session);
+		$id = $this->uri->segment(3);
+		if (isset($_POST['submit'])) {
+			$this->Model_piutang->addPayment();
+			redirect('administrator/pembayaran_piutang/' . $this->input->post('id_piutang'));
+		} else {
+			$data['record'] = $this->Model_piutang->detailHutang($id);
+			$data['title'] = "Pembayaran Piutang";
+			$data['detail'] = $this->Model_piutang->detailPembayaran($id);
+			$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+			$this->template->load('administrator/template', 'administrator/mod_piutang/view_payment_piutang', $data);
+		}
+	}
+
+	public function delete_detail_piutang($id = '')
+	{
+		$this->Model_piutang->deleteDetailPembayaran($id);
+	}
+
+	public function detail_payment_piutang($id = '')
+	{
+		$data = $this->Model_piutang->getDetail($id);
+		echo json_encode($data);
 	}
 
 
