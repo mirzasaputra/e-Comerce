@@ -171,7 +171,7 @@ class Model_app extends CI_model
 
     function orders_report_home($limit)
     {
-        return $this->db->query("SELECT * FROM `rb_penjualan` a ORDER BY a.id_penjualan DESC LIMIT $limit");
+        return $this->db->query("SELECT * FROM `rb_penjualan` a WHERE online_order = 'Y' ORDER BY a.id_penjualan DESC LIMIT $limit");
     }
 
     function profile_konsumen($id)
