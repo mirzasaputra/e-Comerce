@@ -1,11 +1,12 @@
-<?php
-echo "<div class='jumbotron'>
-          <div class='slider-wrapper theme-default'>
-            <div id='slider' class='nivoSlider'>";
-$slider = $this->Model_main->slide();
-foreach ($slider->result_array() as $row) {
-      echo "<img class='img-thumbnail' width='100%' src='" . base_url() . "asset/foto_slide/" . $row['gambar'] . "' title='" . $row['keterangan'] . "'>";
-}
-echo "</div>
-          </div>
-      </div>";
+<section class="hero-slider">
+      <div class="owl-carousel owl-theme slider1">
+            <?php
+            $slider = $this->Model_main->slide();
+            foreach ($slider->result_array() as $row) :
+            ?>
+                  <div class="item w-100">
+                        <img src="<?=base_url();?>asset/foto_slide/<?=$row['gambar'];?>" alt="">
+                  </div>
+            <?php endforeach;?>
+      </div>
+</section>

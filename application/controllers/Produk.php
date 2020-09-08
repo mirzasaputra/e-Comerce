@@ -8,7 +8,7 @@ class Produk extends CI_Controller
 		$jumlah = $this->Model_app->view('rb_produk')->num_rows();
 		$config['base_url'] = base_url() . 'produk/index';
 		$config['total_rows'] = $jumlah;
-		$config['per_page'] = 12;
+		$config['per_page'] = 8;
 		if ($this->uri->segment('3') == '') {
 			$dari = 0;
 		} else {
@@ -25,6 +25,7 @@ class Produk extends CI_Controller
 				$data['title'] = title();
 				$data['judul'] = 'Semua Produk';
 				$data['record'] = $this->Model_app->view_ordering_limit('rb_produk', 'id_produk', 'DESC', $dari, $config['per_page']);
+				$data['berita'] = $this->Model_berita->berita();
 				$this->pagination->initialize($config);
 			}
 			$this->template->load('phpmu-one/template', 'phpmu-one/view_home', $data);
