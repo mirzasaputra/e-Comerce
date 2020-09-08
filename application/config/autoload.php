@@ -152,5 +152,6 @@ $autoload['model'] = array(
     'Model_stok_opname',
     'Model_hutang',
     'Model_penjualan',
-    'Model_piutang'
+    'Model_piutang',
+    'Model_retur_penjualan'
 );
