@@ -1783,6 +1783,57 @@ class Administrator extends CI_Controller
 	}
 
 
+	// Modul Retur Penjualan
+
+	public function retur_penjualan()
+	{
+		cek_session_akses('retur_penjualan', $this->session->id_session);
+		$data['record'] = $this->Model_retur_penjualan->getAllData();
+		$data['title'] = "Data Retur Penjualan";
+		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+		$this->template->load('administrator/template', 'administrator/mod_retur_penjualan/view_retur_penjualan', $data);
+	}
+
+	public function tambah_retur_penjualan()
+	{
+		cek_session_akses('retur_penjualan', $this->session->id_session);
+		$data['title'] = "Entry Retur Penjualan";
+		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+		$this->template->load('administrator/template', 'administrator/mod_retur_penjualan/view_add_retur_penjualan', $data);
+	}
+
+	public function search_general_penjualan($kode = '')
+	{
+		$data = $this->Model_retur_penjualan->search_general_penjualan($kode);
+		echo json_encode($data);
+	}
+
+	public function produk_detail_akan_retur($kode = '')
+	{
+		$data = $this->Model_retur_penjualan->produk_detail_akan_retur($kode);
+		echo json_encode($data);
+	}
+	public function select_produk_retur($kode = '')
+	{
+		$data = $this->Model_retur_penjualan->select_produk_retur($kode);
+		echo json_encode($data);
+	}
+	public function tambah_detail_retur()
+	{
+		$data = $this->Model_retur_penjualan->tambah_detail_retur();
+	}
+	public function load_detail_retur()
+	{
+		$data = $this->Model_retur_penjualan->load_detail_retur();
+		echo json_encode($data);
+	}
+	public function get_total_retur()
+	{
+		$data = $this->db->query("SELECT SUM(total_retur) AS total_retur FROM retur_penjualan_detail WHERE id_retur_penjualan IS NULL")->row_array();
+		echo json_encode($data);
+	}
+
+
 	function orders()
 	{
 		cek_session_akses('konsumen', $this->session->id_session);
