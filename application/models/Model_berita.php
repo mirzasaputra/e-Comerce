@@ -227,4 +227,12 @@ class Model_berita extends CI_model{
     function list_berita_delete($id){
         return $this->db->query("DELETE FROM berita where id_berita='$id'");
     }
+
+    function berita(){
+        $this->db->select('*');
+        $this->db->from('berita');
+        $this->db->order_by('tanggal', 'DESC');
+        $this->db->limit(3);
+        return $this->db->get();
+    }
 }

@@ -1,7 +1,7 @@
 <?php 
 class Model_iklan extends CI_model{
     function iklan_tengah(){
-        return $this->db->query("SELECT * FROM iklantengah");
+        return $this->db->query("SELECT * FROM iklantengah ORDER BY id_iklantengah DESC LIMIT 3");
     }
 
     function iklan_tengah_tambah(){
