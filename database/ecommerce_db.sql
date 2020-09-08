@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2020 at 02:28 PM
+-- Generation Time: Sep 08, 2020 at 01:52 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -89,7 +89,7 @@ CREATE TABLE `berita` (
 
 INSERT INTO `berita` (`id_berita`, `id_kategori`, `username`, `judul`, `sub_judul`, `youtube`, `judul_seo`, `headline`, `aktif`, `utama`, `isi_berita`, `keterangan_gambar`, `hari`, `tanggal`, `jam`, `gambar`, `dibaca`, `tag`, `status`) VALUES
 (4, 55, 'admin', 'Hijab Tutorial Segitiga Instan Sasya Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-segitiga-instan-sasya-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Tulisan ini khususkan&nbsp;untuk siapa saja yang ingin atau sedang mengerjakan Bisnis MLM, terlebih bagi yang ingin&nbsp;untuk meraih sukses di Bisnis MLM.&nbsp;Apakah anda adalah orang yang dimaksud ? Ataukah anda sedang mempelajari bisnis MLM ? Apa pendapat Anda tentang bisnis MLM ? Banyak paradigma negative yang berkembangdi masyarakat, sehingga mereka memberikan penilaian buruk mengenai bisnis MLM.&nbsp;<br />\r\n<br />\r\nBahkan banyak orang awam mengatakan bisnis MLM adalah bisnis menjual Mimpi, bisnis yang tidak masuk akal. Sebelum anda membaca lebih jauh, mari kita singkirkan dulu paradigma negative mengenai bisnis MLM. Terimakasih Anda masih terus membaca, tulisan ini saya buat bukan karena saya sekolah khusus di bidang marketing atau telah mencapai tingkat kesuksesan yang gemilang di bisnis MLM, tetapi pengalamanlah yang membuat saya mampu menuliskannya. Semoga yang sedikit ini dapat bermanfaat bagi anda.&nbsp;<br />\r\n<br />\r\nSaya pertama kali mengenal bisnis MLM pada usia yang masih dini untuk berbisnis, yaitu 15 tahun saat itu saya masih di bangku SMA bergabung di salah satu perusahaan besar milik Amerika. Pada usia tersebut pemahaman saya masih sangat bersih terhadap bisnis MLM, sehingga apapun ilmu yang di berikan dapat saya terima dengan baik. Dua tahun kemudian saya tertarik bergabung di sebuah perusahaan Direct Selling Kosmetika terbesar di Indonesia milik Amerika saat itu tahun 1994 sampai tahun 2006 hingga akhirnya perusahaan tersebut menutup bisnisnya di Indonesia.<br />\r\n<br />\r\nSejak tahun 2006 hingga tahun 2009 saya banyak keluar masuk dibeberapa MLM dan Direct selling Indonesia, dan saat ini saya serius menekuni satu perusahaan direct Delling MLM milik perusahaan Swedia. Ini adalah perusahaan terakhir saya untuk coba sana sini yang ujungnya tidak jelas.&nbsp;<br />\r\n<br />\r\nSaya sangat beruntung dapat bertemu dan bergabung di perusahaan tersebut, karena saya sangat meyakini suatu hari yang sudah saya tentukan nanti saya akan dapat meraih apa yang saya inginkan setelah lebih dari 15 tahun melakukan pencarian. Anda jangan seperti saya, semoga apa yang menjadi pengalaman saya dapat menjadi bahan perbandingan bagi anda dalam menentukan pilihan perusahaan yang terbaik dan cocok buat anda, sehingga tidak buang waktu bertahun tahun untuk menemukan perusahaan mana yang tepat.</p>\r\n', 'Sukses Di Bisnis Multi Level Marketing', 'Minggu', '2018-02-18', '10:53:48', 'RV71_5_Cold_Ocean_grande.jpg', 0, 'pesiar,travel,marketing,system,bonus,wisata', 'Y'),
-(5, 55, 'admin', 'Hijab Tutorial Instan Tanika Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-tanika-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Baiklah sekarang kita akan membahas tentang bisnis luar biasa MLM, mengapa kita katakan luar biasa ? Karena bisnis ini mampu mengubah kehidupan banyak orang bukan hanya secara Materi tetapi juga kepribadian. Banyak orang bisa menjadi kaya dan kaya raya dengan mengerjakan bisnis MLM, kehidupan finansial mereka berubah sejalan dengan bertumbuhnya penghasilan. Orang orang yang sukses di bisnis MLM apapun, mereka adalah orang orang yang memiliki kepribadian yang mulia dan baik.&nbsp;Kesuksesan di bisnis ini ini sangat didukung oleh Sikap Mental, pola pikir dan kepribadian yang baik. Sukses bukan karena latar belakang pendidikan ataupun modal.<br />\r\n<br />\r\nJadi singkatnya bisnis MLM adalah Bisnis Manusiawi, kita akan bekerja sama dengan banyak orang, membimbing, membantu, menolong, dan lain lain yang sifatnya memberi.&nbsp;Sebagai leader, tentunya anda lebih banyak memberi kepada team anda bukan menerima, feed back dari memberi adalah menerima. Sesuatu yang akan anda terima kemudian hari adalah kesuksesan, hubungan baik, persahabatan, kekeluargaan dan mungkin Tuhan akan memberikan penilaian sebagai Ibadah karena anda telah membantu banyak orang.&nbsp;<br />\r\n<br />\r\nSikap gemar menolong memang tidak membuahkan hasil saat itu juga, anda jangan pernah berfikir kapan yang anda berikan akan menghasilkan, karena Tuhan Maha Kaya, Ia akan memberikan lebih dari apa yang sudah kita tanam.&nbsp;</p>\r\n', 'Sukses sejati datang didari dalam diri.', 'Minggu', '2018-02-18', '10:53:29', 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', 0, 'pesiar,umrah,marketing,system,bonus', 'Y'),
+(5, 55, 'admin', 'Hijab Tutorial Instan Tanika Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-tanika-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Baiklah sekarang kita akan membahas tentang bisnis luar biasa MLM, mengapa kita katakan luar biasa ? Karena bisnis ini mampu mengubah kehidupan banyak orang bukan hanya secara Materi tetapi juga kepribadian. Banyak orang bisa menjadi kaya dan kaya raya dengan mengerjakan bisnis MLM, kehidupan finansial mereka berubah sejalan dengan bertumbuhnya penghasilan. Orang orang yang sukses di bisnis MLM apapun, mereka adalah orang orang yang memiliki kepribadian yang mulia dan baik.&nbsp;Kesuksesan di bisnis ini ini sangat didukung oleh Sikap Mental, pola pikir dan kepribadian yang baik. Sukses bukan karena latar belakang pendidikan ataupun modal.<br />\r\n<br />\r\nJadi singkatnya bisnis MLM adalah Bisnis Manusiawi, kita akan bekerja sama dengan banyak orang, membimbing, membantu, menolong, dan lain lain yang sifatnya memberi.&nbsp;Sebagai leader, tentunya anda lebih banyak memberi kepada team anda bukan menerima, feed back dari memberi adalah menerima. Sesuatu yang akan anda terima kemudian hari adalah kesuksesan, hubungan baik, persahabatan, kekeluargaan dan mungkin Tuhan akan memberikan penilaian sebagai Ibadah karena anda telah membantu banyak orang.&nbsp;<br />\r\n<br />\r\nSikap gemar menolong memang tidak membuahkan hasil saat itu juga, anda jangan pernah berfikir kapan yang anda berikan akan menghasilkan, karena Tuhan Maha Kaya, Ia akan memberikan lebih dari apa yang sudah kita tanam.&nbsp;</p>\r\n', 'Sukses sejati datang didari dalam diri.', 'Minggu', '2018-02-18', '10:53:29', 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', 2, 'pesiar,umrah,marketing,system,bonus', 'Y'),
 (6, 55, 'admin', 'Hijab Tutorial Instan Jenna Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-jenna-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Untuk membangun jaringan yang besar dan kuat , seorang distributor MLM perlu kerja keras, semangat , kesabaran dan ketekunan. Selain kerja keras , anda juga perlu melakukan kerja cerdas. Berikut ada 6 strategi yang bisa anda lakukan untuk membangun secara cerdas jaringan bisnis MLM anda.</p>\r\n\r\n<p><strong>1. Membangun Impian Bersama</strong></p>\r\n\r\n<p>Membangun impian adalah pertama yang selalu dianjurkan ketika mulai menjalankan bisnis MLM , tetapi hal yang tidak kalah pentingnya adalah membangun impian bersama. Pertemukan bersama impian anggota jaringan anda. Satukan langkah dan coba semakan visi dan presepsi dulu , baru kemudian bangun jaringan bisnis MLM anda.</p>\r\n\r\n<p><strong>2. Lakukan Duplikasi</strong></p>\r\n\r\n<p>Ingin jaringan bisnis anda berkembang baik ? Lakukan duplikasi dengan benar dan bertahap. Di network marketing , tanpa ada duplikasi , bisnis MLM anda akan berjalan lambat dan kurang gairah. Anda harus meniru langkah orang yang sudah sukses di bisnis MLM anda , dan kembangkan keahlian itu dalam diri anda. Sesudah menguasai hal itu ajarkan kepada downline anda dengan sabar dan tekun tahap demi tahap sesuai dengan kemampuan dari downline anda. Anda harus siap membayar harganya jika ingin mencapai sukses , dengan bekerja keras dan menyediakan waktu untuk bisa membentuk jaringan yang besar.</p>\r\n\r\n<p><strong>3. Terus Belajar dan Inovatif</strong></p>\r\n\r\n<p>Banyak leader &ndash; leader MLM yang sukses dan cepat meraih keberhasilan karena banyak belajar. Tentunya anda harus belajar dari upline atau leader anda , lakukan sharing , Tanya jawab dan solusi pemecahan masalah. Belajar juga bisa dilakukan dengan menghadiri acara presentasi bisnis. Dengarkan dan catat semua tips dan kiat &ndash; kiat sukses dari para leader untuk membangun semangat anda. Yang juga penting adalah membaca buku , mendengarkan kaset dan vcd yang bermanfaat buat pengembangan diri dan pengembangan bisnis MLM anda. Jika anda punya akses internet , anda juga bisa belajar website motivasi dan website belajar online.</p>\r\n', 'Membangun impian adalah pertama yang selalu dianjurkan', 'Minggu', '2018-02-18', '10:53:12', 'AR91_95_Sheva_Maroon_1_grande.png', 1, 'pesiar,umrah,travel,marketing,system,bonus', 'Y'),
 (1, 39, 'admin', 'Hijab Tutorial Instan Keylin Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-keylin-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Menurut saya negara ini sangat mengagumkan dalam hal pengelolaan pertaniannya. Dengan luas wilayah yang relatif kecil bila dibandingkan Indonesia, pada tahun 2011 Belanda mampu menjadi negara peringkat 2 untuk negara pengekspor produk pertanian terbesar didunia dengan nilai ekspor mencapai 72,8 miliar Euro.</p>\r\n\r\n<p>Produk andalannya adalah benih dan bunga. Sektor pertanian merupakan pendorong utama ekonomi di Belanda dengan menyumbang 20% pendapatan nasionalnya.&nbsp;Kunci dari majunya pertanian di Belanda adalah Riset. Kebijakan-kebijakan dan teknologi di adopsi dari riset-riset yang dilakukan para ahli. Salah satu pusat riset pertanian yang terkenal disana adalah universitas Wageningen.</p>\r\n\r\n<p>Seperti yang telah di kutip pada sebuah situs bahwa negara Belanda dengan luas hanya&nbsp;41.526km persegi mampu menjadi yang lebih unggul bila dibandingkan dengan negara kita yang luasnya 1.919.440km persegi. dan perlu kita garis bawahi bahwa nyaris seluruh wilayah di Belanda ada di bawah permukaan laut.</p>\r\n\r\n<p>Kedua hal tersebut yang membawa negara Belanda selalu menjadi yang terbaik. Kemajuan sektor pertanian Belanda tidak hanya berfokus pada optimalisasi keuntungan namun juga sangat memperhatikan keberlanjutan dan keramahan lingkungan.</p>\r\n\r\n<p>Pemerintah Belanda membentuk Mentri Ekonomi, Pertanian dan Inovasi yang difungsikan untuk membawa Belanda menjadi negara yang memadukan inovasi di dalam pertanian untuk mencapai ekonomi negara yang kuat dengan mengutamakan keberlanjutan lingkungan hidup.</p>\r\n', 'Penyiraman air atau pestisida pada lahan pertanian', 'Minggu', '2018-02-18', '10:54:53', 'MK97_7_Mocca_grande.jpg', 0, 'pupuk-organik,pestisida-nabati,peternakan,pertanian', 'Y'),
 (2, 39, 'admin', 'Hijab Tutorial Instan Latisha Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-latisha-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Salah satu negara yang mengedepankan pertanian adalah Indonesia, negara kita ini memang dikenal sangat cocok dengan sektor pertaniannya. Dengan iklim tropis serta dikaruniai tanah subuh membuat Indonesia menjadi tempat yang sangat cocok untuk bertani. Hampir semua tumbuhan bisa tumbuh di tanah Indonesia.</p>\r\n\r\n<p>Namun ironisnya sistem pertanian serta perhatian khusus kepada para petani di Indonesia sangatlah kurang. Bahkan pertanian di Indonesia ini kalah dengan sistem pertanian negara yang tidak memiliki tanah subur seperti Indonesia. Sehingga sektor pertanian Indonesia pun tak pernah mengalami kemajuan.</p>\r\n', 'Indonesia memperoleh julukan negara agraris.', 'Minggu', '2018-02-18', '10:54:18', 'RYB6_1_Grey_grande.jpg', 0, 'pupuk-organik,pestisida-nabati,peternakan,system,teknologi', 'Y'),
@@ -135,6 +135,14 @@ CREATE TABLE `detil_piutang` (
   `tgl_bayar` datetime DEFAULT NULL,
   `nominal` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detil_piutang`
+--
+
+INSERT INTO `detil_piutang` (`id_detil_piutang`, `id_user`, `id_piutang`, `tgl_bayar`, `nominal`) VALUES
+(2, 1, 1, '2020-09-07 18:31:46', 5000),
+(3, 1, 1, '2020-09-07 18:35:50', 15000);
 
 -- --------------------------------------------------------
 
@@ -237,7 +245,7 @@ CREATE TABLE `halamanstatis` (
 --
 
 INSERT INTO `halamanstatis` (`id_halaman`, `judul`, `judul_seo`, `isi_halaman`, `tgl_posting`, `gambar`, `username`, `dibaca`, `jam`, `hari`) VALUES
-(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2018-02-18', 'hijab1.jpg', 'admin', 22, '13:44:49', ''),
+(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2018-02-18', 'hijab1.jpg', 'admin', 25, '13:44:49', ''),
 (50, 'Cara Belanja', 'cara-belanja', '<p>Selamat datang di Toko Online Hijab Wanita Jawan Now. Demi kenyamanan anda berbelanja, berikut ini kami jelaskan tata cara berbelanja di Toko Online Hijab jaman Now.</p>\r\n\r\n<p><strong>1. Memilih Produk</strong></p>\r\n\r\n<p>Silahkan melihat produk-produk yang tersedia di Hijab Wanita Jawan Now melalui menu&nbsp;<strong>Categories</strong>. Pada produk yang diinginkan, klik tombol &lsquo;<strong>Add to Cart</strong>&rsquo; untuk memasukkannya ke dalam belanjaan anda. Perhatikan jumlah stok yang tersedia untuk produk tersebut.&nbsp;Tambahkan produk lain sesuai keperluan.</p>\r\n\r\n<p><strong>2.Melihat Belanjaan Anda</strong></p>\r\n\r\n<p>Dibagian kanan&nbsp;atas&nbsp;terlihat jumlah item dalam belanjaan dan&nbsp;total nilai pesanan anda. Bila ingin melihat daftar belanjaan lebih detil, arahkan kursor ke gambar keranjang belanja, kemudian klik tombol&nbsp;&#39;<strong>View Cart</strong>&#39;.</p>\r\n\r\n<p><strong>3. Checkout</strong></p>\r\n\r\n<p>Bila produk yang dipilih sudah lengkap dan sesuai, untuk checkout klik tombol &lsquo;<strong>Checkout</strong>&rsquo;.</p>\r\n\r\n<p><strong>4. Checkout Options</strong></p>\r\n\r\n<p>Anda akan diarahkan pada bagian &lsquo;<strong>Checkout Options</strong>&rsquo;. Bila anda sudah terdaftar (<strong>Returning Customer</strong>), silahkan gunakan email dan password anda untuk login. Bila anda belum terdaftar (<strong>New Customer</strong>), silahkan lakukan pendaftaran terlebih dahulu dengan meng-klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>5. Membuat Account</strong></p>\r\n\r\n<p>Bagi anda pelanggan baru, silahkan lengkapi beberapa data berikut. Yang perlu diperhatikan adalah pada saat menuliskan nama&nbsp;<strong>Kecamatan</strong>&nbsp;pada field &#39;<strong>Kecamatan (City)</strong>&#39;. Ketikkan beberapa huruf pertama nama kecamatan, kemudian sistem akan menampilkan pilihan nama kecamatan. Pilih yang paling sesuai. Lengkapi data alamat anda. Klik persetujuan&nbsp;<strong>Privacy Policy</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>6. Cara&nbsp;Pengiriman</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih tarif pengiriman melalui jasa kurir JNE yang sesuai. Jumlah nominal ongkos kirim akan otomatis dihitung sesuai dengan pilihan Kecamatan anda dan juga berat dari pesanan. Tuliskan&nbsp;catatan untuk pesanan anda pada bagian&nbsp;<strong>Comment</strong>, bila&nbsp;ada.&nbsp;Kemudian klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>7. Cara Pembayaran</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih cara pembayaran yang sesuai. Kami saat ini hanya menerima pembayaran melalui<strong>Bank Transfer</strong>.&nbsp;Klik persetujuan&nbsp;<strong>Terms &amp; Conditions</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>8. Konfirmasi Pemesanan</strong></p>\r\n\r\n<p>Pada bagian&nbsp;konfirmasi pemesanan&nbsp;ini anda dapat melihat sekali lagi rincian pesanan anda.&nbsp;Bila sudah tidak ada perubahan, klik tombol &lsquo;<strong>Confirm Order</strong>&rsquo;. Akan ada pesan bahwa pesanan anda sudah diproses dan bersamaan dengan itu kami mengirimkan email berisi&nbsp;rincian&nbsp;pesanan anda.</p>\r\n\r\n<p><strong>9. Pembayaran dan Konfirmasi Pembayaran</strong></p>\r\n\r\n<p>Silahkan lakukan pembayaran pada nomor rekening yang tercantum pada email yang kami kirimkan. Kemudian lakukan konfirmasi pembayaran agar kami dapat segera memproses pengiriman pesanan anda.</p>\r\n\r\n<p>Agar pesanan dapat diproses untuk pengiriman di hari yang sama, konfirmasi pembayaran ditunggu paling lambat jam 15.00 WIB (atau jam 12.00 WIB untuk hari Sabtu). Lewat dari itu diproses untuk pengiriman di hari/kesempatan berikutnya. Hari Minggu/Tanggal Merah, kantor libur dan tidak ada pengiriman.</p>\r\n\r\n<p><strong>10. Pengiriman dan Tracking Pengiriman</strong></p>\r\n\r\n<p>Apabila kami pengiriman telah kami lakukan, status pesanan anda akan diupdate dan kami akan sampaikan juga nomor tracking dari jasa kurir JNE melalui email.</p>\r\n', '2018-02-18', '', 'admin', 23, '13:41:58', '');
 
 -- --------------------------------------------------------
@@ -351,7 +359,12 @@ INSERT INTO `kas` (`id_kas`, `id_user`, `nominal`, `jenis`, `keterangan`, `creat
 (9, 1, 130000, 'Pengeluaran', 'Transaksi Pembelian', '2020-09-05 11:45:46'),
 (33, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-05 18:48:55'),
 (34, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-05 18:50:10'),
-(36, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-05 18:50:36');
+(36, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-05 18:50:36'),
+(37, 1, 50000, 'Pemasukan', 'Penjualan Point Of Sales (Offline)', '2020-09-07 12:41:30'),
+(38, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-07 18:29:51'),
+(39, 1, 5000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:30:58'),
+(40, 1, 5000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:31:46'),
+(42, 1, 15000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:35:51');
 
 -- --------------------------------------------------------
 
@@ -482,7 +495,11 @@ INSERT INTO `modul` (`id_modul`, `nama_modul`, `username`, `link`, `static_conte
 (80, 'Kas', 'admin', 'kas', '', '', 'Y', 'user', 'Y', 0, ''),
 (81, 'Stok In / Out', 'admin', 'stok', '', '', 'Y', 'admin', 'Y', 0, ''),
 (82, 'Stok Opname', 'admin', 'stok_opname', '', '', 'Y', 'admin', 'Y', 0, ''),
-(83, 'Hutang', 'admin', 'hutang', '', '', 'Y', 'admin', 'Y', 0, '');
+(83, 'Hutang', 'admin', 'hutang', '', '', 'Y', 'admin', 'Y', 0, ''),
+(84, 'Penjualan', 'admin', 'penjualan', '', '', 'Y', 'admin', 'Y', 0, ''),
+(85, 'Piutang', 'admin', 'piutang', '', '', 'Y', 'admin', 'Y', 0, ''),
+(86, 'Retur Penjualan', 'admin', 'retur_penjualan', '', '', 'Y', 'admin', 'Y', 0, ''),
+(87, 'Retur Pembelian', 'admin', 'retur_pembelian', '', '', 'Y', 'admin', 'Y', 0, '');
 
 -- --------------------------------------------------------
 
@@ -523,6 +540,13 @@ CREATE TABLE `piutang` (
   `status` varchar(100) DEFAULT NULL,
   `jatuh_tempo` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `piutang`
+--
+
+INSERT INTO `piutang` (`id_piutang`, `id_jual`, `tgl_piutang`, `jml_piutang`, `bayar`, `sisa`, `status`, `jatuh_tempo`) VALUES
+(1, 26, '2020-09-07 12:41:30', 20000, 20000, 0, 'Lunas', '2020-09-14');
 
 -- --------------------------------------------------------
 
@@ -622,7 +646,9 @@ CREATE TABLE `rb_konsumen` (
 --
 
 INSERT INTO `rb_konsumen` (`id_konsumen`, `username`, `password`, `nama_lengkap`, `email`, `jenis_kelamin`, `tanggal_lahir`, `tempat_lahir`, `alamat_lengkap`, `kota_id`, `no_hp`, `foto`, `tanggal_daftar`, `tipe`) VALUES
-(29, 'cikociki', 'd9c6a57c26483e6c1d728ef552778812c7df7a208326aa1522623a8b50045c2cbc196131205a2fb11626629c134327bf91bc997d8d2bc8681a1ac42272ed9de1', 'Ciko Ciki Tita ', 'dafidprasetyo109@gmail.com', 'Laki-laki', '2020-09-02', '-', 'RT 001 / RW 002, Dsn. Karangbendo, Ds. Rejosari, Kec. Glenmore', 42, '087676271627', '', '2020-09-02', 'Konsumen');
+(35, 'nanda', '2ab2fcd6ccfd60823ed7b6623ae4788fc5d3c9fb3feacbf328d935e72529c8126395472394a464c9ba429b5f93e9fbccef4a72a547413c789ccd870495ca3cb4', 'Nanda Agung Mahardika', 'nanda@gmail.com', 'Laki-laki', '2002-07-10', 'Banyuwangi', 'Jl. Mawar No. 3', 42, '087678754686', '', '2020-09-06', 'Konsumen'),
+(36, 'nurhayati', '', 'Ibu Nurhayati', 'nurhayati@gmail.com', 'Laki-laki', '1980-02-05', 'Banyuwangi', 'Jl. Mawar No 03', 42, '087657627636', '', '2020-09-07', 'Konsumen'),
+(34, 'umum', '', 'Umum', 'umum', '', '2020-09-06', 'Umum', 'Umum', 0, 'Umum', '', '2020-09-06', 'Konsumen');
 
 -- --------------------------------------------------------
 
@@ -1210,15 +1236,20 @@ CREATE TABLE `rb_penjualan` (
   `ongkir` int(11) NOT NULL,
   `resi` varchar(255) DEFAULT NULL,
   `waktu_transaksi` datetime NOT NULL,
-  `proses` enum('0','1','2','3') NOT NULL
+  `proses` enum('0','1','2','3') NOT NULL,
+  `method` varchar(40) DEFAULT NULL,
+  `bayar` int(11) DEFAULT NULL,
+  `kembali` int(11) DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `online_order` char(1) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rb_penjualan`
 --
 
-INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `diskon`, `kurir`, `service`, `ongkir`, `resi`, `waktu_transaksi`, `proses`) VALUES
-(19, 'TRX-20200904144025', 29, 0, 'jne', 'REG', 24000, NULL, '2020-09-04 14:50:45', '0');
+INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `diskon`, `kurir`, `service`, `ongkir`, `resi`, `waktu_transaksi`, `proses`, `method`, `bayar`, `kembali`, `id_user`, `online_order`) VALUES
+(26, 'TRX-20200907124130', 36, 0, '', '', 0, NULL, '2020-09-07 12:41:30', '2', 'Kredit', 50000, 0, 1, 'N');
 
 -- --------------------------------------------------------
 
@@ -1228,20 +1259,22 @@ INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `dis
 
 CREATE TABLE `rb_penjualan_detail` (
   `id_penjualan_detail` int(11) NOT NULL,
-  `id_penjualan` int(11) NOT NULL,
+  `id_penjualan` int(11) DEFAULT NULL,
   `id_produk` int(11) NOT NULL,
   `jumlah` int(11) NOT NULL,
   `harga_jual` int(11) NOT NULL,
   `satuan` varchar(50) NOT NULL,
-  `keterangan_order` text DEFAULT NULL
+  `keterangan_order` text DEFAULT NULL,
+  `subtotal` int(11) DEFAULT NULL,
+  `diskon` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rb_penjualan_detail`
 --
 
-INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`) VALUES
-(26, 19, 1, 1, 70000, 'pcs', '');
+INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`, `subtotal`, `diskon`) VALUES
+(67, 26, 1, 1, 70000, 'pcs', NULL, 70000, 0);
 
 -- --------------------------------------------------------
 
@@ -1257,7 +1290,9 @@ CREATE TABLE `rb_penjualan_temp` (
   `harga_jual` int(11) NOT NULL,
   `satuan` varchar(50) NOT NULL,
   `keterangan_order` text DEFAULT NULL,
-  `waktu_order` datetime NOT NULL
+  `waktu_order` datetime NOT NULL,
+  `diskon` int(11) DEFAULT NULL,
+  `subtotal` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1289,7 +1324,7 @@ CREATE TABLE `rb_produk` (
 --
 
 INSERT INTO `rb_produk` (`id_produk`, `id_kategori_produk`, `nama_produk`, `produk_seo`, `satuan`, `harga_beli`, `harga_reseller`, `harga_konsumen`, `berat`, `diskon`, `gambar`, `keterangan`, `username`, `waktu_input`, `stok`) VALUES
-(1, 1, 'Segitiga Instan Aira- AA94.9 Tropical Blue', 'segitiga-instan-aira-aa94-9-tropical-blue', 'pcs', 60000, 65000, 70000, '300', 0, 'RYB6_1_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\n\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\n', 'admin', '2017-05-23 17:04:25', 2),
+(1, 1, 'Segitiga Instan Aira- AA94.9 Tropical Blue', 'segitiga-instan-aira-aa94-9-tropical-blue', 'pcs', 60000, 65000, 70000, '300', 0, 'RYB6_1_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\n\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\n', 'admin', '2017-05-23 17:04:25', 4),
 (2, 1, 'Segitiga Instan Aira- AA94.8 Minty Green', 'segitiga-instan-aira-aa94-8-minty-green', 'pcs', 340000, 345000, 350000, '500', 0, 'RV71_27_Jeans_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-23 17:10:17', 2),
 (3, 2, 'Segitiga Instan KEINA - KN54.38 Delfine Lilac', 'segitiga-instan-keina-kn54-38-delfine-lilac', 'unit', 159980, 164980, 169980, '300', 0, 'RV71_5_Cold_Ocean_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:47:14', 2),
 (4, 1, 'Segitiga Instan Madeira - MDB5.3 Sunset', 'segitiga-instan-madeira-mdb5-3-sunset', 'unit', 119900, 124900, 129900, '100', 0, 'MK97_7_Mocca_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:53:10', 0),
@@ -1402,6 +1437,36 @@ INSERT INTO `rb_supplier` (`id_supplier`, `nama_supplier`, `kontak_person`, `ala
 (1, 'PT. Elektronik Jaya Abadi', 'Muhammad Arsen', 'Jl. Siti Nurbayara, No 23 D, Tunggul Hitam, Padang', '082173054522', 'jaya.abadi@gmail.com', 56123, '0751461692', '0751461691', 'Tidak ada keterangan,..'),
 (2, 'PT. Muda Hardware Sejahtera', 'Saiful Tanjung', 'Jl. Persada Ramayana, Ulak Karang, Padang', '098912334566', 'hardware.sejahtera@gmail.com', 87632, '075165321', '075165312', 'Tidak ada keterangan,..'),
 (3, 'PT. Kereta Kencana', 'Arsenio Orlando', 'Jl. Linggar Jati, No 345, Koto Tangah, padang', '82173054486', 'kereta.kencana@gmail.com', 34587, '0751461692', '0751461693', 'Tidak ada keterangan,..');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `retur_penjualan`
+--
+
+CREATE TABLE `retur_penjualan` (
+  `id_retur_penjualan` int(11) NOT NULL,
+  `kode_retur` varchar(50) DEFAULT NULL,
+  `id_penjualan` int(11) DEFAULT NULL,
+  `tgl_retur` datetime DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `retur_penjualan_detail`
+--
+
+CREATE TABLE `retur_penjualan_detail` (
+  `id_retur_penjualan_detail` int(11) NOT NULL,
+  `id_retur_penjualan` int(11) DEFAULT NULL,
+  `id_produk` int(11) DEFAULT NULL,
+  `jumlah_retur` int(11) DEFAULT NULL,
+  `total_retur` int(11) DEFAULT NULL,
+  `kondisi` varchar(100) DEFAULT NULL,
+  `opsi` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -3236,7 +3301,9 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2020-09-02', 115, '1599064228'),
 ('::1', '2020-09-03', 31, '1599133649'),
 ('::1', '2020-09-04', 32, '1599222988'),
-('::1', '2020-09-05', 4, '1599305018');
+('::1', '2020-09-05', 39, '1599317057'),
+('::1', '2020-09-06', 18, '1599371859'),
+('::1', '2020-09-08', 56, '1599565702');
 
 -- --------------------------------------------------------
 
@@ -3603,6 +3670,18 @@ ALTER TABLE `rb_supplier`
   ADD PRIMARY KEY (`id_supplier`);
 
 --
+-- Indexes for table `retur_penjualan`
+--
+ALTER TABLE `retur_penjualan`
+  ADD PRIMARY KEY (`id_retur_penjualan`);
+
+--
+-- Indexes for table `retur_penjualan_detail`
+--
+ALTER TABLE `retur_penjualan_detail`
+  ADD PRIMARY KEY (`id_retur_penjualan_detail`);
+
+--
 -- Indexes for table `slide`
 --
 ALTER TABLE `slide`
@@ -3670,13 +3749,13 @@ ALTER TABLE `berita`
 -- AUTO_INCREMENT for table `detil_hutang`
 --
 ALTER TABLE `detil_hutang`
-  MODIFY `id_detil_hutang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_detil_hutang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `detil_piutang`
 --
 ALTER TABLE `detil_piutang`
-  MODIFY `id_detil_piutang` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_detil_piutang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `download`
@@ -3718,7 +3797,7 @@ ALTER TABLE `identitas`
 -- AUTO_INCREMENT for table `kas`
 --
 ALTER TABLE `kas`
-  MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -3742,7 +3821,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `modul`
 --
 ALTER TABLE `modul`
-  MODIFY `id_modul` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id_modul` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `pasangiklan`
@@ -3754,7 +3833,7 @@ ALTER TABLE `pasangiklan`
 -- AUTO_INCREMENT for table `piutang`
 --
 ALTER TABLE `piutang`
-  MODIFY `id_piutang` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_piutang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `rb_kategori_produk`
@@ -3778,7 +3857,7 @@ ALTER TABLE `rb_konfirmasi`
 -- AUTO_INCREMENT for table `rb_konsumen`
 --
 ALTER TABLE `rb_konsumen`
-  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `rb_kota`
@@ -3802,19 +3881,19 @@ ALTER TABLE `rb_pembelian_detail`
 -- AUTO_INCREMENT for table `rb_penjualan`
 --
 ALTER TABLE `rb_penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan_detail`
 --
 ALTER TABLE `rb_penjualan_detail`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan_temp`
 --
 ALTER TABLE `rb_penjualan_temp`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `rb_produk`
@@ -3839,6 +3918,18 @@ ALTER TABLE `rb_rekening`
 --
 ALTER TABLE `rb_supplier`
   MODIFY `id_supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `retur_penjualan`
+--
+ALTER TABLE `retur_penjualan`
+  MODIFY `id_retur_penjualan` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `retur_penjualan_detail`
+--
+ALTER TABLE `retur_penjualan_detail`
+  MODIFY `id_retur_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `slide`
