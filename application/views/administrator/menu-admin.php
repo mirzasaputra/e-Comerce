@@ -119,6 +119,14 @@
                 if ($cek == 1 or $this->session->level == 'admin') {
                   echo "<li><a href='" . base_url() . "administrator/piutang'><i class='fa fa-circle-o'></i> Piutang </a></li>";
                 }
+                $cek = $this->Model_app->umenu_akses("retur_penjualan", $this->session->id_session);
+                if ($cek == 1 or $this->session->level == 'admin') {
+                  echo "<li><a href='" . base_url() . "administrator/retur_penjualan'><i class='fa fa-circle-o'></i> Retur Penjualan </a></li>";
+                }
+                $cek = $this->Model_app->umenu_akses("retur_pembelian", $this->session->id_session);
+                if ($cek == 1 or $this->session->level == 'admin') {
+                  echo "<li><a href='" . base_url() . "administrator/retur_pembelian'><i class='fa fa-circle-o'></i> Retur Pembelian </a></li>";
+                }
                 ?>
               </ul>
             </li>
