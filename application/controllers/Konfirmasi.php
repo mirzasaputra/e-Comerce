@@ -37,8 +37,7 @@ class Konfirmasi extends CI_Controller
 			$data1 = array('proses' => '2');
 			$where = array('id_penjualan' => $this->input->post('id'));
 			$this->Model_app->update('rb_penjualan', $data1, $where);
-			echo $this->session->set_flashdata('message', '<div class="alert alert-info"><center>Success Melakukan Konfirmasi pembayaran... <br>
-                                                                          akan segera kami cek dan proses!</center></div>');
+			echo $this->session->set_flashdata('message', '<div class="alert alert-info"><center>Success Melakukan Konfirmasi pembayaran... <br>akan segera kami cek dan proses!</center></div>');
 			redirect('konfirmasi/index');
 		} else {
 			$data['title'] = 'Konfirmasi Orderan anda';
