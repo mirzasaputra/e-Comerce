@@ -1,4 +1,4 @@
-            <div class="col-xs-12">  
+            <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Manajemen Modul</h3>
@@ -18,23 +18,23 @@
                       </tr>
                     </thead>
                     <tbody>
-                  <?php 
-                    $no = 1;
-                    foreach ($record->result_array() as $row){
-                    echo "<tr><td>$no</td>
+                      <?php
+                      $no = 1;
+                      foreach ($record->result_array() as $row) {
+                        echo "<tr><td>$no</td>
                               <td>$row[nama_modul]</td>
-                              <td><a href='".base_url()."$row[link]'>$row[link]</a></td>
+                              <td><a href='" . base_url('administrator/') . "$row[link]'>$row[link]</a></td>
                               <td>$row[publish]</td>
                               <td>$row[aktif]</td>
                               <td>$row[status]</td>
                               <td><center>
-                                <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_manajemenmodul/$row[id_modul]'><span class='glyphicon glyphicon-edit'></span></a>
-                                <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_manajemenmodul/$row[id_modul]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                                <a class='btn btn-success btn-xs' title='Edit Data' href='" . base_url() . "administrator/edit_manajemenmodul/$row[id_modul]'><span class='glyphicon glyphicon-edit'></span></a>
+                                <a class='btn btn-danger btn-xs' title='Delete Data' href='" . base_url() . "administrator/delete_manajemenmodul/$row[id_modul]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                               </center></td>
                           </tr>";
-                      $no++;
-                    }
-                  ?>
-                  </tbody>
-                </table>
-              </div>
+                        $no++;
+                      }
+                      ?>
+                    </tbody>
+                  </table>
+                </div>
