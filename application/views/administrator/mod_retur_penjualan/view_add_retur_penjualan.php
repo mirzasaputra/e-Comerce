@@ -12,7 +12,7 @@
                             <label for="">Kode Transaksi</label>
                             <div class="input-group">
                                 <input type="hidden" class="form-control" id="id-penjualan" name="id-penjualan">
-                                <input type="text" class="form-control" id="kode-transaksi" placeholder="Masukan Kode Transaksi">
+                                <input type="text" class="form-control" id="kode-transaksi" placeholder="Masukan Kode Transaksi" autocomplete="off">
                                 <span class="input-group-btn">
                                     <button type="button" onclick="cariDataRetur()" class="btn btn-default btn-flat"><i class="fa fa-search"></i></button>
                                 </span>
@@ -133,8 +133,8 @@
                     <br>
                     <hr>
                     <div class="form-group pull-right">
-                        <button class="btn btn-danger" type="submit"><i class="fa fa-arrow-circle-left"></i> Kembali</button>
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-plus"></i> Simpan Retur</button>
+                        <button class="btn btn-danger" type="button" onclick="kembaliRetur()"><i class="fa fa-arrow-circle-left"></i> Kembali</button>
+                        <button class="btn btn-primary" type="button" onclick="simpanRetur()"><i class="fa fa-plus"></i> Simpan Retur</button>
                     </div>
                 </form>
             </div>

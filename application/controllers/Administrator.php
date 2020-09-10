@@ -589,7 +589,7 @@ class Administrator extends CI_Controller
 		} else {
 			$data['title'] = "Tambah Iklan Home";
 			$data['identitas_web'] = $this->Model_main->identitas()->row_array();
-			$this->template->load('administrator/template', 'administrator/mod_iklanhome/view_iklanhome_tambah');
+			$this->template->load('administrator/template', 'administrator/mod_iklanhome/view_iklanhome_tambah', $data);
 		}
 	}
 
@@ -1247,7 +1247,7 @@ class Administrator extends CI_Controller
 		} else {
 			$data['title'] = "Tambah Rekening";
 			$data['identitas_web'] = $this->Model_main->identitas()->row_array();
-			$this->template->load('administrator/template', 'administrator/mod_rekening/view_rekening_tambah');
+			$this->template->load('administrator/template', 'administrator/mod_rekening/view_rekening_tambah', $data);
 		}
 	}
 
@@ -1827,10 +1827,26 @@ class Administrator extends CI_Controller
 		$data = $this->Model_retur_penjualan->load_detail_retur();
 		echo json_encode($data);
 	}
+	public function detail_retur_penjualan($id = '')
+	{
+		$data = $this->Model_retur_penjualan->detail_retur_penjualan($id);
+		echo json_encode($data);
+	}
 	public function get_total_retur()
 	{
 		$data = $this->db->query("SELECT SUM(total_retur) AS total_retur FROM retur_penjualan_detail WHERE id_retur_penjualan IS NULL")->row_array();
 		echo json_encode($data);
+	}
+
+	public function delete_produk_retur($id_retur = '', $id_penjualan_detail = '')
+	{
+		$this->Model_retur_penjualan->delete_produk_retur($id_retur, $id_penjualan_detail);
+	}
+
+	public function simpan_retur_penjualan($id = '')
+	{
+
+		$this->Model_retur_penjualan->simpan_retur_penjualan($id);
 	}
 
 

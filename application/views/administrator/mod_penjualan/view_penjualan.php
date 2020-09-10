@@ -9,13 +9,14 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Kode Transaksi</th>
+                        <th>Kode</th>
                         <th>Kasir</th>
                         <th>Customer</th>
                         <th>Diskon</th>
                         <th>Pembayaran</th>
                         <th>Qty</th>
                         <th>Total</th>
+                        <th>Retur</th>
                         <th>Waktu</th>
                         <th>Action</th>
                     </tr>
@@ -23,7 +24,12 @@
                 <tbody>
                     <?php
                     $no = 1;
-                    foreach ($record as $row) { ?>
+                    foreach ($record as $row) {
+                        $id = $row['id_penjualan'];
+                        $query = "SELECT SUM(b.total_retur) AS retur FROM retur_penjualan a, retur_penjualan_detail b
+                        WHERE a.id_retur_penjualan = b.id_retur_penjualan AND a.id_penjualan = '$id'";
+                        $retur = $this->db->query($query)->row_array();
+                    ?>
 
                         <tr>
                             <td><?php echo $no++ ?></td>
@@ -34,6 +40,7 @@
                             <td><?php echo $row['method'] ?></td>
                             <td><?php echo $row['qty'] ?></td>
                             <td style='color:green;'>Rp <?php echo rupiah($row['total']) ?></td>
+                            <td style='color:red;'>Rp <?php echo rupiah($retur['retur']) ?></td>
                             <td><?php echo $row['waktu_transaksi'] ?></td>
                             <td>
                                 <a class='btn btn-success btn-xs' title='Detail Data' onclick="detailPenjualan('<?php echo $row['id_penjualan'] ?>')"><span class='glyphicon glyphicon-search'></span> Detail</a>

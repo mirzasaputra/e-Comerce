@@ -22,7 +22,8 @@ class Model_penjualan extends CI_model
             'harga_jual'    => $harga,
             'satuan'        => $this->input->post('satuan'),
             'subtotal'      => $subtotal,
-            'diskon'        => 0
+            'diskon'        => 0,
+            'retur'         => 0
 
         );
         $this->db->insert('rb_penjualan_detail', $data);
@@ -178,7 +179,7 @@ class Model_penjualan extends CI_model
     public function detailPenjualan($id)
     {
         $query = "SELECT c.nama_produk, a.harga_jual, a.jumlah, a.diskon, a.subtotal 
-        FROM rb_penjualan_detail a, rb_penjualan b, rb_produk c WHERE b.id_penjualan = a.id_penjualan AND c.id_produk = a.id_produk AND  a.id_penjualan = '$id'";
+        FROM rb_penjualan_detail a, rb_penjualan b, rb_produk c WHERE b.id_penjualan = a.id_penjualan AND c.id_produk = a.id_produk AND  a.id_penjualan = '$id' AND a.retur = 0";
         $data = $this->db->query($query)->result_array();
         echo json_encode($data);
     }

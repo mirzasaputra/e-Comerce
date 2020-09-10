@@ -80,7 +80,7 @@
                         '<td>' + kondisi + '</td>' +
                         '<td>' + opsi + '</td>' +
                         '<td>Rp. ' + result[i].total_retur + '</td>' +
-                        '<td><a class="btn btn-danger btn-xs" onclick="deleteProdukRetur(' + result[i].id_retur_penjualan_detail + ')" title="Hapus Data"><span class="fa fa-trash"></span></a></td></tr>';
+                        '<td><a class="btn btn-danger btn-xs" onclick="deleteProdukRetur(' + result[i].id_retur_penjualan_detail + ',' + result[i].id_penjualan_detail + ')" title="Hapus Data"><span class="fa fa-trash"></span></a></td></tr>';
                 }
                 $('#daftar-retur').html(html);
             }
@@ -139,6 +139,120 @@
                 $('#total-retur').text(data.total_retur);
             }
 
+        })
+    }
+
+    function deleteProdukRetur(e, i) {
+        const kode = $('#kode-transaksi').val();
+        Swal.fire({
+            title: "Are you sure ?",
+            text: "Deleted data can not be restored!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: base_url + "administrator/delete_produk_retur/" + e + '/' + i,
+                    type: "post",
+                    success: function(data) {
+                        loadDataRetur();
+                        loadDataAkanRetur(kode);
+                        setTotalRetur();
+                    }
+                })
+            }
+        })
+    }
+
+    function simpanRetur() {
+        const data = $('#id-penjualan').val();
+        const table = document.getElementById('daftar-retur').rows.length;
+        if (table == 0) {
+            Swal.fire({
+                title: "Oops!",
+                text: "Tambahkan Produk Terlebih Dahulu Sebelum Disimpan!",
+                icon: "error",
+            });
+        } else {
+            Swal.fire({
+                title: "Simpan Data Retur ?",
+                text: "Produk retur penjualan akan tersimpan!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Ya, simpan!"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        url: base_url + "administrator/simpan_retur_penjualan/" + data,
+                        type: "post",
+                        success: function(data) {
+                            Swal.fire({
+                                title: "Berhasil Disimpan!",
+                                icon: "success",
+                                confirmButtonColor: "#3085d6",
+                                confirmButtonText: "Oke"
+                            }).then((result) => {
+                                if (result.value) {
+                                    window.location.href = base_url + "administrator/retur_penjualan";
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+        }
+    }
+
+    function kembaliRetur() {
+        const table = document.getElementById('daftar-retur').rows.length;
+        if (table > 0) {
+            Swal.fire({
+                title: "Oops!",
+                text: "Harap Simpan Retur Penjualan Terlebib Dahulu!",
+                icon: "error",
+            });
+        } else {
+            window.location.href = base_url + "administrator/retur_penjualan";
+        }
+    }
+
+    function detailRetur(e) {
+        var html = '';
+        $.ajax({
+            url: base_url + "administrator/detail_retur_penjualan/" + e,
+            type: "post",
+            dataType: "json",
+            success: function(result) {
+                for (var i = 0; i < result.length; i++) {
+                    var kondisi = '';
+                    var opsi = '';
+                    if (result[i].kondisi == 1) {
+                        kondisi = "Rusak";
+                    } else if (result[i].kondisi == 2) {
+                        kondisi = "Layak / Bagus";
+                    }
+                    if (result[i].opsi == 1) {
+                        opsi = "Stok In";
+                    } else if (result[i].opsi == 2) {
+                        opsi = "Stok Out";
+                    }
+                    html += '<tr>' +
+                        '<td>' + result[i].nama_produk + '</td>' +
+                        '<td>Rp. ' + result[i].harga_produk + '</td>' +
+                        '<td>' + result[i].jumlah_retur + '</td>' +
+                        '<td>Rp. ' + result[i].total_retur + '</td>' +
+                        '<td>' + kondisi + '</td>' +
+                        '<td>' + opsi + '</td>' +
+                        '</tr>';
+                }
+                $('#detail-retur-penjualan').html(html);
+                $('#detailReturPenjualan').modal('show');
+            }
         })
     }
 </script>
