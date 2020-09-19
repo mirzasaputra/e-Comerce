@@ -13,7 +13,9 @@
                         <th>Supplier</th>
                         <th>Waktu Pembelian</th>
                         <th>Pembayaran</th>
+                        <th>Qty</th>
                         <th>Total</th>
+                        <th>Retur</th>
                         <th>Tunai</th>
                         <th style='width:120px'>Action</th>
                       </tr>
@@ -22,21 +24,29 @@
                       <?php
                       $no = 1;
                       foreach ($record as $row) {
-                        $total = $this->db->query("SELECT sum(a.harga_pesan*a.jumlah_pesan) as total FROM `rb_pembelian_detail` a where a.id_pembelian='$row[id_pembelian]'")->row_array();
-                        echo "<tr><td>$no</td>
-                              <td>$row[kode_pembelian]</td>
-                              <td>$row[nama_supplier]</td>
-                              <td>$row[waktu_beli]</td>
-                              <td>$row[method]</td>
-                              <td style='color:red;'>Rp " . rupiah($total['total']) . "</td>
-                              <td style='color:green;'>Rp " . rupiah($row['bayar']) . "</td>
-                              <td><center>
-                                <a class='btn btn-success btn-xs' title='Detail Data' href='" . base_url() . "administrator/detail_pembelian/$row[id_pembelian]'><span class='glyphicon glyphicon-search'></span> Detail Pembelian</a>
-                              </center></td>
-                          </tr>";
-                        $no++;
-                      }
+                        $id = $row['id_pembelian'];
+                        $query = "SELECT SUM(b.total_retur) AS retur FROM retur_pembelian a, retur_pembelian_detail b WHERE a.id_retur_pembelian = b.id_retur_pembelian AND a.id_pembelian = '$id'";
+                        $retur = $this->db->query($query)->row_array();
+
+                        $total = $this->db->query("SELECT sum(a.harga_pesan*a.jumlah_pesan) as total, sum(a.jumlah_pesan) as jumlah_pesan FROM `rb_pembelian_detail` a where a.id_pembelian='$row[id_pembelian]'")->row_array();
                       ?>
+                        <tr>
+                          <td><?php echo $no++ ?></td>
+                          <td><?php echo $row['kode_pembelian'] ?></td>
+                          <td><?php echo $row['nama_supplier'] ?></td>
+                          <td><?php echo $row['waktu_beli'] ?></td>
+                          <td><?php echo $row['method'] ?></td>
+                          <td><?php echo $total['jumlah_pesan'] ?></td>
+                          <td style='color:red;'>Rp <?php echo rupiah($total['total']) ?></td>
+                          <td style='color:red;'>Rp <?php echo rupiah($retur['retur']) ?></td>
+                          <td style='color:green;'>Rp <?php echo rupiah($row['bayar']) ?></td>
+                          <td>
+                            <center>
+                              <a class='btn btn-success btn-xs' title='Detail Data' href=" <?php echo base_url('administrator/detail_pembelian/') . $row['id_pembelian'] ?> "><span class='glyphicon glyphicon-search'></span> Detail Pembelian</a>
+                            </center>
+                          </td>
+                        </tr>
+                      <?php } ?>
                     </tbody>
                   </table>
                 </div>

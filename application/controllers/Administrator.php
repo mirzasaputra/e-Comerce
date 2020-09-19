@@ -1292,7 +1292,7 @@ class Administrator extends CI_Controller
 	{
 		cek_session_akses('pembelian', $this->session->id_session);
 		$data['rows'] = $this->Model_app->view_join_rows('rb_pembelian', 'rb_supplier', 'id_supplier', array('id_pembelian' => $this->uri->segment(3)), 'id_pembelian', 'DESC')->row_array();
-		$data['record'] = $this->Model_app->view_join_where('rb_pembelian_detail', 'rb_produk', 'id_produk', array('id_pembelian' => $this->uri->segment(3)), 'id_pembelian_detail', 'DESC');
+		$data['record'] = $this->Model_app->view_join_where('rb_pembelian_detail', 'rb_produk', 'id_produk', array('id_pembelian' => $this->uri->segment(3), 'retur' => 0), 'id_pembelian_detail', 'DESC');
 		$data['title'] = "Detail Pembelian";
 		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
 		$this->template->load('administrator/template', 'administrator/mod_pembelian/view_pembelian_detail', $data);
@@ -1346,7 +1346,8 @@ class Administrator extends CI_Controller
 					'id_produk' => $this->input->post('aa'),
 					'harga_pesan' => $this->input->post('bb'),
 					'jumlah_pesan' => $this->input->post('cc'),
-					'satuan' => $this->input->post('dd')
+					'satuan' => $this->input->post('dd'),
+					'retur'	 => 0
 				);
 				$this->Model_app->insert('rb_pembelian_detail', $data);
 				$produk = $this->db->get_where('rb_produk', ['id_produk ' => $this->input->post('aa')])->row_array();
@@ -1357,7 +1358,7 @@ class Administrator extends CI_Controller
 					'id_produk' => $this->input->post('aa'),
 					'harga_pesan' => $this->input->post('bb'),
 					'jumlah_pesan' => $this->input->post('cc'),
-					'satuan' => $this->input->post('dd')
+					'satuan' => $this->input->post('dd'),
 				);
 
 				$detailBeli = $this->db->get_where('rb_pembelian_detail', ['id_pembelian_detail ' => $this->input->post('idpd')])->row_array();
@@ -1849,6 +1850,73 @@ class Administrator extends CI_Controller
 		$this->Model_retur_penjualan->simpan_retur_penjualan($id);
 	}
 
+	// Modul Retur Pembelian
+	public function retur_pembelian()
+	{
+		cek_session_akses('retur_pembelian', $this->session->id_session);
+		$data['record'] = $this->Model_retur_pembelian->getAllData();
+		$data['title'] = "Data Retur Pembelian";
+		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+		$this->template->load('administrator/template', 'administrator/mod_retur_pembelian/view_retur_pembelian', $data);
+	}
+
+	public function tambah_retur_pembelian()
+	{
+		cek_session_akses('retur_pembelian', $this->session->id_session);
+		$data['title'] = "Entry Retur Pembelian";
+		$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+		$this->template->load('administrator/template', 'administrator/mod_retur_pembelian/view_add_retur_pembelian', $data);
+	}
+
+	public function search_general_pembelian($kode = '')
+	{
+		$data = $this->Model_retur_pembelian->search_general_pembelian($kode);
+		echo json_encode($data);
+	}
+
+	public function produk_detail_akan_retur_pembelian($kode = '')
+	{
+		$data = $this->Model_retur_pembelian->produk_detail_akan_retur_pembelian($kode);
+		echo json_encode($data);
+	}
+
+	public function select_produk_retur_pembelian($kode = '')
+	{
+		$data = $this->Model_retur_pembelian->select_produk_retur_pembelian($kode);
+		echo json_encode($data);
+	}
+
+	public function tambah_detail_retur_pembelian()
+	{
+		$data = $this->Model_retur_pembelian->tambah_detail_retur_pembelian();
+	}
+	public function load_detail_retur_pembelian()
+	{
+		$data = $this->Model_retur_pembelian->load_detail_retur_pembelian();
+		echo json_encode($data);
+	}
+	public function get_total_retur_pembelian()
+	{
+		$data = $this->db->query("SELECT SUM(total_retur) AS total_retur FROM retur_pembelian_detail WHERE id_retur_pembelian IS NULL")->row_array();
+		echo json_encode($data);
+	}
+
+	public function delete_produk_retur_pembelian($id_retur = '', $id_pembelian_detail = '')
+	{
+		$this->Model_retur_pembelian->delete_produk_retur_pembelian($id_retur, $id_pembelian_detail);
+	}
+
+	public function simpan_retur_pembelian($id = '')
+	{
+
+		$this->Model_retur_pembelian->simpan_retur_pembelian($id);
+	}
+
+	public function detail_retur_pembelian($id = '')
+	{
+		$data = $this->Model_retur_pembelian->detail_retur_pembelian($id);
+		echo json_encode($data);
+	}
 
 	function orders()
 	{

@@ -153,5 +153,6 @@ $autoload['model'] = array(
     'Model_hutang',
     'Model_penjualan',
     'Model_piutang',
-    'Model_retur_penjualan'
+    'Model_retur_penjualan',
+    'Model_retur_pembelian'
 );
