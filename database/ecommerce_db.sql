@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2020 at 01:52 PM
+-- Generation Time: Sep 19, 2020 at 06:00 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -98,7 +98,7 @@ INSERT INTO `berita` (`id_berita`, `id_kategori`, `username`, `judul`, `sub_judu
 (8, 19, 'admin', 'Hijab Tutorial Instan Claire & Clarina Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-claire--clarina-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Perusahaan BUMN yang bergerak pada sektor peternakan, PT Berdikari (Persero) meresmikan usaha baru yang masih bergerak pada ritel produk daging dan produk olahan daging sapi yaitu Meat Gallery.<br />\r\n<br />\r\nPeluncuran Meat Gallery merupakan salah satu dari rangkaian persiapan Berdikari dalam menciptakan value chain yang terintegrasi yang sebelumnya perusahaan plat merah tersebut telah merevitalisasi<em>&nbsp;ranch breeding</em>&nbsp;di Sulawesi Selatan dan Sulawesi Tenggara, industri penggemukan sapi, rumah potong hewan serta industri daging olahan.<br />\r\n<br />\r\n&quot;Tekad kami untuk memasok kebutuhan daging sapi nasional yang merupakan salah satu sumber protein dengan harga terjangkau,&quot; ujar Direktur Utama PT Berdikari Liberto El Arief di Jakarta, Senin (20/1/2014).&nbsp;Dia mengatakan pada tahun ini, akan dibuka sebanyak 12 cabang Meat Gallery, sedangkan pada tahun depan akan mulai dibuka untuk&nbsp;<em>franchise</em>.<br />\r\n<br />\r\n&nbsp;&quot;Pertama buka di BSD (Bumi Serpong Damai), kemudian disini (kantor pusat) menyusul diseluruh diwilayah&nbsp; Jabodetabek, seperti di Jakarta Timur&nbsp; sedang tahap persiapan, dari situ di awal tahun ini kami membulatkan tekad menjadi BUMN peternakan,&quot; lanjutnya.&nbsp;Menurut Arief, keunggulan Meat Gallery ini karena produk daging maupun produk daging olahan yang dijual berasal dari sapi yang dipelihara sendiri dan dipotong di dalam rumah potong hewan (RPH) yang dikelola sendiri.<br />\r\n<br />\r\n&quot;Sehingga kami menggunakan standar internsional, higienis, proses pendinginan sesuai ketentuan, pembekuannya juga dalam waktu cepat, kualitas kita jamin. Pernah kita tawarkan daging ini ke restoran mereka langsung suka karena beda denga daging impor,&quot; katanya.</p>\r\n', 'Bisnis Ritel untuk Produk Daging', 'Minggu', '2018-02-18', '10:50:12', 'AR91_87_Molly_Grey_grande.jpg', 0, 'peternakan,marketing,system,teknologi,nasional', 'Y'),
 (9, 19, 'admin', 'Hijab Tutorial Pashmina Instan Alifa Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-alifa-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Lahirnya Peraturan Menteri Keuangan (PMK) Nomor 267 Tahun 2015 untuk mengenakan Pajak Pertambahan Nilai (PPN) 10 persen bagi ternak dan pakan ternak impor maupun di dalam negeri menuai banjir protes keras dari kalangan pelaku usaha dan peternak. Dalam beleid ini, hanya sapi indukan yang terbebas dari pungutan pajak.&nbsp; &nbsp;</p>\r\n\r\n<p>Wakil Ketua Kadin Indonesia Bidang Industri Pengolahan Makanan dan Peternakan, Juan Permata Adoe mengungkapkan, bahasa atau substansi dari PMK 267 Tahun 2015, yang menyebutkan PPN 10 persen yang dipungut tidak boleh dikreditkan.</p>\r\n\r\n<p>Itu artinya jika proses dari sapi menjadi daging, dan diproduksi lagi menjadi bakso, maka perusahaan pengolahan daging otomatis dikenakan&nbsp;<em>dobel</em>&nbsp;PPN.</p>\r\n\r\n<p>&quot;Ini yang jadi persoalan, karena dalam menetapkan PMK, pengusaha tidak diajak berdiskusi. PPN bukan menambah daya saing, tapi justru melemahkan daya saing,&quot; ujar dia.</p>\r\n\r\n<p>Juan menuturkan, Kementerian Pertanian sebenarnya meminta kepada Kementerian Keuangan untuk membebaskan bea masuk sapi indukan atau sapi betina produktif, bukan PPN. Tujuannya apabila Bea Masuk dinolkan, maka penjualan sapi jenis ini akan meningkat.</p>\r\n\r\n<p>&quot;Kementan itu inginnya dibebaskan Bea Masuk untuk sapi betina produktif. Tapi dengan alasan tertentu kenapa larinya ke (bebas) PPN, jadi&nbsp;<em>miss interpretasi</em>&nbsp;antara keinginan dan eksekusinya. Untuk ternak lainnya kena PPN 10 persen, otomatis turunannya juga kena,&quot; ujar dia.</p>\r\n', 'Pengusaha Daging sepi Pembeli', 'Minggu', '2018-02-18', '10:50:00', 'AR91_45_Afia_Black_grande.jpg', 0, 'peternakan,marketing,system,nasional', 'Y'),
 (10, 19, 'admin', 'Hijab Tutorial Pashmina Instan Kiyora Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-kiyora-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Pengusaha yang tergabung di Kamar Dagang dan Industri (Kadin) Indonesia meminta pemerintah merevisi aturan mengenai pemberlakuan Pajak Pertambahan Nilai (PPN) 10 persen untuk seluruh ternak, kecuali sapi indukan.</p>\r\n\r\n<p>Lantaran pungutan pajak tersebut akan berdampak besar terhadap produsen, konsumen hingga melemahkan daya saing industri peternakan nasional.</p>\r\n\r\n<p>Wakil Ketua Kadin Indonesia Bidang Industri Pengolahan Makanan dan Peternakan, Juan Permata Adoe mengungkapkan, pemerintah dan pengusaha menggelar rapat koordinasi PMK 267 Tahun 2015 tentang Kriteria Dan/Atau Rincian Ternak, Bahan Pakan Untuk Pembuatan Pakan Ternak dan Pakan Ikan Yang Atas Impor Dan/Atau Penyerahannya Dibebaskan Dari Pengenaan PPN.</p>\r\n\r\n<p>Aturan tersebut merupakan turunan dari Peraturan Pemerintah (PP) Nomor 81 Tahun 2015 tentang Impor dan atau Penyerahan Barang Kena Pajak Tertentu Yang Bersifat Strategis Yang Dibebaskan Dari Pengenaan PPN.&nbsp;Rapat koordinasi ini dihadiri pihak Kementerian Koordinator Bidang Perekonomian, Kementerian Perdagangan, Kementerian Pertanian, Badan Kebijakan Fiskal Kementerian Keuangan, pengusaha termasuk importir dan peternak lokal. Rapat berlangsung di kantor Kemenko Bidang Perekonomian untuk dibawa dalam rakor pangan tingkat Menteri yang dipimpin Menko Perekonomian Darmin Nasution pada pukul 14.00 WIB ini. &nbsp;</p>\r\n', 'Pengusaha Daging Sapi Menjerit', 'Minggu', '2018-02-18', '10:49:49', 'AF_23_6_Best_Of_Black_1024x1024_6e855c30-c2e4-4423-88ac-0f8e9dfeedc4_grande.jpg', 3, 'peternakan,marketing,teknologi,nasional', 'Y'),
-(11, 19, 'admin', 'Hijab Tutorial Instan Rachelia Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-rachelia-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Sebagai upaya serius untuk fokus pada bisnis peternakan dan pengolahan daging, PT Berdikari (Persero) akan melakukan importasi sapi betina produktif atau sapi indukan pada tahun ini.&nbsp;Direktur Utama PT Berdikari, Librato El Arief mengatakan, BUMN tersebut akan mulai melakukan impor sapi tersebut pada kuartal II 2014.&nbsp;<br />\r\n<br />\r\n&quot;Tahun ini akan masuk sapi indukan sebanyak&nbsp; 5 ribu ekor, sekitar bulan Mei-Juni, itu akan dikelola di&nbsp;<em>ranch</em>&nbsp;kami di Sulawesi Selatan dan Sulawesi Tenggara,&quot; ujarnya di Kantor Pusat Berdikari, Jakarta Pusat, Senin (20/1/2014).&nbsp;Selain itu, perusahaan plat merah ini juga akan melakukan impor sapi bakalan sebanyak 2 ribu ekor pada kuartal I tahun ini.&nbsp; &quot;Untuk sapi bakalan pada kuartal I ada 2 ribu ekor, kalau tahun lalu 3.500 ekor,&quot; lanjutnya.<br />\r\n<br />\r\nSapi-sapi ini diharapkan akan mampu menambah populasi milik perusahaan tersebut yang mencapai 12 ribu tersebar di wilayah Sulawesi dan Jawa.&nbsp;&quot;Olahan di RPH (rumah potong hewan) miliki kita kapasitasnya 100 ekor per hari, utilisasinya sampai saat ini baru 30%,&quot; katanya.<br />\r\n<br />\r\nSaat ini, PT Berdikari telah memiliki beberapa kandang penggemukan sapi yang tersebar di beberapa wilayah seperti 2 kandang di Jawa Tengah, 2 kandang di Jawa Barat, 1 kandang di Banten dan ada juga beberapa yang sedang dalam tahap perbaikan sebanyak 8 kandang diharapkan mulai beroperasi di pada bulan Mei tahun ini.</p>\r\n', 'Berdikari akan Impor Sapi Indukan', 'Minggu', '2018-02-18', '10:49:44', 'AD_19_20_Misty_Grey_grande.jpg', 13, 'peternakan,marketing,system,nasional', 'Y');
+(11, 19, 'admin', 'Hijab Tutorial Instan Rachelia Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-rachelia-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Sebagai upaya serius untuk fokus pada bisnis peternakan dan pengolahan daging, PT Berdikari (Persero) akan melakukan importasi sapi betina produktif atau sapi indukan pada tahun ini.&nbsp;Direktur Utama PT Berdikari, Librato El Arief mengatakan, BUMN tersebut akan mulai melakukan impor sapi tersebut pada kuartal II 2014.&nbsp;<br />\r\n<br />\r\n&quot;Tahun ini akan masuk sapi indukan sebanyak&nbsp; 5 ribu ekor, sekitar bulan Mei-Juni, itu akan dikelola di&nbsp;<em>ranch</em>&nbsp;kami di Sulawesi Selatan dan Sulawesi Tenggara,&quot; ujarnya di Kantor Pusat Berdikari, Jakarta Pusat, Senin (20/1/2014).&nbsp;Selain itu, perusahaan plat merah ini juga akan melakukan impor sapi bakalan sebanyak 2 ribu ekor pada kuartal I tahun ini.&nbsp; &quot;Untuk sapi bakalan pada kuartal I ada 2 ribu ekor, kalau tahun lalu 3.500 ekor,&quot; lanjutnya.<br />\r\n<br />\r\nSapi-sapi ini diharapkan akan mampu menambah populasi milik perusahaan tersebut yang mencapai 12 ribu tersebar di wilayah Sulawesi dan Jawa.&nbsp;&quot;Olahan di RPH (rumah potong hewan) miliki kita kapasitasnya 100 ekor per hari, utilisasinya sampai saat ini baru 30%,&quot; katanya.<br />\r\n<br />\r\nSaat ini, PT Berdikari telah memiliki beberapa kandang penggemukan sapi yang tersebar di beberapa wilayah seperti 2 kandang di Jawa Tengah, 2 kandang di Jawa Barat, 1 kandang di Banten dan ada juga beberapa yang sedang dalam tahap perbaikan sebanyak 8 kandang diharapkan mulai beroperasi di pada bulan Mei tahun ini.</p>\r\n', 'Berdikari akan Impor Sapi Indukan', 'Minggu', '2018-02-18', '10:49:44', 'AD_19_20_Misty_Grey_grande.jpg', 14, 'peternakan,marketing,system,nasional', 'Y');
 
 -- --------------------------------------------------------
 
@@ -245,8 +245,8 @@ CREATE TABLE `halamanstatis` (
 --
 
 INSERT INTO `halamanstatis` (`id_halaman`, `judul`, `judul_seo`, `isi_halaman`, `tgl_posting`, `gambar`, `username`, `dibaca`, `jam`, `hari`) VALUES
-(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2018-02-18', 'hijab1.jpg', 'admin', 25, '13:44:49', ''),
-(50, 'Cara Belanja', 'cara-belanja', '<p>Selamat datang di Toko Online Hijab Wanita Jawan Now. Demi kenyamanan anda berbelanja, berikut ini kami jelaskan tata cara berbelanja di Toko Online Hijab jaman Now.</p>\r\n\r\n<p><strong>1. Memilih Produk</strong></p>\r\n\r\n<p>Silahkan melihat produk-produk yang tersedia di Hijab Wanita Jawan Now melalui menu&nbsp;<strong>Categories</strong>. Pada produk yang diinginkan, klik tombol &lsquo;<strong>Add to Cart</strong>&rsquo; untuk memasukkannya ke dalam belanjaan anda. Perhatikan jumlah stok yang tersedia untuk produk tersebut.&nbsp;Tambahkan produk lain sesuai keperluan.</p>\r\n\r\n<p><strong>2.Melihat Belanjaan Anda</strong></p>\r\n\r\n<p>Dibagian kanan&nbsp;atas&nbsp;terlihat jumlah item dalam belanjaan dan&nbsp;total nilai pesanan anda. Bila ingin melihat daftar belanjaan lebih detil, arahkan kursor ke gambar keranjang belanja, kemudian klik tombol&nbsp;&#39;<strong>View Cart</strong>&#39;.</p>\r\n\r\n<p><strong>3. Checkout</strong></p>\r\n\r\n<p>Bila produk yang dipilih sudah lengkap dan sesuai, untuk checkout klik tombol &lsquo;<strong>Checkout</strong>&rsquo;.</p>\r\n\r\n<p><strong>4. Checkout Options</strong></p>\r\n\r\n<p>Anda akan diarahkan pada bagian &lsquo;<strong>Checkout Options</strong>&rsquo;. Bila anda sudah terdaftar (<strong>Returning Customer</strong>), silahkan gunakan email dan password anda untuk login. Bila anda belum terdaftar (<strong>New Customer</strong>), silahkan lakukan pendaftaran terlebih dahulu dengan meng-klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>5. Membuat Account</strong></p>\r\n\r\n<p>Bagi anda pelanggan baru, silahkan lengkapi beberapa data berikut. Yang perlu diperhatikan adalah pada saat menuliskan nama&nbsp;<strong>Kecamatan</strong>&nbsp;pada field &#39;<strong>Kecamatan (City)</strong>&#39;. Ketikkan beberapa huruf pertama nama kecamatan, kemudian sistem akan menampilkan pilihan nama kecamatan. Pilih yang paling sesuai. Lengkapi data alamat anda. Klik persetujuan&nbsp;<strong>Privacy Policy</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>6. Cara&nbsp;Pengiriman</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih tarif pengiriman melalui jasa kurir JNE yang sesuai. Jumlah nominal ongkos kirim akan otomatis dihitung sesuai dengan pilihan Kecamatan anda dan juga berat dari pesanan. Tuliskan&nbsp;catatan untuk pesanan anda pada bagian&nbsp;<strong>Comment</strong>, bila&nbsp;ada.&nbsp;Kemudian klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>7. Cara Pembayaran</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih cara pembayaran yang sesuai. Kami saat ini hanya menerima pembayaran melalui<strong>Bank Transfer</strong>.&nbsp;Klik persetujuan&nbsp;<strong>Terms &amp; Conditions</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>8. Konfirmasi Pemesanan</strong></p>\r\n\r\n<p>Pada bagian&nbsp;konfirmasi pemesanan&nbsp;ini anda dapat melihat sekali lagi rincian pesanan anda.&nbsp;Bila sudah tidak ada perubahan, klik tombol &lsquo;<strong>Confirm Order</strong>&rsquo;. Akan ada pesan bahwa pesanan anda sudah diproses dan bersamaan dengan itu kami mengirimkan email berisi&nbsp;rincian&nbsp;pesanan anda.</p>\r\n\r\n<p><strong>9. Pembayaran dan Konfirmasi Pembayaran</strong></p>\r\n\r\n<p>Silahkan lakukan pembayaran pada nomor rekening yang tercantum pada email yang kami kirimkan. Kemudian lakukan konfirmasi pembayaran agar kami dapat segera memproses pengiriman pesanan anda.</p>\r\n\r\n<p>Agar pesanan dapat diproses untuk pengiriman di hari yang sama, konfirmasi pembayaran ditunggu paling lambat jam 15.00 WIB (atau jam 12.00 WIB untuk hari Sabtu). Lewat dari itu diproses untuk pengiriman di hari/kesempatan berikutnya. Hari Minggu/Tanggal Merah, kantor libur dan tidak ada pengiriman.</p>\r\n\r\n<p><strong>10. Pengiriman dan Tracking Pengiriman</strong></p>\r\n\r\n<p>Apabila kami pengiriman telah kami lakukan, status pesanan anda akan diupdate dan kami akan sampaikan juga nomor tracking dari jasa kurir JNE melalui email.</p>\r\n', '2018-02-18', '', 'admin', 23, '13:41:58', '');
+(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2018-02-18', 'hijab1.jpg', 'admin', 27, '13:44:49', ''),
+(50, 'Cara Belanja', 'cara-belanja', '<p>Selamat datang di Toko Online Hijab Wanita Jawan Now. Demi kenyamanan anda berbelanja, berikut ini kami jelaskan tata cara berbelanja di Toko Online Hijab jaman Now.</p>\r\n\r\n<p><strong>1. Memilih Produk</strong></p>\r\n\r\n<p>Silahkan melihat produk-produk yang tersedia di Hijab Wanita Jawan Now melalui menu&nbsp;<strong>Categories</strong>. Pada produk yang diinginkan, klik tombol &lsquo;<strong>Add to Cart</strong>&rsquo; untuk memasukkannya ke dalam belanjaan anda. Perhatikan jumlah stok yang tersedia untuk produk tersebut.&nbsp;Tambahkan produk lain sesuai keperluan.</p>\r\n\r\n<p><strong>2.Melihat Belanjaan Anda</strong></p>\r\n\r\n<p>Dibagian kanan&nbsp;atas&nbsp;terlihat jumlah item dalam belanjaan dan&nbsp;total nilai pesanan anda. Bila ingin melihat daftar belanjaan lebih detil, arahkan kursor ke gambar keranjang belanja, kemudian klik tombol&nbsp;&#39;<strong>View Cart</strong>&#39;.</p>\r\n\r\n<p><strong>3. Checkout</strong></p>\r\n\r\n<p>Bila produk yang dipilih sudah lengkap dan sesuai, untuk checkout klik tombol &lsquo;<strong>Checkout</strong>&rsquo;.</p>\r\n\r\n<p><strong>4. Checkout Options</strong></p>\r\n\r\n<p>Anda akan diarahkan pada bagian &lsquo;<strong>Checkout Options</strong>&rsquo;. Bila anda sudah terdaftar (<strong>Returning Customer</strong>), silahkan gunakan email dan password anda untuk login. Bila anda belum terdaftar (<strong>New Customer</strong>), silahkan lakukan pendaftaran terlebih dahulu dengan meng-klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>5. Membuat Account</strong></p>\r\n\r\n<p>Bagi anda pelanggan baru, silahkan lengkapi beberapa data berikut. Yang perlu diperhatikan adalah pada saat menuliskan nama&nbsp;<strong>Kecamatan</strong>&nbsp;pada field &#39;<strong>Kecamatan (City)</strong>&#39;. Ketikkan beberapa huruf pertama nama kecamatan, kemudian sistem akan menampilkan pilihan nama kecamatan. Pilih yang paling sesuai. Lengkapi data alamat anda. Klik persetujuan&nbsp;<strong>Privacy Policy</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>6. Cara&nbsp;Pengiriman</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih tarif pengiriman melalui jasa kurir JNE yang sesuai. Jumlah nominal ongkos kirim akan otomatis dihitung sesuai dengan pilihan Kecamatan anda dan juga berat dari pesanan. Tuliskan&nbsp;catatan untuk pesanan anda pada bagian&nbsp;<strong>Comment</strong>, bila&nbsp;ada.&nbsp;Kemudian klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>7. Cara Pembayaran</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih cara pembayaran yang sesuai. Kami saat ini hanya menerima pembayaran melalui<strong>Bank Transfer</strong>.&nbsp;Klik persetujuan&nbsp;<strong>Terms &amp; Conditions</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>8. Konfirmasi Pemesanan</strong></p>\r\n\r\n<p>Pada bagian&nbsp;konfirmasi pemesanan&nbsp;ini anda dapat melihat sekali lagi rincian pesanan anda.&nbsp;Bila sudah tidak ada perubahan, klik tombol &lsquo;<strong>Confirm Order</strong>&rsquo;. Akan ada pesan bahwa pesanan anda sudah diproses dan bersamaan dengan itu kami mengirimkan email berisi&nbsp;rincian&nbsp;pesanan anda.</p>\r\n\r\n<p><strong>9. Pembayaran dan Konfirmasi Pembayaran</strong></p>\r\n\r\n<p>Silahkan lakukan pembayaran pada nomor rekening yang tercantum pada email yang kami kirimkan. Kemudian lakukan konfirmasi pembayaran agar kami dapat segera memproses pengiriman pesanan anda.</p>\r\n\r\n<p>Agar pesanan dapat diproses untuk pengiriman di hari yang sama, konfirmasi pembayaran ditunggu paling lambat jam 15.00 WIB (atau jam 12.00 WIB untuk hari Sabtu). Lewat dari itu diproses untuk pengiriman di hari/kesempatan berikutnya. Hari Minggu/Tanggal Merah, kantor libur dan tidak ada pengiriman.</p>\r\n\r\n<p><strong>10. Pengiriman dan Tracking Pengiriman</strong></p>\r\n\r\n<p>Apabila kami pengiriman telah kami lakukan, status pesanan anda akan diupdate dan kami akan sampaikan juga nomor tracking dari jasa kurir JNE melalui email.</p>\r\n', '2018-02-18', '', 'admin', 24, '13:41:58', '');
 
 -- --------------------------------------------------------
 
@@ -364,7 +364,10 @@ INSERT INTO `kas` (`id_kas`, `id_user`, `nominal`, `jenis`, `keterangan`, `creat
 (38, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-07 18:29:51'),
 (39, 1, 5000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:30:58'),
 (40, 1, 5000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:31:46'),
-(42, 1, 15000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:35:51');
+(42, 1, 15000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:35:51'),
+(43, 1, 519980, 'Pemasukan', 'Penjualan Point Of Sales (Offline)', '2020-09-08 19:51:47'),
+(44, 1, 350000, 'Pengeluaran', 'Retur Penjualan', '2020-09-10 14:49:35'),
+(45, 1, 60000, 'Pemasukan', 'Retur Pembelian', '2020-09-19 22:23:13');
 
 -- --------------------------------------------------------
 
@@ -1207,18 +1210,19 @@ CREATE TABLE `rb_pembelian_detail` (
   `id_produk` int(11) NOT NULL,
   `harga_pesan` int(11) NOT NULL,
   `jumlah_pesan` int(11) NOT NULL,
-  `satuan` varchar(50) NOT NULL
+  `satuan` varchar(50) NOT NULL,
+  `retur` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rb_pembelian_detail`
 --
 
-INSERT INTO `rb_pembelian_detail` (`id_pembelian_detail`, `id_pembelian`, `id_produk`, `harga_pesan`, `jumlah_pesan`, `satuan`) VALUES
-(49, 19, 6, 65000, 2, 'unit'),
-(48, 17, 3, 159980, 2, 'unit'),
-(47, 17, 2, 340000, 2, 'pcs'),
-(46, 13, 1, 60000, 1, 'pcs');
+INSERT INTO `rb_pembelian_detail` (`id_pembelian_detail`, `id_pembelian`, `id_produk`, `harga_pesan`, `jumlah_pesan`, `satuan`, `retur`) VALUES
+(49, 19, 6, 65000, 2, 'unit', 0),
+(48, 17, 3, 159980, 2, 'unit', 0),
+(47, 17, 2, 340000, 2, 'pcs', 0),
+(46, 13, 1, 60000, 0, 'pcs', 1);
 
 -- --------------------------------------------------------
 
@@ -1249,7 +1253,8 @@ CREATE TABLE `rb_penjualan` (
 --
 
 INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `diskon`, `kurir`, `service`, `ongkir`, `resi`, `waktu_transaksi`, `proses`, `method`, `bayar`, `kembali`, `id_user`, `online_order`) VALUES
-(26, 'TRX-20200907124130', 36, 0, '', '', 0, NULL, '2020-09-07 12:41:30', '2', 'Kredit', 50000, 0, 1, 'N');
+(26, 'TRX-20200907124130', 36, 0, '', '', 0, NULL, '2020-09-07 12:41:30', '2', 'Kredit', 50000, 0, 1, 'N'),
+(27, 'TRX-20200908195147', 35, 0, '', '', 0, NULL, '2020-09-08 19:51:47', '2', 'Cash', 600000, 80020, 1, 'N');
 
 -- --------------------------------------------------------
 
@@ -1266,15 +1271,18 @@ CREATE TABLE `rb_penjualan_detail` (
   `satuan` varchar(50) NOT NULL,
   `keterangan_order` text DEFAULT NULL,
   `subtotal` int(11) DEFAULT NULL,
-  `diskon` int(11) DEFAULT NULL
+  `diskon` int(11) DEFAULT NULL,
+  `retur` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rb_penjualan_detail`
 --
 
-INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`, `subtotal`, `diskon`) VALUES
-(67, 26, 1, 1, 70000, 'pcs', NULL, 70000, 0);
+INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`, `subtotal`, `diskon`, `retur`) VALUES
+(76, 26, 1, 2, 70000, 'pcs', NULL, 140000, 0, 0),
+(74, 27, 3, 1, 169980, 'unit', NULL, 169980, 0, 0),
+(75, 27, 2, 0, 350000, 'pcs', NULL, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1325,8 +1333,8 @@ CREATE TABLE `rb_produk` (
 
 INSERT INTO `rb_produk` (`id_produk`, `id_kategori_produk`, `nama_produk`, `produk_seo`, `satuan`, `harga_beli`, `harga_reseller`, `harga_konsumen`, `berat`, `diskon`, `gambar`, `keterangan`, `username`, `waktu_input`, `stok`) VALUES
 (1, 1, 'Segitiga Instan Aira- AA94.9 Tropical Blue', 'segitiga-instan-aira-aa94-9-tropical-blue', 'pcs', 60000, 65000, 70000, '300', 0, 'RYB6_1_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\n\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\n', 'admin', '2017-05-23 17:04:25', 4),
-(2, 1, 'Segitiga Instan Aira- AA94.8 Minty Green', 'segitiga-instan-aira-aa94-8-minty-green', 'pcs', 340000, 345000, 350000, '500', 0, 'RV71_27_Jeans_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-23 17:10:17', 2),
-(3, 2, 'Segitiga Instan KEINA - KN54.38 Delfine Lilac', 'segitiga-instan-keina-kn54-38-delfine-lilac', 'unit', 159980, 164980, 169980, '300', 0, 'RV71_5_Cold_Ocean_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:47:14', 2),
+(2, 1, 'Segitiga Instan Aira- AA94.8 Minty Green', 'segitiga-instan-aira-aa94-8-minty-green', 'pcs', 340000, 345000, 350000, '500', 0, 'RV71_27_Jeans_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-23 17:10:17', 1),
+(3, 2, 'Segitiga Instan KEINA - KN54.38 Delfine Lilac', 'segitiga-instan-keina-kn54-38-delfine-lilac', 'unit', 159980, 164980, 169980, '300', 0, 'RV71_5_Cold_Ocean_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:47:14', 1),
 (4, 1, 'Segitiga Instan Madeira - MDB5.3 Sunset', 'segitiga-instan-madeira-mdb5-3-sunset', 'unit', 119900, 124900, 129900, '100', 0, 'MK97_7_Mocca_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:53:10', 0),
 (5, 1, 'Segitiga Instan Madeira - MDB5.2 Ocean', 'segitiga-instan-madeira-mdb5-2-ocean', 'unit', 745000, 750000, 755000, '150', 0, 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:56:24', 0),
 (6, 1, 'Pashmina Instan Rafella - RLN1.2 Gold Maroon', 'pashmina-instan-rafella-rln1-2-gold-maroon', 'unit', 65000, 70000, 75000, '130', 0, 'Emily_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:57:11', 2),
@@ -1441,6 +1449,51 @@ INSERT INTO `rb_supplier` (`id_supplier`, `nama_supplier`, `kontak_person`, `ala
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `retur_pembelian`
+--
+
+CREATE TABLE `retur_pembelian` (
+  `id_retur_pembelian` int(11) NOT NULL,
+  `kode_retur` varchar(50) DEFAULT NULL,
+  `id_pembelian` int(11) DEFAULT NULL,
+  `tgl_retur` datetime DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `retur_pembelian`
+--
+
+INSERT INTO `retur_pembelian` (`id_retur_pembelian`, `kode_retur`, `id_pembelian`, `tgl_retur`, `id_user`) VALUES
+(1, 'RTRB-20200919222313', 13, '2020-09-19 22:23:13', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `retur_pembelian_detail`
+--
+
+CREATE TABLE `retur_pembelian_detail` (
+  `id_retur_pembelian_detail` int(11) NOT NULL,
+  `id_retur_pembelian` int(11) DEFAULT NULL,
+  `id_produk` int(11) DEFAULT NULL,
+  `jumlah_retur` int(11) DEFAULT NULL,
+  `harga_produk` int(11) DEFAULT NULL,
+  `total_retur` int(11) DEFAULT NULL,
+  `kondisi` int(11) DEFAULT NULL,
+  `opsi` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `retur_pembelian_detail`
+--
+
+INSERT INTO `retur_pembelian_detail` (`id_retur_pembelian_detail`, `id_retur_pembelian`, `id_produk`, `jumlah_retur`, `harga_produk`, `total_retur`, `kondisi`, `opsi`) VALUES
+(12, 1, 1, 1, 60000, 60000, 1, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `retur_penjualan`
 --
 
@@ -1451,6 +1504,15 @@ CREATE TABLE `retur_penjualan` (
   `tgl_retur` datetime DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `retur_penjualan`
+--
+
+INSERT INTO `retur_penjualan` (`id_retur_penjualan`, `kode_retur`, `id_penjualan`, `tgl_retur`, `id_user`) VALUES
+(4, 'RTR-20200910144817', 27, '2020-09-10 14:48:17', 1),
+(5, 'RTR-20200910144833', 27, '2020-09-10 14:48:33', 1),
+(6, 'RTR-20200910144935', 27, '2020-09-10 14:49:35', 1);
 
 -- --------------------------------------------------------
 
@@ -1463,10 +1525,18 @@ CREATE TABLE `retur_penjualan_detail` (
   `id_retur_penjualan` int(11) DEFAULT NULL,
   `id_produk` int(11) DEFAULT NULL,
   `jumlah_retur` int(11) DEFAULT NULL,
+  `harga_produk` int(11) DEFAULT NULL,
   `total_retur` int(11) DEFAULT NULL,
   `kondisi` varchar(100) DEFAULT NULL,
   `opsi` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `retur_penjualan_detail`
+--
+
+INSERT INTO `retur_penjualan_detail` (`id_retur_penjualan_detail`, `id_retur_penjualan`, `id_produk`, `jumlah_retur`, `harga_produk`, `total_retur`, `kondisi`, `opsi`) VALUES
+(23, 6, 2, 1, 350000, 350000, '1', '2');
 
 -- --------------------------------------------------------
 
@@ -3303,7 +3373,10 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2020-09-04', 32, '1599222988'),
 ('::1', '2020-09-05', 39, '1599317057'),
 ('::1', '2020-09-06', 18, '1599371859'),
-('::1', '2020-09-08', 56, '1599565702');
+('::1', '2020-09-08', 58, '1599566190'),
+('::1', '2020-09-09', 23, '1599628682'),
+('::1', '2020-09-18', 1, '1600437264'),
+('::1', '2020-09-19', 2, '1600531133');
 
 -- --------------------------------------------------------
 
@@ -3670,6 +3743,18 @@ ALTER TABLE `rb_supplier`
   ADD PRIMARY KEY (`id_supplier`);
 
 --
+-- Indexes for table `retur_pembelian`
+--
+ALTER TABLE `retur_pembelian`
+  ADD PRIMARY KEY (`id_retur_pembelian`);
+
+--
+-- Indexes for table `retur_pembelian_detail`
+--
+ALTER TABLE `retur_pembelian_detail`
+  ADD PRIMARY KEY (`id_retur_pembelian_detail`);
+
+--
 -- Indexes for table `retur_penjualan`
 --
 ALTER TABLE `retur_penjualan`
@@ -3797,7 +3882,7 @@ ALTER TABLE `identitas`
 -- AUTO_INCREMENT for table `kas`
 --
 ALTER TABLE `kas`
-  MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -3881,13 +3966,13 @@ ALTER TABLE `rb_pembelian_detail`
 -- AUTO_INCREMENT for table `rb_penjualan`
 --
 ALTER TABLE `rb_penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan_detail`
 --
 ALTER TABLE `rb_penjualan_detail`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan_temp`
@@ -3920,16 +4005,28 @@ ALTER TABLE `rb_supplier`
   MODIFY `id_supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `retur_pembelian`
+--
+ALTER TABLE `retur_pembelian`
+  MODIFY `id_retur_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `retur_pembelian_detail`
+--
+ALTER TABLE `retur_pembelian_detail`
+  MODIFY `id_retur_pembelian_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `retur_penjualan`
 --
 ALTER TABLE `retur_penjualan`
-  MODIFY `id_retur_penjualan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_retur_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `retur_penjualan_detail`
 --
 ALTER TABLE `retur_penjualan_detail`
-  MODIFY `id_retur_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_retur_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `slide`
