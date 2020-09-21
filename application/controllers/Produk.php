@@ -5,6 +5,8 @@ class Produk extends CI_Controller
 {
 	function index()
 	{
+		$data['module'] = 'home';
+		$data['custom_js'] = 'asset/custom/produk.js';
 		$jumlah = $this->Model_app->view('rb_produk')->num_rows();
 		$config['base_url'] = base_url() . 'produk/index';
 		$config['total_rows'] = $jumlah;
@@ -15,7 +17,7 @@ class Produk extends CI_Controller
 			$dari = $this->uri->segment('3');
 		}
 
-		if (is_numeric($dari)) {
+		if (is_numeric($dari)) {	
 			$data['iklantengah'] = $this->Model_iklan->iklan_tengah();
 			if ($this->input->post('cari') != '') {
 				$data['title'] = title();
@@ -61,15 +63,14 @@ class Produk extends CI_Controller
 
 	function detail()
 	{
-		$query = $this->Model_app->edit('rb_produk', array('produk_seo' => $this->uri->segment(3)));
-		if ($query->num_rows() >= 1) {
-			$cek = $query->row_array();
-			$data['title'] = "$cek[nama_produk]";
-			$data['judul'] = "$cek[nama_produk]";
-			$data['row'] = $this->Model_app->view_where('rb_produk', array('id_produk' => $cek['id_produk']))->row_array();
-			$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_detail', $data);
+		$check = $this->uri->segment(3);
+		$id = $this->input->post('id');
+
+		if($check == 'ajax'){
+			$data['record'] = $this->Model_app->edit('rb_produk', array('id_produk' => $id))->row_array();
+			$this->load->view('ajax/detailProduk', $data);
 		} else {
-			redirect('main');
+
 		}
 	}
 

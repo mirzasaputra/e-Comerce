@@ -126,6 +126,7 @@
 			<div class="container-fluid">
 				<div class="cat-nav-head">
 					<div class="row px-md-5 m-0">
+						<?php if($module == "home") : ?>
 						<div class="col-lg-3">
 							<div class="all-category">
 								<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
@@ -140,6 +141,7 @@
 								</ul>
 							</div>
 						</div>
+						<?php endif;?>
 						<div class="col-lg-9 col-12">
 							<div class="menu-area">
 								<!-- Main Menu -->
@@ -149,22 +151,29 @@
 											<ul class="nav main-menu menu navbar-nav">
 												<?php
 												$botm = $this->Model_menu->bottom_menu();
+												$no = 1;
 												foreach ($botm->result_array() as $row) {
-												$dropdown = $this->Model_menu->dropdown_menu($row['id_menu'])->num_rows();
-												if ($dropdown == 0) {
-													echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
-												} else {
-													echo "<li>
-																<a href='" . base_url() . "$row[link]' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>$row[nama_menu] 
-																<span class='ti-angle-down'></span></a>
-																<ul class='dropdown'>";
-													$dropmenu = $this->Model_menu->dropdown_menu($row['id_menu']);
-													foreach ($dropmenu->result_array() as $row) {
-													echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
+													if($no == 1){
+														$active = "class='active'";
+													} else {
+														$active = '';
 													}
-													echo "</ul>
-															</li>";
-												}
+													$dropdown = $this->Model_menu->dropdown_menu($row['id_menu'])->num_rows();
+													if ($dropdown == 0) {
+														echo "<li " . $active . "><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
+													} else {
+														echo "<li>
+																	<a href='" . base_url() . "$row[link]' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>$row[nama_menu] 
+																	<span class='ti-angle-down'></span></a>
+																	<ul class='dropdown'>";
+														$dropmenu = $this->Model_menu->dropdown_menu($row['id_menu']);
+														foreach ($dropmenu->result_array() as $row) {
+														echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
+														}
+														echo "</ul>
+																</li>";
+													}
+													$no++;
 												}
 												?>
 											</ul>

@@ -6,9 +6,8 @@
             } else {
               $foto_produk = $row['gambar'];
             }
-            // $j = $this->model_app->jual_umum($row['id_produk'])->row_array();
-            // $b = $this->model_app->beli_umum($row['id_produk'])->row_array();
-            // $stok = $b['beli'] - $j['jual'];
+
+            
             echo "<div class='col-sm-6'>
                         <center><img style='min-height:88px; width:90%' src='" . base_url() . "asset/foto_produk/$foto_produk'></center>
                     </div>
