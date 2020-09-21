@@ -46,6 +46,9 @@
                           <a href="#">
                             <img class="default-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
                             <img class="hover-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
+                            <?php if($row['diskon'] > 0) : ?>
+                              <span class="price-dec"><?=ceil($row['diskon'] * 100 / $row['harga_konsumen']);?>% Off</span>
+                            <?php endif;?>
                           </a>
                           <div class="button-head">
                             <div class="product-action">
@@ -60,10 +63,10 @@
                           <h3><a href="product-details.html"><?=$row['nama_produk'];?></a></h3>
                           <div class="product-price">
                             <?php
-                            if($this->session->level == "konsumen"){
-                              $harga = $row['harga_konsumen'];
-                            } else {
+                            if($this->session->level == "reseller"){
                               $harga = $row['harga_reseller'];
+                            } else {
+                              $harga = $row['harga_konsumen'];
                             }
                             ?>
                             <span>Rp. <?=number_format($harga, '0', ',', '.');;?></span>
@@ -97,10 +100,6 @@
 				<div class="col-lg-6 col-md-6 col-12">
 					<div class="single-banner">
 						<img src="<?=base_url();?>asset/foto_iklan/<?=$row['gambar'];?>" alt="<?=$row['judul'];?>">
-						<div class="content">
-							<h3><?=$row['judul'];?></h3>
-							<a href="<?=$row['url'];?>">Discover Now</a>
-						</div>
 					</div>
 				</div>
         <!-- /End Single Banner  -->
@@ -123,7 +122,7 @@
       <div class="row">
         <div class="col-12">
           <div class="owl-carousel popular-slider">
-            <?php foreach($record->result_array() as $row) : ?>
+            <?php foreach($hotItem->result_array() as $row) : ?>
             <!-- Start Single Product -->
 						<div class="single-product">
 							<div class="product-img">

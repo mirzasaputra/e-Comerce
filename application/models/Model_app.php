@@ -178,4 +178,15 @@ class Model_app extends CI_model
     {
         return $this->db->query("SELECT a.id_konsumen, a.username, a.nama_lengkap, a.email, a.jenis_kelamin, a.tanggal_lahir, a.tempat_lahir, a.alamat_lengkap, a.no_hp, a.tanggal_daftar, a.foto, b.kota_id, b.nama_kota as kota, a.tipe FROM `rb_konsumen` a LEFT JOIN rb_kota b ON a.kota_id=b.kota_id where a.id_konsumen='$id'");
     }
+
+    function select_images($table, $data){
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->where($data);
+        return $this->db->get();
+    }
+
+    function hot_item(){
+        return $this->db->query("SELECT COUNT(jumlah), p.id_produk, id_kategori_produk, nama_produk, produk_seo, p.satuan, harga_beli, harga_reseller, harga_konsumen, berat, p.diskon, gambar, keterangan, username, waktu_input, stok FROM rb_penjualan_detail pd INNER JOIN rb_produk p ON p.id_produk=pd.id_produk GROUP BY id_produk ORDER BY jumlah DESC LIMIT 8");
+    }
 }

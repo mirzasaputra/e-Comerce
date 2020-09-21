@@ -311,8 +311,6 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<script src="<?=base_url();?>asset/vendor/js/easing.js"></script>
 	<!-- Active JS -->
   	<script src="<?=base_url();?>asset/vendor/js/active.js"></script>
-	<!-- script custom-->
-	<script src="<?=base_url($custom_js);?>"></script>
 
   <?php include "modal.php"; ?>
 </body>

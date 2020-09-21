@@ -6,7 +6,6 @@ class Produk extends CI_Controller
 	function index()
 	{
 		$data['module'] = 'home';
-		$data['custom_js'] = 'asset/custom/produk.js';
 		$jumlah = $this->Model_app->view('rb_produk')->num_rows();
 		$config['base_url'] = base_url() . 'produk/index';
 		$config['total_rows'] = $jumlah;
@@ -27,6 +26,7 @@ class Produk extends CI_Controller
 				$data['title'] = title();
 				$data['judul'] = 'Semua Produk';
 				$data['record'] = $this->Model_app->view_ordering_limit('rb_produk', 'id_produk', 'DESC', $dari, $config['per_page']);
+				$data['hotItem'] = $this->Model_app->hot_item();
 				$data['berita'] = $this->Model_berita->berita();
 				$this->pagination->initialize($config);
 			}
@@ -68,6 +68,7 @@ class Produk extends CI_Controller
 
 		if($check == 'ajax'){
 			$data['record'] = $this->Model_app->edit('rb_produk', array('id_produk' => $id))->row_array();
+			$data['images'] = $this->Model_app->select_images('produk_image', array('id_produk' => $id));
 			$this->load->view('ajax/detailProduk', $data);
 		} else {
 
