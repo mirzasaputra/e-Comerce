@@ -1,3 +1,4 @@
+ <div class="container container-content"> 
   <!-- Start Small Banner  -->
   <section class="small-banner section">
 		<div class="container-fluid">
@@ -193,44 +194,45 @@
 		</div>
 	</section>
   <!-- End Shop Blog  -->
+</div>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
-        </div>
-        <div class="modal-body" id="viewDetailProduk">
-            <!-- Produk detail -->
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
+      </div>
+      <div class="modal-body" id="viewDetailProduk">
+          <!-- Produk detail -->
       </div>
     </div>
   </div>
-  <!-- Modal end -->
+</div>
+<!-- Modal end -->
 
-  <script>
-    $(document).ready(function(){
-      $('.slider1').owlCarousel({
-          items: 1,
-          slideSpeed: 300,
-          nav: false,
-          dots: false,
-          loop: true,
-          autoplay: true,
-          stopOnHover: true
-      });
-      
-      $('.detailProduk').click(function(){
-          let id = $(this).attr('value');
-          $.ajax({
-              url: "<?=base_url();?>Produk/detail/ajax",
-              method: "post",
-              data: {id: id},
-              success: function(data){
-                $('#viewDetailProduk').html(data);
-              }
-          })
-      })
+<script>
+  $(document).ready(function(){
+    $('.slider1').owlCarousel({
+        items: 1,
+        slideSpeed: 300,
+        nav: false,
+        dots: false,
+        loop: true,
+        autoplay: true,
+        stopOnHover: true
+    });
+    
+    $('.detailProduk').click(function(){
+        let id = $(this).attr('value');
+        $.ajax({
+            url: "<?=base_url();?>Produk/detail/ajax",
+            method: "post",
+            data: {id: id},
+            success: function(data){
+              $('#viewDetailProduk').html(data);
+            }
+        })
     })
-  </script>
+  })
+</script>

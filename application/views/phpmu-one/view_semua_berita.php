@@ -1,23 +1,40 @@
-<?php
-            echo "<p class='sidebar-title'> &nbsp; $title</p><hr>";
-                $no = 1;
-                foreach ($berita->result_array() as $row){
-                    $isi_berita = strip_tags($row['isi_berita']); 
-                    $isi = substr($isi_berita,0,100); 
-                    $isi = substr($isi_berita,0,strrpos($isi," "));
-                    $tanggal = tgl_indo($row['tanggal']);
-                    if ($row['gambar'] == ''){ $foto = 'small_no-image.jpg'; }else{ $foto = $row['gambar']; }
-                    echo "<div class='col-md-4'>
-                            <small class='date pull-right'><span class='glyphicon glyphicon-time'></span> $row[hari], $tanggal</small><br>
-                            <div style='height:130px; overflow:hidden'>
-                                <img style='width:100%' src='".base_url()."asset/foto_berita/".$foto."'>
-                            </div>
-                            <a href='".base_url()."berita/detail/$row[judul_seo]'>".$row['judul']."</a>
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bread-inner">
+                    <ul class="bread-list">
+                        <li><a href="<?=base_url();?>">Home<i class="ti-arrow-right"></i></a></li>
+                        <li class="active"><a href="<?=base_url();?>berita">Berita</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
 
-                        </div>";
-                        if ($no % 3 == 0){
-                            echo "<div style='clear:both'><hr></div>";
-                        }
-                    $no++;
-                }
-            ?>
+<!-- Start Shop Blog  -->
+<section class="shop-blog section">
+    <div class="container">
+        <div class="row">
+            <?php foreach($berita->result_array() as $row) : ?>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Start Single Blog  -->
+                <div class="shop-single-blog">
+                    <img src="<?=base_url();?>asset/foto_berita/<?=$row['gambar'];?>" alt="<?=$row['judul'];?>">
+                    <div class="content">
+                        <?php $date = date_create($row['tanggal']);?>
+                        <p class="date"><?=$row['hari'];?>, <?=date_format($date, 'd M Y');?></p>
+                        <a href="<?=base_url();?>berita/detail/<?=$row['judul_seo'];?>" class="title"><?=$row['judul'];?></a>
+                        <a href="<?=base_url();?>berita/detail/<?=$row['judul_seo'];?>" class="more-btn">Continue Reading</a>
+                    </div>
+                </div>
+                <!-- End Single Blog  -->
+            </div>
+            <?php endforeach;?>
+        </div>
+    </div>
+</section>
+<!-- End Shop Blog  -->

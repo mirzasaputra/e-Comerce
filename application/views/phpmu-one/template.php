@@ -77,9 +77,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 		<?php include "slide.php";?>
 	<?php endif;?>
 
-	<div class="container container-content">
-		<?=$contents;?>
-	</div> <!-- /container -->
+	<?=$contents;?>
 
 	<!-- Start Shop Services Area -->
 	<section class="shop-services section home">
