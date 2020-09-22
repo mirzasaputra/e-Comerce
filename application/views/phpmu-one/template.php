@@ -239,42 +239,6 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	</footer>
 	<!-- /End Footer Area -->
 
-  <div class="modal fade" id="uploadfoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h5 class="modal-title" id="myModalLabel">Ganti Foto Profile anda?</h5>
-        </div>
-        <center>
-          <div class="modal-body">
-            <?php
-            $attributes = array('class' => 'form-horizontal', 'role' => 'form');
-            echo form_open_multipart('members/foto', $attributes); ?>
-
-            <div class="form-group">
-              <center style='color:#8a8a8a'>Recomended (200 Kb atau 600 x 600) </center><br>
-              <label for="inputEmail3" class="col-sm-3 control-label">Pilih Foto</label>
-              <div style='background:#fff;' class="input-group col-sm-7">
-                <span class="input-group-addon"><i class='fa fa-image fa-fw'></i></span>
-                <input style='text-transform:lowercase;' type="file" class="form-control" name="userfile">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-sm-offset-1">
-                <button type="submit" name='submit' class="btn btn-primary">Update Foto</button>
-              </div>
-            </div>
-
-            </form>
-            <div style='clear:both'></div>
-          </div>
-        </center>
-      </div>
-    </div>
-  </div>
-
   <?php $this->Model_main->kunjungan(); ?>
 
   	<!-- Jquery -->
