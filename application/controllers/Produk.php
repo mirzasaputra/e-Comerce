@@ -36,6 +36,20 @@ class Produk extends CI_Controller
 		}
 	}
 
+	function all()
+	{
+		$data['title'] = title();
+		$data['judul'] = 'Semua Produk';
+		$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_all', $data);
+	}
+
+	function all_ajax(){
+		$order_by = $_GET['order_by'];
+		$data['record'] = $this->Model_app->view_ordering('rb_produk', $order_by, 'ASC');
+		$data['iklan'] = $this->Model_iklan->iklan_sidebar	();
+		$this->load->view('ajax/view_produk_all', $data);
+	}
+
 	function kategori()
 	{
 		$cek = $this->Model_app->edit('rb_kategori_produk', array('kategori_seo' => $this->uri->segment(3)))->row_array();
