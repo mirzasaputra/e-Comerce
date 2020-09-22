@@ -235,4 +235,18 @@ class Model_berita extends CI_model{
         $this->db->limit(3);
         return $this->db->get();
     }
+
+    function get_kategori(){
+        $this->db->select('*');
+        $this->db->from('kategori');
+        $this->db->where('aktif', 'Y');
+        $this->db->order_by('nama_kategori', 'ASC');
+        return $this->db->get();
+    }
+
+    function get_tag(){
+        $this->db->select('*');
+        $this->db->from('tag');
+        return $this->db->get();
+    }
 }

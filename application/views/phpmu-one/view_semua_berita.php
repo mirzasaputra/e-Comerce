@@ -15,9 +15,13 @@
 </div>
 <!-- End Breadcrumbs -->
 
+
 <!-- Start Shop Blog  -->
 <section class="shop-blog section">
     <div class="container">
+        <?php if(isset($kategori)) : ?>
+        <h5>Menampilkan data dengan kategori : <?=$kategori;?></h5><br>
+        <?php endif;?>
         <div class="row">
             <?php foreach($berita->result_array() as $row) : ?>
             <div class="col-lg-4 col-md-6 col-12">

@@ -79,6 +79,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 
 	<?=$contents;?>
 
+	<?php if($module == "home") : ?>
 	<!-- Start Shop Services Area -->
 	<section class="shop-services section home">
 		<div class="container">
@@ -146,7 +147,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 		</div>
 	</section>
   <!-- End Shop Newsletter -->
-  
+ <?php endif;?>
+
   <!-- Start Footer Area -->
 	<footer class="footer">
 		<!-- Footer Top -->

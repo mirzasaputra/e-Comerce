@@ -1,35 +1,118 @@
-<?php
-          $tanggal = tgl_indo($record['tanggal']);
-          echo "<p class='sidebar-title'> $record[judul]</p>
-                <p style='color:blue'>$record[sub_judul]</p>
-                <small class='date'><span class='glyphicon glyphicon-time'></span> $record[hari], $tanggal, $record[jam] WIB, $record[dibaca] View</small>
-                <small class='date'><span class='glyphicon glyphicon-user'></span> $record[nama_lengkap], Kategori : <a href='".base_url()."berita/kategori/$record[kategori_seo]'>$record[nama_kategori]</a></small><hr>
-            <div class='col-md-12'>";
-                if ($record['gambar'] != ''){
-                    echo "<img width='100%' src='".base_url()."asset/foto_berita/".$record['gambar']."'><br>
-                          <small class='btn btn-default btn-xs btn-block' style='color:red;'>$record[keterangan_gambar]</small>";
-                }
-                echo "<p>$record[isi_berita]</p>
-            </div><div style='clear:both'><br></div>
-
-            <p class='sidebar-title'><span class='glyphicon glyphicon-list'></span> &nbsp; Informasi Utama</p><hr>";
-                $no = 1;
-                foreach ($infoterbaru->result_array() as $row){
-                    $isi_berita = strip_tags($row['isi_berita']); 
-                    $isi = substr($isi_berita,0,150); 
-                    $isi = substr($isi_berita,0,strrpos($isi," "));
-                    $tanggal = tgl_indo($row['tanggal']);
-                    if ($row['gambar'] == ''){ $foto = 'small_no-image.jpg'; }else{ $foto = $row['gambar']; }
-                    echo "<div class='col-md-4'>
-                            <small class='date pull-right'><span class='glyphicon glyphicon-time'></span> $row[hari], $tanggal</small><br>
-                            <div style='height:130px; overflow:hidden'>
-                                <img style='width:100%' src='".base_url()."asset/foto_berita/".$foto."'>
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bread-inner">
+                    <ul class="bread-list">
+                        <li><a href="<?=base_url();?>">Home<i class="ti-arrow-right"></i></a></li>
+                        <li><a href="<?=base_url();?>berita">Berita</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+			
+<!-- Start Blog Single -->
+<section class="blog-single section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12">
+                <div class="blog-single-main">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="image">
+                                <img src="<?=base_url();?>asset/foto_berita/<?=$record['gambar'];?>" alt="#">
                             </div>
-                            <a href='".base_url()."berita/detail/$row[judul_seo]'>".$row['judul']."</a>
-                        </div>";
-                        if ($no % 3 == 0){
-                            echo "<div style='clear:both'><hr></div>";
-                        }
-                    $no++;
-                }
-            ?>
+                            <div class="blog-detail">
+                                <h2 class="blog-title"><?=$record['judul'];?></h2>
+                                <div class="blog-meta">
+                                    <?php $tanggal = tgl_indo($record['tanggal']);?>
+                                    <span class="author"><a href="#"><i class="fa fa-user"></i>By <?=$record['nama_lengkap'];?></a><a href="#"><i class="fa fa-calendar"></i><?=$record['hari'];?>, <?=$tanggal;?>, <?=$record['jam'];?></a></span>
+                                </div>
+                                <div class="content">
+                                   <p><?=$record['isi_berita'];?></p>
+                                </div>
+                            </div>
+                            <div class="share-social">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="content-tags">
+                                            <h4>Tags:</h4>
+                                            <ul class="tag-inner">
+                                                <?php
+                                                $tag = explode(',', $record['tag']);
+                                                foreach($tag as $row) : 
+                                                ?>
+                                                <li><a href="#"><?=$row;?></a></li>
+                                                <?php endforeach;?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>			
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="main-sidebar">
+                    <!-- Single Widget -->
+                    <div class="single-widget search">
+                        <div class="form">
+                            <input type="email" placeholder="Search Here...">
+                            <a class="button" href="#"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <div class="single-widget category">
+                        <h3 class="title">Blog Categories</h3>
+                        <ul class="categor-list">
+                            <?php foreach($blog_kategori->result_array() as $row) : ?>
+                                <li><a href="#"><?=$row['nama_kategori'];?></a></li>
+                            <?php endforeach;?>
+                        </ul>
+                    </div>
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <div class="single-widget recent-post">
+                        <h3 class="title">Recent post</h3>
+                        <?php foreach($infoterbaru->result_array() as $row) : ?>
+                        <!-- Single Post -->
+                        <div class="single-post">
+                            <div class="image">
+                                <img src="<?=base_url();?>asset/foto_berita/<?=$row['gambar'];?>" alt="<?=$row['judul'];?>">
+                            </div>
+                            <div class="content">
+                                <h5><a href="#"><?=$row['judul'];?></a></h5>
+                                <ul class="comment">
+                                    <?php $tanggal = tgl_indo($row['tanggal']);?>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i><?=$row['hari'];?>, <?=$tanggal;?></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Single Post -->
+                        <?php endforeach;?>
+                    </div>
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <div class="single-widget side-tags">
+                        <h3 class="title">Tags</h3>
+                        <ul class="tag">
+                            <?php foreach($tags->result_array() as $row) : ?>
+                                <li><a href="#"><?=$row['nama_tag'];?></a></li>
+                            <?php endforeach;?>
+                        </ul>
+                    </div>
+                    <!--/ End Single Widget -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Blog Single -->

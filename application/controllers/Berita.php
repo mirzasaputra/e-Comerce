@@ -20,7 +20,9 @@ class Berita extends CI_Controller
 		}
 		$data['title'] = $row->judul;
 		$data['record'] = $this->Model_berita->berita_detail($ids)->row_array();
-		$data['infoterbaru'] = $this->Model_berita->info_terbaru(6);
+		$data['blog_kategori'] = $this->Model_berita->get_kategori();
+		$data['infoterbaru'] = $this->Model_berita->info_terbaru(3);
+		$data['tags'] = $this->Model_berita->get_tag();
 		$this->Model_berita->berita_dibaca_update($ids);
 		$this->template->load('phpmu-one/template', 'phpmu-one/view_berita', $data);
 	}
@@ -34,8 +36,9 @@ class Berita extends CI_Controller
 		if ($total == 0) {
 			redirect('main');
 		}
+		$data['kategori'] = $ids;
 		$data['title'] = $row->nama_kategori;
-		$data['kategori'] = $this->Model_berita->detail_kategori($row->id_kategori, 9);
-		$this->template->load('phpmu-one/template', 'phpmu-one/view_kategori', $data);
+		$data['berita'] = $this->Model_berita->detail_kategori($row->id_kategori, 9);
+		$this->template->load('phpmu-one/template', 'phpmu-one/view_semua_berita', $data);
 	}
 }
