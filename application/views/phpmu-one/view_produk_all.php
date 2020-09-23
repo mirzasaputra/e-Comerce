@@ -25,85 +25,35 @@
 								<div class="single-widget category">
 									<h3 class="title">Categories</h3>
 									<ul class="categor-list">
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">jacket</a></li>
-										<li><a href="#">jeans</a></li>
-										<li><a href="#">sweatshirts</a></li>
-										<li><a href="#">trousers</a></li>
-										<li><a href="#">kitwears</a></li>
-										<li><a href="#">accessories</a></li>
+										<?php foreach($kategori->result_array() as $row) : ?>
+											<li><a href="<?=base_url();?>produk/kategori/<?=$row['kategori_seo'];?>"><?=$row['nama_kategori'];?></a></li>
+										<?php endforeach;?>
 									</ul>
 								</div>
 								<!--/ End Single Widget -->
 								<!-- Single Widget -->
 								<div class="single-widget recent-post">
 									<h3 class="title">Recent post</h3>
+									<?php foreach($recent_post->result_array() as $row) : ?>
 									<!-- Single Post -->
 									<div class="single-post first">
 										<div class="image">
-											<img src="https://via.placeholder.com/75x75" alt="#">
+											<img src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="<?=$row['nama_produk'];?>">
 										</div>
 										<div class="content">
-											<h5><a href="#">Girls Dress</a></h5>
-											<p class="price">$99.50</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-											</ul>
+											<h5><a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h5>
+											<?php
+											if($this->session->level == 'konsumen'){
+												$harga = $row['harga_konsumen'];
+											} else {
+												$harga = $row['harga_reseller'];
+											}
+											?>
+											<p class="price">Rp. <?=number_format($harga, '0', ',', '.');?></p>
 										</div>
 									</div>
 									<!-- End Single Post -->
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="https://via.placeholder.com/75x75" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Women Clothings</a></h5>
-											<p class="price">$99.50</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="https://via.placeholder.com/75x75" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Man Tshirt</a></h5>
-											<p class="price">$99.50</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-								</div>
-								<!--/ End Single Widget -->
-								<!-- Single Widget -->
-								<div class="single-widget category">
-									<h3 class="title">Manufacturers</h3>
-									<ul class="categor-list">
-										<li><a href="#">Forever</a></li>
-										<li><a href="#">giordano</a></li>
-										<li><a href="#">abercrombie</a></li>
-										<li><a href="#">ecko united</a></li>
-										<li><a href="#">zara</a></li>
-									</ul>
+									<?php endforeach;?>
 								</div>
 								<!--/ End Single Widget -->
 						</div>

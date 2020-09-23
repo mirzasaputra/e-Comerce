@@ -40,13 +40,15 @@ class Produk extends CI_Controller
 	{
 		$data['title'] = title();
 		$data['judul'] = 'Semua Produk';
+		$data['kategori'] = $this->Model_app->view('rb_kategori_produk');
+		$data['recent_post'] = $this->Model_app->view_ordering_limit('rb_produk', 'waktu_input', 'DESC', 0, 3);
 		$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_all', $data);
 	}
 
 	function all_ajax(){
 		$order_by = $_GET['order_by'];
 		$data['record'] = $this->Model_app->view_ordering('rb_produk', $order_by, 'ASC');
-		$data['iklan'] = $this->Model_iklan->iklan_sidebar	();
+		$data['iklan'] = $this->Model_iklan->iklan_sidebar();
 		$this->load->view('ajax/view_produk_all', $data);
 	}
 
@@ -78,9 +80,9 @@ class Produk extends CI_Controller
 	function detail()
 	{
 		$check = $this->uri->segment(3);
-		$id = $this->input->post('id');
-
+		
 		if($check == 'ajax'){
+			$id = $this->input->post('id');
 			$data['record'] = $this->Model_app->edit('rb_produk', array('id_produk' => $id))->row_array();
 			$data['images'] = $this->Model_app->select_images('produk_image', array('id_produk' => $id));
 			$this->load->view('ajax/detailProduk', $data);

@@ -2,7 +2,7 @@
 <div class="col-lg-4 col-md-6 col-12">
     <div class="single-product">
         <div class="product-img">
-            <a href="#">
+            <a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>">
                 <img class="default-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
                 <img class="hover-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
             <?php if($row['diskon'] > 0) : ?>
@@ -11,7 +11,7 @@
             </a>
             <div class="button-head">
                 <div class="product-action">
-                    <a href="#" data-toggle="modal" class="detailProduk" data-target="#exampleModal" value="<?=$row['id_produk'];?>" title="Quick View"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                    <a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>" data-toggle="modal" class="detailProduk" data-target="#exampleModal" value="<?=$row['id_produk'];?>" title="Quick View"><i class=" ti-eye"></i><span>Quick Shop</span></a>
                 </div>
                 <div class="product-action-2">
                     <a title="Add to cart" href="#">Add to cart</a>
