@@ -83,7 +83,22 @@
 				</div>
 			</div>
 		</section>
-        <!--/ End Product Style 1  -->	
+		<!--/ End Product Style 1  -->	
+		
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
+					</div>
+					<div class="modal-body" id="viewDetailProduk">
+						<!-- Produk detail -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal end -->
         
         <script>
             $(document).ready(function(){
@@ -97,6 +112,18 @@
                         data: {order_by: order_by},
                         success: function(data){
                             $('#viewData').html(data);
+
+							$('.detailProduk').click(function(){
+								let id = $(this).attr('value');
+								$.ajax({
+									url: "<?=base_url();?>Produk/detail/ajax",
+									method: "post",
+									data: {id: id},
+									success: function(data){
+									$('#viewDetailProduk').html(data);
+									}
+								})
+							})
                         }
                     })
 

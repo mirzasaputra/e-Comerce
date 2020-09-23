@@ -1,3 +1,13 @@
+<?php
+if($record['judul'] == 'Cara Belanja'){
+    $class = 'col-lg-12 col-12';
+    $contact = 'd-none';
+} else {
+    $class = 'col-lg-8 col-12';
+    $contact = 'col-lg-4 col-12';
+}
+?>
+
 <!-- Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -20,7 +30,7 @@
     <div class="container">
         <div class="contact-head">
             <div class="row">
-                <div class="col-lg-8 col-12">
+                <div class="<?=$class;?>">
                     <div class="form-main">
                         <h3><?=$record['judul'];?></h3>
                         <hr>
@@ -33,7 +43,7 @@
                 <?php
                     $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_array();
                 ?>
-                <div class="col-lg-4 col-12">
+                <div class="<?=$contact;?>">
                     <div class="single-head">
                         <div class="single-info">
                             <i class="fa fa-phone"></i>
