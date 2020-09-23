@@ -7,7 +7,7 @@
             <img src="<?=base_url();?>asset/foto_produk/<?=$record['gambar'];?>" alt="<?=$record['nama_produk'];?>">
           </div>
 
-          <?php if($images->num_rows() < 0) : ?>
+          <?php if($images->num_rows() <= 0) : ?>
           <div class="single-slider">
             <img src="<?=base_url();?>asset/foto_produk/<?=$record['gambar'];?>" alt="<?=$record['nama_produk'];?>">
           </div>
@@ -105,6 +105,19 @@
   </div>
 </div>
 
+<script src="<?=base_url();?>asset/vendor/js/owl-carousel.js"></script>
+
 <script>
+  $('.quickview-slider-active').owlCarousel({
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smatrspeed: 400,
+    autoplayHovePause: true,
+    nav: true,
+    loop: true,
+    dots: false,
+    navText: ['<i class=" ti-arrow-left"></i>', '<i class=" ti-arrow-right"></i>']
+  });
   $('select').niceSelect();
 </script>

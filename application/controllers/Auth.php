@@ -77,20 +77,24 @@ class Auth extends CI_Controller
 	public function login()
 	{
 		if (isset($_POST['login'])) {
-			$username = strip_tags($this->input->post('a'));
-			$password = hash("sha512", md5(strip_tags($this->input->post('b'))));
+			$username = strip_tags($this->input->post('username'));
+			$password = hash("sha512", md5(strip_tags($this->input->post('password'))));
 			$cek = $this->db->query("SELECT * FROM rb_konsumen where username='" . $this->db->escape_str($username) . "' AND password='" . $this->db->escape_str($password) . "'");
 			$row = $cek->row_array();
 			$total = $cek->num_rows();
 			if ($total > 0) {
-				$this->session->set_userdata(array('id_konsumen' => $row['id_konsumen'], 'level' => 'konsumen'));
-				redirect('members/profile');
+				$this->session->set_userdata(array('id_konsumen' => $row['id_konsumen'], 'level' => $row['tipe']));
+				$data['hasil'] = true;
+				$data['pesan'] = 'Success';
+				echo json_encode($data);
 			} else {
-				$data['title'] = 'Gagal Login';
-				$this->template->load('phpmu-one/template', 'phpmu-one/view_login_error', $data);
+				$data['hasil'] = false;
+				$data['pesan'] = 'Incorrect Username or Password';
+				echo json_encode($data);
 			}
 		} else {
 			$data['title'] = 'User Login';
+			$data['module'] = 'login';
 			$this->template->load('phpmu-one/template', 'phpmu-one/view_login', $data);
 		}
 	}

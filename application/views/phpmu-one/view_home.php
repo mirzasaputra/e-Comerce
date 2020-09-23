@@ -44,7 +44,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-4 col-12">
                       <div class="single-product">
                         <div class="product-img">
-                          <a href="#">
+                          <a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>">
                             <img class="default-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
                             <img class="hover-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
                             <?php if($row['diskon'] > 0) : ?>
@@ -61,7 +61,7 @@
                           </div>
                         </div>
                         <div class="product-content">
-                          <h3><a href="product-details.html"><?=$row['nama_produk'];?></a></h3>
+                          <h3><a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h3>
                           <div class="product-price">
                             <?php
                             if($this->session->level == "reseller"){
@@ -127,7 +127,7 @@
             <!-- Start Single Product -->
 						<div class="single-product">
 							<div class="product-img">
-								<a href="product-details.html">
+								<a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>">
 									<img class="default-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
 									<img class="hover-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
 									<span class="out-of-stock">Hot</span>
@@ -142,7 +142,7 @@
 								</div>
 							</div>
 							<div class="product-content">
-								<h3><a href="product-details.html"><?=$row['nama_produk'];?></a></h3>
+								<h3><a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h3>
 								<div class="product-price">
                   <?php
                   if($this->session->level == "konsumen"){
