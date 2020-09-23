@@ -5,9 +5,9 @@
             <a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>">
                 <img class="default-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
                 <img class="hover-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
-            <?php if($row['diskon'] > 0) : ?>
-                <span class="price-dec"><?=ceil($row['diskon'] * 100 / $row['harga_konsumen']);?>% Off</span>
-            <?php endif;?>
+                <?php if($row['diskon'] > 0) : ?>
+                    <span class="price-dec"><?=ceil($row['diskon'] * 100 / $row['harga_konsumen']);?>% Off</span>
+                <?php endif;?>
             </a>
             <div class="button-head">
                 <div class="product-action">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="product-content">
-            <h3><a href="product-details.html"><?=$row['nama_produk'];?></a></h3>
+            <h3><a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h3>
             <div class="product-price">
                 <?php
                 if($this->session->level == "reseller"){

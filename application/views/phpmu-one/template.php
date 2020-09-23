@@ -57,6 +57,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<link rel="stylesheet" href="<?=base_url();?>asset/vendor/css/responsive.css">
 
 	<script src="<?=base_url();?>asset/vendor/js/jquery.min.js"></script>
+	<script src="<?=base_url();?>asset/vendor/js/nicesellect.js"></script>
 </head>
 
 <body class="js">

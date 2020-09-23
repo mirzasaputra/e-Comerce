@@ -1,46 +1,54 @@
 <div class="row no-gutters">
   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
     <!-- Product Slider -->
-    <div class="product-gallery">
-      <div class="quickview-slider-active">
-        <div class="single-slider">
-          <img src="<?=base_url();?>asset/foto_produk/<?=$record['gambar'];?>" alt="Foto Sampul">
+      <div class="product-gallery">
+        <div class="quickview-slider-active">
+          <div class="single-slider">
+            <img src="<?=base_url();?>asset/foto_produk/<?=$record['gambar'];?>" alt="<?=$record['nama_produk'];?>">
+          </div>
+
+          <?php if($images->num_rows() < 0) : ?>
+          <div class="single-slider">
+            <img src="<?=base_url();?>asset/foto_produk/<?=$record['gambar'];?>" alt="<?=$record['nama_produk'];?>">
+          </div>
+          <?php endif;?>
+          
+          <?php foreach($images->row_array() as $row) : ?>
+          <div class="single-slider">
+            <img src="<?=base_url();?>asset/foto_produk/<?=$record['gambar'];?>" alt="<?=$record['nama_produk'];?>">
+          </div>
+          <?php endforeach;?>
         </div>
-        <?php if($images->num_rows() < 1) : ?>
-          <div class="single-slider">
-            <img src="<?=base_url();?>asset/foto_produk/<?=$record['gambar'];?>" alt="Foto Sampul">
-          </div>
-        <?php endif;?>
-        <?php foreach($images->result() as $i) : ?>
-          <div class="single-slider">
-            <img src="<?=base_url();?>asset/foto_produk/<?=$i->img;?>" alt="#">
-          </div>
-        <?php endforeach;?>
       </div>
-    </div>
     <!-- End Product slider -->
   </div>
   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
     <div class="quickview-content">
       <h2><?=$record['nama_produk'];?></h2>
       <div class="quickview-ratting-review">
-        <div class="quickview-ratting-wrap">
-          <div class="quickview-ratting">
-            <i class="yellow fa fa-star"></i>
-            <i class="yellow fa fa-star"></i>
-            <i class="yellow fa fa-star"></i>
-            <i class="yellow fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <a href="#"> (1 customer review)</a>
-        </div>
-        <div class="quickview-stock">
-          <span><i class="fa fa-check-circle-o"></i> in stock</span>
+        <div class="quickview-stock m-0">
+          <?php
+          if($record['stok'] > 0){
+            $class = "fa fa-check-circle-o";
+            $stok = $record['stok'] . 'in stok';
+          } else {
+            $class = "fa fa-times-circle text-danger";
+            $stok = 'out of stok';
+          }
+          ?>
+          <span class=""><i class="<?=$class;?>"></i> <?=$stok;?></span>
         </div>
       </div>
-      <h3>$29.00</h3>
+      <?php
+      if($this->session->level == "konsumen"){
+        $harga = $record['harga_konsumen'];
+      } else {
+        $harga = $record['harga_reseller'];
+      }
+      ?>
+      <h3>Rp. <?=number_format($harga, '0', ',', '.');?></h3>
       <div class="quickview-peragraph">
-        <?=substr($record['keterangan'], 0, 150);?> <a href="<?=base_url();?>Produk/detail/<?=$record['produk_seo'];?>" class="detail-produk-link">Selengkapnya...</a>
+        <p><?=substr($record['keterangan'], 0, 150);?>... <a href="<?=base_url();?>produk/detail/<?=$record['produk_seo'];?>" class="detail-produk-link">Selengkapnya</a></p>
       </div>
       <div class="size">
         <div class="row">
@@ -65,68 +73,38 @@
         </div>
       </div>
       <div class="quantity">
-      <!-- Input Order -->
-      <div class="input-group">
-        <div class="button minus">
-          <button type="button" class="btn btn-primary btn-number qty-min" disabled="disabled" data-type="minus" data-field="quant[1]">
-            <i class="ti-minus"></i>
-          </button>
+        <!-- Input Order -->
+        <div class="input-group">
+          <div class="button minus">
+            <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+              <i class="ti-minus"></i>
+            </button>
+          </div>
+          <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
+          <div class="button plus">
+            <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
+              <i class="ti-plus"></i>
+            </button>
+          </div>
         </div>
-        <input type="text" name="qty" class="input-number"  data-min="1" data-max="1000" value="1">
-        <div class="button plus">
-          <button type="button" class="btn btn-primary btn-number " data-type="plus" data-field="quant[1]">
-            <i class="ti-plus"></i>
-          </button>
-        </div>
+        <!--/ End Input Order -->
       </div>
-      <!--/ End Input Order -->
-    </div>
-    <div class="add-to-cart">
-      <a href="#" class="btn">Add to cart</a>
-      <a href="#" class="btn min"><i class="ti-heart"></i></a>
-      <a href="#" class="btn min"><i class="fa fa-compress"></i></a>
-    </div>
-    <div class="default-social">
-      <h4 class="share-now">Share:</h4>
-      <ul>
+      <div class="add-to-cart">
+        <a href="#" class="btn">Add to cart</a>
+      </div>
+      <div class="default-social">
+        <h4 class="share-now">Share:</h4>
+        <ul>
           <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
           <li><a class="youtube" href="#"><i class="fa fa-pinterest-p"></i></a></li>
           <li><a class="dribbble" href="#"><i class="fa fa-google-plus"></i></a></li>
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- Jquery -->
-<script src="<?=base_url();?>asset/vendor/js/jquery.min.js"></script>
-    <script src="<?=base_url();?>asset/vendor/js/jquery-migrate-3.0.0.js"></script>
-	<script src="<?=base_url();?>asset/vendor/js/jquery-ui.min.js"></script>
-	<!-- Popper JS -->
-	<script src="<?=base_url();?>asset/vendor/js/popper.min.js"></script>
-	<!-- Bootstrap JS -->
-	<script src="<?=base_url();?>asset/vendor/js/bootstrap.min.js"></script>
-	<!-- Color JS -->
-	<script src="<?=base_url();?>asset/vendor/js/colors.js"></script>
-	<!-- Slicknav JS -->
-	<script src="<?=base_url();?>asset/vendor/js/slicknav.min.js"></script>
-	<!-- Owl Carousel JS -->
-	<script src="<?=base_url();?>asset/vendor/js/owl-carousel.js"></script>
-	<!-- Magnific Popup JS -->
-	<script src="<?=base_url();?>asset/vendor/js/magnific-popup.js"></script>
-	<!-- Waypoints JS -->
-	<script src="<?=base_url();?>asset/vendor/js/waypoints.min.js"></script>
-	<!-- Countdown JS -->
-	<script src="<?=base_url();?>asset/vendor/js/finalcountdown.min.js"></script>
-	<!-- Nice Select JS -->
-	<script src="<?=base_url();?>asset/vendor/js/nicesellect.js"></script>
-	<!-- Flex Slider JS -->
-	<script src="<?=base_url();?>asset/vendor/js/flex-slider.js"></script>
-	<!-- ScrollUp JS -->
-	<script src="<?=base_url();?>asset/vendor/js/scrollup.js"></script>
-	<!-- Onepage Nav JS -->
-	<script src="<?=base_url();?>asset/vendor/js/onepage-nav.min.js"></script>
-	<!-- Easing JS -->
-	<script src="<?=base_url();?>asset/vendor/js/easing.js"></script>
-	<!-- Active JS -->
-  	<script src="<?=base_url();?>asset/vendor/js/active.js"></script>
+<script>
+  $('select').niceSelect();
+</script>
