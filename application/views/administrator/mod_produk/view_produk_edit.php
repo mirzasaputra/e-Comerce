@@ -32,6 +32,11 @@
                 <td><input type='text' class='form-control' name='b' value='<?php echo $rows['nama_produk'] ?>' required></td>
               </tr>
               <tr>
+              <tr>
+                <th width='130px' scope='row'>Nama Alias</th>
+                <td><input type='text' class='form-control' name='alias' value='<?php echo $rows['nama_alias'] ?>' required></td>
+              </tr>
+              <tr>
                 <th scope='row'>Satuan</th>
                 <td><input type='text' class='form-control' name='c' value='<?php echo $rows['satuan'] ?>'></td>
               </tr>

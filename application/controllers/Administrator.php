@@ -1129,6 +1129,7 @@ class Administrator extends CI_Controller
 				$data = array(
 					'id_kategori_produk' => $this->input->post('a'),
 					'nama_produk' => $this->db->escape_str($this->input->post('b')),
+					'nama_alias' => $this->input->post('alias'),
 					'produk_seo' => $this->db->escape_str(seo_title($this->input->post('b'))),
 					'satuan' => $this->input->post('c'),
 					'harga_beli' => $this->input->post('d'),
@@ -1144,6 +1145,7 @@ class Administrator extends CI_Controller
 				$data = array(
 					'id_kategori_produk' => $this->input->post('a'),
 					'nama_produk' => $this->input->post('b'),
+					'nama_alias' => $this->input->post('alias'),
 					'produk_seo' => $this->db->escape_str(seo_title($this->input->post('b'))),
 					'satuan' => $this->input->post('c'),
 					'harga_beli' => $this->input->post('d'),
@@ -1182,6 +1184,7 @@ class Administrator extends CI_Controller
 				$data = array(
 					'id_kategori_produk' => $this->input->post('a'),
 					'nama_produk' => $this->input->post('b'),
+					'nama_alias' => $this->input->post('alias'),
 					'produk_seo' => $this->db->escape_str(seo_title($this->input->post('b'))),
 					'satuan' => $this->input->post('c'),
 					'harga_beli' => $this->input->post('d'),
@@ -1195,6 +1198,7 @@ class Administrator extends CI_Controller
 				$data = array(
 					'id_kategori_produk' => $this->input->post('a'),
 					'nama_produk' => $this->input->post('b'),
+					'nama_alias' => $this->input->post('alias'),
 					'produk_seo' => $this->db->escape_str(seo_title($this->input->post('b'))),
 					'satuan' => $this->input->post('c'),
 					'harga_beli' => $this->input->post('d'),
