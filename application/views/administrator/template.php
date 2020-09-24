@@ -159,7 +159,9 @@
     });
   </script>
   <script>
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+      format: "yyyy-mm-dd"
+    });
     $('#rangepicker').daterangepicker();
     $(function() {
       $('.jatuh-tempo').hide();

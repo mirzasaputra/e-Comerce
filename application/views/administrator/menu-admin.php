@@ -165,38 +165,46 @@
               <a href="#"><i class="fa fa-file-text-o"></i> <span>Laporan</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <?php
-                $cek = $this->Model_app->umenu_akses("stok", $this->session->id_session);
+                $cek = $this->Model_app->umenu_akses("laporan/penjualan", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/stok'><i class='fa fa-circle-o'></i> Laporan Penjualan</a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/laporan/penjualan'><i class='fa fa-circle-o'></i> Laporan Penjualan</a></li>";
                 }
 
-                $cek = $this->Model_app->umenu_akses("stok_opname", $this->session->id_session);
+                $cek = $this->Model_app->umenu_akses("laporan/pembelian", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/stok_opname'><i class='fa fa-circle-o'></i> Laporan Pembelian</a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/laporan/pembelian'><i class='fa fa-circle-o'></i> Laporan Pembelian</a></li>";
                 }
-                $cek = $this->Model_app->umenu_akses("stok_opname", $this->session->id_session);
+                $cek = $this->Model_app->umenu_akses("laporan/stok_opname", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/stok_opname'><i class='fa fa-circle-o'></i> Laporan Stok Opname</a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/laporan/stok_opname'><i class='fa fa-circle-o'></i> Laporan Stok Opname</a></li>";
                 }
-                $cek = $this->Model_app->umenu_akses("stok_opname", $this->session->id_session);
+                $cek = $this->Model_app->umenu_akses("laporan/stok_in_out", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/stok_opname'><i class='fa fa-circle-o'></i> Laporan Stok In / Out</a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/laporan/stok_in_out'><i class='fa fa-circle-o'></i> Laporan Stok In / Out</a></li>";
                 }
-                $cek = $this->Model_app->umenu_akses("stok_opname", $this->session->id_session);
+                $cek = $this->Model_app->umenu_akses("laporan/kas", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/stok_opname'><i class='fa fa-circle-o'></i> Laporan Kas</a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/laporan/kas'><i class='fa fa-circle-o'></i> Laporan Kas</a></li>";
                 }
-                $cek = $this->Model_app->umenu_akses("stok_opname", $this->session->id_session);
+                $cek = $this->Model_app->umenu_akses("laporan/hutang", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/stok_opname'><i class='fa fa-circle-o'></i> Laporan Hutang</a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/laporan/hutang'><i class='fa fa-circle-o'></i> Laporan Hutang</a></li>";
                 }
-                $cek = $this->Model_app->umenu_akses("stok_opname", $this->session->id_session);
+                $cek = $this->Model_app->umenu_akses("laporan/piutang", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/stok_opname'><i class='fa fa-circle-o'></i> Laporan Piutang</a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/laporan/piutang'><i class='fa fa-circle-o'></i> Laporan Piutang</a></li>";
                 }
-                $cek = $this->Model_app->umenu_akses("stok_opname", $this->session->id_session);
+                $cek = $this->Model_app->umenu_akses("laporan/laba_rugi", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/stok_opname'><i class='fa fa-circle-o'></i> Laporan Laba Rugi</a></li>";
+                  echo "<li><a href='" . base_url() . "administrator/laporan/laba_rugi'><i class='fa fa-circle-o'></i> Laporan Laba Rugi</a></li>";
+                }
+                $cek = $this->Model_app->umenu_akses("laporan/retur_penjualan", $this->session->id_session);
+                if ($cek == 1 or $this->session->level == 'admin') {
+                  echo "<li><a href='" . base_url() . "administrator/laporan/retur_penjualan'><i class='fa fa-circle-o'></i> Laporan Retur Penjualan</a></li>";
+                }
+                $cek = $this->Model_app->umenu_akses("laporan/retur_pembelian", $this->session->id_session);
+                if ($cek == 1 or $this->session->level == 'admin') {
+                  echo "<li><a href='" . base_url() . "administrator/laporan/retur_pembelian'><i class='fa fa-circle-o'></i> Laporan Retur Pembelian</a></li>";
                 }
                 ?>
               </ul>
