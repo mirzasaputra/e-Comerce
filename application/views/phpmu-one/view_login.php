@@ -1,9 +1,9 @@
 <section class="shop checkout section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-12 mx-auto">
+      <div class="col-lg-5 col-12 mx-auto">
         <div class="checkout-form">
-          <h2 class="text-center">Login</h2>
+          <h2 class="text-center"><i class="fa fa-user"></i> Login</h2>
           <br><br>
           <div class="alert alert-danger d-none" id="pesanError"></div>
           <div class="alert alert-success d-none" id="pesanSuccess"></div>
@@ -35,7 +35,7 @@
 </section>
 <!--/ End Checkout -->
 
-<script>
+<script>  
 $(document).ready(function(){
     $('#login').submit(function(e){
         e.preventDefault();

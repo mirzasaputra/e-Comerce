@@ -88,7 +88,7 @@
 								<div class="shopping-item">
 									<div class="dropdown-cart-header">
 										<span>2 Items</span>
-										<a href="#">View Cart</a>
+										<a href="<?=base_url();?>produk/keranjang">View Cart</a>
 									</div>
 									<ul class="shopping-list">
 										<li>

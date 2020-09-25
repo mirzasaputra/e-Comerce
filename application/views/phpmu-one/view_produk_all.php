@@ -106,10 +106,12 @@
 
                 function loadData_all(){
                     var order_by = $('#shortBy').val();
+					var ajax = '<?=$module;?>';
+					var kategori = '<?=$this->uri->segment(3);?>';
                     $.ajax({
                         url: '<?=base_url();?>produk/all_ajax',
                         method: 'GET',
-                        data: {order_by: order_by},
+                        data: {order_by: order_by, ajax: ajax, kategori: kategori},
                         success: function(data){
                             $('#viewData').html(data);
 
@@ -121,7 +123,47 @@
 									method: "post",
 									data: {id: id},
 									success: function(data){
-									$('#viewDetailProduk').html(data);
+										$('#viewDetailProduk').html(data);
+										
+										$('.add').click(function(e){
+											e.preventDefault();
+											var id_konsumen = '<?=$this->session->id_konsumen;?>';
+
+											if(id_konsumen !== ''){
+												var id_produk = $('#id_produk').val();
+												var jumlah = $('#qty').val();
+												var keterangan = 'Size: '+$('#size').val()+', Color: '+$('#color').val();
+												var diskonnilai = $('#diskon').val();
+
+												$.ajax({
+													url: '<?=base_url();?>produk/keranjang',
+													method: 'post',
+													data: {id_produk: id_produk, jumlah: jumlah, keterangan: keterangan, diskonnilai: diskonnilai},
+													dataType: 'json',
+													success: function(data){
+														if(data.hasil == true){
+														$('#exampleModal').modal('hide');
+														$('.modal-backdrop').remove();
+														$('body').removeClass('modal-open');
+														swal.fire({
+															title: 'Success',
+															icon: 'success',
+															text: data.pesan
+														});
+														loadData_all();
+														} else {
+														swal.fire({
+															title: 'Warning',
+															icon: 'question',
+															text: data.pesan
+														});
+														}
+													}
+												})
+											} else {
+												window.location.assign('<?=base_url();?>auth/login');
+											}
+										})
 									}
 								})
 							})

@@ -40,41 +40,40 @@ class Produk extends CI_Controller
 	{
 		$data['title'] = title();
 		$data['judul'] = 'Semua Produk';
+		$data['module'] = 'all';
 		$data['kategori'] = $this->Model_app->view('rb_kategori_produk');
 		$data['recent_post'] = $this->Model_app->view_ordering_limit('rb_produk', 'waktu_input', 'DESC', 0, 3);
 		$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_all', $data);
 	}
 
 	function all_ajax(){
-		$order_by = $_GET['order_by'];
-		$data['record'] = $this->Model_app->view_ordering('rb_produk', $order_by, 'ASC');
-		$data['iklan'] = $this->Model_iklan->iklan_sidebar();
-		$this->load->view('ajax/view_produk_all', $data);
+		if($_GET['ajax'] == 'all'){
+			$order_by = $_GET['order_by'];
+			($order_by == '') ? $order_by = 'nama_produk' : $order_by = $order_by;
+			$data['record'] = $this->Model_app->view_ordering('rb_produk', $order_by, 'ASC');
+			$data['iklan'] = $this->Model_iklan->iklan_sidebar();
+			$data['num_rows'] = 1;
+			$this->load->view('ajax/view_produk_all', $data);
+		} else {
+			$kategori = $_GET['kategori'];
+			$cek = $this->Model_app->edit('rb_kategori_produk', array('kategori_seo' => $kategori))->row_array();
+			$query = $this->Model_app->view_where_order('rb_produk', array('id_kategori_produk' => $cek['id_kategori_produk']), 'id_produk', 'DESC');
+			$data['record'] = $query->result_array();
+			$data['num_rows'] = $query->num_rows();
+			$data['iklan'] = $this->Model_iklan->iklan_sidebar();
+			$this->load->view('ajax/view_produk_all', $data);
+		}
 	}
 
 	function kategori()
 	{
-		$cek = $this->Model_app->edit('rb_kategori_produk', array('kategori_seo' => $this->uri->segment(3)))->row_array();
-		$jumlah = $this->Model_app->view_where('rb_produk', array('id_kategori_produk' => $cek['id_kategori_produk']))->num_rows();
-		$config['base_url'] = base_url() . 'main/kategori/' . $this->uri->segment(3);
-		$config['total_rows'] = $jumlah;
-		$config['per_page'] = 12;
-		if ($this->uri->segment('4') == '') {
-			$dari = 0;
-		} else {
-			$dari = $this->uri->segment('4');
-		}
-
-		if (is_numeric($dari)) {
-			$data['title'] = "Produk Kategori $cek[nama_kategori]";
-			$data['judul'] = "Produk Kategori $cek[nama_kategori]";
-			$data['iklantengah'] = $this->Model_iklan->iklan_tengah();
-			$data['record'] = $this->Model_app->view_where_ordering_limit('rb_produk', array('id_kategori_produk' => $cek['id_kategori_produk']), 'id_produk', 'DESC', $dari, $config['per_page']);
-			$this->pagination->initialize($config);
-			$this->template->load('phpmu-one/template', 'phpmu-one/view_home', $data);
-		} else {
-			redirect('main');
-		}
+		$data['title'] = "Produk Kategori $cek[nama_kategori]";
+		$data['judul'] = "Produk Kategori $cek[nama_kategori]";
+		$data['module'] = 'kategori';
+		$data['kategori'] = $this->Model_app->view('rb_kategori_produk');
+		$data['iklantengah'] = $this->Model_iklan->iklan_tengah();
+		$data['recent_post'] = $this->Model_app->view_ordering_limit('rb_produk', 'waktu_input', 'DESC', 0, 3);
+		$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_all', $data);
 	}
 
 	function detail()
@@ -100,43 +99,68 @@ class Produk extends CI_Controller
 		$id_produk   = filter($this->input->post('id_produk'));
 		$jumlah   = filter($this->input->post('jumlah'));
 		$keterangan   = filter($this->input->post('keterangan'));
+		if($this->input->post('diskonnilai') == ''){
+			$diskon = 0;
+		} else {
+			$diskon = $this->input->post('diskonnilai');
+		}
 		$stok = $this->db->get_where('rb_produk', ['id_produk' => $id_produk])->row_array();
 
 		if ($id_produk != '') {
 			if ($stok['stok'] < $this->input->post('jumlah') or $stok['stok'] <= '0') {
 				$produk = $this->Model_app->edit('rb_produk', array('id_produk' => $id_produk))->row_array();
 				$produk_cek = filter($produk['nama_produk']);
-				echo "<script>window.alert('Maaf, Stok untuk pemesanan Produk - $produk_cek Tidak Mencukupi!');
-                                  window.location=('" . base_url() . "produk/detail/$produk[produk_seo]')</script>";
+				$JSONdata['hasil'] = false;
+				$JSONdata['pesan'] = 'Maaf, stok pemesanan untuk produk <b>' . $produk_cek . ' tidak mencukupi.';
+				echo json_encode($JSONdata);
 			} else {
 				$this->session->unset_userdata('produk');
-				if ($this->session->idp == '') {
+				
+				$cek_pembeli = $this->Model_app->view_where('rb_penjualan_temp', array('id_pembeli' => $this->session->id_konsumen, 'status' => 'pending'));
+				if ($cek_pembeli->num_rows() > 0) {
+					$cek_pembeli = $cek_pembeli->row_array();
+					$this->session->set_userdata(array('idp' => $cek_pembeli['session']));
+				} else {
 					$idp = 'TRX-' . date('YmdHis');
 					$this->session->set_userdata(array('idp' => $idp));
 				}
 
-				$cek = $this->Model_app->view_where('rb_penjualan_temp', array('session' => $this->session->idp, 'id_produk' => $id_produk))->num_rows();
+				$cek = $this->Model_app->view_where('rb_penjualan_temp', array('id_pembeli' => $this->session->idp, 'id_produk' => $id_produk))->num_rows();
 				if ($cek >= 1) {
+					$jumlahstok = $stok['stok'] - $this->input->post('jumlah');
+					$this->db->query("UPDATE rb_produk SET stok='$jumlahstok' WHERE id_produk='$id_produk'");
 					$this->db->query("UPDATE rb_penjualan_temp SET jumlah=jumlah+$jumlah where session='" . $this->session->idp . "' AND id_produk='$id_produk'");
 				} else {
 					$harga = $this->Model_app->view_where('rb_produk', array('id_produk' => $id_produk))->row_array();
+					$satuan = $harga['satuan'];
+					if($this->session->level == 'reseller'){
+						$harga = $harga['harga_reseller'];
+					} else {
+						$harga = $harga['harga_konsumen'];
+					}
+					
 					$data = array(
+						'id_pembeli' => $this->session->id_konsumen,
 						'session' => $this->session->idp,
 						'id_produk' => $id_produk,
 						'jumlah' => $jumlah,
-						'harga_jual' => $harga['harga_konsumen'],
-						'satuan' => $harga['satuan'],
+						'harga_jual' => $harga,
+						'satuan' => $satuan,
 						'keterangan_order' => $keterangan,
 						'waktu_order' => date('Y-m-d H:i:s'),
-						'diskon'	=> $this->input->post('diskonnilai'),
-						'subtotal'	=> $harga['harga_konsumen'] * $jumlah - $this->input->post('diskonnilai')
+						'diskon'	=> $diskon,
+						'subtotal'	=> ($harga * $jumlah) - $diskon
 					);
 					$this->Model_app->insert('rb_penjualan_temp', $data);
+					$jumlahstok = $stok['stok'] - $this->input->post('jumlah');
+					$this->db->query("UPDATE rb_produk SET stok='$jumlahstok' WHERE id_produk='$id_produk'");
 				}
-				redirect('produk/keranjang');
+				$JSONdata['hasil'] = true;
+				$JSONdata['pesan'] = 'Item telah ditambahkan di keranjang';
+				echo json_encode($JSONdata);
 			}
 		} else {
-			$data['record'] = $this->Model_app->view_join_rows('rb_penjualan_temp', 'rb_produk', 'id_produk', array('session' => $this->session->idp), 'id_penjualan_detail', 'ASC');
+			$data['record'] = $this->Model_app->view_join_rows('rb_penjualan_temp', 'rb_produk', 'id_produk', array('id_pembeli' => $this->session->id_konsumen, 'status' => 'pending'), 'id_penjualan_detail', 'ASC');
 			$data['title'] = 'Keranjang Belanja';
 			$this->template->load('phpmu-one/template', 'phpmu-one/pengunjung/view_keranjang', $data);
 		}

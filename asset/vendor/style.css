@@ -4956,3 +4956,30 @@ Version:1.0
 .detail-produk-link {
 	color: #F7941D!important;
 }
+
+.out-of-stok {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .5)!important;
+	color: #fff!important;
+	text-align: center;
+	padding: 45% 0;
+	font-size: 20px;
+}
+
+.out-of-stok:after {
+	display: block;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	right: 25%;
+	bottom: 25%;
+	border-radius: 50%;
+	content: '';
+	box-shadow: 1rem .5rem 1.5rem rgba(255, 255, 255, .8) inset;
+}

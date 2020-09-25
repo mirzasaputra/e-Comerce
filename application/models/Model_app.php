@@ -65,6 +65,14 @@ class Model_app extends CI_model
         return $query->result_array();
     }
 
+    public function view_where_order($table, $data, $order, $ordering)
+    {
+        $this->db->where($data);
+        $this->db->order_by($order, $ordering);
+        return $this->db->get($table);
+        ;
+    }
+
     public function view_join_one($table1, $table2, $field, $order, $ordering)
     {
         $this->db->select('*');

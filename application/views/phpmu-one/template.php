@@ -55,10 +55,12 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<link rel="stylesheet" href="<?=base_url();?>asset/vendor/css/reset.css">
 	<link rel="stylesheet" href="<?=base_url();?>asset/vendor/style.css">
 	<link rel="stylesheet" href="<?=base_url();?>asset/vendor/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('asset/admin/plugins/'); ?>sweetalert2/dist/sweetalert2.min.css" />
 
 	<script src="<?=base_url();?>asset/vendor/js/jquery.min.js"></script>
 	<script src="<?=base_url();?>asset/vendor/js/nicesellect.js"></script>
 	<script src="<?=base_url();?>asset/vendor/js/owl-carousel.js"></script>
+  	<script src="<?php echo base_url('asset/admin/plugins/') ?>sweetalert2/dist/sweetalert2.min.js"></script>
 </head>
 
 <body class="js">

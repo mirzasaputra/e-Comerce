@@ -30,7 +30,7 @@
           <?php
           if($record['stok'] > 0){
             $class = "fa fa-check-circle-o";
-            $stok = $record['stok'] . 'in stok';
+            $stok = $record['stok'] . ' in stok';
           } else {
             $class = "fa fa-times-circle text-danger";
             $stok = 'out of stok';
@@ -40,10 +40,10 @@
         </div>
       </div>
       <?php
-      if($this->session->level == "konsumen"){
-        $harga = $record['harga_konsumen'];
-      } else {
+      if($this->session->level == "reseller"){
         $harga = $record['harga_reseller'];
+      } else {
+        $harga = $record['harga_konsumen'];
       }
       ?>
       <h3>Rp. <?=number_format($harga, '0', ',', '.');?></h3>
@@ -54,7 +54,7 @@
         <div class="row">
           <div class="col-lg-6 col-12">
             <h5 class="title">Size</h5>
-            <select>
+            <select id="size">
               <option selected="selected">s</option>
               <option>m</option>
               <option>l</option>
@@ -63,7 +63,7 @@
           </div>
           <div class="col-lg-6 col-12">
             <h5 class="title">Color</h5>
-            <select>
+            <select id="color">
               <option selected="selected">orange</option>
               <option>purple</option>
               <option>black</option>
@@ -72,6 +72,8 @@
           </div>
         </div>
       </div>
+      <input type="hide" class="d-none" id="id_produk" value="<?=$record['id_produk'];?>">
+      <input type="hide" class="d-none" id="diskon" value="<?=$record['diskon'];?>">
       <div class="quantity">
         <!-- Input Order -->
         <div class="input-group">
@@ -80,7 +82,7 @@
               <i class="ti-minus"></i>
             </button>
           </div>
-          <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
+          <input type="text" name="quant[1]" id="qty" class="input-number"  data-min="1" data-max="1000" value="1">
           <div class="button plus">
             <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
               <i class="ti-plus"></i>
@@ -90,7 +92,7 @@
         <!--/ End Input Order -->
       </div>
       <div class="add-to-cart">
-        <a href="#" class="btn">Add to cart</a>
+        <a href="#" class="btn <?php if($record['stok'] <= 0) echo 'disabled';?> add">Add to cart</a>
       </div>
       <div class="default-social">
         <h4 class="share-now">Share:</h4>
@@ -105,7 +107,8 @@
   </div>
 </div>
 
-<script src="<?=base_url();?>asset/vendor/js/owl-carousel.js"></script>
+<!-- Nice Select JS -->
+<script src="<?=base_url();?>asset/vendor/js/nicesellect.js"></script>
 
 <script>
   $('.quickview-slider-active').owlCarousel({
