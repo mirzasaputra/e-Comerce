@@ -57,6 +57,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<link rel="stylesheet" href="<?=base_url();?>asset/vendor/css/responsive.css">
 
 	<script src="<?=base_url();?>asset/vendor/js/jquery.min.js"></script>
+	<script src="<?=base_url();?>asset/vendor/js/nicesellect.js"></script>
+	<script src="<?=base_url();?>asset/vendor/js/owl-carousel.js"></script>
 </head>
 
 <body class="js">
@@ -71,7 +73,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	</div>
 	<!-- End Preloader -->
 	
-	<?php include "main-menu.php"; ?>
+	<?php if($module !== 'login') include "main-menu.php"; ?>
 
 	<?php if($module == "home") : ?>
 		<?php include "slide.php";?>
@@ -79,6 +81,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 
 	<?=$contents;?>
 
+	<?php if($module !== 'login') : ?>
 	<?php if($module == "home") : ?>
 	<!-- Start Shop Services Area -->
 	<section class="shop-services section home">
@@ -242,6 +245,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<!-- /End Footer Area -->
 
   <?php $this->Model_main->kunjungan(); ?>
+
+	<?php endif;?>
 
   	<!-- Jquery -->
 	<script src="<?=base_url();?>asset/vendor/js/jquery.min.js"></script>

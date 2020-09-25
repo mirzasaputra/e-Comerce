@@ -19,9 +19,10 @@
 						<div class="right-content">
 							<ul class="list-main">
 								<li><i class="ti-location-pin"></i> Store location</li>
-								<li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
 								<li><i class="ti-user"></i> <a href="#">My account</a></li>
-								<li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
+								<?php if(empty($this->session->id_konsumen)) : ?>
+								<li><i class="ti-power-off"></i><a href="<?=base_url();?>auth/login">Login</a></li>
+								<?php endif;?>
 							</ul>
 						</div>
 						<!-- End Top Right -->
@@ -78,9 +79,6 @@
 					<div class="col-lg-2 col-md-3 col-12">
 						<div class="right-bar">
 							<!-- Search Form -->
-							<div class="sinlge-bar">
-								<a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-							</div>
 							<div class="sinlge-bar">
 								<a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
 							</div>

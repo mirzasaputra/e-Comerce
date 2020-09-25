@@ -87,7 +87,11 @@ class Produk extends CI_Controller
 			$data['images'] = $this->Model_app->select_images('produk_image', array('id_produk' => $id));
 			$this->load->view('ajax/detailProduk', $data);
 		} else {
-
+			$data['title'] = $check;
+			$data['judul'] = 'Produk detail';
+			$data['record'] = $this->Model_app->edit('rb_produk', array('produk_seo' => $check))->row_array();
+			$data['images'] = $this->Model_app->select_images('produk_image', array('id_produk' => $data['id']));
+			$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_detail', $data);
 		}
 	}
 

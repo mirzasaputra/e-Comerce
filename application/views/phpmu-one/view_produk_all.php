@@ -114,6 +114,7 @@
                             $('#viewData').html(data);
 
 							$('.detailProduk').click(function(){
+								$('.modal-backdrop').remove();
 								let id = $(this).attr('value');
 								$.ajax({
 									url: "<?=base_url();?>Produk/detail/ajax",
