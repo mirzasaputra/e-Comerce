@@ -70,7 +70,7 @@
       <div class="icon">
         <i class="fa fa-shopping-cart"></i>
       </div>
-      <a href="<?php echo base_url(); ?>administrator/orders" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+      <a href="<?php echo base_url(); ?>administrator/penjualan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
     </div>
   </div>
   <!-- ./col -->

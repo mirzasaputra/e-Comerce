@@ -24,6 +24,11 @@
                 <td><input type='text' class='form-control' name='b' required></td>
               </tr>
               <tr>
+              <tr>
+                <th width='130px' scope='row'>Nama Alias</th>
+                <td><input type='text' class='form-control' name='alias' required></td>
+              </tr>
+              <tr>
                 <th scope='row'>Satuan</th>
                 <td><input type='text' class='form-control' name='c' required></td>
               </tr>
