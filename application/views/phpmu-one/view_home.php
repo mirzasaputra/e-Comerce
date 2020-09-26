@@ -67,7 +67,7 @@
                           <h3><a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h3>
                           <div class="product-price">
                             <?php
-                            if($this->session->level == "reseller"){
+                            if($this->session->level == "Reseller"){
                               $harga = $row['harga_reseller'];
                             } else {
                               $harga = $row['harga_konsumen'];
@@ -151,10 +151,10 @@
 								<h3><a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h3>
 								<div class="product-price">
                   <?php
-                  if($this->session->level == "konsumen"){
-                    $harga = $row['harga_konsumen'];
-                  } else {
+                  if($this->session->level == "Reseller"){
                     $harga = $row['harga_reseller'];
+                  } else {
+                    $harga = $row['harga_konsumen'];
                   }
                   ?>
 									<span>Rp. <?=number_format($harga, '0', ',', '.');?></span>

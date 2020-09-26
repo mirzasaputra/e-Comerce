@@ -83,6 +83,9 @@ class Auth extends CI_Controller
 			$row = $cek->row_array();
 			$total = $cek->num_rows();
 			if ($total > 0) {
+				$cek_pembeli = $this->Model_app->view_where('rb_penjualan_temp', array('id_pembeli' => $row['id_konsumen'], 'status' => 'pending'));
+				$cek_pembeli = $cek_pembeli->row_array();
+				$this->session->set_userdata(array('idp' => $cek_pembeli['session']));
 				$this->session->set_userdata(array('id_konsumen' => $row['id_konsumen'], 'level' => $row['tipe']));
 				$data['hasil'] = true;
 				$data['pesan'] = 'Success';

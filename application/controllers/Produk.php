@@ -90,6 +90,8 @@ class Produk extends CI_Controller
 			$data['judul'] = 'Produk detail';
 			$data['record'] = $this->Model_app->edit('rb_produk', array('produk_seo' => $check))->row_array();
 			$data['images'] = $this->Model_app->select_images('produk_image', array('id_produk' => $data['id']));
+			$data['kategori'] = $this->Model_app->view('rb_kategori_produk');
+			$data['recent_post'] = $this->Model_app->view_ordering_limit('rb_produk', 'waktu_input', 'DESC', 0, 3);
 			$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_detail', $data);
 		}
 	}
@@ -133,7 +135,7 @@ class Produk extends CI_Controller
 				} else {
 					$harga = $this->Model_app->view_where('rb_produk', array('id_produk' => $id_produk))->row_array();
 					$satuan = $harga['satuan'];
-					if($this->session->level == 'reseller'){
+					if($this->session->level == 'R	eseller'){
 						$harga = $harga['harga_reseller'];
 					} else {
 						$harga = $harga['harga_konsumen'];
@@ -182,6 +184,15 @@ class Produk extends CI_Controller
 			$this->session->unset_userdata('reseller');
 		}
 		redirect('produk/keranjang');
+	}
+
+	public function searching(){
+		$search = $this->input->post('search');
+		$data['record'] = $this->db->query("SELECT * FROM rb_produk r INNER JOIN rb_kategori_produk k ON k.id_kategori_produk=r.id_kategori_produk WHERE nama_produk LIKE '%" . $search . "%' OR nama_kategori LIKE '%" . $search . "%' ORDER BY nama_produk ASC");
+		$data['iklan'] = $this->Model_iklan->iklan_sidebar();
+		$data['search'] = $search;
+		$data['jumlah'] = $data['record']->num_rows();
+		$this->load->view('ajax/search.php', $data);
 	}
 
 	function kurirdata()

@@ -1,4 +1,5 @@
-      <!-- Header -->
+	<?php $kategori = $this->Model_app->view('rb_kategori_produk');?>
+	<!-- Header -->
 	<header class="header shop">
 		<!-- Topbar -->
 		<div class="topbar">
@@ -19,9 +20,11 @@
 						<div class="right-content">
 							<ul class="list-main">
 								<li><i class="ti-location-pin"></i> Store location</li>
-								<li><i class="ti-user"></i> <a href="#">My account</a></li>
+								<?php if(isset($this->session->id_konsumen)) : ?>
+									<li><i class="ti-user"></i> <a href="#">My account</a></li>
+								<?php endif;?>
 								<?php if(empty($this->session->id_konsumen)) : ?>
-								<li><i class="ti-power-off"></i><a href="<?=base_url();?>auth/login">Login</a></li>
+									<li><i class="ti-power-off"></i><a href="<?=base_url();?>auth/login">Login</a></li>
 								<?php endif;?>
 							</ul>
 						</div>
@@ -63,15 +66,9 @@
 					<div class="col-lg-8 col-md-7 col-12">
 						<div class="search-bar-top">
 							<div class="search-bar">
-								<select>
-									<option selected="selected">All Category</option>
-									<option>watch</option>
-									<option>mobile</option>
-									<option>kid’s item</option>
-								</select>
-								<form>
-									<input name="search" placeholder="Search Products Here....." type="search">
-									<button class="btnn"><i class="ti-search"></i></button>
+								<form class="w-100">
+									<input name="search" class="w-100" id="search" placeholder="Search Products Here....." type="search">
+									<button class="btnn search"><i class="ti-search"></i></button>
 								</form>
 							</div>
 						</div>
@@ -79,12 +76,12 @@
 					<div class="col-lg-2 col-md-3 col-12">
 						<div class="right-bar">
 							<!-- Search Form -->
-							<div class="sinlge-bar">
-								<a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-							</div>
 							<div class="sinlge-bar shopping" id="viewCart">
 								
 								<!--/ End Shopping Item -->
+							</div>
+							<div class="sinlge-bar shopping">
+								<a href="#" class="single-icon logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>								
 							</div>
 						</div>
 					</div>
@@ -102,8 +99,6 @@
 								<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
 								<ul class="main-category">
 									<?php
-									$kategori = $this->Model_app->view('rb_kategori_produk');
-									
 									foreach ($kategori->result_array() as $row) {
 									  echo "<li><a href='" . base_url() . "produk/kategori/$row[kategori_seo]'>$row[nama_kategori]</a></li>";
 									}
@@ -160,3 +155,19 @@
 		<!--/ End Header Inner -->
 	</header>
 	<!--/ End Header -->
+
+	<script>
+		$('.logout').click(function(e){
+			e.preventDefault();
+			swal.fire({
+				title: 'Logout?',
+				icon: 'question',
+				text: 'Yakin ingin keluar?',
+				showCancelButton: true,
+				confirmButtonColor: '#ff2222',
+				confirmButtonText: 'Logout'
+			}).then(function(logout){
+
+			});
+		})
+	</script>

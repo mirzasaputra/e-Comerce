@@ -106,7 +106,16 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 		<?php include "slide.php";?>
 	<?php endif;?>
 
-	<?=$contents;?>
+	<div id="contentFirst">
+		<?=$contents;?>
+	</div>
+
+	<div id="contentSearch"></div>
+
+	<div id="loading" class="loading-search alert bg-light mx-auto my-3 d-none text-center">
+		<h4><i class="fa fa-spinner fa-spin"></i></h4>
+		<p>Loading...</p>
+	</div>
 
 	<?php if($module !== 'login') : ?>
 	<?php if($module == "home") : ?>
@@ -306,9 +315,37 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<!-- Easing JS -->
 	<script src="<?=base_url();?>asset/vendor/js/easing.js"></script>
 	<!-- Active JS -->
-  	<script src="<?=base_url();?>asset/vendor/js/active.js"></script>
+	<script src="<?=base_url();?>asset/vendor/js/active.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('#search').keyup(function(){
+			$('#contentFirst').hide();
+				$('#contentSearch').hide();
+				$('#loading').removeClass('d-none');
 
-  <?php include "modal.php"; ?>
+				if($('#search').val() == ''){
+					$('#loading').addClass('d-none');
+					$('#contentFirst').show();
+					$('#contentSearch').hide();
+				} else {
+					var search = $(this).val();
+
+					$.ajax({
+						url: '<?=base_url();?>produk/searching/',
+						method: 'post',
+						data: {search: search},
+						success: function(data){
+							$('#contentSearch').show();
+							$('#loading').addClass('d-none');
+							$('#contentFirst').hide();
+							$('#contentSearch').html(data);
+						}
+					})
+				}
+			})
+		})
+	</script>
 </body>
 
 </html>

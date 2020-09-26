@@ -40,7 +40,7 @@
         </div>
       </div>
       <?php
-      if($this->session->level == "reseller"){
+      if($this->session->level == "Reseller"){
         $harga = $record['harga_reseller'];
       } else {
         $harga = $record['harga_konsumen'];
