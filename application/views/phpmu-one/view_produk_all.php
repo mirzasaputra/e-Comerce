@@ -151,6 +151,7 @@
 															text: data.pesan
 														});
 														loadData_all();
+														loadData();
 														} else {
 														swal.fire({
 															title: 'Warning',

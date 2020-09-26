@@ -125,7 +125,7 @@ class Produk extends CI_Controller
 					$this->session->set_userdata(array('idp' => $idp));
 				}
 
-				$cek = $this->Model_app->view_where('rb_penjualan_temp', array('id_pembeli' => $this->session->idp, 'id_produk' => $id_produk))->num_rows();
+				$cek = $this->Model_app->view_where('rb_penjualan_temp', array('session' => $this->session->idp, 'id_produk' => $id_produk))->num_rows();
 				if ($cek >= 1) {
 					$jumlahstok = $stok['stok'] - $this->input->post('jumlah');
 					$this->db->query("UPDATE rb_produk SET stok='$jumlahstok' WHERE id_produk='$id_produk'");
@@ -164,6 +164,12 @@ class Produk extends CI_Controller
 			$data['title'] = 'Keranjang Belanja';
 			$this->template->load('phpmu-one/template', 'phpmu-one/pengunjung/view_keranjang', $data);
 		}
+	}
+
+	function cart(){
+		$data['record'] = $this->Model_app->view_join_rows('rb_penjualan_temp', 'rb_produk', 'id_produk', array('id_pembeli' => $this->session->id_konsumen, 'status' => 'pending'), 'id_penjualan_detail', 'ASC');
+		$data['title'] = 'Keranjang Belanja';
+		$this->load->view('ajax/viewcart', $data);
 	}
 
 	function keranjang_delete()

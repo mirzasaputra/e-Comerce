@@ -61,6 +61,31 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<script src="<?=base_url();?>asset/vendor/js/nicesellect.js"></script>
 	<script src="<?=base_url();?>asset/vendor/js/owl-carousel.js"></script>
   	<script src="<?php echo base_url('asset/admin/plugins/') ?>sweetalert2/dist/sweetalert2.min.js"></script>
+	
+	<script>
+	loadData();
+
+	function loadData(){
+		$.ajax({
+			url: '<?=base_url();?>produk/cart/',
+			method: 'GET',
+			success: function(data){
+				$('#viewCart').html(data);
+				
+				$('.remove').click(function(e){
+					e.preventDefault();
+					$.ajax({
+						url: $(this).attr('href'),
+						success: function(data){
+							loadData();
+						}
+					})
+				})
+			}
+		})
+
+	}
+	</script>
 </head>
 
 <body class="js">

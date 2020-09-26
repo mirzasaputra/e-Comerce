@@ -381,6 +381,14 @@
                                     <div class="checkbox-inline"><input name="kurir" class="kurir" type="radio" value="<?=$rkurir;?>"> <?=strtoupper($rkurir);?></div>
                                 <?php $no++;endforeach;?>
                             </div>
+                            <div id="kuririnfo" class="d-none">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class='alert alert-info' style='padding:5px; border-radius:0px; margin-bottom:0px'>Service</div>
+                                        <p class="form-control-static" id="kurirserviceinfo"></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!--/ End Order Widget -->

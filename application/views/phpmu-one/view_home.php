@@ -47,6 +47,9 @@
                           <a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>">
                             <img class="default-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
                             <img class="hover-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
+                            <?php if($row['stok'] <= 0) : ?>
+                              <span class="out-of-stok">Out Of Stok</span>
+                            <?php endif;?>
                             <?php if($row['diskon'] > 0) : ?>
                               <span class="price-dec"><?=ceil($row['diskon'] * 100 / $row['harga_konsumen']);?>% Off</span>
                             <?php endif;?>
@@ -130,7 +133,10 @@
 								<a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>">
 									<img class="default-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
 									<img class="hover-img" src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="#">
-									<span class="out-of-stock">Hot</span>
+									<?php if($row['stok'] <= 0) : ?>
+                    <span class="out-of-stok">Out Of Stok</span>
+                  <?php endif;?>
+                  <span class="out-of-stock">Hot</span>
 								</a>
 								<div class="button-head">
 									<div class="product-action">
@@ -234,5 +240,76 @@
             }
         })
     })
+
+    loadData_all();
+
+    function loadData_all(){
+      var order_by = $('#shortBy').val();
+      var ajax = '<?=$module;?>';
+      var kategori = '<?=$this->uri->segment(3);?>';
+      $.ajax({
+          url: '<?=base_url();?>produk/all_ajax',
+          method: 'GET',
+          data: {order_by: order_by, ajax: ajax, kategori: kategori},
+          success: function(data){
+            $('#viewData').html(data);
+
+            $('.detailProduk').click(function(){
+            $('.modal-backdrop').remove();
+            let id = $(this).attr('value');
+            $.ajax({
+              url: "<?=base_url();?>Produk/detail/ajax",
+              method: "post",
+              data: {id: id},
+              success: function(data){
+                $('#viewDetailProduk').html(data);
+                
+                $('.add').click(function(e){
+                  e.preventDefault();
+                  var id_konsumen = '<?=$this->session->id_konsumen;?>';
+
+                  if(id_konsumen !== ''){
+                    var id_produk = $('#id_produk').val();
+                    var jumlah = $('#qty').val();
+                    var keterangan = 'Size: '+$('#size').val()+', Color: '+$('#color').val();
+                    var diskonnilai = $('#diskon').val();
+
+                    $.ajax({
+                      url: '<?=base_url();?>produk/keranjang',
+                      method: 'post',
+                      data: {id_produk: id_produk, jumlah: jumlah, keterangan: keterangan, diskonnilai: diskonnilai},
+                      dataType: 'json',
+                      success: function(data){
+                        if(data.hasil == true){
+                        $('#exampleModal').modal('hide');
+                        $('.modal-backdrop').remove();
+                        $('body').removeClass('modal-open');
+                        $('body').attr('style', '');
+                        swal.fire({
+                          title: 'Success',
+                          icon: 'success',
+                          text: data.pesan
+                        });
+                        loadData_all();
+                        loadData();
+                        } else {
+                        swal.fire({
+                          title: 'Warning',
+                          icon: 'question',
+                          text: data.pesan
+                        });
+                        }
+                      }
+                    })
+                  } else {
+                    window.location.assign('<?=base_url();?>auth/login');
+                  }
+                })
+              }
+            })
+          })
+        }
+      })
+    }
   })
 </script>
