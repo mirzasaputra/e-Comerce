@@ -94,7 +94,7 @@
 				<div class="cat-nav-head">
 					<div class="row px-md-5 m-0">
 						<?php if($module == "home") : ?>
-						<div class="col-lg-3">
+						<div class="col-lg-3" id="category">
 							<div class="all-category">
 								<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
 								<ul class="main-category">

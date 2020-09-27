@@ -321,13 +321,15 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 		$(document).ready(function(){
 			$('#search').keyup(function(){
 			$('#contentFirst').hide();
-				$('#contentSearch').hide();
-				$('#loading').removeClass('d-none');
+			$('#category').hide()
+			$('#contentSearch').hide();
+			$('#loading').removeClass('d-none');
 
 				if($('#search').val() == ''){
 					$('#loading').addClass('d-none');
 					$('#contentFirst').show();
 					$('#contentSearch').hide();
+					$('#category').show();
 				} else {
 					var search = $(this).val();
 
