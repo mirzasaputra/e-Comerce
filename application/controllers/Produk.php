@@ -83,7 +83,7 @@ class Produk extends CI_Controller
 		if($check == 'ajax'){
 			$id = $this->input->post('id');
 			$data['record'] = $this->Model_app->edit('rb_produk', array('id_produk' => $id))->row_array();
-			$data['images'] = $this->Model_app->select_images('produk_image', array('id_produk' => $id));
+			$data['images'] = $this->db->get_where('produk_image', array('id_produk' => $id));
 			$this->load->view('ajax/detailProduk', $data);
 		} else {
 			$data['title'] = $check;

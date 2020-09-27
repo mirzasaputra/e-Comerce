@@ -13,9 +13,9 @@
           </div>
           <?php endif;?>
           
-          <?php foreach($images->row_array() as $row) : ?>
+          <?php foreach($images->result_array() as $row) : ?>
           <div class="single-slider">
-            <img src="<?=base_url();?>asset/foto_produk/<?=$record['gambar'];?>" alt="<?=$record['nama_produk'];?>">
+            <img src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="<?=$record['nama_produk'];?>">
           </div>
           <?php endforeach;?>
         </div>
