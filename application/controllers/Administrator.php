@@ -1739,7 +1739,7 @@ class Administrator extends CI_Controller
 	public function simpan_penjualan()
 	{
 		$this->Model_penjualan->simpanPenjualan();
-		redirect('administrator/penjualan');
+		redirect('report/struk_penjualan');
 	}
 	public function invoice()
 	{

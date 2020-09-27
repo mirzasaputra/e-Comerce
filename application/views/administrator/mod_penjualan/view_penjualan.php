@@ -44,7 +44,7 @@
                             <td><?php echo $row['waktu_transaksi'] ?></td>
                             <td>
                                 <a class='btn btn-success btn-xs' title='Detail Data' onclick="detailPenjualan('<?php echo $row['id_penjualan'] ?>')"><span class='glyphicon glyphicon-search'></span> Detail</a>
-                                <a class='btn btn-info btn-xs' title='Print Data' href="<?php echo base_url('administrator/invoice/') . $row['id_penjualan'] ?> "><span class='glyphicon glyphicon-print'></span> Print</a>
+                                <a class='btn btn-info btn-xs' title='Print Data' href="<?php echo base_url('report/struk_penjualan/') . $row['id_penjualan'] ?> " target='_blank'><span class='glyphicon glyphicon-print'></span> Print</a>
 
                             </td>
                         </tr>

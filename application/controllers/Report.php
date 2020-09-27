@@ -74,4 +74,11 @@ class Report extends CI_Controller
         $data['akhir'] = $this->input->get('to');
         $this->load->view('report/report_retur_pembelian', $data);
     }
+
+    public function struk_penjualan($id = '')
+    {
+        $this->data['id_resi'] = $id;
+        $this->data['profil'] = $this->Model_main->identitas()->row_array();
+        $this->load->view('report/struk_penjualan', $this->data);
+    }
 }
