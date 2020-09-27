@@ -102,11 +102,11 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	
 	<?php if($module !== 'login') include "main-menu.php"; ?>
 
+<div id="contentFirst">
 	<?php if($module == "home") : ?>
 		<?php include "slide.php";?>
 	<?php endif;?>
 
-	<div id="contentFirst">
 		<?=$contents;?>
 	</div>
 
