@@ -168,9 +168,9 @@
 				showCancelButton: true,
 				confirmButtonColor: '#ff2222',
 				confirmButtonText: 'Logout'
-			}).then(function(logout){
-				if(logout){
-					window.location.assign('<?=base_url();?>members/logout');
+			}).then((result) => {
+				if(!result.dismiss){
+					window.location.assign('members/logout');
 				}
 			});
 		})

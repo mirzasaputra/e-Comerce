@@ -27,7 +27,7 @@
                         <h3 class="title">Categories</h3>
                         <ul class="categor-list">
                             <?php foreach($kategori->result_array() as $row) : ?>
-                                <li><a href="#"><?=$row['nama_kategori'];?></a></li>
+                                <li><a href="<?=base_url();?>produk/kategori/<?=$row['kategori_seo'];?>"><?=$row['nama_kategori'];?></a></li>
                             <?php endforeach;?>
                         </ul>
                     </div>
@@ -75,7 +75,7 @@
                                     <?php endforeach;?>
                                 </div>
 
-                                <?php if($images->num_rows > 0) : ?>
+                                <?php if($images->num_rows() > 0) : ?>
                                 <a href="#exampleCarousel" class="carousel-control-prev produk-detail" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon"></span>
                                     <span class="sr-only">Previous</span>

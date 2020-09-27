@@ -201,115 +201,29 @@
 	</section>
   <!-- End Shop Blog  -->
 </div>
-  
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
-      </div>
-      <div class="modal-body" id="viewDetailProduk">
-          <!-- Produk detail -->
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal end -->
 
 <script>
   $(document).ready(function(){
     $('.slider1').owlCarousel({
-        items: 1,
-        slideSpeed: 300,
-        nav: false,
-        dots: false,
-        loop: true,
-        autoplay: true,
-        stopOnHover: true
+      items: 1,
+      slideSpeed: 300,
+      nav: false,
+      dots: false,
+      loop: true,
+      autoplay: true,
+      stopOnHover: true
     });
     
     $('.detailProduk').click(function(){
-        let id = $(this).attr('value');
-        $.ajax({
-            url: "<?=base_url();?>Produk/detail/ajax",
-            method: "post",
-            data: {id: id},
-            success: function(data){
-              $('#viewDetailProduk').html(data);
-            }
-        })
-    })
-
-    loadData_all();
-
-    function loadData_all(){
-      var order_by = $('#shortBy').val();
-      var ajax = '<?=$module;?>';
-      var kategori = '<?=$this->uri->segment(3);?>';
+      let id = $(this).attr('value');
       $.ajax({
-          url: '<?=base_url();?>produk/all_ajax',
-          method: 'GET',
-          data: {order_by: order_by, ajax: ajax, kategori: kategori},
+          url: "<?=base_url();?>Produk/detail/ajax",
+          method: "post",
+          data: {id: id},
           success: function(data){
-            $('#viewData').html(data);
-
-            $('.detailProduk').click(function(){
-            $('.modal-backdrop').remove();
-            let id = $(this).attr('value');
-            $.ajax({
-              url: "<?=base_url();?>Produk/detail/ajax",
-              method: "post",
-              data: {id: id},
-              success: function(data){
-                $('#viewDetailProduk').html(data);
-                
-                $('.add').click(function(e){
-                  e.preventDefault();
-                  var id_konsumen = '<?=$this->session->id_konsumen;?>';
-
-                  if(id_konsumen !== ''){
-                    var id_produk = $('#id_produk').val();
-                    var jumlah = $('#qty').val();
-                    var keterangan = 'Size: '+$('#size').val()+', Color: '+$('#color').val();
-                    var diskonnilai = $('#diskon').val();
-
-                    $.ajax({
-                      url: '<?=base_url();?>produk/keranjang',
-                      method: 'post',
-                      data: {id_produk: id_produk, jumlah: jumlah, keterangan: keterangan, diskonnilai: diskonnilai},
-                      dataType: 'json',
-                      success: function(data){
-                        if(data.hasil == true){
-                        $('#exampleModal').modal('hide');
-                        $('.modal-backdrop').remove();
-                        $('body').removeClass('modal-open');
-                        $('body').attr('style', '');
-                        swal.fire({
-                          title: 'Success',
-                          icon: 'success',
-                          text: data.pesan
-                        });
-                        loadData_all();
-                        loadData();
-                        } else {
-                        swal.fire({
-                          title: 'Warning',
-                          icon: 'question',
-                          text: data.pesan
-                        });
-                        }
-                      }
-                    })
-                  } else {
-                    window.location.assign('<?=base_url();?>auth/login');
-                  }
-                })
-              }
-            })
-          })
-        }
+            $('#viewDetailProduk').html(data);
+          }
       })
-    }
+    })
   })
 </script>

@@ -67,32 +67,30 @@ class Model_members extends CI_model
 
     function profile_update($id)
     {
-        if (trim($this->input->post('a')) != '') {
+        if (trim($this->input->post('pass')) != '') {
             $datadbd = array(
-                'username' => $this->db->escape_str(strip_tags($this->input->post('aa'))),
-                'password' => hash("sha512", md5($this->input->post('a'))),
-                'nama_lengkap' => $this->db->escape_str(strip_tags($this->input->post('b'))),
-                'email' => $this->db->escape_str(strip_tags($this->input->post('c'))),
-                'jenis_kelamin' => $this->db->escape_str($this->input->post('d')),
-                'tanggal_lahir' => $this->db->escape_str($this->input->post('e')),
-                'tempat_lahir' => $this->db->escape_str(strip_tags($this->input->post('f'))),
-                'alamat_lengkap' => $this->db->escape_str(strip_tags($this->input->post('g'))),
-                'kota_id' => $this->db->escape_str(strip_tags($this->input->post('j'))),
-                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('l'))),
-                'tipe' => $this->db->escape_str(strip_tags($this->input->post('tipe')))
+                'username' => $this->db->escape_str(strip_tags($this->input->post('user'))),
+                'password' => hash("sha512", md5($this->input->post('pass'))),
+                'nama_lengkap' => $this->db->escape_str(strip_tags($this->input->post('nama'))),
+                'email' => $this->db->escape_str(strip_tags($this->input->post('email'))),
+                'jenis_kelamin' => $this->db->escape_str($this->input->post('jekel')),
+                'tanggal_lahir' => $this->db->escape_str($this->input->post('tanggal_lahir')),
+                'tempat_lahir' => $this->db->escape_str(strip_tags($this->input->post('tempat_lahir'))),
+                'alamat_lengkap' => $this->db->escape_str(strip_tags($this->input->post('alamat'))),
+                'kota_id' => $this->db->escape_str(strip_tags($this->input->post('kota_id'))),
+                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('no_hp')))
             );
         } else {
             $datadbd = array(
-                'username' => $this->db->escape_str(strip_tags($this->input->post('aa'))),
-                'nama_lengkap' => $this->db->escape_str(strip_tags($this->input->post('b'))),
-                'email' => $this->db->escape_str(strip_tags($this->input->post('c'))),
-                'jenis_kelamin' => $this->db->escape_str($this->input->post('d')),
-                'tanggal_lahir' => $this->db->escape_str($this->input->post('e')),
-                'tempat_lahir' => $this->db->escape_str(strip_tags($this->input->post('f'))),
-                'alamat_lengkap' => $this->db->escape_str(strip_tags($this->input->post('g'))),
-                'kota_id' => $this->db->escape_str(strip_tags($this->input->post('j'))),
-                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('l'))),
-                'tipe' => $this->db->escape_str(strip_tags($this->input->post('tipe')))
+                'username' => $this->db->escape_str(strip_tags($this->input->post('user'))),
+                'nama_lengkap' => $this->db->escape_str(strip_tags($this->input->post('nama'))),
+                'email' => $this->db->escape_str(strip_tags($this->input->post('email'))),
+                'jenis_kelamin' => $this->db->escape_str($this->input->post('jekel')),
+                'tanggal_lahir' => $this->db->escape_str($this->input->post('tanggal_lahir')),
+                'tempat_lahir' => $this->db->escape_str(strip_tags($this->input->post('tempat_lahir'))),
+                'alamat_lengkap' => $this->db->escape_str(strip_tags($this->input->post('alamat'))),
+                'kota_id' => $this->db->escape_str(strip_tags($this->input->post('kota_id'))),
+                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('no_hp')))
             );
         }
         $this->db->where('id_konsumen', $id);

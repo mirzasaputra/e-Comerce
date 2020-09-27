@@ -52,7 +52,7 @@
                               <a href="#" data-toggle="modal" class="detailProduk" data-target="#exampleModal" value="<?=$row['id_produk'];?>" title="Quick View"><i class=" ti-eye"></i><span>Quick Shop</span></a>
                             </div>
                             <div class="product-action-2">
-                              <a title="Add to cart" href="#">Add to cart</a>
+                              <a title="Add to cart add" href="#">Add to cart</a>
                             </div>
                           </div>
                         </div>

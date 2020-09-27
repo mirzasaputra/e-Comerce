@@ -87,7 +87,7 @@
                                 <img src="<?=base_url();?>asset/foto_berita/<?=$row['gambar'];?>" alt="<?=$row['judul'];?>">
                             </div>
                             <div class="content">
-                                <h5><a href="#"><?=$row['judul'];?></a></h5>
+                                <h5><a href="<?=base_url();?>berita/detail/<?=$row['judul_seo'];?>"><?=$row['judul'];?></a></h5>
                                 <ul class="comment">
                                     <?php $tanggal = tgl_indo($row['tanggal']);?>
                                     <li><i class="fa fa-calendar" aria-hidden="true"></i><?=$row['hari'];?>, <?=$tanggal;?></li>

@@ -89,7 +89,7 @@ class Produk extends CI_Controller
 			$data['title'] = $check;
 			$data['judul'] = 'Produk detail';
 			$data['record'] = $this->Model_app->edit('rb_produk', array('produk_seo' => $check))->row_array();
-			$data['images'] = $this->Model_app->select_images('produk_image', array('id_produk' => $data['id']));
+			$data['images'] = $this->Model_app->select_images('produk_image', array('id_produk' => $data['record']['id_produk']));
 			$data['kategori'] = $this->Model_app->view('rb_kategori_produk');
 			$data['recent_post'] = $this->Model_app->view_ordering_limit('rb_produk', 'waktu_input', 'DESC', 0, 3);
 			$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_detail', $data);

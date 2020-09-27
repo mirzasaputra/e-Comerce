@@ -6,7 +6,7 @@
                 <div class="bread-inner">
                     <ul class="bread-list">
                         <li><a href="<?=base_url();?>">Home <i class="ti-arrow-right"></i></a></li>
-                        <li><a href="<?=base_url();?>members/profil/">Profile</i></a></li>
+                        <li><a href="<?=base_url();?>members/profile/">Profile</i></a></li>
                     </ul>
                 </div>
             </div>
@@ -41,8 +41,8 @@
       <table class="table mb-0">
         <thead>
           <tr>
-            <td><h5>Data Profile</h5>Pastikan data profile anda sudah benar.</td>
-            <td align="right"><a href="" class="btn text-white">Edit Data</a></td>
+            <td><h5>Data Profile</h5>Pastikan data profile anda sudah benar, agar tidak terjadi kesalahan saat transaksi.</td>
+            <td align="right"><a href="<?=base_url();?>members/edit_profile" class="btn text-white">Edit Data</a></td>
           </tr>
         </thead>
       </table>
