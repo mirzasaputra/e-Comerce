@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2020 at 06:00 PM
+-- Generation Time: Sep 27, 2020 at 05:28 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -89,16 +89,16 @@ CREATE TABLE `berita` (
 
 INSERT INTO `berita` (`id_berita`, `id_kategori`, `username`, `judul`, `sub_judul`, `youtube`, `judul_seo`, `headline`, `aktif`, `utama`, `isi_berita`, `keterangan_gambar`, `hari`, `tanggal`, `jam`, `gambar`, `dibaca`, `tag`, `status`) VALUES
 (4, 55, 'admin', 'Hijab Tutorial Segitiga Instan Sasya Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-segitiga-instan-sasya-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Tulisan ini khususkan&nbsp;untuk siapa saja yang ingin atau sedang mengerjakan Bisnis MLM, terlebih bagi yang ingin&nbsp;untuk meraih sukses di Bisnis MLM.&nbsp;Apakah anda adalah orang yang dimaksud ? Ataukah anda sedang mempelajari bisnis MLM ? Apa pendapat Anda tentang bisnis MLM ? Banyak paradigma negative yang berkembangdi masyarakat, sehingga mereka memberikan penilaian buruk mengenai bisnis MLM.&nbsp;<br />\r\n<br />\r\nBahkan banyak orang awam mengatakan bisnis MLM adalah bisnis menjual Mimpi, bisnis yang tidak masuk akal. Sebelum anda membaca lebih jauh, mari kita singkirkan dulu paradigma negative mengenai bisnis MLM. Terimakasih Anda masih terus membaca, tulisan ini saya buat bukan karena saya sekolah khusus di bidang marketing atau telah mencapai tingkat kesuksesan yang gemilang di bisnis MLM, tetapi pengalamanlah yang membuat saya mampu menuliskannya. Semoga yang sedikit ini dapat bermanfaat bagi anda.&nbsp;<br />\r\n<br />\r\nSaya pertama kali mengenal bisnis MLM pada usia yang masih dini untuk berbisnis, yaitu 15 tahun saat itu saya masih di bangku SMA bergabung di salah satu perusahaan besar milik Amerika. Pada usia tersebut pemahaman saya masih sangat bersih terhadap bisnis MLM, sehingga apapun ilmu yang di berikan dapat saya terima dengan baik. Dua tahun kemudian saya tertarik bergabung di sebuah perusahaan Direct Selling Kosmetika terbesar di Indonesia milik Amerika saat itu tahun 1994 sampai tahun 2006 hingga akhirnya perusahaan tersebut menutup bisnisnya di Indonesia.<br />\r\n<br />\r\nSejak tahun 2006 hingga tahun 2009 saya banyak keluar masuk dibeberapa MLM dan Direct selling Indonesia, dan saat ini saya serius menekuni satu perusahaan direct Delling MLM milik perusahaan Swedia. Ini adalah perusahaan terakhir saya untuk coba sana sini yang ujungnya tidak jelas.&nbsp;<br />\r\n<br />\r\nSaya sangat beruntung dapat bertemu dan bergabung di perusahaan tersebut, karena saya sangat meyakini suatu hari yang sudah saya tentukan nanti saya akan dapat meraih apa yang saya inginkan setelah lebih dari 15 tahun melakukan pencarian. Anda jangan seperti saya, semoga apa yang menjadi pengalaman saya dapat menjadi bahan perbandingan bagi anda dalam menentukan pilihan perusahaan yang terbaik dan cocok buat anda, sehingga tidak buang waktu bertahun tahun untuk menemukan perusahaan mana yang tepat.</p>\r\n', 'Sukses Di Bisnis Multi Level Marketing', 'Minggu', '2018-02-18', '10:53:48', 'RV71_5_Cold_Ocean_grande.jpg', 0, 'pesiar,travel,marketing,system,bonus,wisata', 'Y'),
-(5, 55, 'admin', 'Hijab Tutorial Instan Tanika Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-tanika-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Baiklah sekarang kita akan membahas tentang bisnis luar biasa MLM, mengapa kita katakan luar biasa ? Karena bisnis ini mampu mengubah kehidupan banyak orang bukan hanya secara Materi tetapi juga kepribadian. Banyak orang bisa menjadi kaya dan kaya raya dengan mengerjakan bisnis MLM, kehidupan finansial mereka berubah sejalan dengan bertumbuhnya penghasilan. Orang orang yang sukses di bisnis MLM apapun, mereka adalah orang orang yang memiliki kepribadian yang mulia dan baik.&nbsp;Kesuksesan di bisnis ini ini sangat didukung oleh Sikap Mental, pola pikir dan kepribadian yang baik. Sukses bukan karena latar belakang pendidikan ataupun modal.<br />\r\n<br />\r\nJadi singkatnya bisnis MLM adalah Bisnis Manusiawi, kita akan bekerja sama dengan banyak orang, membimbing, membantu, menolong, dan lain lain yang sifatnya memberi.&nbsp;Sebagai leader, tentunya anda lebih banyak memberi kepada team anda bukan menerima, feed back dari memberi adalah menerima. Sesuatu yang akan anda terima kemudian hari adalah kesuksesan, hubungan baik, persahabatan, kekeluargaan dan mungkin Tuhan akan memberikan penilaian sebagai Ibadah karena anda telah membantu banyak orang.&nbsp;<br />\r\n<br />\r\nSikap gemar menolong memang tidak membuahkan hasil saat itu juga, anda jangan pernah berfikir kapan yang anda berikan akan menghasilkan, karena Tuhan Maha Kaya, Ia akan memberikan lebih dari apa yang sudah kita tanam.&nbsp;</p>\r\n', 'Sukses sejati datang didari dalam diri.', 'Minggu', '2018-02-18', '10:53:29', 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', 2, 'pesiar,umrah,marketing,system,bonus', 'Y'),
+(5, 55, 'admin', 'Hijab Tutorial Instan Tanika Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-tanika-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Baiklah sekarang kita akan membahas tentang bisnis luar biasa MLM, mengapa kita katakan luar biasa ? Karena bisnis ini mampu mengubah kehidupan banyak orang bukan hanya secara Materi tetapi juga kepribadian. Banyak orang bisa menjadi kaya dan kaya raya dengan mengerjakan bisnis MLM, kehidupan finansial mereka berubah sejalan dengan bertumbuhnya penghasilan. Orang orang yang sukses di bisnis MLM apapun, mereka adalah orang orang yang memiliki kepribadian yang mulia dan baik.&nbsp;Kesuksesan di bisnis ini ini sangat didukung oleh Sikap Mental, pola pikir dan kepribadian yang baik. Sukses bukan karena latar belakang pendidikan ataupun modal.<br />\r\n<br />\r\nJadi singkatnya bisnis MLM adalah Bisnis Manusiawi, kita akan bekerja sama dengan banyak orang, membimbing, membantu, menolong, dan lain lain yang sifatnya memberi.&nbsp;Sebagai leader, tentunya anda lebih banyak memberi kepada team anda bukan menerima, feed back dari memberi adalah menerima. Sesuatu yang akan anda terima kemudian hari adalah kesuksesan, hubungan baik, persahabatan, kekeluargaan dan mungkin Tuhan akan memberikan penilaian sebagai Ibadah karena anda telah membantu banyak orang.&nbsp;<br />\r\n<br />\r\nSikap gemar menolong memang tidak membuahkan hasil saat itu juga, anda jangan pernah berfikir kapan yang anda berikan akan menghasilkan, karena Tuhan Maha Kaya, Ia akan memberikan lebih dari apa yang sudah kita tanam.&nbsp;</p>\r\n', 'Sukses sejati datang didari dalam diri.', 'Minggu', '2018-02-18', '10:53:29', 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', 4, 'pesiar,umrah,marketing,system,bonus', 'Y'),
 (6, 55, 'admin', 'Hijab Tutorial Instan Jenna Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-jenna-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Untuk membangun jaringan yang besar dan kuat , seorang distributor MLM perlu kerja keras, semangat , kesabaran dan ketekunan. Selain kerja keras , anda juga perlu melakukan kerja cerdas. Berikut ada 6 strategi yang bisa anda lakukan untuk membangun secara cerdas jaringan bisnis MLM anda.</p>\r\n\r\n<p><strong>1. Membangun Impian Bersama</strong></p>\r\n\r\n<p>Membangun impian adalah pertama yang selalu dianjurkan ketika mulai menjalankan bisnis MLM , tetapi hal yang tidak kalah pentingnya adalah membangun impian bersama. Pertemukan bersama impian anggota jaringan anda. Satukan langkah dan coba semakan visi dan presepsi dulu , baru kemudian bangun jaringan bisnis MLM anda.</p>\r\n\r\n<p><strong>2. Lakukan Duplikasi</strong></p>\r\n\r\n<p>Ingin jaringan bisnis anda berkembang baik ? Lakukan duplikasi dengan benar dan bertahap. Di network marketing , tanpa ada duplikasi , bisnis MLM anda akan berjalan lambat dan kurang gairah. Anda harus meniru langkah orang yang sudah sukses di bisnis MLM anda , dan kembangkan keahlian itu dalam diri anda. Sesudah menguasai hal itu ajarkan kepada downline anda dengan sabar dan tekun tahap demi tahap sesuai dengan kemampuan dari downline anda. Anda harus siap membayar harganya jika ingin mencapai sukses , dengan bekerja keras dan menyediakan waktu untuk bisa membentuk jaringan yang besar.</p>\r\n\r\n<p><strong>3. Terus Belajar dan Inovatif</strong></p>\r\n\r\n<p>Banyak leader &ndash; leader MLM yang sukses dan cepat meraih keberhasilan karena banyak belajar. Tentunya anda harus belajar dari upline atau leader anda , lakukan sharing , Tanya jawab dan solusi pemecahan masalah. Belajar juga bisa dilakukan dengan menghadiri acara presentasi bisnis. Dengarkan dan catat semua tips dan kiat &ndash; kiat sukses dari para leader untuk membangun semangat anda. Yang juga penting adalah membaca buku , mendengarkan kaset dan vcd yang bermanfaat buat pengembangan diri dan pengembangan bisnis MLM anda. Jika anda punya akses internet , anda juga bisa belajar website motivasi dan website belajar online.</p>\r\n', 'Membangun impian adalah pertama yang selalu dianjurkan', 'Minggu', '2018-02-18', '10:53:12', 'AR91_95_Sheva_Maroon_1_grande.png', 1, 'pesiar,umrah,travel,marketing,system,bonus', 'Y'),
-(1, 39, 'admin', 'Hijab Tutorial Instan Keylin Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-keylin-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Menurut saya negara ini sangat mengagumkan dalam hal pengelolaan pertaniannya. Dengan luas wilayah yang relatif kecil bila dibandingkan Indonesia, pada tahun 2011 Belanda mampu menjadi negara peringkat 2 untuk negara pengekspor produk pertanian terbesar didunia dengan nilai ekspor mencapai 72,8 miliar Euro.</p>\r\n\r\n<p>Produk andalannya adalah benih dan bunga. Sektor pertanian merupakan pendorong utama ekonomi di Belanda dengan menyumbang 20% pendapatan nasionalnya.&nbsp;Kunci dari majunya pertanian di Belanda adalah Riset. Kebijakan-kebijakan dan teknologi di adopsi dari riset-riset yang dilakukan para ahli. Salah satu pusat riset pertanian yang terkenal disana adalah universitas Wageningen.</p>\r\n\r\n<p>Seperti yang telah di kutip pada sebuah situs bahwa negara Belanda dengan luas hanya&nbsp;41.526km persegi mampu menjadi yang lebih unggul bila dibandingkan dengan negara kita yang luasnya 1.919.440km persegi. dan perlu kita garis bawahi bahwa nyaris seluruh wilayah di Belanda ada di bawah permukaan laut.</p>\r\n\r\n<p>Kedua hal tersebut yang membawa negara Belanda selalu menjadi yang terbaik. Kemajuan sektor pertanian Belanda tidak hanya berfokus pada optimalisasi keuntungan namun juga sangat memperhatikan keberlanjutan dan keramahan lingkungan.</p>\r\n\r\n<p>Pemerintah Belanda membentuk Mentri Ekonomi, Pertanian dan Inovasi yang difungsikan untuk membawa Belanda menjadi negara yang memadukan inovasi di dalam pertanian untuk mencapai ekonomi negara yang kuat dengan mengutamakan keberlanjutan lingkungan hidup.</p>\r\n', 'Penyiraman air atau pestisida pada lahan pertanian', 'Minggu', '2018-02-18', '10:54:53', 'MK97_7_Mocca_grande.jpg', 0, 'pupuk-organik,pestisida-nabati,peternakan,pertanian', 'Y'),
+(1, 39, 'admin', 'Hijab Tutorial Instan Keylin Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-keylin-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Menurut saya negara ini sangat mengagumkan dalam hal pengelolaan pertaniannya. Dengan luas wilayah yang relatif kecil bila dibandingkan Indonesia, pada tahun 2011 Belanda mampu menjadi negara peringkat 2 untuk negara pengekspor produk pertanian terbesar didunia dengan nilai ekspor mencapai 72,8 miliar Euro.</p>\r\n\r\n<p>Produk andalannya adalah benih dan bunga. Sektor pertanian merupakan pendorong utama ekonomi di Belanda dengan menyumbang 20% pendapatan nasionalnya.&nbsp;Kunci dari majunya pertanian di Belanda adalah Riset. Kebijakan-kebijakan dan teknologi di adopsi dari riset-riset yang dilakukan para ahli. Salah satu pusat riset pertanian yang terkenal disana adalah universitas Wageningen.</p>\r\n\r\n<p>Seperti yang telah di kutip pada sebuah situs bahwa negara Belanda dengan luas hanya&nbsp;41.526km persegi mampu menjadi yang lebih unggul bila dibandingkan dengan negara kita yang luasnya 1.919.440km persegi. dan perlu kita garis bawahi bahwa nyaris seluruh wilayah di Belanda ada di bawah permukaan laut.</p>\r\n\r\n<p>Kedua hal tersebut yang membawa negara Belanda selalu menjadi yang terbaik. Kemajuan sektor pertanian Belanda tidak hanya berfokus pada optimalisasi keuntungan namun juga sangat memperhatikan keberlanjutan dan keramahan lingkungan.</p>\r\n\r\n<p>Pemerintah Belanda membentuk Mentri Ekonomi, Pertanian dan Inovasi yang difungsikan untuk membawa Belanda menjadi negara yang memadukan inovasi di dalam pertanian untuk mencapai ekonomi negara yang kuat dengan mengutamakan keberlanjutan lingkungan hidup.</p>\r\n', 'Penyiraman air atau pestisida pada lahan pertanian', 'Minggu', '2018-02-18', '10:54:53', 'MK97_7_Mocca_grande.jpg', 2, 'pupuk-organik,pestisida-nabati,peternakan,pertanian', 'Y'),
 (2, 39, 'admin', 'Hijab Tutorial Instan Latisha Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-latisha-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Salah satu negara yang mengedepankan pertanian adalah Indonesia, negara kita ini memang dikenal sangat cocok dengan sektor pertaniannya. Dengan iklim tropis serta dikaruniai tanah subuh membuat Indonesia menjadi tempat yang sangat cocok untuk bertani. Hampir semua tumbuhan bisa tumbuh di tanah Indonesia.</p>\r\n\r\n<p>Namun ironisnya sistem pertanian serta perhatian khusus kepada para petani di Indonesia sangatlah kurang. Bahkan pertanian di Indonesia ini kalah dengan sistem pertanian negara yang tidak memiliki tanah subur seperti Indonesia. Sehingga sektor pertanian Indonesia pun tak pernah mengalami kemajuan.</p>\r\n', 'Indonesia memperoleh julukan negara agraris.', 'Minggu', '2018-02-18', '10:54:18', 'RYB6_1_Grey_grande.jpg', 0, 'pupuk-organik,pestisida-nabati,peternakan,system,teknologi', 'Y'),
 (3, 39, 'admin', 'Hijab Tutorial Pashmina Instan Rafella Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-rafella-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Indonesia dinilai perlu belajar dari Brasil dalam pengembangan&nbsp;sektor pertanian. Sebagai negara agraris, perekonomian Brasil saat ini banyak ditopang dari sektor tersebut.</p>\r\n\r\n<p>Menteri Desa, Pembangunan Daerah Tertinggal dan Transmigrasi Eko Putro Sandjojo &lrm;menjelaskan, sebagai negara dengan sumber daya alam (SDA) yang melimpah, Indonesia punya potensi besar untuk menjadi negara agraris terbesar di dunia.&nbsp;&quot;Untuk membicarakan kemandirian pangan Indonesia. Apakah Indonesia bisa menjadi penghasil pangan dunia? Iya. Karena kita dengan lahan terbesar di dunia kedua setelah Brasil,&quot; &lrm;ujar dia di Kantor Kementerian Pertanian.</p>\r\n\r\n<p>Dia menjelaskan, dengan potensi yang besar ini, Indonesia harusnya bisa seperti Brasil yang mampu menjadi negara ekonomi terbesar ke-5 dunia berkat sokongan sektor pertanian.</p>\r\n\r\n<p>&quot;Brazil bisa menjadi negara yang perekonomian&nbsp;kuat nomor 5 di dunia karena bisa memanfaatkan lahan pertanian. Brasil kalau dulu ada inflasi 1.000 persen sekarang maju karena pertanian. Hal ini juga perlu ditiru,&quot; kata dia.&nbsp;Menurut Eko, potensi Indonesia ini juga semakin besar jika bisa memanfaatkan&nbsp;sektor perikanan. Karena sebagaimana diketahui, Indonesia merupakan negara dengan garis pantai&nbsp;</p>\r\n', 'Petani indonesia harus belajar lebih banyak', 'Minggu', '2018-02-18', '10:54:03', 'RV71_27_Jeans_grande.jpg', 0, 'umrah,pupuk-organik,pestisida-nabati,marketing,teknologi', 'Y'),
-(7, 39, 'admin', 'Hijab Tutorial Instan Kaviya Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-kaviya-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Terdapat dua hal utama yang bisa mendorong terciptanya&nbsp;negara maju. Indonesia akan serius menerapkan dua hal tersebut sehingga ke depan bisa masuk ke dalam kategori negara maju.&nbsp;Menteri Kordinator Bidang Kemaritiman Rizal Ramli ungkap,&nbsp;hal yang pertama yang bisa mendorong sebuah negara masuk kategori maju adalah tingkatan&nbsp;kualitas Sumber Daya Manusia&lrm;&nbsp;(SDM). Selama ini banyak negara maju yang tidak memiliki sumber daya alam, namun karena sumber daya manusia berkualitas maka negara tersebut bisa berkembang.<br />\r\n<br />\r\n&quot;Satu SDM. Negara yang maju tidak punya sumber daya alam, jadi fokus dalam pengembangan SDM. Akhirnya manusia yang terdidik ini, yang&nbsp;<em>educated&nbsp;</em>ini akhirnya mengubah bangsanya,&quot; kataRizal, dalamPressConfrence&nbsp;Rakor Migas, di Kantor Kementerian Kordinator Bidang Kemaritiman,Jakarta, Rabu (11/5/2016).</p>\r\n\r\n<p>Rizal mengakui, Indonesia agak ketinggalan dalam meningkatkan kualitas SDM, karena itu pemerintah akan melakukan transformasi peningkatan kualitas SDM dengan memberikan pendidikan yang lebih spesifik sehingga SDM Indonesia memiliki kemampuan&nbsp;yang sama dengan negara maju.<br />\r\n<br />\r\n&quot;Zaman sekarang zaman Google. Pengetahuan umum bisa didapat dari mana saja, yang penting kemampuan analisa, kemampuan sintesa, kemampuan inovasi dan modifikasi,&quot; ungkap Rizal.</p>\r\n', 'Rizal Ramli kini menjabat sebagai Menteri Koordinator Bidang Kemaritiman', 'Minggu', '2018-02-18', '10:50:24', 'AR96_13_Tartan_Grey_grande.jpg', 0, 'pupuk-organik,marketing,system,bonus,teknologi,nasional', 'Y'),
+(7, 39, 'admin', 'Hijab Tutorial Instan Kaviya Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-kaviya-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Terdapat dua hal utama yang bisa mendorong terciptanya&nbsp;negara maju. Indonesia akan serius menerapkan dua hal tersebut sehingga ke depan bisa masuk ke dalam kategori negara maju.&nbsp;Menteri Kordinator Bidang Kemaritiman Rizal Ramli ungkap,&nbsp;hal yang pertama yang bisa mendorong sebuah negara masuk kategori maju adalah tingkatan&nbsp;kualitas Sumber Daya Manusia&lrm;&nbsp;(SDM). Selama ini banyak negara maju yang tidak memiliki sumber daya alam, namun karena sumber daya manusia berkualitas maka negara tersebut bisa berkembang.<br />\r\n<br />\r\n&quot;Satu SDM. Negara yang maju tidak punya sumber daya alam, jadi fokus dalam pengembangan SDM. Akhirnya manusia yang terdidik ini, yang&nbsp;<em>educated&nbsp;</em>ini akhirnya mengubah bangsanya,&quot; kataRizal, dalamPressConfrence&nbsp;Rakor Migas, di Kantor Kementerian Kordinator Bidang Kemaritiman,Jakarta, Rabu (11/5/2016).</p>\r\n\r\n<p>Rizal mengakui, Indonesia agak ketinggalan dalam meningkatkan kualitas SDM, karena itu pemerintah akan melakukan transformasi peningkatan kualitas SDM dengan memberikan pendidikan yang lebih spesifik sehingga SDM Indonesia memiliki kemampuan&nbsp;yang sama dengan negara maju.<br />\r\n<br />\r\n&quot;Zaman sekarang zaman Google. Pengetahuan umum bisa didapat dari mana saja, yang penting kemampuan analisa, kemampuan sintesa, kemampuan inovasi dan modifikasi,&quot; ungkap Rizal.</p>\r\n', 'Rizal Ramli kini menjabat sebagai Menteri Koordinator Bidang Kemaritiman', 'Minggu', '2018-02-18', '10:50:24', 'AR96_13_Tartan_Grey_grande.jpg', 2, 'pupuk-organik,marketing,system,bonus,teknologi,nasional', 'Y'),
 (8, 19, 'admin', 'Hijab Tutorial Instan Claire & Clarina Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-claire--clarina-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Perusahaan BUMN yang bergerak pada sektor peternakan, PT Berdikari (Persero) meresmikan usaha baru yang masih bergerak pada ritel produk daging dan produk olahan daging sapi yaitu Meat Gallery.<br />\r\n<br />\r\nPeluncuran Meat Gallery merupakan salah satu dari rangkaian persiapan Berdikari dalam menciptakan value chain yang terintegrasi yang sebelumnya perusahaan plat merah tersebut telah merevitalisasi<em>&nbsp;ranch breeding</em>&nbsp;di Sulawesi Selatan dan Sulawesi Tenggara, industri penggemukan sapi, rumah potong hewan serta industri daging olahan.<br />\r\n<br />\r\n&quot;Tekad kami untuk memasok kebutuhan daging sapi nasional yang merupakan salah satu sumber protein dengan harga terjangkau,&quot; ujar Direktur Utama PT Berdikari Liberto El Arief di Jakarta, Senin (20/1/2014).&nbsp;Dia mengatakan pada tahun ini, akan dibuka sebanyak 12 cabang Meat Gallery, sedangkan pada tahun depan akan mulai dibuka untuk&nbsp;<em>franchise</em>.<br />\r\n<br />\r\n&nbsp;&quot;Pertama buka di BSD (Bumi Serpong Damai), kemudian disini (kantor pusat) menyusul diseluruh diwilayah&nbsp; Jabodetabek, seperti di Jakarta Timur&nbsp; sedang tahap persiapan, dari situ di awal tahun ini kami membulatkan tekad menjadi BUMN peternakan,&quot; lanjutnya.&nbsp;Menurut Arief, keunggulan Meat Gallery ini karena produk daging maupun produk daging olahan yang dijual berasal dari sapi yang dipelihara sendiri dan dipotong di dalam rumah potong hewan (RPH) yang dikelola sendiri.<br />\r\n<br />\r\n&quot;Sehingga kami menggunakan standar internsional, higienis, proses pendinginan sesuai ketentuan, pembekuannya juga dalam waktu cepat, kualitas kita jamin. Pernah kita tawarkan daging ini ke restoran mereka langsung suka karena beda denga daging impor,&quot; katanya.</p>\r\n', 'Bisnis Ritel untuk Produk Daging', 'Minggu', '2018-02-18', '10:50:12', 'AR91_87_Molly_Grey_grande.jpg', 0, 'peternakan,marketing,system,teknologi,nasional', 'Y'),
 (9, 19, 'admin', 'Hijab Tutorial Pashmina Instan Alifa Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-alifa-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Lahirnya Peraturan Menteri Keuangan (PMK) Nomor 267 Tahun 2015 untuk mengenakan Pajak Pertambahan Nilai (PPN) 10 persen bagi ternak dan pakan ternak impor maupun di dalam negeri menuai banjir protes keras dari kalangan pelaku usaha dan peternak. Dalam beleid ini, hanya sapi indukan yang terbebas dari pungutan pajak.&nbsp; &nbsp;</p>\r\n\r\n<p>Wakil Ketua Kadin Indonesia Bidang Industri Pengolahan Makanan dan Peternakan, Juan Permata Adoe mengungkapkan, bahasa atau substansi dari PMK 267 Tahun 2015, yang menyebutkan PPN 10 persen yang dipungut tidak boleh dikreditkan.</p>\r\n\r\n<p>Itu artinya jika proses dari sapi menjadi daging, dan diproduksi lagi menjadi bakso, maka perusahaan pengolahan daging otomatis dikenakan&nbsp;<em>dobel</em>&nbsp;PPN.</p>\r\n\r\n<p>&quot;Ini yang jadi persoalan, karena dalam menetapkan PMK, pengusaha tidak diajak berdiskusi. PPN bukan menambah daya saing, tapi justru melemahkan daya saing,&quot; ujar dia.</p>\r\n\r\n<p>Juan menuturkan, Kementerian Pertanian sebenarnya meminta kepada Kementerian Keuangan untuk membebaskan bea masuk sapi indukan atau sapi betina produktif, bukan PPN. Tujuannya apabila Bea Masuk dinolkan, maka penjualan sapi jenis ini akan meningkat.</p>\r\n\r\n<p>&quot;Kementan itu inginnya dibebaskan Bea Masuk untuk sapi betina produktif. Tapi dengan alasan tertentu kenapa larinya ke (bebas) PPN, jadi&nbsp;<em>miss interpretasi</em>&nbsp;antara keinginan dan eksekusinya. Untuk ternak lainnya kena PPN 10 persen, otomatis turunannya juga kena,&quot; ujar dia.</p>\r\n', 'Pengusaha Daging sepi Pembeli', 'Minggu', '2018-02-18', '10:50:00', 'AR91_45_Afia_Black_grande.jpg', 0, 'peternakan,marketing,system,nasional', 'Y'),
-(10, 19, 'admin', 'Hijab Tutorial Pashmina Instan Kiyora Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-kiyora-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Pengusaha yang tergabung di Kamar Dagang dan Industri (Kadin) Indonesia meminta pemerintah merevisi aturan mengenai pemberlakuan Pajak Pertambahan Nilai (PPN) 10 persen untuk seluruh ternak, kecuali sapi indukan.</p>\r\n\r\n<p>Lantaran pungutan pajak tersebut akan berdampak besar terhadap produsen, konsumen hingga melemahkan daya saing industri peternakan nasional.</p>\r\n\r\n<p>Wakil Ketua Kadin Indonesia Bidang Industri Pengolahan Makanan dan Peternakan, Juan Permata Adoe mengungkapkan, pemerintah dan pengusaha menggelar rapat koordinasi PMK 267 Tahun 2015 tentang Kriteria Dan/Atau Rincian Ternak, Bahan Pakan Untuk Pembuatan Pakan Ternak dan Pakan Ikan Yang Atas Impor Dan/Atau Penyerahannya Dibebaskan Dari Pengenaan PPN.</p>\r\n\r\n<p>Aturan tersebut merupakan turunan dari Peraturan Pemerintah (PP) Nomor 81 Tahun 2015 tentang Impor dan atau Penyerahan Barang Kena Pajak Tertentu Yang Bersifat Strategis Yang Dibebaskan Dari Pengenaan PPN.&nbsp;Rapat koordinasi ini dihadiri pihak Kementerian Koordinator Bidang Perekonomian, Kementerian Perdagangan, Kementerian Pertanian, Badan Kebijakan Fiskal Kementerian Keuangan, pengusaha termasuk importir dan peternak lokal. Rapat berlangsung di kantor Kemenko Bidang Perekonomian untuk dibawa dalam rakor pangan tingkat Menteri yang dipimpin Menko Perekonomian Darmin Nasution pada pukul 14.00 WIB ini. &nbsp;</p>\r\n', 'Pengusaha Daging Sapi Menjerit', 'Minggu', '2018-02-18', '10:49:49', 'AF_23_6_Best_Of_Black_1024x1024_6e855c30-c2e4-4423-88ac-0f8e9dfeedc4_grande.jpg', 3, 'peternakan,marketing,teknologi,nasional', 'Y'),
-(11, 19, 'admin', 'Hijab Tutorial Instan Rachelia Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-rachelia-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Sebagai upaya serius untuk fokus pada bisnis peternakan dan pengolahan daging, PT Berdikari (Persero) akan melakukan importasi sapi betina produktif atau sapi indukan pada tahun ini.&nbsp;Direktur Utama PT Berdikari, Librato El Arief mengatakan, BUMN tersebut akan mulai melakukan impor sapi tersebut pada kuartal II 2014.&nbsp;<br />\r\n<br />\r\n&quot;Tahun ini akan masuk sapi indukan sebanyak&nbsp; 5 ribu ekor, sekitar bulan Mei-Juni, itu akan dikelola di&nbsp;<em>ranch</em>&nbsp;kami di Sulawesi Selatan dan Sulawesi Tenggara,&quot; ujarnya di Kantor Pusat Berdikari, Jakarta Pusat, Senin (20/1/2014).&nbsp;Selain itu, perusahaan plat merah ini juga akan melakukan impor sapi bakalan sebanyak 2 ribu ekor pada kuartal I tahun ini.&nbsp; &quot;Untuk sapi bakalan pada kuartal I ada 2 ribu ekor, kalau tahun lalu 3.500 ekor,&quot; lanjutnya.<br />\r\n<br />\r\nSapi-sapi ini diharapkan akan mampu menambah populasi milik perusahaan tersebut yang mencapai 12 ribu tersebar di wilayah Sulawesi dan Jawa.&nbsp;&quot;Olahan di RPH (rumah potong hewan) miliki kita kapasitasnya 100 ekor per hari, utilisasinya sampai saat ini baru 30%,&quot; katanya.<br />\r\n<br />\r\nSaat ini, PT Berdikari telah memiliki beberapa kandang penggemukan sapi yang tersebar di beberapa wilayah seperti 2 kandang di Jawa Tengah, 2 kandang di Jawa Barat, 1 kandang di Banten dan ada juga beberapa yang sedang dalam tahap perbaikan sebanyak 8 kandang diharapkan mulai beroperasi di pada bulan Mei tahun ini.</p>\r\n', 'Berdikari akan Impor Sapi Indukan', 'Minggu', '2018-02-18', '10:49:44', 'AD_19_20_Misty_Grey_grande.jpg', 14, 'peternakan,marketing,system,nasional', 'Y');
+(10, 19, 'admin', 'Hijab Tutorial Pashmina Instan Kiyora Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-kiyora-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Pengusaha yang tergabung di Kamar Dagang dan Industri (Kadin) Indonesia meminta pemerintah merevisi aturan mengenai pemberlakuan Pajak Pertambahan Nilai (PPN) 10 persen untuk seluruh ternak, kecuali sapi indukan.</p>\r\n\r\n<p>Lantaran pungutan pajak tersebut akan berdampak besar terhadap produsen, konsumen hingga melemahkan daya saing industri peternakan nasional.</p>\r\n\r\n<p>Wakil Ketua Kadin Indonesia Bidang Industri Pengolahan Makanan dan Peternakan, Juan Permata Adoe mengungkapkan, pemerintah dan pengusaha menggelar rapat koordinasi PMK 267 Tahun 2015 tentang Kriteria Dan/Atau Rincian Ternak, Bahan Pakan Untuk Pembuatan Pakan Ternak dan Pakan Ikan Yang Atas Impor Dan/Atau Penyerahannya Dibebaskan Dari Pengenaan PPN.</p>\r\n\r\n<p>Aturan tersebut merupakan turunan dari Peraturan Pemerintah (PP) Nomor 81 Tahun 2015 tentang Impor dan atau Penyerahan Barang Kena Pajak Tertentu Yang Bersifat Strategis Yang Dibebaskan Dari Pengenaan PPN.&nbsp;Rapat koordinasi ini dihadiri pihak Kementerian Koordinator Bidang Perekonomian, Kementerian Perdagangan, Kementerian Pertanian, Badan Kebijakan Fiskal Kementerian Keuangan, pengusaha termasuk importir dan peternak lokal. Rapat berlangsung di kantor Kemenko Bidang Perekonomian untuk dibawa dalam rakor pangan tingkat Menteri yang dipimpin Menko Perekonomian Darmin Nasution pada pukul 14.00 WIB ini. &nbsp;</p>\r\n', 'Pengusaha Daging Sapi Menjerit', 'Minggu', '2018-02-18', '10:49:49', 'AF_23_6_Best_Of_Black_1024x1024_6e855c30-c2e4-4423-88ac-0f8e9dfeedc4_grande.jpg', 4, 'peternakan,marketing,teknologi,nasional', 'Y'),
+(11, 19, 'admin', 'Hijab Tutorial Instan Rachelia Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-rachelia-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Sebagai upaya serius untuk fokus pada bisnis peternakan dan pengolahan daging, PT Berdikari (Persero) akan melakukan importasi sapi betina produktif atau sapi indukan pada tahun ini.&nbsp;Direktur Utama PT Berdikari, Librato El Arief mengatakan, BUMN tersebut akan mulai melakukan impor sapi tersebut pada kuartal II 2014.&nbsp;<br />\r\n<br />\r\n&quot;Tahun ini akan masuk sapi indukan sebanyak&nbsp; 5 ribu ekor, sekitar bulan Mei-Juni, itu akan dikelola di&nbsp;<em>ranch</em>&nbsp;kami di Sulawesi Selatan dan Sulawesi Tenggara,&quot; ujarnya di Kantor Pusat Berdikari, Jakarta Pusat, Senin (20/1/2014).&nbsp;Selain itu, perusahaan plat merah ini juga akan melakukan impor sapi bakalan sebanyak 2 ribu ekor pada kuartal I tahun ini.&nbsp; &quot;Untuk sapi bakalan pada kuartal I ada 2 ribu ekor, kalau tahun lalu 3.500 ekor,&quot; lanjutnya.<br />\r\n<br />\r\nSapi-sapi ini diharapkan akan mampu menambah populasi milik perusahaan tersebut yang mencapai 12 ribu tersebar di wilayah Sulawesi dan Jawa.&nbsp;&quot;Olahan di RPH (rumah potong hewan) miliki kita kapasitasnya 100 ekor per hari, utilisasinya sampai saat ini baru 30%,&quot; katanya.<br />\r\n<br />\r\nSaat ini, PT Berdikari telah memiliki beberapa kandang penggemukan sapi yang tersebar di beberapa wilayah seperti 2 kandang di Jawa Tengah, 2 kandang di Jawa Barat, 1 kandang di Banten dan ada juga beberapa yang sedang dalam tahap perbaikan sebanyak 8 kandang diharapkan mulai beroperasi di pada bulan Mei tahun ini.</p>\r\n', 'Berdikari akan Impor Sapi Indukan', 'Minggu', '2018-02-18', '10:49:44', 'AD_19_20_Misty_Grey_grande.jpg', 16, 'peternakan,marketing,system,nasional', 'Y');
 
 -- --------------------------------------------------------
 
@@ -114,14 +114,6 @@ CREATE TABLE `detil_hutang` (
   `tgl_bayar` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `detil_hutang`
---
-
-INSERT INTO `detil_hutang` (`id_detil_hutang`, `id_user`, `id_hutang`, `nominal`, `tgl_bayar`) VALUES
-(15, 1, 1, 5000, '2020-09-05 18:50:10'),
-(16, 1, 1, 5000, '2020-09-05 18:50:36');
-
 -- --------------------------------------------------------
 
 --
@@ -135,14 +127,6 @@ CREATE TABLE `detil_piutang` (
   `tgl_bayar` datetime DEFAULT NULL,
   `nominal` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `detil_piutang`
---
-
-INSERT INTO `detil_piutang` (`id_detil_piutang`, `id_user`, `id_piutang`, `tgl_bayar`, `nominal`) VALUES
-(2, 1, 1, '2020-09-07 18:31:46', 5000),
-(3, 1, 1, '2020-09-07 18:35:50', 15000);
 
 -- --------------------------------------------------------
 
@@ -245,8 +229,8 @@ CREATE TABLE `halamanstatis` (
 --
 
 INSERT INTO `halamanstatis` (`id_halaman`, `judul`, `judul_seo`, `isi_halaman`, `tgl_posting`, `gambar`, `username`, `dibaca`, `jam`, `hari`) VALUES
-(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2018-02-18', 'hijab1.jpg', 'admin', 27, '13:44:49', ''),
-(50, 'Cara Belanja', 'cara-belanja', '<p>Selamat datang di Toko Online Hijab Wanita Jawan Now. Demi kenyamanan anda berbelanja, berikut ini kami jelaskan tata cara berbelanja di Toko Online Hijab jaman Now.</p>\r\n\r\n<p><strong>1. Memilih Produk</strong></p>\r\n\r\n<p>Silahkan melihat produk-produk yang tersedia di Hijab Wanita Jawan Now melalui menu&nbsp;<strong>Categories</strong>. Pada produk yang diinginkan, klik tombol &lsquo;<strong>Add to Cart</strong>&rsquo; untuk memasukkannya ke dalam belanjaan anda. Perhatikan jumlah stok yang tersedia untuk produk tersebut.&nbsp;Tambahkan produk lain sesuai keperluan.</p>\r\n\r\n<p><strong>2.Melihat Belanjaan Anda</strong></p>\r\n\r\n<p>Dibagian kanan&nbsp;atas&nbsp;terlihat jumlah item dalam belanjaan dan&nbsp;total nilai pesanan anda. Bila ingin melihat daftar belanjaan lebih detil, arahkan kursor ke gambar keranjang belanja, kemudian klik tombol&nbsp;&#39;<strong>View Cart</strong>&#39;.</p>\r\n\r\n<p><strong>3. Checkout</strong></p>\r\n\r\n<p>Bila produk yang dipilih sudah lengkap dan sesuai, untuk checkout klik tombol &lsquo;<strong>Checkout</strong>&rsquo;.</p>\r\n\r\n<p><strong>4. Checkout Options</strong></p>\r\n\r\n<p>Anda akan diarahkan pada bagian &lsquo;<strong>Checkout Options</strong>&rsquo;. Bila anda sudah terdaftar (<strong>Returning Customer</strong>), silahkan gunakan email dan password anda untuk login. Bila anda belum terdaftar (<strong>New Customer</strong>), silahkan lakukan pendaftaran terlebih dahulu dengan meng-klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>5. Membuat Account</strong></p>\r\n\r\n<p>Bagi anda pelanggan baru, silahkan lengkapi beberapa data berikut. Yang perlu diperhatikan adalah pada saat menuliskan nama&nbsp;<strong>Kecamatan</strong>&nbsp;pada field &#39;<strong>Kecamatan (City)</strong>&#39;. Ketikkan beberapa huruf pertama nama kecamatan, kemudian sistem akan menampilkan pilihan nama kecamatan. Pilih yang paling sesuai. Lengkapi data alamat anda. Klik persetujuan&nbsp;<strong>Privacy Policy</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>6. Cara&nbsp;Pengiriman</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih tarif pengiriman melalui jasa kurir JNE yang sesuai. Jumlah nominal ongkos kirim akan otomatis dihitung sesuai dengan pilihan Kecamatan anda dan juga berat dari pesanan. Tuliskan&nbsp;catatan untuk pesanan anda pada bagian&nbsp;<strong>Comment</strong>, bila&nbsp;ada.&nbsp;Kemudian klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>7. Cara Pembayaran</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih cara pembayaran yang sesuai. Kami saat ini hanya menerima pembayaran melalui<strong>Bank Transfer</strong>.&nbsp;Klik persetujuan&nbsp;<strong>Terms &amp; Conditions</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>8. Konfirmasi Pemesanan</strong></p>\r\n\r\n<p>Pada bagian&nbsp;konfirmasi pemesanan&nbsp;ini anda dapat melihat sekali lagi rincian pesanan anda.&nbsp;Bila sudah tidak ada perubahan, klik tombol &lsquo;<strong>Confirm Order</strong>&rsquo;. Akan ada pesan bahwa pesanan anda sudah diproses dan bersamaan dengan itu kami mengirimkan email berisi&nbsp;rincian&nbsp;pesanan anda.</p>\r\n\r\n<p><strong>9. Pembayaran dan Konfirmasi Pembayaran</strong></p>\r\n\r\n<p>Silahkan lakukan pembayaran pada nomor rekening yang tercantum pada email yang kami kirimkan. Kemudian lakukan konfirmasi pembayaran agar kami dapat segera memproses pengiriman pesanan anda.</p>\r\n\r\n<p>Agar pesanan dapat diproses untuk pengiriman di hari yang sama, konfirmasi pembayaran ditunggu paling lambat jam 15.00 WIB (atau jam 12.00 WIB untuk hari Sabtu). Lewat dari itu diproses untuk pengiriman di hari/kesempatan berikutnya. Hari Minggu/Tanggal Merah, kantor libur dan tidak ada pengiriman.</p>\r\n\r\n<p><strong>10. Pengiriman dan Tracking Pengiriman</strong></p>\r\n\r\n<p>Apabila kami pengiriman telah kami lakukan, status pesanan anda akan diupdate dan kami akan sampaikan juga nomor tracking dari jasa kurir JNE melalui email.</p>\r\n', '2018-02-18', '', 'admin', 24, '13:41:58', '');
+(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2018-02-18', 'hijab1.jpg', 'admin', 33, '13:44:49', ''),
+(50, 'Cara Belanja', 'cara-belanja', '<p>Selamat datang di Toko Online Hijab Wanita Jawan Now. Demi kenyamanan anda berbelanja, berikut ini kami jelaskan tata cara berbelanja di Toko Online Hijab jaman Now.</p>\r\n\r\n<p><strong>1. Memilih Produk</strong></p>\r\n\r\n<p>Silahkan melihat produk-produk yang tersedia di Hijab Wanita Jawan Now melalui menu&nbsp;<strong>Categories</strong>. Pada produk yang diinginkan, klik tombol &lsquo;<strong>Add to Cart</strong>&rsquo; untuk memasukkannya ke dalam belanjaan anda. Perhatikan jumlah stok yang tersedia untuk produk tersebut.&nbsp;Tambahkan produk lain sesuai keperluan.</p>\r\n\r\n<p><strong>2.Melihat Belanjaan Anda</strong></p>\r\n\r\n<p>Dibagian kanan&nbsp;atas&nbsp;terlihat jumlah item dalam belanjaan dan&nbsp;total nilai pesanan anda. Bila ingin melihat daftar belanjaan lebih detil, arahkan kursor ke gambar keranjang belanja, kemudian klik tombol&nbsp;&#39;<strong>View Cart</strong>&#39;.</p>\r\n\r\n<p><strong>3. Checkout</strong></p>\r\n\r\n<p>Bila produk yang dipilih sudah lengkap dan sesuai, untuk checkout klik tombol &lsquo;<strong>Checkout</strong>&rsquo;.</p>\r\n\r\n<p><strong>4. Checkout Options</strong></p>\r\n\r\n<p>Anda akan diarahkan pada bagian &lsquo;<strong>Checkout Options</strong>&rsquo;. Bila anda sudah terdaftar (<strong>Returning Customer</strong>), silahkan gunakan email dan password anda untuk login. Bila anda belum terdaftar (<strong>New Customer</strong>), silahkan lakukan pendaftaran terlebih dahulu dengan meng-klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>5. Membuat Account</strong></p>\r\n\r\n<p>Bagi anda pelanggan baru, silahkan lengkapi beberapa data berikut. Yang perlu diperhatikan adalah pada saat menuliskan nama&nbsp;<strong>Kecamatan</strong>&nbsp;pada field &#39;<strong>Kecamatan (City)</strong>&#39;. Ketikkan beberapa huruf pertama nama kecamatan, kemudian sistem akan menampilkan pilihan nama kecamatan. Pilih yang paling sesuai. Lengkapi data alamat anda. Klik persetujuan&nbsp;<strong>Privacy Policy</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>6. Cara&nbsp;Pengiriman</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih tarif pengiriman melalui jasa kurir JNE yang sesuai. Jumlah nominal ongkos kirim akan otomatis dihitung sesuai dengan pilihan Kecamatan anda dan juga berat dari pesanan. Tuliskan&nbsp;catatan untuk pesanan anda pada bagian&nbsp;<strong>Comment</strong>, bila&nbsp;ada.&nbsp;Kemudian klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>7. Cara Pembayaran</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih cara pembayaran yang sesuai. Kami saat ini hanya menerima pembayaran melalui<strong>Bank Transfer</strong>.&nbsp;Klik persetujuan&nbsp;<strong>Terms &amp; Conditions</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>8. Konfirmasi Pemesanan</strong></p>\r\n\r\n<p>Pada bagian&nbsp;konfirmasi pemesanan&nbsp;ini anda dapat melihat sekali lagi rincian pesanan anda.&nbsp;Bila sudah tidak ada perubahan, klik tombol &lsquo;<strong>Confirm Order</strong>&rsquo;. Akan ada pesan bahwa pesanan anda sudah diproses dan bersamaan dengan itu kami mengirimkan email berisi&nbsp;rincian&nbsp;pesanan anda.</p>\r\n\r\n<p><strong>9. Pembayaran dan Konfirmasi Pembayaran</strong></p>\r\n\r\n<p>Silahkan lakukan pembayaran pada nomor rekening yang tercantum pada email yang kami kirimkan. Kemudian lakukan konfirmasi pembayaran agar kami dapat segera memproses pengiriman pesanan anda.</p>\r\n\r\n<p>Agar pesanan dapat diproses untuk pengiriman di hari yang sama, konfirmasi pembayaran ditunggu paling lambat jam 15.00 WIB (atau jam 12.00 WIB untuk hari Sabtu). Lewat dari itu diproses untuk pengiriman di hari/kesempatan berikutnya. Hari Minggu/Tanggal Merah, kantor libur dan tidak ada pengiriman.</p>\r\n\r\n<p><strong>10. Pengiriman dan Tracking Pengiriman</strong></p>\r\n\r\n<p>Apabila kami pengiriman telah kami lakukan, status pesanan anda akan diupdate dan kami akan sampaikan juga nomor tracking dari jasa kurir JNE melalui email.</p>\r\n', '2018-02-18', '', 'admin', 29, '13:41:58', '');
 
 -- --------------------------------------------------------
 
@@ -282,13 +266,6 @@ CREATE TABLE `hutang` (
   `jatuh_tempo` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `hutang`
---
-
-INSERT INTO `hutang` (`id_hutang`, `id_beli`, `tgl_hutang`, `jml_hutang`, `bayar`, `sisa`, `status`, `jatuh_tempo`) VALUES
-(1, 13, '2020-09-04 23:42:28', 10000, 10000, 0, 'Lunas', '2020-09-18');
-
 -- --------------------------------------------------------
 
 --
@@ -316,7 +293,7 @@ CREATE TABLE `identitas` (
 --
 
 INSERT INTO `identitas` (`id_identitas`, `nama_website`, `email`, `url`, `facebook`, `rekening`, `no_telp`, `kota_id`, `alamat`, `meta_deskripsi`, `meta_keyword`, `favicon`, `maps`) VALUES
-(1, 'Hijab Wanita Jaman Now', 'ecommerce@gmail.com', 'http://localhost/reseller', '', '#', 'Telp. 081267771344 - Fax. 0411 431111', 17, 'Jl. Angkasa Puri, Perundam 4, Tunggul Hitam, Koto Tangah , Kota padang', 'Menyajikan produk terbaik, tekini, tercepat, dan terpercaya.', 'Ada banyak produk di phpmu.com yang bisa memberikan komisi kepada Anda setiap terjadi penjualan. Dan produk ini akan terus bertambah dari waktu ke waktu. Jadi, sekali Anda bergabung di phpmu.com, Anda punya kesempatan berbisnis tanpa modal, juga peng', 'reseller.png', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3989.3358607198243!2d100.35483479999999!3d-0.8910373999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b8aa1a4e0441%3A0x3f81ebb48d31a38b!2sTunggul+Hitam%2C+Padang+Utara%2C+Kota+Padang%2C+Sumatera+Barat+25173!5e0!3m2!1sid!2sid!4v1408275531365');
+(1, 'Hijab Wanita Jaman Now', 'ecommerce@gmail.com', 'http://localhost/reseller', '', '#', 'Telp. 081267771344 - Fax. 0411 431111', 17, 'Jl. Nusantara No 30, Rogojampi', 'Menyajikan produk terbaik, tekini, tercepat, dan terpercaya.', 'Ada banyak produk di phpmu.com yang bisa memberikan komisi kepada Anda setiap terjadi penjualan. Dan produk ini akan terus bertambah dari waktu ke waktu. Jadi, sekali Anda bergabung di phpmu.com, Anda punya kesempatan berbisnis tanpa modal, juga peng', 'reseller.png', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3989.3358607198243!2d100.35483479999999!3d-0.8910373999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b8aa1a4e0441%3A0x3f81ebb48d31a38b!2sTunggul+Hitam%2C+Padang+Utara%2C+Kota+Padang%2C+Sumatera+Barat+25173!5e0!3m2!1sid!2sid!4v1408275531365');
 
 -- --------------------------------------------------------
 
@@ -354,20 +331,10 @@ CREATE TABLE `kas` (
 
 INSERT INTO `kas` (`id_kas`, `id_user`, `nominal`, `jenis`, `keterangan`, `created_at`) VALUES
 (4, 1, 10000000, 'Pemasukan', 'Modal Awal', '2020-09-02 23:30:17'),
-(7, 1, 50000, 'Pengeluaran', 'Transaksi Pembelian', '2020-09-04 23:42:28'),
-(8, 1, 999960, 'Pengeluaran', 'Transaksi Pembelian', '2020-09-05 11:29:27'),
-(9, 1, 130000, 'Pengeluaran', 'Transaksi Pembelian', '2020-09-05 11:45:46'),
-(33, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-05 18:48:55'),
-(34, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-05 18:50:10'),
-(36, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-05 18:50:36'),
-(37, 1, 50000, 'Pemasukan', 'Penjualan Point Of Sales (Offline)', '2020-09-07 12:41:30'),
-(38, 1, 5000, 'Pengeluaran', 'Pembayaran Hutang', '2020-09-07 18:29:51'),
-(39, 1, 5000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:30:58'),
-(40, 1, 5000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:31:46'),
-(42, 1, 15000, 'Pemasukan', 'Pembayaran Piutang', '2020-09-07 18:35:51'),
-(43, 1, 519980, 'Pemasukan', 'Penjualan Point Of Sales (Offline)', '2020-09-08 19:51:47'),
-(44, 1, 350000, 'Pengeluaran', 'Retur Penjualan', '2020-09-10 14:49:35'),
-(45, 1, 60000, 'Pemasukan', 'Retur Pembelian', '2020-09-19 22:23:13');
+(48, 1, 420000, 'Pemasukan', 'Penjualan Point Of Sales (Offline)', '2020-09-24 22:11:22'),
+(49, 1, 2499900, 'Pengeluaran', 'Transaksi Pembelian', '2020-09-24 22:14:52'),
+(50, 1, 226000, 'Pemasukan', 'Penjualan Point Of Sales (Offline)', '2020-09-24 22:15:53'),
+(51, 1, 99000, 'Pemasukan', 'Penjualan Point Of Sales (Offline)', '2020-09-27 21:21:17');
 
 -- --------------------------------------------------------
 
@@ -444,7 +411,7 @@ INSERT INTO `menu` (`id_menu`, `id_parent`, `nama_menu`, `link`, `aktif`, `posit
 (139, 0, 'Download', 'download', 'Tidak', 'Bottom', 18),
 (141, 0, 'Gallery', 'gallery', 'Tidak', 'Bottom', 20),
 (142, 0, 'Testimoni', 'testimoni', 'Ya', 'Bottom', 22),
-(144, 0, 'Semua Koleksi', 'produk', 'Ya', 'Bottom', 3),
+(144, 0, 'Semua Koleksi', 'produk/all', 'Ya', 'Bottom', 3),
 (145, 146, 'Cara Belanja', 'page/detail/cara-belanja', 'Ya', 'Bottom', 2),
 (146, 0, 'Informasi', '#', 'Ya', 'Bottom', 2),
 (147, 0, 'Tracking Order', 'konfirmasi/tracking', 'Ya', 'Bottom', 23);
@@ -474,15 +441,6 @@ CREATE TABLE `modul` (
 --
 
 INSERT INTO `modul` (`id_modul`, `nama_modul`, `username`, `link`, `static_content`, `gambar`, `publish`, `status`, `aktif`, `urutan`, `link_seo`) VALUES
-(2, 'Manajemen User', 'admin', 'manajemenuser', '', '', 'Y', 'user', 'Y', 0, ''),
-(18, 'Berita', 'admin', 'listberita', '', '', 'Y', 'user', 'Y', 0, ''),
-(71, 'Image Slider', 'admin', 'imagesslider', '', '', 'N', 'admin', 'N', 0, ''),
-(10, 'Manajemen Modul', 'admin', 'manajemenmodul', '', '', 'Y', 'user', 'Y', 0, ''),
-(31, 'Kategori Berita ', 'admin', 'kategoriberita', '', '', 'Y', 'user', 'Y', 0, ''),
-(33, 'Testimoni', 'admin', 'testimoni', '', '', 'Y', 'user', 'Y', 0, ''),
-(34, 'Tag Berita', 'admin', 'tagberita', '', '', 'Y', 'user', 'Y', 0, ''),
-(43, 'Berita Foto', 'admin', 'album', '', '', 'Y', 'user', 'Y', 0, ''),
-(44, 'Galeri Berita Foto', 'admin', 'gallery', '', '', 'Y', 'user', 'Y', 0, ''),
 (46, 'Konsumen', 'admin', 'konsumen', '', '', 'Y', 'user', 'Y', 0, ''),
 (61, 'Identitas Website', 'admin', 'identitaswebsite', '', '', 'Y', 'user', 'Y', 0, ''),
 (57, 'Menu Website', 'admin', 'menuwebsite', '', '', 'Y', 'user', 'Y', 0, ''),
@@ -502,7 +460,17 @@ INSERT INTO `modul` (`id_modul`, `nama_modul`, `username`, `link`, `static_conte
 (84, 'Penjualan', 'admin', 'penjualan', '', '', 'Y', 'admin', 'Y', 0, ''),
 (85, 'Piutang', 'admin', 'piutang', '', '', 'Y', 'admin', 'Y', 0, ''),
 (86, 'Retur Penjualan', 'admin', 'retur_penjualan', '', '', 'Y', 'admin', 'Y', 0, ''),
-(87, 'Retur Pembelian', 'admin', 'retur_pembelian', '', '', 'Y', 'admin', 'Y', 0, '');
+(87, 'Retur Pembelian', 'admin', 'retur_pembelian', '', '', 'Y', 'admin', 'Y', 0, ''),
+(88, 'Laporan Kas', 'admin', 'laporan/kas', '', '', 'Y', 'admin', 'Y', 0, ''),
+(89, 'Laporan Penjualan', 'admin', 'laporan/penjualan', '', '', 'Y', 'admin', 'Y', 0, ''),
+(90, 'Laporan Pembelian', 'admin', 'laporan/pembelian', '', '', 'Y', 'admin', 'Y', 0, ''),
+(91, 'Laporan Stok Opname', 'admin', 'laporan/stok_opname', '', '', 'Y', 'admin', 'Y', 0, ''),
+(92, 'Laporan Sok In / Out', 'admin', 'laporan/stok_in_out', '', '', 'Y', 'admin', 'Y', 0, ''),
+(93, 'Laporan Hutang', 'admin', 'laporan/hutang', '', '', 'Y', 'admin', 'Y', 0, ''),
+(94, 'Laporan Piutang', 'admin', 'laporan/piutang', '', '', 'Y', 'admin', 'Y', 0, ''),
+(95, 'Laporan Laba Rugi', 'admin', 'laporan/laba_rugi', '', '', 'Y', 'admin', 'Y', 0, ''),
+(96, 'Laporan Retur Penjualan', 'admin', 'laporan/retur_penjualan', '', '', 'Y', 'admin', 'Y', 0, ''),
+(97, 'Laporan Retur Pembelian', 'admin', 'laporan/retur_pembelian', '', '', 'Y', 'admin', 'Y', 0, '');
 
 -- --------------------------------------------------------
 
@@ -544,12 +512,25 @@ CREATE TABLE `piutang` (
   `jatuh_tempo` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `piutang`
+-- Table structure for table `produk_image`
 --
 
-INSERT INTO `piutang` (`id_piutang`, `id_jual`, `tgl_piutang`, `jml_piutang`, `bayar`, `sisa`, `status`, `jatuh_tempo`) VALUES
-(1, 26, '2020-09-07 12:41:30', 20000, 20000, 0, 'Lunas', '2020-09-14');
+CREATE TABLE `produk_image` (
+  `id_produk_image` int(11) NOT NULL,
+  `id_produk` int(11) DEFAULT NULL,
+  `gambar` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `produk_image`
+--
+
+INSERT INTO `produk_image` (`id_produk_image`, `id_produk`, `gambar`) VALUES
+(8, 13, '15.jpg'),
+(9, 13, '16.jpg');
 
 -- --------------------------------------------------------
 
@@ -651,7 +632,8 @@ CREATE TABLE `rb_konsumen` (
 INSERT INTO `rb_konsumen` (`id_konsumen`, `username`, `password`, `nama_lengkap`, `email`, `jenis_kelamin`, `tanggal_lahir`, `tempat_lahir`, `alamat_lengkap`, `kota_id`, `no_hp`, `foto`, `tanggal_daftar`, `tipe`) VALUES
 (35, 'nanda', '2ab2fcd6ccfd60823ed7b6623ae4788fc5d3c9fb3feacbf328d935e72529c8126395472394a464c9ba429b5f93e9fbccef4a72a547413c789ccd870495ca3cb4', 'Nanda Agung Mahardika', 'nanda@gmail.com', 'Laki-laki', '2002-07-10', 'Banyuwangi', 'Jl. Mawar No. 3', 42, '087678754686', '', '2020-09-06', 'Konsumen'),
 (36, 'nurhayati', '', 'Ibu Nurhayati', 'nurhayati@gmail.com', 'Laki-laki', '1980-02-05', 'Banyuwangi', 'Jl. Mawar No 03', 42, '087657627636', '', '2020-09-07', 'Konsumen'),
-(34, 'umum', '', 'Umum', 'umum', '', '2020-09-06', 'Umum', 'Umum', 0, 'Umum', '', '2020-09-06', 'Konsumen');
+(34, 'umum', '', 'Umum', 'umum', '', '2020-09-06', 'Umum', 'Umum', 0, 'Umum', '', '2020-09-06', 'Konsumen'),
+(37, 'yusup', '9970f16668b0ce09b694293b5164ae2b211fb9a23e9026bb4d0d1aef370f192120dd5f5a8e78c06d57fa036de0975c09b528ea7dc49262aee10c3247e62964fa', 'Yusup Supriyanti', 'yusup@gamil.com', 'Laki-laki', '2020-09-18', 'Banyuwangi', 'Kaligung', 42, '085676546677', '', '2020-09-26', 'Reseller');
 
 -- --------------------------------------------------------
 
@@ -1194,9 +1176,7 @@ CREATE TABLE `rb_pembelian` (
 --
 
 INSERT INTO `rb_pembelian` (`id_pembelian`, `kode_pembelian`, `id_supplier`, `waktu_beli`, `id_user`, `method`, `bayar`, `kembali`) VALUES
-(13, 'TRX-0000000001', 1, '2020-09-04 21:28:24', 1, 'Kredit', 50000, 0),
-(19, 'TRX-0000000003', 2, '2020-09-05 11:45:12', 1, 'Cash', 150000, 20000),
-(17, 'TRX-0000000002', 3, '2020-09-05 11:25:41', 1, 'Cash', 1000000, 40);
+(20, 'TRX-0000000001', 3, '2020-09-24 22:13:23', 1, 'Cash', 2500000, 100);
 
 -- --------------------------------------------------------
 
@@ -1219,10 +1199,8 @@ CREATE TABLE `rb_pembelian_detail` (
 --
 
 INSERT INTO `rb_pembelian_detail` (`id_pembelian_detail`, `id_pembelian`, `id_produk`, `harga_pesan`, `jumlah_pesan`, `satuan`, `retur`) VALUES
-(49, 19, 6, 65000, 2, 'unit', 0),
-(48, 17, 3, 159980, 2, 'unit', 0),
-(47, 17, 2, 340000, 2, 'pcs', 0),
-(46, 13, 1, 60000, 0, 'pcs', 1);
+(51, 20, 3, 159980, 5, 'unit', 0),
+(50, 20, 2, 340000, 5, 'pcs', 0);
 
 -- --------------------------------------------------------
 
@@ -1253,8 +1231,9 @@ CREATE TABLE `rb_penjualan` (
 --
 
 INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `diskon`, `kurir`, `service`, `ongkir`, `resi`, `waktu_transaksi`, `proses`, `method`, `bayar`, `kembali`, `id_user`, `online_order`) VALUES
-(26, 'TRX-20200907124130', 36, 0, '', '', 0, NULL, '2020-09-07 12:41:30', '2', 'Kredit', 50000, 0, 1, 'N'),
-(27, 'TRX-20200908195147', 35, 0, '', '', 0, NULL, '2020-09-08 19:51:47', '2', 'Cash', 600000, 80020, 1, 'N');
+(30, 'TRX-20200924221553', 36, 0, '', '', 0, NULL, '2020-09-24 22:15:53', '2', 'Cash', 300000, 74000, 1, 'N'),
+(29, 'TRX-20200924221122', 34, 0, '', '', 0, NULL, '2020-09-24 22:11:22', '2', 'Cash', 450000, 30000, 1, 'N'),
+(31, 'TRX-20200927212117', 34, 0, '', '', 0, NULL, '2020-09-27 21:21:17', '2', 'Cash', 100000, 1000, 1, 'N');
 
 -- --------------------------------------------------------
 
@@ -1280,9 +1259,11 @@ CREATE TABLE `rb_penjualan_detail` (
 --
 
 INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`, `subtotal`, `diskon`, `retur`) VALUES
-(76, 26, 1, 2, 70000, 'pcs', NULL, 140000, 0, 0),
-(74, 27, 3, 1, 169980, 'unit', NULL, 169980, 0, 0),
-(75, 27, 2, 0, 350000, 'pcs', NULL, 0, 0, 1);
+(81, 30, 11, 1, 89000, 'pcs', NULL, 89000, 0, 0),
+(80, 30, 9, 2, 68500, 'unit', NULL, 137000, 0, 0),
+(79, 29, 2, 1, 350000, 'pcs', NULL, 350000, 0, 0),
+(78, 29, 1, 1, 70000, 'pcs', NULL, 70000, 0, 0),
+(83, 31, 7, 1, 99000, 'unit', NULL, 99000, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1292,6 +1273,7 @@ INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_pr
 
 CREATE TABLE `rb_penjualan_temp` (
   `id_penjualan_detail` int(11) NOT NULL,
+  `id_pembeli` int(11) DEFAULT NULL,
   `session` varchar(50) NOT NULL,
   `id_produk` int(11) NOT NULL,
   `jumlah` int(11) NOT NULL,
@@ -1300,8 +1282,16 @@ CREATE TABLE `rb_penjualan_temp` (
   `keterangan_order` text DEFAULT NULL,
   `waktu_order` datetime NOT NULL,
   `diskon` int(11) DEFAULT NULL,
-  `subtotal` int(11) DEFAULT NULL
+  `subtotal` int(11) DEFAULT NULL,
+  `status` enum('Pending','Checkout') DEFAULT 'Pending'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rb_penjualan_temp`
+--
+
+INSERT INTO `rb_penjualan_temp` (`id_penjualan_detail`, `id_pembeli`, `session`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`, `waktu_order`, `diskon`, `subtotal`, `status`) VALUES
+(29, 37, 'TRX-20200926123123', 10, 1, 59900, 'pcs', 'Size: s, Color: orange', '2020-09-26 12:31:23', 0, 59900, 'Pending');
 
 -- --------------------------------------------------------
 
@@ -1313,6 +1303,7 @@ CREATE TABLE `rb_produk` (
   `id_produk` int(11) NOT NULL,
   `id_kategori_produk` int(11) NOT NULL,
   `nama_produk` varchar(255) NOT NULL,
+  `nama_alias` varchar(255) DEFAULT NULL,
   `produk_seo` varchar(255) NOT NULL,
   `satuan` varchar(50) NOT NULL,
   `harga_beli` int(11) NOT NULL,
@@ -1331,20 +1322,20 @@ CREATE TABLE `rb_produk` (
 -- Dumping data for table `rb_produk`
 --
 
-INSERT INTO `rb_produk` (`id_produk`, `id_kategori_produk`, `nama_produk`, `produk_seo`, `satuan`, `harga_beli`, `harga_reseller`, `harga_konsumen`, `berat`, `diskon`, `gambar`, `keterangan`, `username`, `waktu_input`, `stok`) VALUES
-(1, 1, 'Segitiga Instan Aira- AA94.9 Tropical Blue', 'segitiga-instan-aira-aa94-9-tropical-blue', 'pcs', 60000, 65000, 70000, '300', 0, 'RYB6_1_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\n\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\n', 'admin', '2017-05-23 17:04:25', 4),
-(2, 1, 'Segitiga Instan Aira- AA94.8 Minty Green', 'segitiga-instan-aira-aa94-8-minty-green', 'pcs', 340000, 345000, 350000, '500', 0, 'RV71_27_Jeans_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-23 17:10:17', 1),
-(3, 2, 'Segitiga Instan KEINA - KN54.38 Delfine Lilac', 'segitiga-instan-keina-kn54-38-delfine-lilac', 'unit', 159980, 164980, 169980, '300', 0, 'RV71_5_Cold_Ocean_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:47:14', 1),
-(4, 1, 'Segitiga Instan Madeira - MDB5.3 Sunset', 'segitiga-instan-madeira-mdb5-3-sunset', 'unit', 119900, 124900, 129900, '100', 0, 'MK97_7_Mocca_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:53:10', 0),
-(5, 1, 'Segitiga Instan Madeira - MDB5.2 Ocean', 'segitiga-instan-madeira-mdb5-2-ocean', 'unit', 745000, 750000, 755000, '150', 0, 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:56:24', 0),
-(6, 1, 'Pashmina Instan Rafella - RLN1.2 Gold Maroon', 'pashmina-instan-rafella-rln1-2-gold-maroon', 'unit', 65000, 70000, 75000, '130', 0, 'Emily_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:57:11', 2),
-(7, 6, 'Pashmina Instan Rafella - RLN1.1 Sweet Grey', 'pashmina-instan-rafella-rln1-1-sweet-grey', 'unit', 89000, 94000, 99000, '600', 0, 'AYD5_3_Mayra_Pink_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:52:58', 0),
-(8, 6, 'Pashmina Instan Rafella - RLN1.3 Lilac', 'pashmina-instan-rafella-rln1-3-lilac', 'unit', 24500, 29500, 34500, '220', 0, 'AR96_13_Tartan_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:55:04', 0),
-(9, 6, 'Pashmina Instan Diva Lava - DL85.5 Misty Sky', 'pashmina-instan-diva-lava-dl85-5-misty-sky', 'unit', 58500, 63500, 68500, '250', 0, 'AR91_95_Sheva_Maroon_1_grande.png', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:58:43', 0),
-(10, 2, 'Pashmina Instan Diva Lava - DL85.1 Green Sea', 'pashmina-instan-diva-lava-dl85-1-green-sea', 'pcs', 49900, 54900, 59900, '320', 0, 'AR91_87_Molly_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:02:14', 0),
-(11, 2, 'Pashmina Instan Famora - OR82.16 Plum', 'pashmina-instan-famora-or82-16-plum', 'pcs', 79000, 84000, 89000, '250', 0, 'AR91_45_Afia_Black_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:03:47', 0),
-(12, 2, 'Pashmina Instan Famora - OR82.1 Black sweet', 'pashmina-instan-famora-or82-1-black-sweet', 'unit', 55000, 60000, 65000, '360', 20000, 'AF_23_6_Best_Of_Black_1024x1024_6e855c30-c2e4-4423-88ac-0f8e9dfeedc4_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:06:33', 0),
-(13, 2, 'Segiempat Rebya  - RYB6.7 Pink Clover', 'segiempat-rebya---ryb67-pink-clover', 'pcs', 55000, 60000, 65000, '300', 0, 'AD_19_20_Misty_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:10:37', 0);
+INSERT INTO `rb_produk` (`id_produk`, `id_kategori_produk`, `nama_produk`, `nama_alias`, `produk_seo`, `satuan`, `harga_beli`, `harga_reseller`, `harga_konsumen`, `berat`, `diskon`, `gambar`, `keterangan`, `username`, `waktu_input`, `stok`) VALUES
+(1, 1, 'Segitiga Instan Aira- AA94.9 Tropical Blue', 'AA94.9 Tropical Blue', 'segitiga-instan-aira-aa94-9-tropical-blue', 'pcs', 60000, 65000, 70000, '300', 0, 'RYB6_1_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\n\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\n', 'admin', '2017-05-23 17:04:25', 5),
+(2, 1, 'Segitiga Instan Aira- AA94.8 Minty Green', 'AA94.8 Minty Green', 'segitiga-instan-aira-aa94-8-minty-green', 'pcs', 340000, 345000, 350000, '500', 0, 'RV71_27_Jeans_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-23 17:10:17', 5),
+(3, 2, 'Segitiga Instan KEINA - KN54.38 Delfine Lilac', 'KN54.38 Delfine Lilac', 'segitiga-instan-keina-kn54-38-delfine-lilac', 'unit', 159980, 164980, 169980, '300', 0, 'RV71_5_Cold_Ocean_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:47:14', 5),
+(4, 1, 'Segitiga Instan Madeira - MDB5.3 Sunset', 'MDB5.3 Sunset', 'segitiga-instan-madeira-mdb5-3-sunset', 'unit', 119900, 124900, 129900, '100', 0, 'MK97_7_Mocca_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:53:10', 10),
+(5, 1, 'Segitiga Instan Madeira - MDB5.2 Ocean', 'MDB5.2 Ocean', 'segitiga-instan-madeira-mdb5-2-ocean', 'unit', 745000, 750000, 755000, '150', 0, 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:56:24', 2),
+(6, 1, 'Pashmina Instan Rafella - RLN1.2 Gold Maroon', 'RLN1.2 Gold Maroon', 'pashmina-instan-rafella-rln1-2-gold-maroon', 'unit', 65000, 70000, 75000, '130', 0, 'Emily_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:57:11', 2),
+(7, 6, 'Pashmina Instan Rafella - RLN1.1 Sweet Grey', 'RLN1.1 Sweet Grey', 'pashmina-instan-rafella-rln1-1-sweet-grey', 'unit', 89000, 94000, 99000, '600', 0, 'AYD5_3_Mayra_Pink_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:52:58', 11),
+(8, 6, 'Pashmina Instan Rafella - RLN1.3 Lilac', 'RLN1.3 Lilac', 'pashmina-instan-rafella-rln1-3-lilac', 'unit', 24500, 29500, 34500, '220', 0, 'AR96_13_Tartan_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:55:04', 11),
+(9, 6, 'Pashmina Instan Diva Lava - DL85.5 Misty Sky', 'DL85.5 Misty Sky', 'pashmina-instan-diva-lava--dl855-misty-sky', 'unit', 58500, 63500, 68500, '250', 0, 'AR91_95_Sheva_Maroon_1_grande.png', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:58:43', 4),
+(10, 2, 'Pashmina Instan Diva Lava - DL85.1 Green Sea', 'DL85.1 Green Sea', 'pashmina-instan-diva-lava--dl851-green-sea', 'pcs', 49900, 54900, 59900, '320', 0, 'AR91_87_Molly_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:02:14', 4),
+(11, 2, 'Pashmina Instan Famora - OR82.16 Plum', 'OR82.16 Plum', 'pashmina-instan-famora--or8216-plum', 'pcs', 79000, 84000, 89000, '250', 0, 'AR91_45_Afia_Black_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:03:47', 1),
+(12, 2, 'Pashmina Instan Famora - OR82.1 Black sweet', 'OR82.1 Black sweet', 'pashmina-instan-famora--or821-black-sweet', 'unit', 55000, 60000, 65000, '360', 20000, 'AF_23_6_Best_Of_Black_1024x1024_6e855c30-c2e4-4423-88ac-0f8e9dfeedc4_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:06:33', 9),
+(13, 2, 'Segiempat Rebya  - RYB6.7 Pink Clover', 'RYB6.7 Pink Clover', 'segiempat-rebya---ryb67-pink-clover', 'pcs', 55000, 60000, 65000, '300', 0, 'AD_19_20_Misty_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:10:37', 5);
 
 -- --------------------------------------------------------
 
@@ -1460,13 +1451,6 @@ CREATE TABLE `retur_pembelian` (
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `retur_pembelian`
---
-
-INSERT INTO `retur_pembelian` (`id_retur_pembelian`, `kode_retur`, `id_pembelian`, `tgl_retur`, `id_user`) VALUES
-(1, 'RTRB-20200919222313', 13, '2020-09-19 22:23:13', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -1484,13 +1468,6 @@ CREATE TABLE `retur_pembelian_detail` (
   `opsi` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `retur_pembelian_detail`
---
-
-INSERT INTO `retur_pembelian_detail` (`id_retur_pembelian_detail`, `id_retur_pembelian`, `id_produk`, `jumlah_retur`, `harga_produk`, `total_retur`, `kondisi`, `opsi`) VALUES
-(12, 1, 1, 1, 60000, 60000, 1, 2);
-
 -- --------------------------------------------------------
 
 --
@@ -1504,15 +1481,6 @@ CREATE TABLE `retur_penjualan` (
   `tgl_retur` datetime DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `retur_penjualan`
---
-
-INSERT INTO `retur_penjualan` (`id_retur_penjualan`, `kode_retur`, `id_penjualan`, `tgl_retur`, `id_user`) VALUES
-(4, 'RTR-20200910144817', 27, '2020-09-10 14:48:17', 1),
-(5, 'RTR-20200910144833', 27, '2020-09-10 14:48:33', 1),
-(6, 'RTR-20200910144935', 27, '2020-09-10 14:49:35', 1);
 
 -- --------------------------------------------------------
 
@@ -1530,13 +1498,6 @@ CREATE TABLE `retur_penjualan_detail` (
   `kondisi` varchar(100) DEFAULT NULL,
   `opsi` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `retur_penjualan_detail`
---
-
-INSERT INTO `retur_penjualan_detail` (`id_retur_penjualan_detail`, `id_retur_penjualan`, `id_produk`, `jumlah_retur`, `harga_produk`, `total_retur`, `kondisi`, `opsi`) VALUES
-(23, 6, 2, 1, 350000, 350000, '1', '2');
 
 -- --------------------------------------------------------
 
@@ -3376,7 +3337,14 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2020-09-08', 58, '1599566190'),
 ('::1', '2020-09-09', 23, '1599628682'),
 ('::1', '2020-09-18', 1, '1600437264'),
-('::1', '2020-09-19', 2, '1600531133');
+('::1', '2020-09-19', 2, '1600531133'),
+('::1', '2020-09-21', 2, '1600697563'),
+('::1', '2020-09-22', 4, '1600768169'),
+('::1', '2020-09-23', 78, '1600867575'),
+('::1', '2020-09-24', 4, '1600959598'),
+('::1', '2020-09-25', 19, '1601040407'),
+('::1', '2020-09-26', 70, '1601098880'),
+('::1', '2020-09-27', 38, '1601220365');
 
 -- --------------------------------------------------------
 
@@ -3394,6 +3362,14 @@ CREATE TABLE `stok` (
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `stok`
+--
+
+INSERT INTO `stok` (`id_stok`, `id_produk`, `jml`, `nilai`, `jenis`, `keterangan`, `created_at`) VALUES
+(2, 11, 3, 237000, 'Stok Masuk', 'Bonus', '2020-09-22 22:01:56'),
+(3, 8, 1, 24500, 'Stok Keluar', 'Dikasihkan', '2020-09-22 22:02:15');
+
 -- --------------------------------------------------------
 
 --
@@ -3410,6 +3386,13 @@ CREATE TABLE `stok_opname` (
   `keterangan` text DEFAULT NULL,
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `stok_opname`
+--
+
+INSERT INTO `stok_opname` (`id_stok_opname`, `id_produk`, `stok`, `stok_nyata`, `selisih`, `nilai`, `keterangan`, `created_at`) VALUES
+(5, 11, 0, 1, 1, 79000, 'Pengecekan Stok Bulan September', '2020-09-22 21:42:42');
 
 -- --------------------------------------------------------
 
@@ -3659,6 +3642,12 @@ ALTER TABLE `piutang`
   ADD PRIMARY KEY (`id_piutang`);
 
 --
+-- Indexes for table `produk_image`
+--
+ALTER TABLE `produk_image`
+  ADD PRIMARY KEY (`id_produk_image`);
+
+--
 -- Indexes for table `rb_kategori_produk`
 --
 ALTER TABLE `rb_kategori_produk`
@@ -3882,7 +3871,7 @@ ALTER TABLE `identitas`
 -- AUTO_INCREMENT for table `kas`
 --
 ALTER TABLE `kas`
-  MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -3906,7 +3895,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `modul`
 --
 ALTER TABLE `modul`
-  MODIFY `id_modul` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id_modul` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `pasangiklan`
@@ -3919,6 +3908,12 @@ ALTER TABLE `pasangiklan`
 --
 ALTER TABLE `piutang`
   MODIFY `id_piutang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `produk_image`
+--
+ALTER TABLE `produk_image`
+  MODIFY `id_produk_image` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `rb_kategori_produk`
@@ -3942,7 +3937,7 @@ ALTER TABLE `rb_konfirmasi`
 -- AUTO_INCREMENT for table `rb_konsumen`
 --
 ALTER TABLE `rb_konsumen`
-  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `rb_kota`
@@ -3954,37 +3949,37 @@ ALTER TABLE `rb_kota`
 -- AUTO_INCREMENT for table `rb_pembelian`
 --
 ALTER TABLE `rb_pembelian`
-  MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `rb_pembelian_detail`
 --
 ALTER TABLE `rb_pembelian_detail`
-  MODIFY `id_pembelian_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id_pembelian_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan`
 --
 ALTER TABLE `rb_penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan_detail`
 --
 ALTER TABLE `rb_penjualan_detail`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan_temp`
 --
 ALTER TABLE `rb_penjualan_temp`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `rb_produk`
 --
 ALTER TABLE `rb_produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `rb_provinsi`
@@ -4020,13 +4015,13 @@ ALTER TABLE `retur_pembelian_detail`
 -- AUTO_INCREMENT for table `retur_penjualan`
 --
 ALTER TABLE `retur_penjualan`
-  MODIFY `id_retur_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_retur_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `retur_penjualan_detail`
 --
 ALTER TABLE `retur_penjualan_detail`
-  MODIFY `id_retur_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_retur_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `slide`
@@ -4038,13 +4033,13 @@ ALTER TABLE `slide`
 -- AUTO_INCREMENT for table `stok`
 --
 ALTER TABLE `stok`
-  MODIFY `id_stok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_stok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `stok_opname`
 --
 ALTER TABLE `stok_opname`
-  MODIFY `id_stok_opname` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_stok_opname` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tag`

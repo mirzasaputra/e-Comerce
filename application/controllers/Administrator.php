@@ -1169,6 +1169,38 @@ class Administrator extends CI_Controller
 		}
 	}
 
+	public function produk_image($id = '')
+	{
+		cek_session_akses('produk', $this->session->id_session);
+		if (isset($_POST['submit'])) {
+			$config['upload_path'] = 'asset/foto_produk/';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+			$config['max_size'] = '5000'; // kb
+			$this->load->library('upload', $config);
+			$this->upload->do_upload('produk-image');
+			$hasil = $this->upload->data();
+
+			$data = array(
+				'id_produk' => $this->input->post('id'),
+				'gambar'	=> $hasil['file_name'],
+			);
+
+			$this->Model_app->insert('produk_image', $data);
+			redirect('administrator/produk_image/' . $this->input->post('id'));
+		} else {
+			$data['title'] = "Produk Image";
+			$data['identitas_web'] = $this->Model_main->identitas()->row_array();
+			$data['record'] = $this->Model_produk_image->getDataById($id);
+			$this->template->load('administrator/template', 'administrator/mod_produk/view_produk_image', $data);
+		}
+	}
+
+	public function delete_produk_image($kode = '')
+	{
+		$this->Model_produk_image->delete($kode);
+	}
+
+
 	function edit_produk()
 	{
 		cek_session_akses('produk', $this->session->id_session);
@@ -1739,7 +1771,7 @@ class Administrator extends CI_Controller
 	public function simpan_penjualan()
 	{
 		$this->Model_penjualan->simpanPenjualan();
-		redirect('administrator/penjualan');
+		redirect('report/struk_penjualan');
 	}
 	public function invoice()
 	{
