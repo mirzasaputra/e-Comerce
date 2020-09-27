@@ -34,6 +34,7 @@
                               <td>$row[satuan]</td>
                               <td>$row[berat] Gram</td>
                               <td><center>
+                                <a class='btn btn-primary btn-xs' title='Produk Image' href='" . base_url() . "administrator/produk_image/$row[id_produk]'><i class='fa fa-camera'></i></a>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='" . base_url() . "administrator/edit_produk/$row[id_produk]'><span class='glyphicon glyphicon-edit'></span></a>
                                 <a class='btn btn-danger btn-xs' title='Delete Data' href='" . base_url() . "administrator/delete_produk/$row[id_produk]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                               </center></td>
