@@ -129,8 +129,6 @@ class Produk extends CI_Controller
 
 				$cek = $this->Model_app->view_where('rb_penjualan_temp', array('session' => $this->session->idp, 'id_produk' => $id_produk))->num_rows();
 				if ($cek >= 1) {
-					$jumlahstok = $stok['stok'] - $this->input->post('jumlah');
-					$this->db->query("UPDATE rb_produk SET stok='$jumlahstok' WHERE id_produk='$id_produk'");
 					$this->db->query("UPDATE rb_penjualan_temp SET jumlah=jumlah+$jumlah where session='" . $this->session->idp . "' AND id_produk='$id_produk'");
 				} else {
 					$harga = $this->Model_app->view_where('rb_produk', array('id_produk' => $id_produk))->row_array();
@@ -154,8 +152,6 @@ class Produk extends CI_Controller
 						'subtotal'	=> ($harga * $jumlah) - $diskon
 					);
 					$this->Model_app->insert('rb_penjualan_temp', $data);
-					$jumlahstok = $stok['stok'] - $this->input->post('jumlah');
-					$this->db->query("UPDATE rb_produk SET stok='$jumlahstok' WHERE id_produk='$id_produk'");
 				}
 				$JSONdata['hasil'] = true;
 				$JSONdata['pesan'] = 'Item telah ditambahkan di keranjang';

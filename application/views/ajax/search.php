@@ -94,6 +94,11 @@
                     <?php endif;$no++;?>
                     <?php endforeach;?>
 
+                    <?php if($jumlah <= 0) : ?>
+                        <div class="d-block mx-auto my-5">
+                            <h4 class="text-center text-muted">Item tidak ditemukan.</h4>
+                        </div>
+                    <?php endif;?>
                   </div>
                 </div>
               </div>

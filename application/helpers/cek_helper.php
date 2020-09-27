@@ -25,7 +25,7 @@ error_reporting(0);
     function cek_session_members(){
         $ci = & get_instance();
         $session = $ci->session->userdata('level');
-        if ($session != 'konsumen'){
+        if (empty($session)){
             redirect(base_url());
         }
     }

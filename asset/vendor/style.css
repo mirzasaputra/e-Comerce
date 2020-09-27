@@ -5006,3 +5006,41 @@ Version:1.0
 	padding: 10px;
 	width: 300px;
 }
+
+.search-bar-top .search-bar form i {
+	position: absolute;
+	right: 20px;
+	top: 17px;
+	pointer-events: none;
+}
+
+.img-profil {
+	display: block;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border: 2px solid #000;
+	border-radius: 50%;
+}
+
+.img-profil .img-btn {
+	position: absolute;
+	margin-top: 175px;
+	margin-left: -60px;
+	font-size: 25px;
+	padding: 12px 14px;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+}
+
+.img-btn.right {
+	margin-top: 175px;
+	margin-left: -60px;
+}
+
+.img-btn.left {
+	margin-top: 175px;
+	margin-left: -240px;
+}

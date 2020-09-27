@@ -249,4 +249,23 @@ class Model_berita extends CI_model{
         $this->db->from('tag');
         return $this->db->get();
     }
+
+    function tag_like($tag){
+        $this->db->select('*');
+        $this->db->from('berita');
+        $this->db->like('tag', $tag);
+        $this->db->order_by('judul', 'ASC');
+        return $this->db->get();
+    }
+
+    function searching($search){
+        $this->db->select('*');
+        $this->db->from('berita b');
+        $this->db->join('kategori k', 'k.id_kategori=b.id_kategori', 'LEFT');
+        $this->db->like('judul', $search);
+        $this->db->or_like('tag', $search);
+        $this->db->or_like('nama_kategori', $search);
+        $this->db->order_by('judul', 'ASC');
+        return $this->db->get();
+    }
 }

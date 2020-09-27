@@ -46,7 +46,7 @@
                                                 $tag = explode(',', $record['tag']);
                                                 foreach($tag as $row) : 
                                                 ?>
-                                                <li><a href="#"><?=$row;?></a></li>
+                                                <li><a href="<?=base_url();?>berita/tag/<?=$row;?>"><?=$row;?></a></li>
                                                 <?php endforeach;?>
                                             </ul>
                                         </div>
@@ -61,10 +61,10 @@
                 <div class="main-sidebar">
                     <!-- Single Widget -->
                     <div class="single-widget search">
-                        <div class="form">
-                            <input type="email" placeholder="Search Here...">
-                            <a class="button" href="#"><i class="fa fa-search"></i></a>
-                        </div>
+                        <form class="form" action="<?=base_url();?>berita/search/">
+                            <input type="text" name="search" placeholder="Search Here...">
+                            <button type="submit" class="button"><i class="fa fa-search"></i></button>
+                        </form>
                     </div>
                     <!--/ End Single Widget -->
                     <!-- Single Widget -->
@@ -72,7 +72,7 @@
                         <h3 class="title">Blog Categories</h3>
                         <ul class="categor-list">
                             <?php foreach($blog_kategori->result_array() as $row) : ?>
-                                <li><a href="#"><?=$row['nama_kategori'];?></a></li>
+                                <li><a href="<?=base_url();?>berita/kategori/<?=$row['kategori_seo'];?>"><?=$row['nama_kategori'];?></a></li>
                             <?php endforeach;?>
                         </ul>
                     </div>
@@ -99,13 +99,11 @@
                     </div>
                     <!--/ End Single Widget -->
                     <!-- Single Widget -->
-                    <!--/ End Single Widget -->
-                    <!-- Single Widget -->
                     <div class="single-widget side-tags">
                         <h3 class="title">Tags</h3>
                         <ul class="tag">
                             <?php foreach($tags->result_array() as $row) : ?>
-                                <li><a href="#"><?=$row['nama_tag'];?></a></li>
+                                <li><a href="<?=base_url();?>berita/tag/<?=$row['tag_seo'];?>"><?=$row['nama_tag'];?></a></li>
                             <?php endforeach;?>
                         </ul>
                     </div>

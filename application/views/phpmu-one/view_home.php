@@ -59,7 +59,7 @@
                               <a href="#" data-toggle="modal" class="detailProduk" data-target="#exampleModal" value="<?=$row['id_produk'];?>" title="Quick View"><i class=" ti-eye"></i><span>Quick Shop</span></a>
                             </div>
                             <div class="product-action-2">
-                              <a title="Add to cart" href="#">Add to cart</a>
+                              <a title="Add to cart" href="#exampleModal" data-toggle="modal" class="detailProduk" value="<?=$row['id_produk'];?>">Add to cart</a>
                             </div>
                           </div>
                         </div>
@@ -140,10 +140,10 @@
 								</a>
 								<div class="button-head">
 									<div class="product-action">
-										<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+										<a data-toggle="modal" data-target="#exampleModal" class="detailProduk" title="Quick View" value="<?=$row['id_produk'];?>" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
 									</div>
 									<div class="product-action-2">
-										<a title="Add to cart" href="#">Add to cart</a>
+										<a title="Add to cart" href="#exampleModal" data-toggle="modal" class="detailProduk" value="<?=$row['id_produk'];?>">Add to cart</a>
 									</div>
 								</div>
 							</div>

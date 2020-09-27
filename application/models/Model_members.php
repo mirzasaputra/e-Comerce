@@ -27,9 +27,9 @@ class Model_members extends CI_model
         $config['allowed_types'] = 'gif|jpg|png|JPG|gif|JPEG|jpeg';
         $config['max_size']     = '1000'; // kb
         $this->load->library('upload', $config);
-        $this->upload->do_upload();
+        $this->upload->do_upload('foto');
         $hasil = $this->upload->data();
-
+        
         $config['image_library'] = 'gd2';
         $config['source_image'] = 'asset/foto_user/' . $hasil['file_name'];
         $config['create_thumb'] = TRUE;

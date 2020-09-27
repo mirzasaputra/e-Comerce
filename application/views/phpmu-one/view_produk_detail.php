@@ -5,8 +5,9 @@
             <div class="col-12">
                 <div class="bread-inner">
                     <ul class="bread-list">
-                        <li><a href="<?=base_url();?>">Home<i class="ti-arrow-right"></i></a></li>
-                        <li><a href="<?=base_url();?>berita">Produk Detail</a></li>
+                        <li><a href="<?=base_url();?>">Home <i class="ti-arrow-right"></i></a></li>
+                        <li><a href="<?=base_url();?>produk">Produk <i class="ti-arrow-right"></i></a></li>
+                        <li><a><?=$record['nama_produk'];?></a></li>
                     </ul>
                 </div>
             </div>
@@ -135,8 +136,8 @@
                                         </div>
                                         </div>
                                     </div>
-                                    <input type="hide" class="d-none" id="id_produk" value="<?=$record['id_produk'];?>">
-                                    <input type="hide" class="d-none" id="diskon" value="<?=$record['diskon'];?>">
+                                    <input type="hidden" id="id_produk" value="<?=$record['id_produk'];?>">
+                                    <input type="hidden" id="diskon" value="<?=$record['diskon'];?>">
                                     <div class="quantity">
                                         <!-- Input Order -->
                                         <div class="input-group">
@@ -167,3 +168,47 @@
     </div>
 </section>
 <!--/ End Blog Single -->
+
+<script>
+    $('.add').click(function(e){
+        e.preventDefault();
+        var id_konsumen = '<?=$this->session->id_konsumen;?>';
+
+        if(id_konsumen !== ''){
+        var id_produk = $('#id_produk').val();
+        var jumlah = $('#qty').val();
+        var keterangan = 'Size: '+$('#size').val()+', Color: '+$('#color').val();
+        var diskonnilai = $('#diskon').val();
+
+        $.ajax({
+            url: '<?=base_url();?>produk/keranjang',
+            method: 'post',
+            data: {id_produk: id_produk, jumlah: jumlah, keterangan: keterangan, diskonnilai: diskonnilai},
+            dataType: 'json',
+            success: function(data){
+            if(data.hasil == true){
+            $('#exampleModal').modal('hide');
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open');
+            $('body').attr('style', '');
+            swal.fire({
+                title: 'Success',
+                icon: 'success',
+                text: data.pesan
+            });
+            loadData_all();
+            loadData();
+            } else {
+            swal.fire({
+                title: 'Warning',
+                icon: 'question',
+                text: data.pesan
+            });
+            }
+            }
+        })
+        } else {
+        window.location.assign('<?=base_url();?>auth/login');
+        }
+    })
+</script>

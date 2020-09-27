@@ -21,7 +21,7 @@
 							<ul class="list-main">
 								<li><i class="ti-location-pin"></i> Store location</li>
 								<?php if(isset($this->session->id_konsumen)) : ?>
-									<li><i class="ti-user"></i> <a href="#">My account</a></li>
+									<li><i class="ti-user"></i> <a href="<?=base_url();?>members/profile">My account</a></li>
 								<?php endif;?>
 								<?php if(empty($this->session->id_konsumen)) : ?>
 									<li><i class="ti-power-off"></i><a href="<?=base_url();?>auth/login">Login</a></li>
@@ -68,7 +68,7 @@
 							<div class="search-bar">
 								<form class="w-100">
 									<input name="search" class="w-100" id="search" placeholder="Search Products Here....." type="search">
-									<button class="btnn search"><i class="ti-search"></i></button>
+									<i class="fa fa-search"></i>
 								</form>
 							</div>
 						</div>
@@ -80,9 +80,11 @@
 								
 								<!--/ End Shopping Item -->
 							</div>
-							<div class="sinlge-bar shopping">
-								<a href="#" class="single-icon logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>								
-							</div>
+							<?php if(isset($this->session->id_konsumen)) : ?>
+								<div class="sinlge-bar">
+									<a href="#" class="single-icon logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>								
+								</div>
+							<?php endif;?>
 						</div>
 					</div>
 				</div>
@@ -167,7 +169,9 @@
 				confirmButtonColor: '#ff2222',
 				confirmButtonText: 'Logout'
 			}).then(function(logout){
-
+				if(logout){
+					window.location.assign('<?=base_url();?>members/logout');
+				}
 			});
 		})
 	</script>

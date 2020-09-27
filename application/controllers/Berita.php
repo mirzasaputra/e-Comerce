@@ -41,4 +41,26 @@ class Berita extends CI_Controller
 		$data['berita'] = $this->Model_berita->detail_kategori($row->id_kategori, 9);
 		$this->template->load('phpmu-one/template', 'phpmu-one/view_semua_berita', $data);
 	}
+
+	public function tag(){
+		$tag = $this->uri->segment('3');
+		$dat = $this->db->query("SELECT * FROM tag WHERE tag_seo='$tag'");
+		$row = $dat->row_array();
+		$total = $dat->num_rows();
+		if($total == 0){
+			redirect('main');
+		}
+		$data['tag'] = $tag;
+		$data['title'] = $row['nama_tag'];
+		$data['berita'] = $this->Model_berita->tag_like($tag);
+		$this->template->load('phpmu-one/template', 'phpmu-one/view_semua_berita', $data);
+	}
+
+	public function search(){
+		$search = $_GET['search'];
+		$data['search'] = $search;
+		$data['title'] = 'Berita';
+		$data['berita'] = $this->Model_berita->searching($search);
+		$this->template->load('phpmu-one/template', 'phpmu-one/view_semua_berita', $data);
+	}
 }
