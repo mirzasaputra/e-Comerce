@@ -15,6 +15,10 @@
 </div>
 <!-- End Breadcrumbs -->
 			
+<?php if($row['tempat_lahir'] == '' || $row['tanggal_lahir'] == '0000-00-00' || $row['alamat_lengkap'] == '' || $row['kota_id'] == '' || $row['no_hp'] == '') : ?>
+  <div class="alert alert-danger"><i class="fa fa-info-circle"></i> Silahkan lengkapi data diri anda, agar tidak terjadi kesalahan saat melakukan transaksi.</div>
+<?php endif;?>
+
 <!-- Start Blog Single -->
 <section class="blog-single section">
   <div class="container">
@@ -98,7 +102,7 @@
         </div>
         <div class="card-body">
           <?php
-          $cek = $this->db->get_where('rb_penjualan', array('id_pembeli' => $this->session->id_pembeli));
+          $cek = $this->db->get_where('rb_penjualan', array('id_pembeli' => $this->session->id_konsumen));
           if($cek->num_rows() > 0) : ?>
           <table class="table table-bordered">
             <thead class="table-dark">

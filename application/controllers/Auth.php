@@ -19,55 +19,33 @@ class Auth extends CI_Controller
 	public function register()
 	{
 		if (isset($_POST['submit'])) {
-			$data = array(
-				'username' => $this->input->post('a'),
-				'password' => hash("sha512", md5($this->input->post('b'))),
-				'nama_lengkap' => $this->input->post('c'),
-				'email' => $this->input->post('d'),
-				'alamat_lengkap' => $this->input->post('e'),
-				'kota_id' => $this->input->post('h'),
-				'no_hp' => $this->input->post('j'),
-				'tanggal_daftar' => date('Y-m-d H:i:s'),
-				'tipe'	=> 'Konsumen'
-			);
-			$this->Model_app->insert('rb_konsumen', $data);
-			$id = $this->db->insert_id();
-			$this->session->set_userdata(array('id_konsumen' => $id, 'level' => 'konsumen'));
-			redirect('members/profile');
-		}
-		// elseif (isset($_POST['submit2'])) {
-		// 	$cek  = $this->Model_app->view_where('rb_reseller', array('username' => $this->input->post('a')))->num_rows();
-		// 	if ($cek >= 1) {
-		// 		$username = $this->input->post('a');
-		// 		echo "<script>window.alert('Maaf, Username $username sudah dipakai oleh orang lain!');
-		//                           window.location=('" . base_url() . "/auth/register')</script>";
-		// 	} else {
-		// 		$route = array('administrator', 'agenda', 'auth', 'berita', 'contact', 'download', 'gallery', 'konfirmasi', 'main', 'members', 'page', 'produk', 'reseller', 'testimoni', 'video');
-		// 		if (in_array($this->input->post('a'), $route)) {
-		// 			$username = $this->input->post('a');
-		// 			echo "<script>window.alert('Maaf, Username $username sudah dipakai oleh orang lain!');
-		//                               window.location=('" . base_url() . "/" . $this->input->post('i') . "')</script>";
-		// 		} else {
-		// 			$data = array(
-		// 				'username' => $this->input->post('a'),
-		// 				'password' => hash("sha512", md5($this->input->post('b'))),
-		// 				'nama_reseller' => $this->input->post('c'),
-		// 				'jenis_kelamin' => $this->input->post('d'),
-		// 				'alamat_lengkap' => $this->input->post('e'),
-		// 				'no_telpon' => $this->input->post('f'),
-		// 				'email' => $this->input->post('g'),
-		// 				'kode_pos' => $this->input->post('h'),
-		// 				'referral' => $this->input->post('i'),
-		// 				'tanggal_daftar' => date('Y-m-d H:i:s')
-		// 			);
-		// 			$this->Model_app->insert('rb_reseller', $data);
-		// 			$id = $this->db->insert_id();
-		// 			$this->session->set_userdata(array('id_reseller' => $id, 'level' => 'reseller'));
-		// 			redirect('reseller/home');
-		// 		}
-		// 	}
-		// } 
-		else {
+			$cek = $this->db->get_where('rb_konsumen', array('username' => $this->input->post('username')));
+			if($cek->num_rows() > 0) {
+				$data['hasil'] = false;
+				$data['pesan'] = 'Username sudah terdaftar, silahkan gunakan username yang lain.';
+			} else {
+
+				$data = array(
+					'username' => $this->input->post('username'),
+					'password' => hash("sha512", md5($this->input->post('password'))),
+					'nama_lengkap' => $this->input->post('nama'),
+					'email' => $this->input->post('email'),
+					'tanggal_lahir' => '0000-00-00',
+					'alamat_lengkap' => '',
+					'kota_id' => '',
+					'no_hp' => '',
+					'tanggal_daftar' => date('Y-m-d H:i:s'),
+					'tipe'	=> 'Konsumen'
+				);
+				$this->Model_app->insert('rb_konsumen', $data);
+				$id = $this->db->insert_id();
+				$this->session->set_userdata(array('id_konsumen' => $id, 'level' => 'Konsumen'));
+				$data['hasil'] = true;
+				$data['pesan'] = 'Success';
+			}
+			
+			echo json_encode($data);
+		} else {
 			$data['title'] = 'Formulir Pendaftaran';
 			$data['kota'] = $this->Model_app->view_ordering('rb_kota', 'kota_id', 'ASC');
 			$this->template->load('phpmu-one/template', 'phpmu-one/view_register', $data);

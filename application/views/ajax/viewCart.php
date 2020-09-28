@@ -11,7 +11,7 @@
         <li>
             <a href="<?=base_url();?>produk/keranjang_delete/<?=$row['id_penjualan_detail'];?>" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
             <a class="cart-img" href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><img src="<?=base_url();?>asset/foto_produk/<?=$row['gambar'];?>" alt="<?=$row['nama_produk'];?>"></a>
-            <h4><a href="<?base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h4>
+            <h4><a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h4>
             <?php if ($row['diskon']!='0'){ $diskon = "<del style='color:red'>".rupiah($row['harga_jual'])."</del>"; }else{ $diskon = ""; } ?>
             <p class="quantity"><?=$row['jumlah'];?>x - <span class="amount">Rp. <?=number_format($row['harga_jual'] - $row['diskon'], 0, ',', '.');?> <?=$diskon;?></span></p>
         </li>

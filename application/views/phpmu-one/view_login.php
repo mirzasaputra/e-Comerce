@@ -11,7 +11,7 @@
           <form class="form" id="login" method="post" action="<?php echo base_url('auth/login') ?>">
             <div class="form-group">
                 <input type="text" name="username" placeholder="Username" required>
-                <input type="hide" class="d-none" name="login">
+                <input type="hidden" name="login">
             </div>
             <div class="form-group">
                 <input type="password" name="password" placeholder="Password" required>
@@ -25,7 +25,7 @@
                     </div>
                   </div>
                 </div>
-                <center><span>Belum punya akun? <a class="text-primary" href="">Buat akun</a></span></center>
+                <center><span>Belum punya akun? <a class="text-primary" href="<?=base_url();?>auth/register">Buat akun</a></span></center>
           </form>
           <!--/ End Form -->
         </div>

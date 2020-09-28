@@ -10,33 +10,32 @@ class Konfirmasi extends CI_Controller
 			$config['allowed_types'] = 'gif|jpg|png|jpeg';
 			$config['max_size'] = '10000'; // kb
 			$this->load->library('upload', $config);
-			$this->upload->do_upload('f');
+			$this->upload->do_upload('file');
 			$hasil = $this->upload->data();
 			if ($hasil['file_name'] == '') {
 				$data = array(
 					'id_penjualan' => $this->input->post('id'),
-					'total_transfer' => $this->input->post('b'),
-					'id_rekening' => $this->input->post('c'),
-					'nama_pengirim' => $this->input->post('d'),
-					'tanggal_transfer' => $this->input->post('e'),
+					'total_transfer' => $this->input->post('total'),
+					'id_rekening' => $this->input->post('id_rekening'),
+					'nama_pengirim' => $this->input->post('nama'),
+					'tanggal_transfer' => $this->input->post('date'),
 					'waktu_konfirmasi' => date('Y-m-d H:i:s')
 				);
 				$this->Model_app->insert('rb_konfirmasi', $data);
 			} else {
 				$data = array(
 					'id_penjualan' => $this->input->post('id'),
-					'total_transfer' => $this->input->post('b'),
-					'id_rekening' => $this->input->post('c'),
-					'nama_pengirim' => $this->input->post('d'),
-					'tanggal_transfer' => $this->input->post('e'),
+					'total_transfer' => $this->input->post('total'),
+					'id_rekening' => $this->input->post('id_rekening'),
+					'nama_pengirim' => $this->input->post('nama'),
+					'tanggal_transfer' => $this->input->post('date'),
 					'bukti_transfer' => $hasil['file_name'],
 					'waktu_konfirmasi' => date('Y-m-d H:i:s')
 				);
 				$this->Model_app->insert('rb_konfirmasi', $data);
 			}
-			$data1 = array('proses' => '2');
-			$where = array('id_penjualan' => $this->input->post('id'));
-			$this->Model_app->update('rb_penjualan', $data1, $where);
+			$this->db->where('id_penjualan', $this->input->post('id'));
+			$this->db->update('rb_penjualan', array('proses' => 2));
 			echo $this->session->set_flashdata('message', '<div class="alert alert-info"><center>Success Melakukan Konfirmasi pembayaran... <br>akan segera kami cek dan proses!</center></div>');
 			redirect('konfirmasi/index');
 		} else {
@@ -45,9 +44,10 @@ class Konfirmasi extends CI_Controller
 				$kode_transaksi = filter($this->input->post('a'));
 				$row = $this->db->query("SELECT id_penjualan FROM `rb_penjualan` where kode_transaksi='$kode_transaksi'")->row_array();
 				$data['record'] = $this->Model_app->view('rb_rekening');
-
+				
 				$data['total'] = $this->db->query("SELECT a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk where a.id_penjualan='$row[id_penjualan]'")->row_array();
 				$data['rows'] = $this->Model_app->view_where('rb_penjualan', array('id_penjualan' => $row['id_penjualan']))->row_array();
+				echo $data['rows']['kode_transaksi'] . 'assfsdf';
 				$data['ksm'] = $this->Model_app->view_where('rb_konsumen', array('id_konsumen' => $this->session->id_konsumen))->row_array();
 				$this->template->load('phpmu-one/template', 'phpmu-one/pengunjung/view_konfirmasi_pembayaran', $data);
 			} else {

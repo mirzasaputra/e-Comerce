@@ -42,7 +42,7 @@
                                 <img src="<?=base_url();?>asset/foto_berita/<?=$row['gambar'];?>" alt="<?=$row['judul'];?>">
                             </div>
                             <div class="content">
-                                <h5><a href="#"><?=$row['nama_produk'];?></a></h5>
+                                <h5><a href="<?=base_url();?>produk/detail/<?=$row['produk_seo'];?>"><?=$row['nama_produk'];?></a></h5>
                                 <?php 
                                     if($this->session->level == 'Reseller'){
                                         $harga = $row['harga_reseller'];
@@ -115,26 +115,7 @@
                                         <p><?=$record['keterangan'];?></p>
                                     </div>
                                     <div class="size">
-                                        <div class="row">
-                                        <div class="col-lg-6 col-12">
-                                            <h5 class="title">Size</h5>
-                                            <select id="size">
-                                            <option selected="selected">s</option>
-                                            <option>m</option>
-                                            <option>l</option>
-                                            <option>xl</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-6 col-12">
-                                            <h5 class="title">Color</h5>
-                                            <select id="color">
-                                            <option selected="selected">orange</option>
-                                            <option>purple</option>
-                                            <option>black</option>
-                                            <option>pink</option>
-                                            </select>
-                                        </div>
-                                        </div>
+                                        <textarea id="keterangan" rows="3" placeholder="Keterangan size, color, dll."></textarea>
                                     </div>
                                     <input type="hidden" id="id_produk" value="<?=$record['id_produk'];?>">
                                     <input type="hidden" id="diskon" value="<?=$record['diskon'];?>">
@@ -177,7 +158,7 @@
         if(id_konsumen !== ''){
         var id_produk = $('#id_produk').val();
         var jumlah = $('#qty').val();
-        var keterangan = 'Size: '+$('#size').val()+', Color: '+$('#color').val();
+        var keterangan = $('#keterangan').val();
         var diskonnilai = $('#diskon').val();
 
         $.ajax({

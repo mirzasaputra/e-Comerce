@@ -83,8 +83,16 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 				})
 			}
 		})
-
 	}
+
+	function toDuit(number) {
+      var number = number.toString(),
+        duit = number.split('.')[0],
+        duit = duit.split('').reverse().join('')
+        .replace(/(\d{3}(?!$))/g, '$1.')
+        .split('').reverse().join('');
+      return 'Rp. ' + duit;
+    }
 	</script>
 </head>
 
@@ -111,6 +119,11 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	</div>
 
 	<div id="contentSearch"></div>
+
+	<!--Icon Whatsapp-->
+	<a href="" class="whatsapp-icon">
+		<i class="fa fa-whatsapp"></i>
+	</a>
 
 	<div id="loading" class="loading-search alert bg-light mx-auto my-3 d-none text-center">
 		<h4><i class="fa fa-spinner fa-spin"></i></h4>
@@ -334,13 +347,13 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	
 	<script>
 		$(document).ready(function(){
-			$('#search').keyup(function(){
-			$('#contentFirst').hide();
-			$('#category').hide()
-			$('#contentSearch').hide();
-			$('#loading').removeClass('d-none');
+			$('.search-input').keyup(function(){
+				$('#contentFirst').hide();
+				$('#category').hide()
+				$('#contentSearch').hide();
+				$('#loading').removeClass('d-none');
 
-				if($('#search').val() == ''){
+				if($('.search-input').val() == ''){
 					$('#loading').addClass('d-none');
 					$('#contentFirst').show();
 					$('#contentSearch').hide();
@@ -375,7 +388,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 											if(id_konsumen !== ''){
 												var id_produk = $('#id_produk').val();
 												var jumlah = $('#qty').val();
-												var keterangan = 'Size: '+$('#size').val()+', Color: '+$('#color').val();
+												var keterangan = $('#keterangan').val();
 												var diskonnilai = $('#diskon').val();
 
 												$.ajax({
@@ -447,7 +460,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 										if(id_konsumen !== ''){
 											var id_produk = $('#id_produk').val();
 											var jumlah = $('#qty').val();
-											var keterangan = 'Size: '+$('#size').val()+', Color: '+$('#color').val();
+											var keterangan = $('#keterangan').val();
 											var diskonnilai = $('#diskon').val();
 
 											$.ajax({

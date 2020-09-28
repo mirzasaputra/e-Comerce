@@ -16,6 +16,10 @@ class Page extends CI_Controller
 		$data['record'] = $this->Model_halaman->page_detail($ids)->row_array();
 		$data['infoterbaru'] = $this->Model_berita->info_terbaru(6);
 		$this->Model_halaman->page_dibaca_update($ids);
+	}
+	
+	public function location(){
+		$data['record']['judul'] = 'Store Location';
 		$this->template->load('phpmu-one/template', 'phpmu-one/view_page', $data);
 	}
 }

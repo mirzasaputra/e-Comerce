@@ -368,6 +368,10 @@ Version:1.0
 	float: left;
 	margin-top: 35px;
 }
+.header.shop .logo img {
+	max-width: auto;
+	height: 30px;
+}
 .header.shop .top-contact {
 	margin-top:0px;
 }
@@ -625,6 +629,7 @@ Version:1.0
 .header.shop .logo {
 	float: left;
 	margin: 19px 0 0;
+	max-width: 350px;
 }
 .header.shop .top-contact {
 	margin-top:0px;
@@ -5043,4 +5048,18 @@ Version:1.0
 .img-btn.left {
 	margin-top: 175px;
 	margin-left: -240px;
+}
+
+.whatsapp-icon {
+	display: block;
+	width: 60px;
+	height: 60px;
+	padding: 12px 15px;
+	font-size: 35px;
+	background: #000;
+	color: #fff!important;
+	position: fixed;
+	right: 20px;
+	bottom: 60px;
+	border-radius: 50%;
 }
