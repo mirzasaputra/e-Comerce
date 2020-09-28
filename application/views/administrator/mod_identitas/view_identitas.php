@@ -70,7 +70,7 @@
                 <th scope='row'>Favicon</th>
                 <td><input type='file' class='form-control' name='i' value='<?php echo $record['favicon'] ?>'>
                   <hr style='margin:5px'>
-                  Favicon Aktif Saat ini : <img src="<?php echo base_url('asset/images/') . $record['favicon']; ?>"></td>
+                  Favicon Aktif Saat ini : <img src="<?php echo base_url('asset/images/') . $record['favicon']; ?>" width="300"></td>
               </tr>
             </tbody>
           </table>

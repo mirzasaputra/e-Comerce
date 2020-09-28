@@ -11,13 +11,13 @@
             </div>
         </div>
     </div>
-    </div>
-    <!-- End Breadcrumbs -->
-        
-    <!-- Start Checkout -->
-    <section class="shop checkout section">
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Start Checkout -->
+<section class="shop checkout section">
     <div class="container">
-        <div class="row"> 
+        <div class="row">
             <div class="col-lg-8 col-12">
                 <div class="checkout-form">
                     <h2>Make Your Checkout Here</h2>
@@ -362,7 +362,7 @@
                 <div class="order-details">
                     <!-- Order Widget -->
                     <div class="single-widget">
-                        <h2>CART  TOTALS</h2>
+                        <h2>CART TOTALS</h2>
                         <div class="content">
                             <ul>
                                 <li>Sub Total<span>$330.00</span></li>
@@ -377,15 +377,18 @@
                         <h2>Payments</h2>
                         <div class="content">
                             <div class="checkbox">
-                                <?php $no = 1;$kurir = ['jne', 'pos', 'tiki', 'cod(cash on delivery)'];foreach($kurir as $rkurir) : ?>
-                                    <div class="checkbox-inline"><input name="kurir" class="kurir" type="radio" value="<?=$rkurir;?>"> <?=strtoupper($rkurir);?></div>
-                                <?php $no++;endforeach;?>
+                                <?php $no = 1;
+                                $kurir = ['jne', 'pos', 'tiki', 'cod(cash on delivery)'];
+                                foreach ($kurir as $rkurir) : ?>
+                                    <div class="checkbox-inline"><input name="kurir" class="kurir" type="radio" value="<?= $rkurir; ?>"> <?= strtoupper($rkurir); ?></div>
+                                <?php $no++;
+                                endforeach; ?>
                             </div>
                             <div id="kuririnfo" class="d-none">
                                 <div class="form-group">
                                     <div class="col-md-12">
                                         <div class='alert alert-info' style='padding:5px; border-radius:0px; margin-bottom:0px'>Service</div>
-                                        <p class="form-control-static" id="kurirserviceinfo"></p>
+                                        <!-- <p class="form-control-static" id="kurirserviceinfo"></p> -->
                                     </div>
                                 </div>
                             </div>
@@ -412,8 +415,8 @@
             </div>
         </div>
     </div>
-    </section>
-    <!--/ End Checkout -->
+</section>
+<!--/ End Checkout -->
 
 
 
@@ -514,11 +517,11 @@ $kode_unik = substr($this->session->idp, -3);
         <label class="radio-inline"><input type="radio" name="kurir" class="kurir" value="cod" /> COD (Cash on delivery)</label>
     </div>
 </div>
-<div id="kuririnfo" style="display: none;">
+<div id="kuririnfo">
     <div class="form-group">
         <div class="col-md-12">
             <div class='alert alert-info' style='padding:5px; border-radius:0px; margin-bottom:0px'>Service</div>
-            <p class="form-control-static" id="kurirserviceinfo"></p>
+            <div class="form-control-static" id="kurirserviceinfo"></div>
         </div>
     </div>
 </div>
@@ -545,6 +548,7 @@ echo form_close();
                         }
                     })
                     .done(function(x) {
+                        // console.log(x);
                         $("#kurirserviceinfo").html(x);
                         $("#kuririnfo").show();
                     })
@@ -554,10 +558,10 @@ echo form_close();
                     });
             });
         });
-
         $("#diskon").html(toDuit(0));
         hitung();
     });
+
 
     function hitung() {
         var diskon = $('#diskonnilai').val();
