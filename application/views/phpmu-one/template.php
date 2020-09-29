@@ -224,38 +224,26 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 							</div>
 							<!-- End Single Widget -->
 						</div>
-						<div class="col-lg-2 col-md-6 col-12">
+						<div class="col-lg-3 col-md-6 col-12">
 							<!-- Single Widget -->
 							<div class="single-footer links">
 								<h4>Information</h4>
 								<ul>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Faq</a></li>
-									<li><a href="#">Terms & Conditions</a></li>
-									<li><a href="#">Contact Us</a></li>
-									<li><a href="#">Help</a></li>
+									<?php
+									$dropmenu = $this->Model_menu->dropdown_menu(146);
+									foreach ($dropmenu->result_array() as $row) {
+										echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
+									}
+									?>
 								</ul>
 							</div>
 							<!-- End Single Widget -->
 						</div>
-						<div class="col-lg-2 col-md-6 col-12">
-							<!-- Single Widget -->
-							<div class="single-footer links">
-								<h4>Customer Service</h4>
-								<ul>
-									<li><a href="#">Payment Methods</a></li>
-									<li><a href="#">Money-back</a></li>
-									<li><a href="#">Returns</a></li>
-									<li><a href="#">Shipping</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-								</ul>
-							</div>
-							<!-- End Single Widget -->
-						</div>
-						<div class="col-lg-3 col-md-6 col-12">
+						<div class="col-lg-4 col-md-6 col-12">
 							<!-- Single Widget -->
 							<div class="single-footer social">
 								<h4>Get In Tuch</h4>
+								<iframe src="<?=$iden['maps'];?>" frameborder="0"></iframe>
 								<!-- Single Widget -->
 								<div class="contact">
 									<ul>
@@ -285,11 +273,6 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 							<div class="col-lg-6 col-12">
 								<div class="left">
 									<p>Copyright © 2020 <a href="http://www.wpthemesgrid.com" target="_blank">Wpthemesgrid</a> - All Rights Reserved.</p>
-								</div>
-							</div>
-							<div class="col-lg-6 col-12">
-								<div class="right">
-									<img src="images/payments.png" alt="#">
 								</div>
 							</div>
 						</div>
