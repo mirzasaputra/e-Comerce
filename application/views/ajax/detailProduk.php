@@ -51,7 +51,7 @@
         <p><?=substr($record['keterangan'], 0, 150);?>... <a href="<?=base_url();?>produk/detail/<?=$record['produk_seo'];?>" class="detail-produk-link">Selengkapnya</a></p>
       </div>
       <div class="size">
-        <textarea id="keterangan" rows="3" placeholder="Keterangan size, color, dll."></textarea>
+        <textarea id="keterangan" style="height: auto!important" rows="2" placeholder="Keterangan size, color, dll."></textarea>
       </div>
       <input type="hide" class="d-none" id="id_produk" value="<?=$record['id_produk'];?>">
       <input type="hide" class="d-none" id="diskon" value="<?=$record['diskon'];?>">
