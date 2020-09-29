@@ -2,12 +2,18 @@
 if($record['judul'] == 'Cara Belanja'){
     $class = 'col-lg-12 col-12';
     $contact = 'd-none';
+    $section = '';
+} elseif($record['judul'] == 'Store Location') {
+    $class = 'col-lg-12 col-12';
+    $contact = 'd-none';
+    $section = 'd-none';
+    $margin = 'my-3';
 } else {
     $class = 'col-lg-8 col-12';
     $contact = 'col-lg-4 col-12';
+    $section = '';
 }
 ?>
-
 <!-- Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -26,7 +32,7 @@ if($record['judul'] == 'Cara Belanja'){
 <!-- End Breadcrumbs -->
 
 <!-- Start Contact -->
-<section id="contact-us" class="contact-us section">
+<section id="contact-us" class="contact-us section <?=$section;?>">
     <div class="container">
         <div class="contact-head">
             <div class="row">
@@ -74,8 +80,8 @@ if($record['judul'] == 'Cara Belanja'){
 </section>
 <!--/ End Contact -->
 
-<?php if($record['judul'] == 'Tentang Kami') : ?>
-<div class="container">
+<?php if($record['judul'] == 'Tentang Kami' || $record['judul'] == 'Store Location') : ?>
+<div class="container <?php if(isset($margin)) echo $margin;?>">
     <embed src="<?=$iden['maps'];?>" width="100%" style="height: 60vh">
 </div>
 <?php endif;?>

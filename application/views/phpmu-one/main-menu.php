@@ -9,8 +9,8 @@
 						<!-- Top Left -->
 						<div class="top-left">
 							<ul class="list-main">
-								<li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-								<li><i class="ti-email"></i> support@shophub.com</li>
+								<li><i class="ti-headphone-alt"></i> <?=$iden['no_telp'];?></li>
+								<li><i class="ti-email"></i> <?=$iden['email'];?></li>
 							</ul>
 						</div>
 						<!--/ End Top Left -->
@@ -19,6 +19,7 @@
 						<!-- Top Right -->
 						<div class="right-content">
 							<ul class="list-main">
+<<<<<<< HEAD
 								<li><i class="ti-location-pin"></i> Store location</li>
 								<?php if (isset($this->session->id_konsumen)) : ?>
 									<li><i class="ti-user"></i> <a href="<?= base_url(); ?>members/profile">My account</a></li>
@@ -26,6 +27,15 @@
 								<?php if (empty($this->session->id_konsumen)) : ?>
 									<li><i class="ti-power-off"></i><a href="<?= base_url(); ?>auth/login">Login</a></li>
 								<?php endif; ?>
+=======
+								<li><a href="<?=base_url();?>page/location/"><i class="ti-location-pin"></i> Store Location</a></li>
+								<?php if(isset($this->session->id_konsumen)) : ?>
+									<li><i class="ti-user"></i> <a href="<?=base_url();?>members/profile">My account</a></li>
+								<?php endif;?>
+								<?php if(empty($this->session->id_konsumen)) : ?>
+									<li><i class="ti-power-off"></i><a href="<?=base_url();?>auth/login">Login</a></li>
+								<?php endif;?>
+>>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
 							</ul>
 						</div>
 						<!-- End Top Right -->
@@ -54,7 +64,7 @@
 							<!-- Search Form -->
 							<div class="search-top">
 								<form class="search-form">
-									<input type="text" placeholder="Search here..." name="search">
+									<input type="text" class="search-input" placeholder="Search here..." name="search">
 									<button value="search" type="submit"><i class="ti-search"></i></button>
 								</form>
 							</div>
@@ -67,7 +77,7 @@
 						<div class="search-bar-top">
 							<div class="search-bar">
 								<form class="w-100">
-									<input name="search" class="w-100" id="search" placeholder="Search Products Here....." type="search">
+									<input name="search" class="w-100 search-input" placeholder="Search Products Here....." type="search">
 									<i class="fa fa-search"></i>
 								</form>
 							</div>
@@ -169,8 +179,13 @@
 				confirmButtonColor: '#ff2222',
 				confirmButtonText: 'Logout'
 			}).then((result) => {
+<<<<<<< HEAD
 				if (!result.dismiss) {
 					window.location.assign('members/logout');
+=======
+				if(!result.dismiss){
+					window.location.assign('<?=base_url();?>members/logout');
+>>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
 				}
 			});
 		})

@@ -51,26 +51,7 @@
         <p><?=substr($record['keterangan'], 0, 150);?>... <a href="<?=base_url();?>produk/detail/<?=$record['produk_seo'];?>" class="detail-produk-link">Selengkapnya</a></p>
       </div>
       <div class="size">
-        <div class="row">
-          <div class="col-lg-6 col-12">
-            <h5 class="title">Size</h5>
-            <select id="size">
-              <option selected="selected">s</option>
-              <option>m</option>
-              <option>l</option>
-              <option>xl</option>
-            </select>
-          </div>
-          <div class="col-lg-6 col-12">
-            <h5 class="title">Color</h5>
-            <select id="color">
-              <option selected="selected">orange</option>
-              <option>purple</option>
-              <option>black</option>
-              <option>pink</option>
-            </select>
-          </div>
-        </div>
+        <textarea id="keterangan" rows="3" placeholder="Keterangan size, color, dll."></textarea>
       </div>
       <input type="hide" class="d-none" id="id_produk" value="<?=$record['id_produk'];?>">
       <input type="hide" class="d-none" id="diskon" value="<?=$record['diskon'];?>">

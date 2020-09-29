@@ -203,6 +203,7 @@ class Produk extends CI_Controller
 		$d = json_decode($dc, TRUE);
 		$o = '';
 		if (!empty($d['rajaongkir']['results'])) {
+			$data['kurir'] = $kurir;
 			$data['data'] = $d['rajaongkir']['results'][0]['costs'];
 			$this->load->view('phpmu-one/pengunjung/kurirdata', $data);
 		} else {
@@ -374,9 +375,11 @@ class Produk extends CI_Controller
 				$this->email->initialize($config);
 
 				$this->session->unset_userdata('idp');
-				$this->template->load('phpmu-one/template', 'phpmu-one/view_order_success', $data);
+				$JSONdata['hasil'] = true;
+				$JSONdata['pesan'] = "Berhasil, silahkan komnfirmasi pembayaran";
+				echo json_encode($JSONdata);
 			} else {
-				redirect('produk/keranjang');
+				
 			}
 		} else {
 			if ($this->session->id_konsumen) {

@@ -8,10 +8,10 @@ if(!empty($data)){
 		$deskripsi=$row['description'];
 		$waktu=$row['cost'][0]['etd']?$row['cost'][0]['etd']:"-";
 		?>
-		<div class="col-md-4">
+		<div class="col-md-12">
 			<div class="radio" style='margin: 0px;'>
 				<label>
-					<input type="radio" name="service" class="service" data-id="<?php echo $i; ?>" value="<?php echo $service; ?>"/><?php echo $deskripsi; ?>
+					<input type="radio" name="service" class="service" data-id="<?php echo $i; ?>" value="<?php echo $service; ?>"/> <?php echo $deskripsi; ?>
 				</label>
 			</div>
 			<input type="hidden" name="tarif" id="tarif<?php echo $i; ?>" value="<?php echo $tarif; ?>"/>
@@ -26,10 +26,10 @@ if(!empty($data)){
 <?php }
 
 if($ongkir=='0'){ ?>
-<div class="col-md-6">
+<div class="col-md-12">
 	<div class="radio" style='margin: 0px;'>
 		<label>
-			<input type="radio" name="service" class="service" data-id="1" value="Cash on delivery"/> Pembayaran Ditempat
+			<input type="radio" name="service" data-id="1" value="Cash on delivery"/> Pembayaran Ditempat
 		</label>
 	</div>
 	<input type="hidden" name="tarif" id="tarif1" value="1"/>
@@ -45,10 +45,13 @@ if($ongkir=='0'){ ?>
 $(document).ready(function(){
 $(".service").each(function(o_index,o_val){
 	$(this).on("change",function(){
+		var service = $(this).val();
 		var did=$(this).attr('data-id');
 		var tarif=$("#tarif"+did).val();
+		var kurir = '<?=$kurir;?>';
 		$("#ongkir").val(tarif);
 		hitung();
+		simpan(service, kurir);
 	});
 });
 });

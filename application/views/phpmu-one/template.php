@@ -81,10 +81,26 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 							}
 						})
 					})
+<<<<<<< HEAD
 				}
 			})
 
 		}
+=======
+				})
+			}
+		})
+	}
+
+	function toDuit(number) {
+      var number = number.toString(),
+        duit = number.split('.')[0],
+        duit = duit.split('').reverse().join('')
+        .replace(/(\d{3}(?!$))/g, '$1.')
+        .split('').reverse().join('');
+      return 'Rp. ' + duit;
+    }
+>>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
 	</script>
 </head>
 
@@ -111,6 +127,11 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	</div>
 
 	<div id="contentSearch"></div>
+
+	<!--Icon Whatsapp-->
+	<a href="" class="whatsapp-icon">
+		<i class="fa fa-whatsapp"></i>
+	</a>
 
 	<div id="loading" class="loading-search alert bg-light mx-auto my-3 d-none text-center">
 		<h4><i class="fa fa-spinner fa-spin"></i></h4>
@@ -333,14 +354,23 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<script src="<?= base_url(); ?>asset/vendor/js/active.js"></script>
 
 	<script>
+<<<<<<< HEAD
 		$(document).ready(function() {
 			$('#search').keyup(function() {
+=======
+		$(document).ready(function(){
+			$('.search-input').keyup(function(){
+>>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
 				$('#contentFirst').hide();
 				$('#category').hide()
 				$('#contentSearch').hide();
 				$('#loading').removeClass('d-none');
 
+<<<<<<< HEAD
 				if ($('#search').val() == '') {
+=======
+				if($('.search-input').val() == ''){
+>>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
 					$('#loading').addClass('d-none');
 					$('#contentFirst').show();
 					$('#contentSearch').hide();
@@ -379,7 +409,11 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 											if (id_konsumen !== '') {
 												var id_produk = $('#id_produk').val();
 												var jumlah = $('#qty').val();
+<<<<<<< HEAD
 												var keterangan = 'Size: ' + $('#size').val() + ', Color: ' + $('#color').val();
+=======
+												var keterangan = $('#keterangan').val();
+>>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
 												var diskonnilai = $('#diskon').val();
 
 												$.ajax({
@@ -462,7 +496,11 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 										if (id_konsumen !== '') {
 											var id_produk = $('#id_produk').val();
 											var jumlah = $('#qty').val();
+<<<<<<< HEAD
 											var keterangan = 'Size: ' + $('#size').val() + ', Color: ' + $('#color').val();
+=======
+											var keterangan = $('#keterangan').val();
+>>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
 											var diskonnilai = $('#diskon').val();
 
 											$.ajax({
