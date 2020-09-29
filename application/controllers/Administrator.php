@@ -50,6 +50,8 @@ class Administrator extends CI_Controller
 			redirect('administrator/identitaswebsite');
 		} else {
 			$data['record'] = $this->Model_main->identitas()->row_array();
+			$data['wa'] = $this->db->get_where('settings', ['name' => 'wa'])->row_array();
+			$data['email'] = $this->db->get_where('settings', ['name' => 'email'])->row_array();
 			$data['identitas_web'] = $this->Model_main->identitas()->row_array();
 			$data['title'] = "Identitas Website";
 			$this->template->load('administrator/template', 'administrator/mod_identitas/view_identitas', $data);
@@ -1952,6 +1954,18 @@ class Administrator extends CI_Controller
 	{
 		$data = $this->Model_retur_pembelian->detail_retur_pembelian($id);
 		echo json_encode($data);
+	}
+
+	// Update WhatsApp
+	public function updateWa()
+	{
+		$id = $this->input->post('id');
+		$data = array(
+			'key'	=> $this->input->post('wa'),
+			'value' => $this->input->post('pesan')
+		);
+		$this->db->set($data)->where('id', $id)->update('settings');
+		redirect('administrator/identitaswebsite');
 	}
 
 	function orders()
