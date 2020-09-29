@@ -1987,6 +1987,14 @@ class Administrator extends CI_Controller
 		$data = array('proses' => $this->uri->segment(4));
 		$where = array('id_penjualan' => $this->uri->segment(3));
 		$this->Model_app->update('rb_penjualan', $data, $where);
+		if($this->uri->segment(4) == 2){
+			$row = $this->db->get_where('rb_penjualan_detail', array('id_penjualan' => $this->uri->segment(3)));
+			foreach($row->result_array() as $row){
+				$produk = $this->db->get_where('rb_produk', array('id_produk' => $row['id_produk']))->row_array();
+				$this->db->where('id_produk', $row['id_produk']);
+				$this->db->update('rb_produk', array('stok' => $produk['stok'] - $row['jumlah']));
+			}
+		}
 		redirect('administrator/orders');
 	}
 

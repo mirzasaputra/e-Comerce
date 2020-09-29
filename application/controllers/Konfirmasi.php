@@ -35,7 +35,7 @@ class Konfirmasi extends CI_Controller
 				$this->Model_app->insert('rb_konfirmasi', $data);
 			}
 			$this->db->where('id_penjualan', $this->input->post('id'));
-			$this->db->update('rb_penjualan', array('proses' => 2));
+			$this->db->update('rb_penjualan', array('proses' => 1));
 			echo $this->session->set_flashdata('message', '<div class="alert alert-info"><center>Success Melakukan Konfirmasi pembayaran... <br>akan segera kami cek dan proses!</center></div>');
 			redirect('konfirmasi/index');
 		} else {
@@ -47,7 +47,6 @@ class Konfirmasi extends CI_Controller
 				
 				$data['total'] = $this->db->query("SELECT a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk where a.id_penjualan='$row[id_penjualan]'")->row_array();
 				$data['rows'] = $this->Model_app->view_where('rb_penjualan', array('id_penjualan' => $row['id_penjualan']))->row_array();
-				echo $data['rows']['kode_transaksi'] . 'assfsdf';
 				$data['ksm'] = $this->Model_app->view_where('rb_konsumen', array('id_konsumen' => $this->session->id_konsumen))->row_array();
 				$this->template->load('phpmu-one/template', 'phpmu-one/pengunjung/view_konfirmasi_pembayaran', $data);
 			} else {
