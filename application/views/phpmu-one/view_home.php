@@ -73,7 +73,8 @@
                               $harga = $row['harga_konsumen'];
                             }
                             ?>
-                            <span>Rp. <?=number_format($harga, '0', ',', '.');;?></span>
+                            <?php if ($row['diskon']!='0'){ $diskon = "<del style='color:red'>".number_format($harga, 0, ',', '.')."</del>"; }else{ $diskon = ""; } ?>
+                            <span>Rp. <?=number_format($harga - $row['diskon'], '0', ',', '.');;?> <?=$diskon;?></span>
                           </div>
                         </div>
                       </div>
@@ -157,7 +158,8 @@
                     $harga = $row['harga_konsumen'];
                   }
                   ?>
-									<span>Rp. <?=number_format($harga, '0', ',', '.');?></span>
+                  <?php if ($row['diskon']!='0'){ $diskon = "<del style='color:red'>".number_format($harga, 0, ',', '.')."</del>"; }else{ $diskon = ""; } ?>
+									<span>Rp. <?=number_format($harga - $row['diskon'], '0', ',', '.');?> <?=$diskon;?></span>
 								</div>
 							</div>
 						</div>

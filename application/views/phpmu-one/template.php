@@ -230,7 +230,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 								<h4>Information</h4>
 								<ul>
 									<?php
-									$dropmenu = $this->Model_menu->dropdown_menu(146);
+									$row = $this->db->get_where('menu', array('nama_menu' => 'Informasi'))->row_array();
+									$dropmenu = $this->Model_menu->dropdown_menu($row['id_menu']);
 									foreach ($dropmenu->result_array() as $row) {
 										echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
 									}
@@ -351,6 +352,101 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 
 				if ($('.search-input').val() == '') {
 
+					$('#loading').addClass('d-none');
+					$('#contentFirst').show();
+					$('#contentSearch').hide();
+					$('#category').show();
+				} else {
+					var search = $(this).val();
+
+					$.ajax({
+						url: '<?= base_url(); ?>produk/searching/',
+						method: 'post',
+						data: {
+							search: search
+						},
+						success: function(data) {
+							$('#contentSearch').show();
+							$('#loading').addClass('d-none');
+							$('#contentFirst').hide();
+							$('#contentSearch').html(data);
+
+							$('.detailProduk').click(function() {
+								$('.modal-backdrop').remove();
+								let id = $(this).attr('value');
+								$.ajax({
+									url: "<?= base_url(); ?>Produk/detail/ajax",
+									method: "post",
+									data: {
+										id: id
+									},
+									success: function(data) {
+										$('#viewDetailProduk').html(data);
+
+										$('.add').click(function(e) {
+											e.preventDefault();
+											var id_konsumen = '<?= $this->session->id_konsumen; ?>';
+
+											if (id_konsumen !== '') {
+												var id_produk = $('#id_produk').val();
+												var jumlah = $('#qty').val();
+												// var keterangan = 'Size: ' + $('#size').val() + ', Color: ' + $('#color').val();
+
+												var keterangan = $('#keterangan').val();
+												var diskonnilai = $('#diskon').val();
+
+												$.ajax({
+													url: '<?= base_url(); ?>produk/keranjang',
+													method: 'post',
+													data: {
+														id_produk: id_produk,
+														jumlah: jumlah,
+														keterangan: keterangan,
+														diskonnilai: diskonnilai
+													},
+													dataType: 'json',
+													success: function(data) {
+														if (data.hasil == true) {
+															$('#exampleModal').modal('hide');
+															$('.modal-backdrop').remove();
+															$('body').removeClass('modal-open');
+															swal.fire({
+																title: 'Success',
+																icon: 'success',
+																text: data.pesan
+															});
+															loadData_all();
+															loadData();
+														} else {
+															swal.fire({
+																title: 'Warning',
+																icon: 'question',
+																text: data.pesan
+															});
+														}
+													}
+												})
+											} else {
+												window.location.assign('<?= base_url(); ?>auth/login');
+											}
+										})
+									}
+								})
+							})
+
+						}
+					})
+				}
+			})
+
+			$('.search').keyup(function(){
+
+				$('#contentFirst').hide();
+				$('#category').hide()
+				$('#contentSearch').hide();
+				$('#loading').removeClass('d-none');
+
+				if ($('.search').val() == '') {
 					$('#loading').addClass('d-none');
 					$('#contentFirst').show();
 					$('#contentSearch').hide();

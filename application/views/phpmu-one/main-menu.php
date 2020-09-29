@@ -25,6 +25,7 @@
 									<li><i class="ti-user"></i> <a href="<?= base_url(); ?>members/profile">My account</a></li>
 								<?php endif; ?>
 								<?php if (empty($this->session->id_konsumen)) : ?>
+									<li><i class="ti-user"></i><a href="<?= base_url(); ?>auth/register">Register</a></li>
 									<li><i class="ti-power-off"></i><a href="<?= base_url(); ?>auth/login">Login</a></li>
 								<?php endif; ?>
 
@@ -56,7 +57,7 @@
 							<!-- Search Form -->
 							<div class="search-top">
 								<form class="search-form">
-									<input type="text" class="search-input" placeholder="Search here..." name="search">
+									<input type="text" class="search" placeholder="Search here..." name="search">
 									<button value="search" type="submit"><i class="ti-search"></i></button>
 								</form>
 							</div>
@@ -69,7 +70,7 @@
 						<div class="search-bar-top">
 							<div class="search-bar">
 								<form class="w-100">
-									<input name="search" class="w-100 search-input" placeholder="Search Products Here....." type="search">
+									<input name="search" class="w-100 search-input" placeholder="Search Products Here....." type="text">
 									<i class="fa fa-search"></i>
 								</form>
 							</div>
