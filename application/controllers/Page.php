@@ -20,6 +20,7 @@ class Page extends CI_Controller
 	}
 	
 	public function location(){
+		$data['title'] = 'Store Location';
 		$data['record']['judul'] = 'Store Location';
 		$this->template->load('phpmu-one/template', 'phpmu-one/view_page', $data);
 	}
