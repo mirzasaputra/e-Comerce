@@ -5059,7 +5059,7 @@ Version:1.0
 	background: #000;
 	color: #fff!important;
 	position: fixed;
-	right: 20px;
-	bottom: 60px;
+	right: 60px;
+	bottom: 10px;
 	border-radius: 50%;
 }
