@@ -109,6 +109,7 @@
               <tr>
                 <th width="1%">No.</th>
                 <th>No. Invoice</th>
+                <th>No. Resi</th>
                 <th>Total Belanja</th>
                 <th>Status</th>
                 <th>Waktu Transaksi</th>
@@ -135,6 +136,7 @@
               <?php $total = $this->db->query("SELECT a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk where a.kode_transaksi='$row[kode_transaksi]'")->row_array();?>
                 <td><?=$no++;?></td>
                 <td><?=$row['kode_transaksi'];?></td>
+                <td><?=$row['resi'];?></td>
                 <td>Rp. <?=number_format($total['total'] + $total['ongkir'] + substr($row['kode_transaksi']), 0, ',', '.');?></td>
                 <td><?=$proses;?></td>
                 <td><?=$row['waktu_transaksi'];?></td>
