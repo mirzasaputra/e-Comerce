@@ -12,7 +12,7 @@
                       $no = 1;
                       foreach ($record->result_array() as $row) {
                         echo "<input type='hidden' name='id' value='$row[id_logo]'>
-                          <tr><td width=120px>Logo Terpasang</td><td><a href=''><img src='" . base_url() . "asset/images/$row[gambar]'></a></td></tr>
+                          <tr><td width=120px>Logo Terpasang</td><td><a href=''><img src='" . base_url() . "asset/images/$row[gambar]' width='300'></a></td></tr>
                           <tr><td>Ganti Logo</td><td><a href=''><input type='file' name='logo' class='form-control'></td></tr>";
                         $no++;
                       }

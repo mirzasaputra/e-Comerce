@@ -1,4 +1,4 @@
-	<?php $kategori = $this->Model_app->view('rb_kategori_produk');?>
+	<?php $kategori = $this->Model_app->view('rb_kategori_produk'); ?>
 	<!-- Header -->
 	<header class="header shop">
 		<!-- Topbar -->
@@ -9,8 +9,8 @@
 						<!-- Top Left -->
 						<div class="top-left">
 							<ul class="list-main">
-								<li><i class="ti-headphone-alt"></i> <?=$iden['no_telp'];?></li>
-								<li><i class="ti-email"></i> <?=$iden['email'];?></li>
+								<li><i class="ti-headphone-alt"></i> <?= $iden['no_telp']; ?></li>
+								<li><i class="ti-email"></i> <?= $iden['email']; ?></li>
 							</ul>
 						</div>
 						<!--/ End Top Left -->
@@ -19,13 +19,15 @@
 						<!-- Top Right -->
 						<div class="right-content">
 							<ul class="list-main">
-								<li><a href="<?=base_url();?>page/location/"><i class="ti-location-pin"></i> Store Location</a></li>
-								<?php if(isset($this->session->id_konsumen)) : ?>
-									<li><i class="ti-user"></i> <a href="<?=base_url();?>members/profile">My account</a></li>
-								<?php endif;?>
-								<?php if(empty($this->session->id_konsumen)) : ?>
-									<li><i class="ti-power-off"></i><a href="<?=base_url();?>auth/login">Login</a></li>
-								<?php endif;?>
+
+								<li><a href="<?= base_url(); ?>page/location/"><i class="ti-location-pin"></i> Store Location</a></li>
+								<?php if (isset($this->session->id_konsumen)) : ?>
+									<li><i class="ti-user"></i> <a href="<?= base_url(); ?>members/profile">My account</a></li>
+								<?php endif; ?>
+								<?php if (empty($this->session->id_konsumen)) : ?>
+									<li><i class="ti-power-off"></i><a href="<?= base_url(); ?>auth/login">Login</a></li>
+								<?php endif; ?>
+
 							</ul>
 						</div>
 						<!-- End Top Right -->
@@ -43,7 +45,7 @@
 							<?php
 							$logo = $this->Model_app->view_ordering_limit('logo', 'id_logo', 'DESC', 0, 1);
 							foreach ($logo->result_array() as $row) {
-								echo "<a href='" . base_url() . "'><img height=50px src='" . base_url() . "asset/images/$row[gambar]'/></a>";
+								echo "<a href='" . base_url() . "'><img class='logo-image-nav' height=50px src='" . base_url() . "asset/images/$row[gambar]'/></a>";
 							}
 							?>
 						</div>
@@ -77,14 +79,14 @@
 						<div class="right-bar">
 							<!-- Search Form -->
 							<div class="sinlge-bar shopping" id="viewCart">
-								
+
 								<!--/ End Shopping Item -->
 							</div>
-							<?php if(isset($this->session->id_konsumen)) : ?>
+							<?php if (isset($this->session->id_konsumen)) : ?>
 								<div class="sinlge-bar">
-									<a href="#" class="single-icon logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>								
+									<a href="#" class="single-icon logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 								</div>
-							<?php endif;?>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -95,32 +97,32 @@
 			<div class="container-fluid">
 				<div class="cat-nav-head">
 					<div class="row px-md-5 m-0">
-						<?php if($module == "home") : ?>
-						<div class="col-lg-3" id="category">
-							<div class="all-category">
-								<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
-								<ul class="main-category">
-									<?php
-									foreach ($kategori->result_array() as $row) {
-									  echo "<li><a href='" . base_url() . "produk/kategori/$row[kategori_seo]'>$row[nama_kategori]</a></li>";
-									}
-									?>
-								</ul>
+						<?php if ($module == "home") : ?>
+							<div class="col-lg-3" id="category">
+								<div class="all-category">
+									<h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
+									<ul class="main-category">
+										<?php
+										foreach ($kategori->result_array() as $row) {
+											echo "<li><a href='" . base_url() . "produk/kategori/$row[kategori_seo]'>$row[nama_kategori]</a></li>";
+										}
+										?>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<?php endif;?>
+						<?php endif; ?>
 						<div class="col-lg-9 col-12">
 							<div class="menu-area">
 								<!-- Main Menu -->
 								<nav class="navbar navbar-expand-lg">
-									<div class="navbar-collapse">	
-										<div class="nav-inner">	
+									<div class="navbar-collapse">
+										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav">
 												<?php
 												$botm = $this->Model_menu->bottom_menu();
 												$no = 1;
 												foreach ($botm->result_array() as $row) {
-													if($no == 1){
+													if ($no == 1) {
 														$active = "class='active'";
 													} else {
 														$active = '';
@@ -135,7 +137,7 @@
 																	<ul class='dropdown'>";
 														$dropmenu = $this->Model_menu->dropdown_menu($row['id_menu']);
 														foreach ($dropmenu->result_array() as $row) {
-														echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
+															echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
 														}
 														echo "</ul>
 																</li>";
@@ -147,7 +149,7 @@
 										</div>
 									</div>
 								</nav>
-								<!--/ End Main Menu -->	
+								<!--/ End Main Menu -->
 							</div>
 						</div>
 					</div>
@@ -159,7 +161,7 @@
 	<!--/ End Header -->
 
 	<script>
-		$('.logout').click(function(e){
+		$('.logout').click(function(e) {
 			e.preventDefault();
 			swal.fire({
 				title: 'Logout?',
@@ -169,8 +171,10 @@
 				confirmButtonColor: '#ff2222',
 				confirmButtonText: 'Logout'
 			}).then((result) => {
-				if(!result.dismiss){
-					window.location.assign('<?=base_url();?>members/logout');
+
+				if (!result.dismiss) {
+					window.location.assign('<?= base_url(); ?>members/logout');
+
 				}
 			});
 		})
