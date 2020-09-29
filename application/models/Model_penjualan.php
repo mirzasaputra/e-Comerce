@@ -183,4 +183,19 @@ class Model_penjualan extends CI_model
         $data = $this->db->query($query)->result_array();
         echo json_encode($data);
     }
+
+    public function saveKasOnline($id)
+    {
+        $user = $this->db->get_where('users', ['username' => $this->session->username])->row_array();
+        $subtotal = $this->db->query("SELECT SUM(subtotal) as total FROM rb_penjualan_detail WHERE id_penjualan='$id'")->row_array();
+        $kas = array(
+            'id_user'        => $user['id_users'],
+            'nominal'        => $subtotal['total'],
+            'jenis'          => 'Pemasukan',
+            'keterangan'     => 'Penjualan E-Commerce (online)',
+            'created_at'     => date('Y-m-d H:i:s')
+        );
+
+        $this->db->insert('kas', $kas);
+    }
 }

@@ -127,7 +127,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	<div id="contentSearch"></div>
 
 	<!--Icon Whatsapp-->
-	<a href="" class="whatsapp-icon">
+	<a href="https://api.whatsapp.com/send?phone=6281234567890&text=Saya%20tertarik%20untuk%20membeli%20produk%20ini%20segera" target="_blank" class="whatsapp-icon">
 		<i class="fa fa-whatsapp"></i>
 	</a>
 
