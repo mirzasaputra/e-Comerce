@@ -9,8 +9,8 @@
 						<!-- Top Left -->
 						<div class="top-left">
 							<ul class="list-main">
-								<li><i class="ti-headphone-alt"></i> <?=$iden['no_telp'];?></li>
-								<li><i class="ti-email"></i> <?=$iden['email'];?></li>
+								<li><i class="ti-headphone-alt"></i> <?= $iden['no_telp']; ?></li>
+								<li><i class="ti-email"></i> <?= $iden['email']; ?></li>
 							</ul>
 						</div>
 						<!--/ End Top Left -->
@@ -19,23 +19,15 @@
 						<!-- Top Right -->
 						<div class="right-content">
 							<ul class="list-main">
-<<<<<<< HEAD
-								<li><i class="ti-location-pin"></i> Store location</li>
+
+								<li><a href="<?= base_url(); ?>page/location/"><i class="ti-location-pin"></i> Store Location</a></li>
 								<?php if (isset($this->session->id_konsumen)) : ?>
 									<li><i class="ti-user"></i> <a href="<?= base_url(); ?>members/profile">My account</a></li>
 								<?php endif; ?>
 								<?php if (empty($this->session->id_konsumen)) : ?>
 									<li><i class="ti-power-off"></i><a href="<?= base_url(); ?>auth/login">Login</a></li>
 								<?php endif; ?>
-=======
-								<li><a href="<?=base_url();?>page/location/"><i class="ti-location-pin"></i> Store Location</a></li>
-								<?php if(isset($this->session->id_konsumen)) : ?>
-									<li><i class="ti-user"></i> <a href="<?=base_url();?>members/profile">My account</a></li>
-								<?php endif;?>
-								<?php if(empty($this->session->id_konsumen)) : ?>
-									<li><i class="ti-power-off"></i><a href="<?=base_url();?>auth/login">Login</a></li>
-								<?php endif;?>
->>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
+
 							</ul>
 						</div>
 						<!-- End Top Right -->
@@ -179,13 +171,10 @@
 				confirmButtonColor: '#ff2222',
 				confirmButtonText: 'Logout'
 			}).then((result) => {
-<<<<<<< HEAD
+
 				if (!result.dismiss) {
-					window.location.assign('members/logout');
-=======
-				if(!result.dismiss){
-					window.location.assign('<?=base_url();?>members/logout');
->>>>>>> ea7f0b0c23219943668c9be3eec5a5aadb82f772
+					window.location.assign('<?= base_url(); ?>members/logout');
+
 				}
 			});
 		})
