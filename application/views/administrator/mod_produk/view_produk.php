@@ -10,9 +10,10 @@
                       <tr>
                         <th style='width:30px'>No</th>
                         <th>Nama Produk</th>
-                        <th>Harga Modal</th>
-                        <th>Harga Reseller</th>
-                        <th>Harga Konsumen</th>
+                        <th>Hrg. Modal</th>
+                        <th>Hrg. Reseller</th>
+                        <th>Hrg. Konsumen</th>
+                        <th>Diskon</th>
                         <th>Stok</th>
                         <th>Satuan</th>
                         <th>Berat</th>
@@ -30,6 +31,7 @@
                               <td>Rp " . rupiah($row['harga_beli']) . "</td>
                               <td>Rp " . rupiah($row['harga_reseller']) . "</td>
                               <td>Rp " . rupiah($row['harga_konsumen']) . "</td>
+                              <td>Rp " . rupiah($row['diskon']) . "</td>
                               <td>" . $row['stok'] . "</td>
                               <td>$row[satuan]</td>
                               <td>$row[berat] Gram</td>

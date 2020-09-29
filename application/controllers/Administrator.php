@@ -1225,6 +1225,7 @@ class Administrator extends CI_Controller
 					'harga_reseller' => $this->input->post('e'),
 					'harga_konsumen' => $this->input->post('f'),
 					'berat' => $this->input->post('berat'),
+					'diskon' => $this->input->post('diskon'),
 					'keterangan' => $this->input->post('ff'),
 					'username' => $this->session->username
 				);
@@ -1239,6 +1240,7 @@ class Administrator extends CI_Controller
 					'harga_reseller' => $this->input->post('e'),
 					'harga_konsumen' => $this->input->post('f'),
 					'berat' => $this->input->post('berat'),
+					'diskon' => $this->input->post('diskon'),
 					'gambar' => $hasil['file_name'],
 					'keterangan' => $this->input->post('ff'),
 					'username' => $this->session->username
