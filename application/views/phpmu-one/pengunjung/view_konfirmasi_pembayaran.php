@@ -75,7 +75,7 @@
                 <div class="form-group">
                   <label>Total Transfer</label>
                   <input type="hidden" name="id" value="<?=$rows['id_penjualan'];?>">
-                  <input type="text" value="Rp. <?=number_format($total['total'], 0, ',', '.');?>" name="total" placeholder="Total..." required="required" autocomplete="off">
+                  <input type="text" value="Rp. <?=number_format($total['total'] + $total['ongkir'], 0, ',', '.');?>" name="total" placeholder="Total..." required="required" autocomplete="off">
                 </div>
                 <div class="form-group">
                   <label>Transfer Ke</label>
