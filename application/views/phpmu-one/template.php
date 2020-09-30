@@ -388,6 +388,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 										$('.add').click(function(e) {
 											e.preventDefault();
 											var id_konsumen = '<?= $this->session->id_konsumen; ?>';
+											$('.add').addClass('disabled');
+											$('.add').html('<i class="fa fa-spinner fa-spin"></i> Loading...');
 
 											if (id_konsumen !== '') {
 												var id_produk = $('#id_produk').val();
@@ -408,6 +410,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 													},
 													dataType: 'json',
 													success: function(data) {
+														$('.add').removeClass('disabled')
+														$('.add').html('ADD TO CART');
 														if (data.hasil == true) {
 															$('#exampleModal').modal('hide');
 															$('.modal-backdrop').remove();
@@ -483,6 +487,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 										$('.add').click(function(e) {
 											e.preventDefault();
 											var id_konsumen = '<?= $this->session->id_konsumen; ?>';
+											$('.add').addClass('disabled');
+											$('.add').html('<i class="fa fa-spinner fa-spin"></i> Loading...');
 
 											if (id_konsumen !== '') {
 												var id_produk = $('#id_produk').val();
@@ -503,6 +509,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 													},
 													dataType: 'json',
 													success: function(data) {
+														$('.add').removeClass('disabled');
+														$('.add').html('ADD TO CART');
 														if (data.hasil == true) {
 															$('#exampleModal').modal('hide');
 															$('.modal-backdrop').remove();
@@ -568,6 +576,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 									$('.add').click(function(e) {
 										e.preventDefault();
 										var id_konsumen = '<?= $this->session->id_konsumen; ?>';
+										$('.add').addClass('disabled');
+										$('.add').html('<i class="fa fa-spinner fa-spin"></i> Loading');
 
 										if (id_konsumen !== '') {
 											var id_produk = $('#id_produk').val();
@@ -588,6 +598,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 												},
 												dataType: 'json',
 												success: function(data) {
+													$('.add').removeClass('disabled');
+													$('.add').html('ADD TO CART');
 													if (data.hasil == true) {
 														$('#exampleModal').modal('hide');
 														$('.modal-backdrop').remove();

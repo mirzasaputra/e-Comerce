@@ -29,7 +29,7 @@ if($ongkir=='0'){ ?>
 <div class="col-md-12">
 	<div class="radio" style='margin: 0px;'>
 		<label>
-			<input type="radio" name="service" data-id="1" value="Cash on delivery"/> Pembayaran Ditempat
+			<input type="radio" name="service" data-id="1" class="service" value="Cash on delivery"/> Pembayaran Ditempat
 		</label>
 	</div>
 	<input type="hidden" name="tarif" id="tarif1" value="1"/>
@@ -49,8 +49,10 @@ $(".service").each(function(o_index,o_val){
 		var did=$(this).attr('data-id');
 		var tarif=$("#tarif"+did).val();
 		var kurir = '<?=$kurir;?>';
-		$("#ongkir").val(tarif);
-		hitung();
+		if(did !== 1){
+			$("#ongkir").val(tarif);
+		}
+		hitung(tarif, did);
 		simpan(service, kurir);
 	});
 });
