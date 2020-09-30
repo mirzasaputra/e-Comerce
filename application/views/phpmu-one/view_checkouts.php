@@ -158,7 +158,7 @@
                     <div class="single-widget get-button">
                         <div class="content">
                             <div class="button">
-                                <a href="#" id="oksimpan" class="btn disabled">proceed to checkout</a>
+                                <a href="#" id="oksimpan" class="btn">proceed to checkout</a>
                             </div>
                         </div>
                     </div>
@@ -216,7 +216,9 @@
 
     function simpan(service, kurir) {
         $('#oksimpan').click(function(e) {
-            e.preventDefault()
+            e.preventDefault();
+            $('#oksimpan').addClass('disabled');
+            $('#oksimpan').html('<i class="fa fa-spinner fa-spin"></i> Loading...');
 
             var diskon = $('#diskonnilai').val();
             var ongkir = $("#ongkir").val();
@@ -233,6 +235,8 @@
                 },
                 dataType: 'json',
                 success: function(data) {
+                    $('#oksimpan').removeClass('disabled');
+                    $('#oksimpan').html('PROCEED TO CHECKOUT');
                     if (data.hasil == true) {
                         swal.fire({
                             title: 'Berhasil',
@@ -253,13 +257,12 @@
         })
     }
 
-    function hitung() {
+    function hitung(tarif, did) {
         var diskon = $('#diskonnilai').val();
         var total = $('#total').val();
         var ongkir = $("#ongkir").val();
         var bayar = (parseFloat(total) + parseFloat(ongkir));
-        if (parseFloat(ongkir) > 0) {
-            $('#oksimpan').removeClass('disabled');
+        if (parseFloat(ongkir) > 0 || tarif > 0) {
             $("#oksimpan").show();
         } else {
             $("#oksimpan").hide();
