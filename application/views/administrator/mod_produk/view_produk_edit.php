@@ -57,6 +57,10 @@
                 <td><input type='number' class='form-control' name='f' value='<?php echo $rows['harga_konsumen'] ?>'></td>
               </tr>
               <tr>
+                <th scope='row'>Diskon</th>
+                <td><input type='number' class='form-control' name='diskon' value='<?php echo $rows['diskon'] ?>'></td>
+              </tr>
+              <tr>
                 <th scope='row'>Keterangan</th>
                 <td><textarea id='editor1' class='form-control' name='ff'><?php echo $rows['keterangan'] ?></textarea></td>
               </tr>

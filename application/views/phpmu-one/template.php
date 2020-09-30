@@ -125,9 +125,11 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 	</div>
 
 	<div id="contentSearch"></div>
-
+	<?php
+	$wa = $this->db->get_where('settings', ['name' => 'wa'])->row_array();
+	?>
 	<!--Icon Whatsapp-->
-	<a href="" class="whatsapp-icon">
+	<a href="https://api.whatsapp.com/send?phone=<?php echo $wa['key'] ?>&text=<?php echo pesan_wa($wa['value']) ?>" target="_blank" class="whatsapp-icon">
 		<i class="fa fa-whatsapp"></i>
 	</a>
 
@@ -182,29 +184,6 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 				</div>
 			</section>
 			<!-- End Shop Services Area -->
-
-			<!-- Start Shop Newsletter  -->
-			<section class="shop-newsletter section">
-				<div class="container">
-					<div class="inner-top">
-						<div class="row">
-							<div class="col-lg-8 offset-lg-2 col-12">
-								<!-- Start Newsletter Inner -->
-								<div class="inner">
-									<h4>Newsletter</h4>
-									<p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
-									<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-										<input name="EMAIL" placeholder="Your email address" required="" type="email">
-										<button class="btn">Subscribe</button>
-									</form>
-								</div>
-								<!-- End Newsletter Inner -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- End Shop Newsletter -->
 		<?php endif; ?>
 
 		<!-- Start Footer Area -->
@@ -219,8 +198,8 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 								<div class="logo">
 									<a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>asset/images/<?= $identitas_web['favicon']; ?>" alt="#"></a>
 								</div>
-								<p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-								<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789"><?= $iden['no_telp']; ?></a></span></p>
+								<p class="text"><?php echo $iden['meta_deskripsi'] ?></p>
+								<p class="call">Ada Pertanyaan ? Silakan hubungi kontak dibawah<span><a href="tel:123456789"><?= $iden['no_telp']; ?></a></span></p>
 							</div>
 							<!-- End Single Widget -->
 						</div>
@@ -230,12 +209,15 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 								<h4>Information</h4>
 								<ul>
 									<?php
-									$row = $this->db->get_where('menu', array('nama_menu' => 'Informasi'))->row_array();
-									$dropmenu = $this->Model_menu->dropdown_menu($row['id_menu']);
-									foreach ($dropmenu->result_array() as $row) {
-										echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
-									}
+									// $row = $this->db->get_where('menu', array('nama_menu' => 'Informasi'))->row_array();
+									// $dropmenu = $this->Model_menu->dropdown_menu($row['id_menu']);
+									// foreach ($dropmenu->result_array() as $row) {
+									// 	echo "<li><a href='" . base_url() . "$row[link]'>$row[nama_menu]</a></li>";
+									// }
 									?>
+									<li><a href="<?php echo base_url('berita') ?>">Blog</a></li>
+									<li><a href="<?php echo base_url('page/detail/cara-belanja') ?>">Cara Belanja</a></li>
+									<li><a href="<?php echo base_url('page/detail/tentang-kami') ?>">Tentang Kami</a></li>
 								</ul>
 							</div>
 							<!-- End Single Widget -->
@@ -244,7 +226,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 							<!-- Single Widget -->
 							<div class="single-footer social">
 								<h4>Get In Tuch</h4>
-								<iframe src="<?=$iden['maps'];?>" frameborder="0"></iframe>
+								<iframe src="<?= $iden['maps']; ?>" frameborder="0"></iframe>
 								<!-- Single Widget -->
 								<div class="contact">
 									<ul>
@@ -443,7 +425,7 @@ $iden = $this->db->query("SELECT * FROM identitas where id_identitas='1'")->row_
 				}
 			})
 
-			$('.search').keyup(function(){
+			$('.search').keyup(function() {
 
 				$('#contentFirst').hide();
 				$('#category').hide()

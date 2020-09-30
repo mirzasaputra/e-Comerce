@@ -31,7 +31,7 @@
                     </div>
                   </div>
                 </div>
-                <center><span>Sudah punya akun? <a class="text-primary" href="<?=base_url();?>auth/register">Login</a></span></center>
+                <center><span>Sudah punya akun? <a class="text-primary" href="<?=base_url();?>auth/login">Login</a></span></center>
           </form>
           <!--/ End Form -->
         </div>

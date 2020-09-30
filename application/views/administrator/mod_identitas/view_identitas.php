@@ -13,7 +13,7 @@
         </ul><br>
 
         <div id='myTabContent' class='tab-content'>
-          <div role='tabpanel' class='tab-pane fade active in' id='profile' aria-labelledby='profile-tab'>  
+          <div role='tabpanel' class='tab-pane fade active in' id='profile' aria-labelledby='profile-tab'>
             <form action="<?php echo base_url('administrator/identitaswebsite') ?>" method="post" enctype="multipart/form-data">
               <div class='col-md-12'>
                 <table class='table table-condensed table-bordered'>
@@ -84,53 +84,60 @@
                     </tr>
                   </tbody>
                 </table>
+                <button type='submit' name='submit' class='btn btn-info'>Update</button>
               </div>
+            </form>
           </div>
 
           <div role='tabpanel' class='tab-pane fade' id='wa' aria-labelledby='wa-tab'>
-            <form action="<?php echo base_url('administrator/identitaswebsite') ?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo base_url('administrator/updateWa') ?>" method="post" enctype="multipart/form-data">
               <div class='col-md-12'>
                 <table class='table table-condensed table-bordered'>
                   <tbody>
-                    <input type='hidden' name='id' value=''>
+                    <input type='hidden' name='id' value='<?php echo $wa['id'] ?>'>
                     <tr>
                       <th width='120px' scope='row'>No. Whatsapp</th>
-                      <td><input type='text' class='form-control' name='a' value='' placeholder="No. Whatsapp"></td>
+                      <td><input type='number' class='form-control' name='wa' autocomplete="off" value="<?php echo $wa['key'] ?>" placeholder="No. Whatsapp" required>
+                        <small><i>Awali dengan angka 62</i></small>
+                      </td>
                     </tr>
                     <tr>
-                      <th width='120px' scope='row'>No. Whatsapp</th>
-                      <td><textarea name="pesan" rows="3" class="form-control" placeholder="Pesan..."></textarea></td>
+                      <th width='120px' scope='row'>Pesan</th>
+                      <td><textarea name="pesan" rows="3" class="form-control" placeholder="Pesan..." required><?php echo $wa['value'] ?></textarea></td>
                     </tr>
                   </tbody>
                 </table>
+                <button type='submit' name='submit' class='btn btn-info'>Update</button>
               </div>
+            </form>
           </div>
 
           <div role='tabpanel' class='tab-pane fade' id='email' aria-labelledby='email-tab'>
-            <form action="<?php echo base_url('administrator/identitaswebsite') ?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo base_url('administrator/updateEmail') ?>" method="post" enctype="multipart/form-data">
               <div class='col-md-12'>
                 <table class='table table-condensed table-bordered'>
                   <tbody>
-                    <input type='hidden' name='id' value=''>
+                    <input type='hidden' name='id' value=' <?php echo $email['id'] ?>'>
                     <tr>
                       <th width='120px' scope='row'>Email</th>
-                      <td><input type='text' class='form-control' name='a' value='<?php echo $record['email'] ?>' placeholder="Email..."></td>
+                      <td><input type='text' class='form-control' name='email' value='<?php echo $email['key'] ?>' autocomplete="off" placeholder="Email..." required></td>
                     </tr>
                     <tr>
                       <th width='120px' scope='row'>Password</th>
-                      <td><input type='text' class='form-control' name='a' value='' placeholder="Password..."></td>
+                      <td>
+                        <input type='password' class='form-control' name='password' placeholder="Password...">
+                        <small><i>Kosongkan jika tidak diubah</i></small>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <button type='submit' name='submit' class='btn btn-info'>Update</button>
           </div>
+          </form>
         </div>
 
       </div>
     </div>
-    <div class='box-footer'>
-      <button type='submit' name='submit' class='btn btn-info'>Update</button>
-    </div>
-    </form>
   </div>
 </div>

@@ -8,7 +8,7 @@
         <div class='col-md-12'>
           <table class='table table-condensed table-bordered'>
             <tbody>
-              <input type='hidden' name='id' value='$rows[id_modul]'>
+              <input type='hidden' name='id' value='<?php echo $rows['id_modul'] ?>'>
               <tr>
                 <th width='120px' scope='row'>Nama Modul</th>
                 <td><input type='text' class='form-control' name='a' value='<?php echo $rows['nama_modul'] ?>' required></td>
