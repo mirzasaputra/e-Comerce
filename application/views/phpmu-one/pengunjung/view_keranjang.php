@@ -40,7 +40,7 @@
                   <td class="image" data-title="No"><img src="<?= base_url(); ?>asset/foto_produk/<?= $row['gambar']; ?>" alt="#"></td>
                   <td class="product-des" width="35%" data-title="Description">
                     <p class="product-name"><a href="<?= base_url(); ?>produk/detail/<?= $row['produk_seo']; ?>"><?= $row['nama_produk']; ?></a></p>
-                    <p class="product-des"><?= substr($row['keterangan'], 0, 100); ?>... <a href="<?= base_url(); ?>produk/detail/<?= $row['produk_seo']; ?>" class="detail-produk-link">Selengkapnya.</a></p>
+                    <p class="product-des">Note : <?=$row['keterangan_order']; ?></p>
                   </td>
                   <?php if ($row['diskon'] != '0') {
                     $diskon = "<del style='color:red'>" . rupiah($row['harga_jual']) . "</del>";
