@@ -16,7 +16,7 @@ class Produk extends CI_Controller
 			$dari = $this->uri->segment('3');
 		}
 
-		if (is_numeric($dari)) {	
+		if (is_numeric($dari)) {
 			$data['iklantengah'] = $this->Model_iklan->iklan_tengah();
 			if ($this->input->post('cari') != '') {
 				$data['title'] = title();
@@ -46,8 +46,9 @@ class Produk extends CI_Controller
 		$this->template->load('phpmu-one/template', 'phpmu-one/view_produk_all', $data);
 	}
 
-	function all_ajax(){
-		if($_GET['ajax'] == 'all'){
+	function all_ajax()
+	{
+		if ($_GET['ajax'] == 'all') {
 			$order_by = $_GET['order_by'];
 			($order_by == '') ? $order_by = 'nama_produk' : $order_by = $order_by;
 			$data['record'] = $this->Model_app->view_ordering('rb_produk', $order_by, 'ASC');
@@ -79,8 +80,8 @@ class Produk extends CI_Controller
 	function detail()
 	{
 		$check = $this->uri->segment(3);
-		
-		if($check == 'ajax'){
+
+		if ($check == 'ajax') {
 			$id = $this->input->post('id');
 			$data['record'] = $this->Model_app->edit('rb_produk', array('id_produk' => $id))->row_array();
 			$data['images'] = $this->db->get_where('produk_image', array('id_produk' => $id));
@@ -101,7 +102,7 @@ class Produk extends CI_Controller
 		$id_produk   = filter($this->input->post('id_produk'));
 		$jumlah   = filter($this->input->post('jumlah'));
 		$keterangan   = filter($this->input->post('keterangan'));
-		if($this->input->post('diskonnilai') == ''){
+		if ($this->input->post('diskonnilai') == '') {
 			$diskon = 0;
 		} else {
 			$diskon = $this->input->post('diskonnilai');
@@ -117,7 +118,7 @@ class Produk extends CI_Controller
 				echo json_encode($JSONdata);
 			} else {
 				$this->session->unset_userdata('produk');
-				
+
 				$cek_pembeli = $this->Model_app->view_where('rb_penjualan_temp', array('id_pembeli' => $this->session->id_konsumen, 'status' => 'pending'));
 				if ($cek_pembeli->num_rows() > 0) {
 					$cek_pembeli = $cek_pembeli->row_array();
@@ -133,12 +134,12 @@ class Produk extends CI_Controller
 				} else {
 					$harga = $this->Model_app->view_where('rb_produk', array('id_produk' => $id_produk))->row_array();
 					$satuan = $harga['satuan'];
-					if($this->session->level == 'R	eseller'){
+					if ($this->session->level == 'R	eseller') {
 						$harga = $harga['harga_reseller'];
 					} else {
 						$harga = $harga['harga_konsumen'];
 					}
-					
+
 					$data = array(
 						'id_pembeli' => $this->session->id_konsumen,
 						'session' => $this->session->idp,
@@ -164,7 +165,8 @@ class Produk extends CI_Controller
 		}
 	}
 
-	function cart(){
+	function cart()
+	{
 		$data['record'] = $this->Model_app->view_join_rows('rb_penjualan_temp', 'rb_produk', 'id_produk', array('id_pembeli' => $this->session->id_konsumen, 'status' => 'pending'), 'id_penjualan_detail', 'ASC');
 		$data['title'] = 'Keranjang Belanja';
 		$this->load->view('ajax/viewcart', $data);
@@ -182,7 +184,8 @@ class Produk extends CI_Controller
 		redirect('produk/keranjang');
 	}
 
-	public function searching(){
+	public function searching()
+	{
 		$search = $this->input->post('search');
 		$data['record'] = $this->db->query("SELECT * FROM rb_produk r INNER JOIN rb_kategori_produk k ON k.id_kategori_produk=r.id_kategori_produk WHERE nama_produk LIKE '%" . $search . "%' OR nama_kategori LIKE '%" . $search . "%' ORDER BY nama_produk ASC");
 		$data['iklan'] = $this->Model_iklan->iklan_sidebar();
@@ -319,7 +322,7 @@ class Produk extends CI_Controller
 
 				                <tr bgcolor='lightblue'>
 				                  <td colspan='5'><b>Ongkos Kirim</b></td>
-				                  <td><b>" . $this->input->post('ongkir') . "</b></td>
+				                  <td><b>Rp " . rupiah($this->input->post('ongkir')) . "</b></td>
 				                </tr>
 
 				                <tr bgcolor='lightgreen'>
@@ -355,31 +358,43 @@ class Produk extends CI_Controller
 					  </table><br><br>
 
 				      Jika sudah melakukan transfer, jangan lupa konfirmasi transferan anda <a href='" . base_url() . "konfirmasi'>disini</a><br>
-				      Salam. Admin, $iden[nama_website] </body></html> \n";
+					  Salam. Admin, $iden[nama_website] </body></html> \n";
 
-				$this->email->from($iden['email'], $iden['nama_website']);
+				$settings = $this->db->get_where('settings', ['name' => 'email'])->row_array();
+				$config = [
+					'protocol'  => 'smtp',
+					'smtp_host' => 'ssl://smtp.googlemail.com',
+					'smtp_user' => $settings['key'],
+					'smtp_pass' => decrypt($settings['value']),
+					'smtp_port' => 465,
+					'mailtype'  => 'html',
+					'charset'   => 'iso-8859-1',
+					'newline'   => "\r\n"
+				];
+				$this->email->initialize($config);
+
+				$this->email->from($settings['key'], $iden['nama_website']);
 				$this->email->to($email_tujuan);
-				$this->email->cc('');
-				$this->email->bcc('');
+				// $this->email->cc('');
+				// $this->email->bcc('');
 
 				$this->email->subject($subject);
 				$this->email->message($message);
-				$this->email->set_mailtype("html");
+				// $this->email->set_mailtype("html");
 				$this->email->send();
 
-				$config['protocol'] = 'sendmail';
-				$config['mailpath'] = '/usr/sbin/sendmail';
-				$config['charset'] = 'utf-8';
-				$config['wordwrap'] = TRUE;
-				$config['mailtype'] = 'html';
-				$this->email->initialize($config);
+				// $config['protocol'] = 'sendmail';
+				// $config['mailpath'] = '/usr/sbin/sendmail';
+				// $config['charset'] = 'utf-8';
+				// $config['wordwrap'] = TRUE;
+				// $config['mailtype'] = 'html';
+				// $this->email->initialize($config);
 
 				$this->session->unset_userdata('idp');
 				$JSONdata['hasil'] = true;
 				$JSONdata['pesan'] = "Berhasil, silahkan komnfirmasi pembayaran";
 				echo json_encode($JSONdata);
 			} else {
-				
 			}
 		} else {
 			if ($this->session->id_konsumen) {

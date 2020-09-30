@@ -74,7 +74,7 @@
                                             <td class="image" data-title="No"><img src="<?= base_url(); ?>asset/foto_produk/<?= $row['gambar']; ?>" alt="#"></td>
                                             <td class="product-des" width="35%" data-title="Description">
                                                 <p class="product-name"><a href="<?= base_url(); ?>produk/detail/<?= $row['produk_seo']; ?>"><?= $row['nama_produk']; ?></a></p>
-                                                <p class="product-des">Note : <?=$row['keterangan_order'];?></p>
+                                                <p class="product-des">Note : <?= $row['keterangan_order']; ?></p>
                                             </td>
                                             <?php
                                             if ($row['diskon'] != '0') {
@@ -114,10 +114,10 @@
                         <div class="content">
                             <ul>
                                 <?php $total = $this->db->query("SELECT sum((a.harga_jual*a.jumlah)-(b.diskon*a.jumlah)) as total, sum(b.berat*a.jumlah) as total_berat FROM `rb_penjualan_temp` a JOIN rb_produk b ON a.id_produk=b.id_produk where a.session='" . $this->session->idp . "'")->row_array(); ?>
-                                <input type="hidden" id="total" value="<?php echo $total['total']; ?>">
-                                <input type="hidden" id="ongkir" value="0">
-                                <input type="hidden" name="berat" value="<?php echo $total['total_berat']; ?>" />
-                                <input type="hidden" name="diskonnilai" id="diskonnilai" value="<?php echo $diskon_total; ?>" />
+                                <input type="text" id="total" value="<?php echo $total['total']; ?>">
+                                <input type="text" id="ongkir" value="0">
+                                <input type="text" name="berat" id="berat" value="<?php echo $total['total_berat']; ?>" />
+                                <input type="text" name="diskonnilai" id="diskonnilai" value="<?php echo $diskon_total; ?>" />
 
                                 <li>Sub Total<span>Rp. <?= number_format($total['total'], 0, ',', '.'); ?></span></li>
                                 <li>Ongkir<span id="totalongkir"></span></li>
@@ -222,6 +222,8 @@
 
             var diskon = $('#diskonnilai').val();
             var ongkir = $("#ongkir").val();
+            var total = $("#total").val();
+            var berat = $("#berat").val();
 
             $.ajax({
                 url: '<?= base_url(); ?>produk/checkouts',
@@ -231,6 +233,8 @@
                     kurir: kurir,
                     service: service,
                     ongkir: ongkir,
+                    berat: berat,
+                    total: total,
                     submit: ''
                 },
                 dataType: 'json',

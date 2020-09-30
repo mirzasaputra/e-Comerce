@@ -1969,6 +1969,25 @@ class Administrator extends CI_Controller
 		$this->db->set($data)->where('id', $id)->update('settings');
 		redirect('administrator/identitaswebsite');
 	}
+	// Update Email
+	public function updateEmail()
+	{
+		$id = $this->input->post('id');
+		$pass = $this->input->post('password');
+		if ($pass != '') {
+
+			$data = array(
+				'key'	=> $this->input->post('email'),
+				'value' => encrypt($pass)
+			);
+		} else {
+			$data = array(
+				'key'	=> $this->input->post('email'),
+			);
+		}
+		$this->db->set($data)->where('id', $id)->update('settings');
+		redirect('administrator/identitaswebsite');
+	}
 
 	function orders()
 	{

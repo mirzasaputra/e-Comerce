@@ -117,10 +117,10 @@
               <div class='col-md-12'>
                 <table class='table table-condensed table-bordered'>
                   <tbody>
-                    <input type='hidden' name='id' value=''>
+                    <input type='hidden' name='id' value=' <?php echo $email['id'] ?>'>
                     <tr>
                       <th width='120px' scope='row'>Email</th>
-                      <td><input type='text' class='form-control' name='email' autocomplete="off" placeholder="Email..." required></td>
+                      <td><input type='text' class='form-control' name='email' value='<?php echo $email['key'] ?>' autocomplete="off" placeholder="Email..." required></td>
                     </tr>
                     <tr>
                       <th width='120px' scope='row'>Password</th>
