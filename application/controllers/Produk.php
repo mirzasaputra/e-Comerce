@@ -134,7 +134,7 @@ class Produk extends CI_Controller
 				} else {
 					$harga = $this->Model_app->view_where('rb_produk', array('id_produk' => $id_produk))->row_array();
 					$satuan = $harga['satuan'];
-					if ($this->session->level == 'R	eseller') {
+					if ($this->session->level == 'Reseller') {
 						$harga = $harga['harga_reseller'];
 					} else {
 						$harga = $harga['harga_konsumen'];
