@@ -29,7 +29,7 @@
     <div class='col-md-5'>
         <center>
         Total Tagihan 
-        <h4 style='margin:0px;'>Rp " . rupiah($total['total'] + $total['ongkir'] + substr($this->uri->segment(3), -3)) . "<br> <br> 
+        <h4 style='margin:0px;'>Rp " . rupiah($total['total'] + $total['ongkir']) . "<br> <br> 
           <span style='text-transform:uppercase'>$total[kurir]</span> ($total[service])
         </h4>
         Status : <i>$proses</i>   

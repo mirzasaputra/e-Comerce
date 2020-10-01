@@ -22,7 +22,6 @@
                         <div class="form-group">
                             <label for="">Jenis</label>
                             <select name="category" id="category" class="form-control select2" required>
-                                <option value="all">Semua Transaksi</option>
                                 <option value="online">Online</option>
                                 <option value="offline">Offline (POS)</option>
                             </select>

@@ -121,7 +121,7 @@
               $total = $this->db->query("SELECT a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk where a.kode_transaksi='$row[kode_transaksi]'")->row_array();
               echo "<tr><td>$no</td>
                                       <td>$row[kode_transaksi]</td>
-                                      <td style='color:red;'>Rp " . rupiah($total['total'] + $total['ongkir'] + substr($total['kode_transaksi'], -3)) . "</td>
+                                      <td style='color:red;'>Rp " . rupiah($total['total'] + $total['ongkir']) . "</td>
                                       <td>$proses</td>
                                       <td>" . cek_terakhir($row['waktu_transaksi']) . " lalu</td>
                                       <td width='50px'><a class='btn btn-info btn-xs' title='Detail data pesanan' href='" . base_url() . "administrator/tracking/$row[kode_transaksi]'><span class='glyphicon glyphicon-search'></span></a></td>

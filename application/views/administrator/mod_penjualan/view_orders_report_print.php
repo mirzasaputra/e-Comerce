@@ -49,7 +49,7 @@
 
         echo "<tr><td>$no</td>
                 <td>$row[kode_transaksi]</td>
-                <td style='color:red;'>Rp " . rupiah($total['total'] + $total['ongkir'] + substr($row['kode_transaksi'], -3)) . "</td>
+                <td style='color:red;'>Rp " . rupiah($total['total'] + $total['ongkir']) . "</td>
                 <td><span style='text-transform:uppercase'>$total[kurir]</span> ($total[service])</td>
                 <td><a target='_BLANK' title='$total[nama_provinsi] -> $total[nama_kota]' href='https://www.google.com/maps/place/$total[nama_kota]'>$total[nama_kota]</a></td>
                 <td>$row[waktu_transaksi]</td>
