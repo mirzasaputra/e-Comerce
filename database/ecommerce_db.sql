@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 11:02 AM
+-- Generation Time: Oct 01, 2020 at 01:42 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -637,7 +637,7 @@ INSERT INTO `rb_konsumen` (`id_konsumen`, `username`, `password`, `nama_lengkap`
 (35, 'nanda', '2ab2fcd6ccfd60823ed7b6623ae4788fc5d3c9fb3feacbf328d935e72529c8126395472394a464c9ba429b5f93e9fbccef4a72a547413c789ccd870495ca3cb4', 'Nanda Agung Mahardika', 'nanda@gmail.com', 'Laki-laki', '2002-07-10', 'Banyuwangi', 'Jl. Mawar No. 3', 42, '087678754686', '', '2020-09-06', 'Konsumen'),
 (36, 'nurhayati', '', 'Ibu Nurhayati', 'nurhayati@gmail.com', 'Laki-laki', '1980-02-05', 'Banyuwangi', 'Jl. Mawar No 03', 42, '087657627636', '', '2020-09-07', 'Konsumen'),
 (34, 'umum', '', 'Umum', 'umum', '', '2020-09-06', 'Umum', 'Umum', 0, 'Umum', '', '2020-09-06', 'Konsumen'),
-(37, 'yusup', '9970f16668b0ce09b694293b5164ae2b211fb9a23e9026bb4d0d1aef370f192120dd5f5a8e78c06d57fa036de0975c09b528ea7dc49262aee10c3247e62964fa', 'Yusup Supriyanto', 'dafidprasetyo109@gmail.com', 'Laki-laki', '2020-09-18', 'Banyuwangi', 'Kaligung', 42, '085676546677', 'avatar-2.jpg', '2020-09-26', 'Reseller'),
+(37, 'yusup', '9970f16668b0ce09b694293b5164ae2b211fb9a23e9026bb4d0d1aef370f192120dd5f5a8e78c06d57fa036de0975c09b528ea7dc49262aee10c3247e62964fa', 'Yusup Supriyanto', 'yusup@gmail.com', 'Laki-laki', '1994-06-14', 'Banyuwangi', 'Jl. Kebangsaan Timur', 42, '082456876567', 'avatar-2.jpg', '2020-09-26', 'Reseller'),
 (38, 'hari', '9970f16668b0ce09b694293b5164ae2b211fb9a23e9026bb4d0d1aef370f192120dd5f5a8e78c06d57fa036de0975c09b528ea7dc49262aee10c3247e62964fa', 'Hariyono', 'hariyono@gmail.com', 'Laki-laki', '0000-00-00', '-', '', 0, '', '', '2020-09-30', 'Konsumen');
 
 -- --------------------------------------------------------
@@ -1236,6 +1236,7 @@ CREATE TABLE `rb_penjualan` (
 --
 
 INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `diskon`, `kurir`, `service`, `ongkir`, `resi`, `waktu_transaksi`, `proses`, `method`, `bayar`, `kembali`, `id_user`, `online_order`) VALUES
+(45, 'TRX-20201001180841', 37, 0, 'pos', 'Paket Kilat Khusus', 20000, NULL, '2020-10-01 18:10:52', '0', NULL, NULL, NULL, NULL, 'Y'),
 (44, 'TRX-20201001153203', 37, 5000, 'tiki', 'ECO', 18000, 'RS-0988289348', '2020-10-01 15:32:53', '2', NULL, NULL, NULL, NULL, 'Y'),
 (43, 'TRX-20201001150108', 37, 0, 'jne', 'OKE', 20000, 'RS-098828934', '2020-10-01 15:01:55', '3', NULL, NULL, NULL, NULL, 'Y'),
 (42, 'TRX-20201001145221', 36, 5000, '', '', 0, NULL, '2020-10-01 14:52:21', '2', 'Cash', 60000, 0, 1, 'N');
@@ -1264,6 +1265,8 @@ CREATE TABLE `rb_penjualan_detail` (
 --
 
 INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`, `subtotal`, `diskon`, `retur`) VALUES
+(106, 45, 8, 1, 29500, 'unit', 'Color putih', 29500, 0, 0),
+(105, 45, 10, 1, 54900, 'pcs', 'Color ungu', 54900, 0, 0),
 (104, 44, 13, 1, 65000, 'pcs', '-', 60000, 5000, 0),
 (103, 43, 7, 1, 99000, 'unit', '-', 99000, 0, 0),
 (102, 42, 12, 1, 65000, 'unit', NULL, 60000, 5000, 0);
@@ -1513,8 +1516,8 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `key`, `value`) VALUES
-(1, 'email', 'webmedia27@gmail.com', 'a0NydUczTVNuaG9IUjhUTnA2NDJGeXY1cW1HM1dSaklueTNDdVN4WndTTT0='),
-(2, 'wa', '628816321180', 'Hallo kak, mau tanya nih');
+(1, 'email', 'ecommerce@gmail.com', 'a0NydUczTVNuaG9IUjhUTnA2NDJGeXY1cW1HM1dSaklueTNDdVN4WndTTT0='),
+(2, 'wa', '6285678765434', 'Hallo kak, mau tanya nih');
 
 -- --------------------------------------------------------
 
@@ -3365,7 +3368,7 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2020-09-28', 105, '1601302868'),
 ('::1', '2020-09-29', 109, '1601393837'),
 ('::1', '2020-09-30', 124, '1601480936'),
-('::1', '2020-10-01', 38, '1601541286');
+('::1', '2020-10-01', 64, '1601552334');
 
 -- --------------------------------------------------------
 
@@ -3990,19 +3993,19 @@ ALTER TABLE `rb_pembelian_detail`
 -- AUTO_INCREMENT for table `rb_penjualan`
 --
 ALTER TABLE `rb_penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan_detail`
 --
 ALTER TABLE `rb_penjualan_detail`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT for table `rb_penjualan_temp`
 --
 ALTER TABLE `rb_penjualan_temp`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `rb_produk`

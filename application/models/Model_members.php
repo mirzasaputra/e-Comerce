@@ -29,7 +29,7 @@ class Model_members extends CI_model
         $this->load->library('upload', $config);
         $this->upload->do_upload('foto');
         $hasil = $this->upload->data();
-        
+
         $config['image_library'] = 'gd2';
         $config['source_image'] = 'asset/foto_user/' . $hasil['file_name'];
         $config['create_thumb'] = TRUE;
@@ -78,7 +78,8 @@ class Model_members extends CI_model
                 'tempat_lahir' => $this->db->escape_str(strip_tags($this->input->post('tempat_lahir'))),
                 'alamat_lengkap' => $this->db->escape_str(strip_tags($this->input->post('alamat'))),
                 'kota_id' => $this->db->escape_str(strip_tags($this->input->post('kota_id'))),
-                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('no_hp')))
+                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('no_hp'))),
+                'tipe' => $this->db->escape_str(strip_tags($this->input->post('tipe'))),
             );
         } else {
             $datadbd = array(
@@ -90,7 +91,8 @@ class Model_members extends CI_model
                 'tempat_lahir' => $this->db->escape_str(strip_tags($this->input->post('tempat_lahir'))),
                 'alamat_lengkap' => $this->db->escape_str(strip_tags($this->input->post('alamat'))),
                 'kota_id' => $this->db->escape_str(strip_tags($this->input->post('kota_id'))),
-                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('no_hp')))
+                'no_hp' => $this->db->escape_str(strip_tags($this->input->post('no_hp'))),
+                'tipe' => $this->db->escape_str(strip_tags($this->input->post('tipe'))),
             );
         }
         $this->db->where('id_konsumen', $id);

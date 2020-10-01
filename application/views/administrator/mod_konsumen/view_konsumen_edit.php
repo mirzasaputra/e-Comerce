@@ -11,46 +11,42 @@
               <input type='hidden' value="<?php echo $this->uri->segment(3) ?>" name='id'>
               <tr>
                 <td width='140px'><b>Username</b></td>
-                <td><input class='required form-control' style='width:50%; display:inline-block' name='aa' type='text' value='<?php echo $row['username'] ?>'></td>
+                <td><input class='required form-control' style='width:50%; display:inline-block' name='user' type='text' value='<?php echo $row['username'] ?>'></td>
               </tr>
               <tr>
                 <td><b>Password</b></td>
-                <td><input class='form-control' style='width:50%; display:inline-block' type='password' name='a'> <small style='color:red'><i>Kosongkan Saja JIka Tidak ubah.</i></small></td>
+                <td><input class='form-control' style='width:50%; display:inline-block' type='password' name='pass'> <small style='color:red'><i>Kosongkan Saja JIka Tidak ubah.</i></small></td>
               </tr>
               <tr>
                 <td><b>Nama Lengkap</b></td>
-                <td><input class='required form-control' type='text' name='b' value='<?php echo $row['nama_lengkap'] ?>'></td>
+                <td><input class='required form-control' type='text' name='nama' value='<?php echo $row['nama_lengkap'] ?>'></td>
               </tr>
               <tr>
                 <td><b>Email</b></td>
-                <td><input class='required email form-control' type='email' name='c' value='<?php echo $row['email'] ?>'></td>
+                <td><input class='required email form-control' type='email' name='email' value='<?php echo $row['email'] ?>'></td>
               </tr>
               <tr>
                 <td><b>Jenis Kelamin</b></td>
                 <td>
-                  <?php if ($row['jenis_kelamin'] == 'Laki-laki') { ?>
-                    <input type='radio' value='Laki-laki' name='d' checked> Laki-laki <input type='radio' value='Perempuan' name='d'> Perempuan
-                  <?php } else { ?>
-                    <input type='radio' value='Laki-laki' name='d'> Laki-laki <input type='radio' value='Perempuan' name='d' checked> Perempuan
-
-                  <?php } ?>
+                  <input type="radio" name="jekel" value="Laki-laki" <?php if ($row['jenis_kelamin'] == 'Laki-laki') echo "checked"; ?> id="laki"> <label for="laki"> Laki - laki</label>
+                  <input type="radio" name="jekel" value="Perempuan" <?php if ($row['jenis_kelamin'] == 'Perempuan') echo 'checked'; ?> id="prem"> <label for="prem"> Perempuan</label>
                 </td>
               </tr>
               <tr>
                 <td><b>Tanggal Lahir</b></td>
-                <td><input style='padding-left:13px' class='required datepicker form-control' type='text' name='e' value='<?php echo $row['tanggal_lahir'] ?>' data-date-format='yyyy-mm-dd'></td>
+                <td><input style='padding-left:13px' class='required datepicker form-control' type='text' name='tanggal_lahir' value='<?php echo $row['tanggal_lahir'] ?>' data-date-format='yyyy-mm-dd'></td>
               </tr>
               <tr>
                 <td><b>Tempat Lahir</b></td>
-                <td><input class='required form-control' type='text' name='f' value='<?php echo $row['tempat_lahir'] ?>'></td>
+                <td><input class='required form-control' type='text' name='tempat_lahir' value='<?php echo $row['tempat_lahir'] ?>'></td>
               </tr>
               <tr>
                 <td><b>Alamat</b></td>
-                <td><textarea class='required form-control' name='g'><?php echo $row['alamat_lengkap'] ?></textarea></td>
+                <td><textarea class='required form-control' name='alamat'><?php echo $row['alamat_lengkap'] ?></textarea></td>
               </tr>
               <tr>
                 <td><b>Kota Sekarang</b></td>
-                <td><select class='form-control select2' name='j' id='city' required>
+                <td><select class='form-control select2' name='kota_id' id='city' required>
                     <option value=''>- Pilih -</option>
                     <?php foreach ($kota->result_array() as $rows) { ?>
                       <?php if ($row['kota_id'] == $rows['kota_id']) { ?>
@@ -64,7 +60,7 @@
               </tr>
               <tr>
                 <td><b>No Hp</b></td>
-                <td><input style='width:40%' class='required number form-control' type='number' name='l' value='<?php echo $row['no_hp'] ?>'></td>
+                <td><input style='width:40%' class='required number form-control' type='number' name='no_hp' value='<?php echo $row['no_hp'] ?>'></td>
               </tr>
               <tr>
                 <td><b>Tipe Konsumen</b></td>

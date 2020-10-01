@@ -275,10 +275,10 @@
                   echo "<li><a href='" . base_url() . "administrator/logowebsite'><i class='fa fa-circle-o'></i> Logo Website</a></li>";
                 }
 
-                $cek = $this->Model_app->umenu_akses("pesanmasuk", $this->session->id_session);
-                if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/pesanmasuk'><i class='fa fa-circle-o'></i> Pesan Masuk</a></li>";
-                }
+                // $cek = $this->Model_app->umenu_akses("pesanmasuk", $this->session->id_session);
+                // if ($cek == 1 or $this->session->level == 'admin') {
+                //   echo "<li><a href='" . base_url() . "administrator/pesanmasuk'><i class='fa fa-circle-o'></i> Pesan Masuk</a></li>";
+                // }
 
                 $cek = $this->Model_app->umenu_akses("download", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
