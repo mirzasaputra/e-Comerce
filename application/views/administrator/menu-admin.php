@@ -77,10 +77,10 @@
                   echo "<li><a href='" . base_url() . "administrator/supplier'><i class='fa fa-circle-o'></i> Supplier</a></li>";
                 }
 
-                $cek = $this->Model_app->umenu_akses("keterangan", $this->session->id_session);
-                if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/keterangan'><i class='fa fa-circle-o'></i> Info Keranjang</a></li>";
-                }
+                // $cek = $this->Model_app->umenu_akses("keterangan", $this->session->id_session);
+                // if ($cek == 1 or $this->session->level == 'admin') {
+                //   echo "<li><a href='" . base_url() . "administrator/keterangan'><i class='fa fa-circle-o'></i> Info Keranjang</a></li>";
+                // }
 
                 $cek = $this->Model_app->umenu_akses("konsumen", $this->session->id_session);
                 if ($cek == 1 or $this->session->level == 'admin') {
@@ -232,22 +232,22 @@
               </ul>
             </li>
 
-            <li class="treeview">
+            <!-- <li class="treeview">
               <a href="#"><i class="glyphicon glyphicon-camera"></i> <span>Modul Gallery</span><i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <?php
-                $cek = $this->Model_app->umenu_akses("album", $this->session->id_session);
-                if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/album'><i class='fa fa-circle-o'></i> Berita Foto</a></li>";
-                }
+                // $cek = $this->Model_app->umenu_akses("album", $this->session->id_session);
+                // if ($cek == 1 or $this->session->level == 'admin') {
+                //   echo "<li><a href='" . base_url() . "administrator/album'><i class='fa fa-circle-o'></i> Berita Foto</a></li>";
+                // }
 
-                $cek = $this->Model_app->umenu_akses("gallery", $this->session->id_session);
-                if ($cek == 1 or $this->session->level == 'admin') {
-                  echo "<li><a href='" . base_url() . "administrator/gallery'><i class='fa fa-circle-o'></i> Gallery Berita Foto</a></li>";
-                }
+                // $cek = $this->Model_app->umenu_akses("gallery", $this->session->id_session);
+                // if ($cek == 1 or $this->session->level == 'admin') {
+                //   echo "<li><a href='" . base_url() . "administrator/gallery'><i class='fa fa-circle-o'></i> Gallery Berita Foto</a></li>";
+                // }
                 ?>
               </ul>
-            </li>
+            </li> -->
 
             <li class="treeview">
               <a href="#"><i class="glyphicon glyphicon-blackboard"></i> <span>Modul Iklan</span><i class="fa fa-angle-left pull-right"></i></a>
