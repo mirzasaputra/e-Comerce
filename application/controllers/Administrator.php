@@ -839,7 +839,7 @@ class Administrator extends CI_Controller
 
 			redirect('administrator/edit_manajemenuser/' . $this->input->post('a'));
 		} else {
-			$proses = $this->Model_app->view_where_ordering('modul', array('publish' => 'Y', 'status' => 'user'), 'id_modul', 'DESC');
+			$proses = $this->Model_app->view_where_ordering('modul', array('publish' => 'Y'), 'id_modul', 'DESC');
 			$data = array('record' => $proses);
 			$data['title'] = "Tambah User";
 			$data['identitas_web'] = $this->Model_main->identitas()->row_array();
@@ -912,7 +912,7 @@ class Administrator extends CI_Controller
 			if ($this->session->username == $this->uri->segment(3) or $this->session->level == 'admin') {
 				$proses = $this->Model_app->edit('users', array('username' => $id))->row_array();
 				$akses = $this->Model_app->view_join_where('users_modul', 'modul', 'id_modul', array('id_session' => $proses['id_session']), 'id_umod', 'DESC');
-				$modul = $this->Model_app->view_where_ordering('modul', array('publish' => 'Y', 'status' => 'user'), 'id_modul', 'DESC');
+				$modul = $this->Model_app->view_where_ordering('modul', array('publish' => 'Y'), 'id_modul', 'DESC');
 				$data = array('rows' => $proses, 'record' => $modul, 'akses' => $akses);
 				$data['title'] = "Edit User";
 				$data['identitas_web'] = $this->Model_main->identitas()->row_array();
@@ -1798,7 +1798,7 @@ class Administrator extends CI_Controller
 
 	public function pembayaran_piutang()
 	{
-		cek_session_akses('hutang', $this->session->id_session);
+		cek_session_akses('piutang', $this->session->id_session);
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])) {
 			$this->Model_piutang->addPayment();
