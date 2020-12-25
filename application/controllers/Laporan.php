@@ -38,7 +38,7 @@ class Laporan extends CI_Controller
     {
         cek_session_akses('laporan/piutang', $this->session->id_session);
         $data['title'] = "Laporan Piutang";
-        $data['customer'] = $this->db->get('rb_supplier')->result_array();
+        $data['customer'] = $this->db->get('rb_konsumen')->result_array();
         $data['identitas_web'] = $this->Model_main->identitas()->row_array();
         $this->template->load('administrator/template', 'administrator/mod_piutang/view_laporan', $data);
     }

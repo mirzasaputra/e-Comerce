@@ -54,7 +54,7 @@ foreach ($result as $data) {
 
 if ($supplier == "all") {
 
-    $query_total = "SELECT SUM(a.jml_hutang) AS total FROM hutang a, pembelian b, rb_supplier c WHERE a.id_beli = b.id_pembelian AND c.id_supplier = b.id_supplier AND SUBSTRING(a.tgl_hutang, 1, 10) BETWEEN '$awal' AND '$akhir'";
+    $query_total = "SELECT SUM(a.jml_hutang) AS total FROM hutang a, rb_pembelian b, rb_supplier c WHERE a.id_beli = b.id_pembelian AND c.id_supplier = b.id_supplier AND SUBSTRING(a.tgl_hutang, 1, 10) BETWEEN '$awal' AND '$akhir'";
     $query_lunas = "SELECT SUM(a.jml_hutang) AS total FROM hutang a, rb_pembelian b, rb_supplier c WHERE a.id_beli = b.id_pembelian AND c.id_supplier = b.id_supplier AND SUBSTRING(a.tgl_hutang, 1, 10) BETWEEN '$awal' AND '$akhir' AND a.status = 'Lunas'";
     $query_sisa = "SELECT SUM(a.sisa) AS sisa FROM hutang a, rb_pembelian b, rb_supplier c WHERE a.id_beli = b.id_pembelian AND c.id_supplier = b.id_supplier AND SUBSTRING(a.tgl_hutang, 1, 10) BETWEEN '$awal' AND '$akhir'";
     $query_bayar = "SELECT SUM(a.bayar) AS bayar FROM hutang a, rb_pembelian b, rb_supplier c WHERE a.id_beli = b.id_pembelian AND c.id_supplier = b.id_supplier AND SUBSTRING(a.tgl_hutang, 1, 10) BETWEEN '$awal' AND '$akhir'";

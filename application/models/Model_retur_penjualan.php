@@ -30,14 +30,14 @@ class Model_retur_penjualan extends CI_model
         FROM rb_penjualan_detail a, rb_produk b WHERE a.id_produk = b.id_produk AND a.id_penjualan_detail = '$kode'";
         return $this->db->query($query)->row_array();
     }
-    public function load_detail_retur()
+    public function load_detail_retur($id)
     {
-        $query = "SELECT a.kondisi, a.opsi, a.id_retur_penjualan_detail, a.harga_produk, a.jumlah_retur, a.total_retur, b.nama_produk, b.satuan, c.id_penjualan_detail FROM retur_penjualan_detail a, rb_produk b, rb_penjualan_detail c WHERE a.id_produk = b.id_produk AND a.id_retur_penjualan IS NULL AND c.id_produk = b.id_produk ORDER BY a.id_retur_penjualan_detail DESC";
+        $query = "SELECT a.id_retur_penjualan_detail, a.kondisi,a.harga_produk, a.jumlah_retur, a.opsi, b.nama_produk, b.satuan, a.total_retur, c.id_penjualan_detail FROM retur_penjualan_detail a, rb_produk b, rb_penjualan_detail c, rb_penjualan d WHERE a.id_produk = b.id_produk AND a.id_retur_penjualan IS NULL AND d.id_penjualan = c.id_penjualan AND d.id_penjualan = '$id' ORDER BY a.id_retur_penjualan_detail DESC";
         return $this->db->query($query)->result_array();
     }
     public function detail_retur_penjualan($id)
     {
-        $query = "SELECT a.kondisi, a.opsi, a.id_retur_penjualan_detail, a.harga_produk, a.jumlah_retur, a.total_retur, b.nama_produk, b.satuan, c.id_penjualan_detail FROM retur_penjualan_detail a, rb_produk b, rb_penjualan_detail c, retur_penjualan d WHERE a.id_produk = b.id_produk AND d.id_retur_penjualan = '$id' AND c.id_produk = b.id_produk AND a.id_retur_penjualan = d.id_retur_penjualan ORDER BY a.id_retur_penjualan_detail DESC";
+        $query = "SELECT a.id_retur_penjualan_detail, a.opsi, a.kondisi, a.harga_produk, a.jumlah_retur, a.total_retur, c.nama_produk FROM retur_penjualan_detail a, retur_penjualan b, rb_produk c WHERE a.id_produk = c.id_produk AND a.id_retur_penjualan = b.id_retur_penjualan AND b.id_retur_penjualan = '$id' ORDER BY a.id_retur_penjualan_detail DESC";
         return $this->db->query($query)->result_array();
     }
 

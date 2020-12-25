@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Nov 2020 pada 15.59
+-- Waktu pembuatan: 25 Des 2020 pada 07.00
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.9
 
@@ -343,7 +343,9 @@ INSERT INTO `kas` (`id_kas`, `id_user`, `nominal`, `jenis`, `keterangan`, `creat
 (55, 1, 99000, 'Pemasukan', 'Penjualan E-Commerce (online)', '2020-10-01 15:08:38'),
 (56, 1, 60000, 'Pemasukan', 'Penjualan E-Commerce (online)', '2020-10-01 15:51:27'),
 (57, 1, 30000, 'Pemasukan', 'Penjualan Point Of Sales (Offline)', '2020-11-04 21:46:42'),
-(58, 5, 4500, 'Pemasukan', 'Pembayaran Piutang', '2020-11-04 21:49:14');
+(58, 5, 4500, 'Pemasukan', 'Pembayaran Piutang', '2020-11-04 21:49:14'),
+(59, 1, 65000, 'Pengeluaran', 'Retur Penjualan', '2020-12-18 22:36:38'),
+(60, 1, 1479900, 'Pemasukan', 'Retur Pembelian', '2020-12-22 22:24:22');
 
 -- --------------------------------------------------------
 
@@ -657,7 +659,8 @@ INSERT INTO `rb_konsumen` (`id_konsumen`, `username`, `password`, `nama_lengkap`
 (36, 'nurhayati', '', 'Ibu Nurhayati', 'nurhayati@gmail.com', 'Laki-laki', '1980-02-05', 'Banyuwangi', 'Jl. Mawar No 03', 42, '087657627636', '', '2020-09-07', 'Konsumen'),
 (34, 'umum', '', 'Umum', 'umum', '', '2020-09-06', 'Umum', 'Umum', 0, 'Umum', '', '2020-09-06', 'Konsumen'),
 (37, 'yusup', '9970f16668b0ce09b694293b5164ae2b211fb9a23e9026bb4d0d1aef370f192120dd5f5a8e78c06d57fa036de0975c09b528ea7dc49262aee10c3247e62964fa', 'Yusup Supriyanto', 'yusup@gmail.com', 'Laki-laki', '1994-06-14', 'Banyuwangi', 'Jl. Kebangsaan Timur', 42, '082456876567', 'avatar-2.jpg', '2020-09-26', 'Reseller'),
-(38, 'hari', '9970f16668b0ce09b694293b5164ae2b211fb9a23e9026bb4d0d1aef370f192120dd5f5a8e78c06d57fa036de0975c09b528ea7dc49262aee10c3247e62964fa', 'Hariyono', 'hariyono@gmail.com', 'Laki-laki', '0000-00-00', '-', '', 0, '', '', '2020-09-30', 'Konsumen');
+(38, 'hari', '9970f16668b0ce09b694293b5164ae2b211fb9a23e9026bb4d0d1aef370f192120dd5f5a8e78c06d57fa036de0975c09b528ea7dc49262aee10c3247e62964fa', 'Hariyono', 'hariyono@gmail.com', 'Laki-laki', '0000-00-00', '-', '', 0, '', '', '2020-09-30', 'Konsumen'),
+(39, 'anda', 'fb7a536b2f2e736ede257378fd7ef0d99365c756c11e646ee38ce0748068a20003276be92c7f51e9a142130c92c7567de586c0406c885a4c39bb2402ea0806b6', 'anda', 'anda@gmail.com', 'Laki-laki', '0000-00-00', '-', '', 0, '', '', '2020-12-17', 'Konsumen');
 
 -- --------------------------------------------------------
 
@@ -1223,8 +1226,8 @@ CREATE TABLE `rb_pembelian_detail` (
 --
 
 INSERT INTO `rb_pembelian_detail` (`id_pembelian_detail`, `id_pembelian`, `id_produk`, `harga_pesan`, `jumlah_pesan`, `satuan`, `retur`) VALUES
-(51, 20, 3, 159980, 5, 'unit', 0),
-(50, 20, 2, 340000, 5, 'pcs', 0);
+(51, 20, 3, 159980, 0, 'unit', 1),
+(50, 20, 2, 340000, 3, 'pcs', 0);
 
 -- --------------------------------------------------------
 
@@ -1290,7 +1293,7 @@ INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_pr
 (105, 45, 10, 1, 54900, 'pcs', 'Color ungu', 54900, 0, 0),
 (104, 44, 13, 1, 65000, 'pcs', '-', 60000, 5000, 0),
 (103, 43, 7, 1, 99000, 'unit', '-', 99000, 0, 0),
-(102, 42, 12, 1, 65000, 'unit', NULL, 60000, 5000, 0);
+(102, 42, 12, 0, 65000, 'unit', NULL, 0, 5000, 1);
 
 -- --------------------------------------------------------
 
@@ -1344,8 +1347,8 @@ CREATE TABLE `rb_produk` (
 
 INSERT INTO `rb_produk` (`id_produk`, `id_kategori_produk`, `nama_produk`, `nama_alias`, `produk_seo`, `satuan`, `harga_beli`, `harga_reseller`, `harga_konsumen`, `berat`, `diskon`, `gambar`, `keterangan`, `username`, `waktu_input`, `stok`) VALUES
 (1, 1, 'Segitiga Instan Aira- AA94.9 Tropical Blue', 'AA94.9 Tropical Blue', 'segitiga-instan-aira-aa94-9-tropical-blue', 'pcs', 60000, 65000, 70000, '300', 0, 'RYB6_1_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\n\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\n', 'admin', '2017-05-23 17:04:25', 0),
-(2, 1, 'Segitiga Instan Aira- AA94.8 Minty Green', 'AA94.8 Minty Green', 'segitiga-instan-aira-aa94-8-minty-green', 'pcs', 340000, 345000, 350000, '500', 0, 'RV71_27_Jeans_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-23 17:10:17', 5),
-(3, 2, 'Segitiga Instan KEINA - KN54.38 Delfine Lilac', 'KN54.38 Delfine Lilac', 'segitiga-instan-keina-kn54-38-delfine-lilac', 'unit', 159980, 164980, 169980, '300', 0, 'RV71_5_Cold_Ocean_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:47:14', 5),
+(2, 1, 'Segitiga Instan Aira- AA94.8 Minty Green', 'AA94.8 Minty Green', 'segitiga-instan-aira-aa94-8-minty-green', 'pcs', 340000, 345000, 350000, '500', 0, 'RV71_27_Jeans_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-23 17:10:17', 3),
+(3, 2, 'Segitiga Instan KEINA - KN54.38 Delfine Lilac', 'KN54.38 Delfine Lilac', 'segitiga-instan-keina-kn54-38-delfine-lilac', 'unit', 159980, 164980, 169980, '300', 0, 'RV71_5_Cold_Ocean_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:47:14', 0),
 (4, 1, 'Segitiga Instan Madeira - MDB5.3 Sunset', 'MDB5.3 Sunset', 'segitiga-instan-madeira-mdb5-3-sunset', 'unit', 119900, 124900, 129900, '100', 0, 'MK97_7_Mocca_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:53:10', 10),
 (5, 1, 'Segitiga Instan Madeira - MDB5.2 Ocean', 'MDB5.2 Ocean', 'segitiga-instan-madeira-mdb5-2-ocean', 'unit', 745000, 750000, 755000, '150', 0, 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:56:24', 2),
 (6, 1, 'Pashmina Instan Rafella - RLN1.2 Gold Maroon', 'RLN1.2 Gold Maroon', 'pashmina-instan-rafella-rln1-2-gold-maroon', 'unit', 65000, 70000, 75000, '130', 0, 'Emily_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:57:11', 1),
@@ -1471,6 +1474,13 @@ CREATE TABLE `retur_pembelian` (
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `retur_pembelian`
+--
+
+INSERT INTO `retur_pembelian` (`id_retur_pembelian`, `kode_retur`, `id_pembelian`, `tgl_retur`, `id_user`) VALUES
+(2, 'RTRB-20201222222422', 20, '2020-12-22 22:24:22', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -1488,6 +1498,14 @@ CREATE TABLE `retur_pembelian_detail` (
   `opsi` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `retur_pembelian_detail`
+--
+
+INSERT INTO `retur_pembelian_detail` (`id_retur_pembelian_detail`, `id_retur_pembelian`, `id_produk`, `jumlah_retur`, `harga_produk`, `total_retur`, `kondisi`, `opsi`) VALUES
+(13, 2, 3, 5, 159980, 799900, 1, 2),
+(14, 2, 2, 2, 340000, 680000, 1, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -1501,6 +1519,13 @@ CREATE TABLE `retur_penjualan` (
   `tgl_retur` datetime DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `retur_penjualan`
+--
+
+INSERT INTO `retur_penjualan` (`id_retur_penjualan`, `kode_retur`, `id_penjualan`, `tgl_retur`, `id_user`) VALUES
+(8, 'RTR-20201218223638', 42, '2020-12-18 22:36:38', 1);
 
 -- --------------------------------------------------------
 
@@ -1518,6 +1543,13 @@ CREATE TABLE `retur_penjualan_detail` (
   `kondisi` varchar(100) DEFAULT NULL,
   `opsi` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `retur_penjualan_detail`
+--
+
+INSERT INTO `retur_penjualan_detail` (`id_retur_penjualan_detail`, `id_retur_penjualan`, `id_produk`, `jumlah_retur`, `harga_produk`, `total_retur`, `kondisi`, `opsi`) VALUES
+(27, 8, 12, 1, 65000, 65000, '1', '2');
 
 -- --------------------------------------------------------
 
@@ -1538,7 +1570,7 @@ CREATE TABLE `settings` (
 
 INSERT INTO `settings` (`id`, `name`, `key`, `value`) VALUES
 (1, 'email', 'ecommerce@gmail.com', 'a0NydUczTVNuaG9IUjhUTnA2NDJGeXY1cW1HM1dSaklueTNDdVN4WndTTT0='),
-(2, 'wa', '628816321180', 'Hallo kak, mau tanya nih');
+(2, 'wa', '6285738294847', 'Hallo kak, mau tanya nih');
 
 -- --------------------------------------------------------
 
@@ -3393,7 +3425,12 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2020-10-19', 26, '1603110370'),
 ('::1', '2020-10-20', 3, '1603193331'),
 ('::1', '2020-10-24', 3, '1603504051'),
-('::1', '2020-11-04', 8, '1604501275');
+('::1', '2020-11-04', 8, '1604501275'),
+('::1', '2020-12-17', 6, '1608190351'),
+('::1', '2020-12-18', 1, '1608297669'),
+('::1', '2020-12-19', 1, '1608393607'),
+('::1', '2020-12-22', 1, '1608645864'),
+('::1', '2020-12-25', 3, '1608875817');
 
 -- --------------------------------------------------------
 
@@ -3938,7 +3975,7 @@ ALTER TABLE `identitas`
 -- AUTO_INCREMENT untuk tabel `kas`
 --
 ALTER TABLE `kas`
-  MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
@@ -4004,7 +4041,7 @@ ALTER TABLE `rb_konfirmasi`
 -- AUTO_INCREMENT untuk tabel `rb_konsumen`
 --
 ALTER TABLE `rb_konsumen`
-  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT untuk tabel `rb_kota`
@@ -4070,25 +4107,25 @@ ALTER TABLE `rb_supplier`
 -- AUTO_INCREMENT untuk tabel `retur_pembelian`
 --
 ALTER TABLE `retur_pembelian`
-  MODIFY `id_retur_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_retur_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `retur_pembelian_detail`
 --
 ALTER TABLE `retur_pembelian_detail`
-  MODIFY `id_retur_pembelian_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_retur_pembelian_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `retur_penjualan`
 --
 ALTER TABLE `retur_penjualan`
-  MODIFY `id_retur_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_retur_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `retur_penjualan_detail`
 --
 ALTER TABLE `retur_penjualan_detail`
-  MODIFY `id_retur_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_retur_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT untuk tabel `settings`

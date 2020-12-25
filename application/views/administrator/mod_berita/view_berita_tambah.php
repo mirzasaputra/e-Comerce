@@ -1,7 +1,7 @@
 <div class='col-md-12'>
   <div class='box box-info'>
     <div class='box-header with-border'>
-      <h3 class='box-title'>Tambah Berita Baru ".$this->session->disabled."</h3>
+      <h3 class='box-title'>Tambah Berita Baru</h3>
     </div>
     <div class='box-body'>
       <form action="<?php echo base_url('administrator/tambah_listberita') ?>" method="post" enctype="multipart/form-data">

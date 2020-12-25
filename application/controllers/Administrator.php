@@ -1863,9 +1863,9 @@ class Administrator extends CI_Controller
 	{
 		$data = $this->Model_retur_penjualan->tambah_detail_retur();
 	}
-	public function load_detail_retur()
+	public function load_detail_retur($id = '')
 	{
-		$data = $this->Model_retur_penjualan->load_detail_retur();
+		$data = $this->Model_retur_penjualan->load_detail_retur($id);
 		echo json_encode($data);
 	}
 	public function detail_retur_penjualan($id = '')

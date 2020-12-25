@@ -54,8 +54,9 @@
 
     function loadDataRetur() {
         var html = '';
+        var id = $('#id-penjualan').val();
         $.ajax({
-            url: base_url + "administrator/load_detail_retur",
+            url: base_url + "administrator/load_detail_retur/" + id,
             type: "post",
             dataType: "json",
             success: function(result) {
